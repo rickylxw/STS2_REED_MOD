@@ -7,22 +7,19 @@ extends AnimatedSprite2D
 const FPS = 30.0
 
 # 各皮肤对应的帧目录（与 reed_character_select_bg.gd 中的 SKINS 对应）
-# 皮肤 0(默认) 和 1(精二) 使用同一套默认帧，精二靠 modulate 区分
 const SKIN_FRAMES_DIRS = [
 	"res://Reed/images/character_frames",           # 默认
-	"res://Reed/images/character_frames",           # 精二（无独立 Spine，复用默认帧）
 	"res://Reed/images/character_frames_epoque",    # 薄雾
-	"res://Reed/images/character_frames_snow",      # 闪耀
-	"res://Reed/images/character_frames_summer",    # 霞辉
+	"res://Reed/images/character_frames_snow",     # 闪耀
+	"res://Reed/images/character_frames_summer",   # 霞辉
 ]
 
 const LOOP_ANIMS = ["Idle", "Default", "Skill_3_Loop"]
 const ANIM_NAMES = ["Idle", "Attack", "Die", "Start", "Default", "Skill_2", "Skill_3_Begin", "Skill_3_Attack", "Skill_3_End", "Skill_3_Loop"]
 
-# 皮肤 modulate 颜色（精二靠此区分，其他皮肤有独立帧无需着色）
+# 皮肤 modulate 颜色（所有皮肤都有独立帧，无需着色）
 const SKIN_MODULATES = [
 	Color(1, 1, 1, 1),           # 默认
-	Color(1.08, 0.98, 0.88, 1),  # 精二
 	Color(1, 1, 1, 1),           # 薄雾（独立帧）
 	Color(1, 1, 1, 1),           # 闪耀（独立帧）
 	Color(1, 1, 1, 1),           # 霞辉（独立帧）

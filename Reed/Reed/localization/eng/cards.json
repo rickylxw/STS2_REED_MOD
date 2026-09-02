@@ -27,7 +27,7 @@
     "REED_CARD_REEDS_SPEAR.description": "Deal {Damage:diff()} damage. If the target has [red]Scorch[/red], deal double damage.",
 
     "REED_CARD_SEARING_PIERCE.title": "Searing Pierce",
-    "REED_CARD_SEARING_PIERCE.description": "Deal {Damage:diff()} damage. Deal {Cards:diff()} additional damage for each [red]Scorch[/red] stack on the target.",
+    "REED_CARD_SEARING_PIERCE.description": "Deal {Damage:diff()} damage. Deal {Cards:diff()} additional damage for each [red]Scorch[/red] stack on the target. Target gains [red]Scorch Immunity[/red] (no longer takes Scorch damage).",
 
     "REED_CARD_EMBERS.title": "Embers",
     "REED_CARD_EMBERS.description": "Draw {Cards:diff()} cards. [gold]Exhaust[/gold].",
@@ -132,5 +132,35 @@
     "REED_CARD_SCORCH_AWAKENING.description": "Consume all your [red]Scorch[/red]. Gain {Cards:diff()} [gold]Strength[/gold] per stack. [gold]Exhaust[/gold].",
 
     "REED_CARD_SCORCH_BASTION.title": "Scorch Bastion",
-    "REED_CARD_SCORCH_BASTION.description": "Gain {Block:diff()} Block. Gain additional Block equal to your [red]Scorch[/red] stacks x {Cards:diff()}."
+    "REED_CARD_SCORCH_BASTION.description": "Gain {Block:diff()} Block. Gain additional Block equal to your [red]Scorch[/red] stacks x {Cards:diff()}.",
+
+    "REED_CARD_DRAGON_BREATH.title": "Dragon Breath",
+    "REED_CARD_DRAGON_BREATH.description": "Deal {Damage:diff()} damage. Consume all [blue]Ash[/blue]. Deal {Cards:diff()} additional damage per [blue]Ash[/blue]. [gold]Exhaust[/gold].",
+
+    "REED_CARD_CINDER_SPEAR_COMBO.title": "Cinder Spear Combo",
+    "REED_CARD_CINDER_SPEAR_COMBO.description": "Deal {Damage:diff()} damage 3 times. Apply {Cards:diff()} [red]Scorch[/red] each hit.",
+
+    "REED_CARD_BURN_OUT.title": "Burn Out",
+    "REED_CARD_BURN_OUT.description": "Deal {Damage:diff()} damage. If target has {Cards:diff()} or more [red]Scorch[/red], deal 12 additional damage and remove all [red]Scorch[/red].",
+
+    "REED_CARD_EMBER_EYE.title": "Ember Eye",
+    "REED_CARD_EMBER_EYE.description": "Draw {Cards:diff()} cards. If any drawn card is Scorch-related, lose 1 HP.",
+
+    "REED_CARD_ASH_BATH.title": "Ash Bath",
+    "REED_CARD_ASH_BATH.description": "Remove all your [red]Scorch[/red]. Heal {Cards:diff()} HP per stack. Gain [blue]Ash[/blue] equal to the removed stacks. [gold]Exhaust[/gold].",
+
+    "REED_CARD_FLAME_SCALE.title": "Flame Scale",
+    "REED_CARD_FLAME_SCALE.description": "Gain {Cards:diff()} Block. If you have [red]Scorch[/red], gain additional Block equal to [red]Scorch[/red] stacks (max 15).",
+
+    "REED_CARD_EMBER_CONDUIT.title": "Ember Conduit",
+    "REED_CARD_EMBER_CONDUIT.description": "Gain {Cards:diff()} [blue]Ash[/blue]. Draw {Cards:diff()} card(s).",
+
+    "REED_CARD_SCORCHED_EARTH_PROTOCOL.title": "Scorched Earth Protocol",
+    "REED_CARD_SCORCHED_EARTH_PROTOCOL.description": "Exhaust all non-Attack, non-Skill cards in hand. Gain {Cards:diff()} energy per card. [gold]Exhaust[/gold].",
+
+    "REED_CARD_DRAGONS_LEGACY.title": "Dragon's Legacy",
+    "REED_CARD_DRAGONS_LEGACY.description": "Gain {Cards} [blue]Dragon's Legacy[/blue]. At the start of each turn, gain 1 [gold]Strength[/gold] and apply 1 [red]Scorch[/red] to ALL enemies.",
+
+    "REED_CARD_ASH_RECOVERY.title": "Ash Recovery",
+    "REED_CARD_ASH_RECOVERY.description": "Gain {Cards} [blue]Ash Recovery[/blue]. Whenever you Exhaust a card, heal 1 HP."
 }

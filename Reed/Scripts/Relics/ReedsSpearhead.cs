@@ -13,7 +13,6 @@ namespace Reed.Scripts.Relics;
 /// <summary>
 /// 鑻囪崏涔嬮攱锛圧eedsSpearhead锛夆€斺€?鍒濆閬楃墿銆?/// 姣忓洖鍚堝紑濮嬫椂锛屽鎵€鏈夋晫浜烘柦鍔?灞傜伡鐕冦€?/// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
-[RegisterCharacterStarterRelic(typeof(ReedCharacter))]
 public sealed class ReedsSpearhead : ModRelicTemplate
 {
     public override RelicRarity Rarity => RelicRarity.Common;

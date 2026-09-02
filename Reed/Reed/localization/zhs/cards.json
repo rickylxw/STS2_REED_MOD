@@ -27,7 +27,7 @@
     "REED_CARD_REEDS_SPEAR.description": "造成 {Damage:diff()} 点伤害。若目标有[red]灼燃[/red]，造成双倍伤害。",
 
     "REED_CARD_SEARING_PIERCE.title": "灼穿",
-    "REED_CARD_SEARING_PIERCE.description": "造成 {Damage:diff()} 点伤害，目标每有 1 层[red]灼燃[/red]额外造成 {Cards:diff()} 点伤害。",
+    "REED_CARD_SEARING_PIERCE.description": "造成 {Damage:diff()} 点伤害，目标每有 1 层[red]灼燃[/red]额外造成 {Cards:diff()} 点伤害。目标获得[red]灼燃免疫[/red]（不再受到灼燃伤害）。",
 
     "REED_CARD_EMBERS.title": "余烬",
     "REED_CARD_EMBERS.description": "抽 {Cards:diff()} 张牌。[gold]消耗[/gold]。",
@@ -132,5 +132,35 @@
     "REED_CARD_SCORCH_AWAKENING.description": "消耗所有自身[red]灼燃[/red]，每层获得 {Cards:diff()} 点[gold]力量[/gold]。[gold]消耗[/gold]。",
 
     "REED_CARD_SCORCH_BASTION.title": "灼燃壁垒",
-    "REED_CARD_SCORCH_BASTION.description": "获得 {Block:diff()} 点格挡，额外格挡为自身[red]灼燃[/red]层数 × {Cards:diff()}。"
+    "REED_CARD_SCORCH_BASTION.description": "获得 {Block:diff()} 点格挡，额外格挡为自身[red]灼燃[/red]层数 × {Cards:diff()}。",
+
+    "REED_CARD_DRAGON_BREATH.title": "龙息",
+    "REED_CARD_DRAGON_BREATH.description": "造成 {Damage:diff()} 点伤害，消耗所有[blue]灰烬[/blue]，每层灰烬使伤害+{Cards:diff()}。[gold]消耗[/gold]。",
+
+    "REED_CARD_CINDER_SPEAR_COMBO.title": "烬枪连刺",
+    "REED_CARD_CINDER_SPEAR_COMBO.description": "造成 {Damage:diff()} 点伤害3次，每次施加 {Cards:diff()} 层[red]灼燃[/red]。",
+
+    "REED_CARD_BURN_OUT.title": "焚尽",
+    "REED_CARD_BURN_OUT.description": "造成 {Damage:diff()} 点伤害。如果目标[red]灼燃[/red]≥{Cards:diff()}，造成额外12点伤害并移除全部[red]灼燃[/red]。",
+
+    "REED_CARD_EMBER_EYE.title": "燃烬之眼",
+    "REED_CARD_EMBER_EYE.description": "抽 {Cards:diff()} 张牌。若抽到的牌中有灼燃相关卡，失去1生命。",
+
+    "REED_CARD_ASH_BATH.title": "灰烬浴",
+    "REED_CARD_ASH_BATH.description": "移除自身所有[red]灼燃[/red]，每层回复 {Cards:diff()} 点生命，并获得等量[blue]灰烬[/blue]。[gold]消耗[/gold]。",
+
+    "REED_CARD_FLAME_SCALE.title": "炎鳞",
+    "REED_CARD_FLAME_SCALE.description": "获得 {Cards:diff()} 点格挡。若你身上有[red]灼燃[/red]，额外获得等同灼燃层数的格挡（最多15）。",
+
+    "REED_CARD_EMBER_CONDUIT.title": "余烬导管",
+    "REED_CARD_EMBER_CONDUIT.description": "获得 {Cards:diff()} 层[blue]灰烬[/blue]。抽 {Cards:diff()} 张牌。",
+
+    "REED_CARD_SCORCHED_EARTH_PROTOCOL.title": "焦土协议",
+    "REED_CARD_SCORCHED_EARTH_PROTOCOL.description": "将手牌中所有非攻击非技能牌消耗掉，每张提供 {Cards:diff()} 点能量。[gold]消耗[/gold]。",
+
+    "REED_CARD_DRAGONS_LEGACY.title": "龙之传承",
+    "REED_CARD_DRAGONS_LEGACY.description": "获得 {Cards} 层[blue]龙之传承[/blue]。每回合开始时，获得1层[gold]力量[/gold]，并对所有敌人施加1层[red]灼燃[/red]。",
+
+    "REED_CARD_ASH_RECOVERY.title": "灰烬复苏",
+    "REED_CARD_ASH_RECOVERY.description": "获得 {Cards} 层[blue]灰烬复苏[/blue]。每当你消耗一张牌时，恢复1点生命。"
 }

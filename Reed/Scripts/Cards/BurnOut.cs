@@ -10,9 +10,11 @@ using Reed.Scripts.Powers;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 鐏肩┛锛圫earingPierce锛夆€斺�?涓嶅父瑙佹敾鍑荤墝銆?/// 1璐癸紝閫犳垚6鐐逛激瀹筹紙鍗囩骇�?鐐癸級锛岀洰鏍囨瘡�?灞傜伡鐕冮澶栭€犳�?鐐逛激瀹筹紙鍗囩骇�?鐐癸級銆?/// </summary>
+/// 焚尽（BurnOut）——罕见攻击牌。
+/// 1费，造成8点伤害，如果目标灼燃≥5，则造成额外12点伤害并移除全部灼燃（升级后基础伤害+4）。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
-public sealed class SearingPierce : ModCardTemplate
+public sealed class BurnOut : ModCardTemplate
 {
     private const int BaseEnergyCost = 1;
     private const CardType CardKind = CardType.Attack;
@@ -20,39 +22,42 @@ public sealed class SearingPierce : ModCardTemplate
     private const TargetType CardTarget = TargetType.AnyEnemy;
     private const bool ShowInCardLibrary = true;
 
+    private const int BonusDamage = 12;
+    private const int ScorchThreshold = 5;
+
     public override CardAssetProfile AssetProfile => new(
         PortraitPath: $"{Entry.ResPath}/images/cards/{GetType().Name}.svg");
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(6, ValueProp.Move),
-        new CardsVar(3) // 姣忓眰鐏肩噧棰濆浼ゅ
+        new DamageVar(8, ValueProp.Move),
+        new CardsVar(ScorchThreshold) // 灼燃阈值
     ];
 
-    public SearingPierce() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
+    public BurnOut() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target);
 
-        int damage = (int)DynamicVars.Damage.BaseValue;
-        int bonusPerScorch = DynamicVars.Cards.IntValue;
         int scorchStacks = ReedCombatHelper.GetPowerAmount<Scorch>(cardPlay.Target);
-        damage += bonusPerScorch * scorchStacks;
+        int totalDamage = (int)DynamicVars.Damage.BaseValue;
 
-        await DamageCmd.Attack(damage)
+        if (scorchStacks >= DynamicVars.Cards.IntValue)
+        {
+            totalDamage += BonusDamage;
+        }
+
+        await DamageCmd.Attack(totalDamage)
             .FromCard(this, cardPlay)
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
 
-        // 削弱：目标获得灼燃免疫（不再受到灼燃伤害）
-        await PowerCmd.Apply<ScorchImmunity>(choiceContext, cardPlay.Target, 1, Owner.Creature, null);
+        if (scorchStacks >= DynamicVars.Cards.IntValue)
+        {
+            await ReedCombatHelper.RemoveAllPower<Scorch>(cardPlay.Target, choiceContext);
+        }
     }
 
-    protected override void OnUpgrade()
-    {
-        DynamicVars.Damage.UpgradeValueBy(2);
-        DynamicVars.Cards.UpgradeValueBy(2);
-    }
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(4);
 }
-

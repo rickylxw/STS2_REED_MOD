@@ -1,0 +1,25 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+  <defs>
+    <radialGradient id='immunityGlow' cx='50%' cy='50%' r='55%'>
+      <stop offset='0%' stop-color='#7a8a9a' stop-opacity='0.35'/>
+      <stop offset='100%' stop-color='#0d1a1a' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='shieldOuter' x1='50%' y1='0%' x2='50%' y2='100%'>
+      <stop offset='0%' stop-color='#a0b8c8'/>
+      <stop offset='50%' stop-color='#5a7a8a'/>
+      <stop offset='100%' stop-color='#2a4a5a'/>
+    </linearGradient>
+    <linearGradient id='flameRemnant' x1='50%' y1='0%' x2='50%' y2='100%'>
+      <stop offset='0%' stop-color='#ff9933'/>
+      <stop offset='100%' stop-color='#cc3300'/>
+    </linearGradient>
+  </defs>
+  <rect width='64' height='64' fill='#0d1a1a' rx='8'/>
+  <rect width='64' height='64' fill='url(#immunityGlow)' rx='8'/>
+  <!-- Shield -->
+  <path d='M32 6 L50 14 L50 32 C50 44 42 54 32 58 C22 54 14 44 14 32 L14 14 Z' fill='url(#shieldOuter)' stroke='#1a3a4a' stroke-width='1.5'/>
+  <!-- Diagonal strike-through line -->
+  <line x1='18' y1='22' x2='46' y2='50' stroke='#cc3333' stroke-width='3.5' stroke-linecap='round' opacity='0.85'/>
+  <!-- Small flame icon at bottom, being blocked -->
+  <path d='M32 38 C35 42 37 44 36 48 C35 51 33 52 32 52 C31 52 29 51 28 48 C27 44 29 42 32 38 Z' fill='url(#flameRemnant)' opacity='0.5'/>
+</svg>

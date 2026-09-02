@@ -1,0 +1,104 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgDB' cx='50%' cy='35%' r='80%'>
+      <stop offset='0%' stop-color='#2a1505'/>
+      <stop offset='55%' stop-color='#1a0d08'/>
+      <stop offset='100%' stop-color='#0a0503'/>
+    </radialGradient>
+    <linearGradient id='dragonDB' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#2a1505'/>
+      <stop offset='50%' stop-color='#1a0d08'/>
+      <stop offset='100%' stop-color='#080402'/>
+    </linearGradient>
+    <linearGradient id='flameCoreDB' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='15%' stop-color='#ffe060'/>
+      <stop offset='40%' stop-color='#ff8800'/>
+      <stop offset='70%' stop-color='#c41a05'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </linearGradient>
+    <linearGradient id='flameMidDB' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ffaa00' stop-opacity='0.9'/>
+      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.7'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </linearGradient>
+    <radialGradient id='emberGlowDB' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0' stop-opacity='0.9'/>
+      <stop offset='40%' stop-color='#ff8800' stop-opacity='0.5'/>
+      <stop offset='100%' stop-color='#c41a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='glowDB'><feGaussianBlur stdDeviation='3' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>
+    <filter id='bigBlurDB'><feGaussianBlur stdDeviation='8'/></filter>
+  </defs>
+
+  <rect width='250' height='190' rx='8' fill='url(#bgDB)'/>
+
+  <!-- heat haze -->
+  <ellipse cx='125' cy='120' rx='100' ry='60' fill='#e6591a' opacity='0.05' filter='url(#bigBlurDB)'/>
+
+  <!-- dragon head silhouette (top, facing forward/down) -->
+  <path d='M 60,30 L 45,20 L 52,8 L 68,15 L 80,5 L 92,15 L 108,8 L 115,20 L 100,30 L 125,35 L 150,30 L 135,20 L 142,8 L 158,15 L 170,5 L 182,15 L 198,8 L 205,20 L 190,30 L 195,42 L 180,50 L 165,48 L 155,55 L 145,52 L 135,58 L 125,56 L 115,58 L 105,52 L 95,55 L 85,48 L 70,50 L 55,42 Z' fill='url(#dragonDB)' stroke='#3a1f10' stroke-width='0.8'/>
+
+  <!-- horns detail -->
+  <path d='M 45,20 L 52,8 L 68,15' fill='none' stroke='#3a2018' stroke-width='0.6' opacity='0.5'/>
+  <path d='M 198,8 L 205,20 L 190,30' fill='none' stroke='#3a2018' stroke-width='0.6' opacity='0.5'/>
+
+  <!-- dragon eyes (glowing) -->
+  <ellipse cx='95' cy='38' rx='5' ry='2.5' fill='#ff8800' opacity='0.85' filter='url(#glowDB)'/>
+  <ellipse cx='95' cy='38' rx='2.5' ry='1.5' fill='#ffe060'/>
+  <ellipse cx='155' cy='38' rx='5' ry='2.5' fill='#ff8800' opacity='0.85' filter='url(#glowDB)'/>
+  <ellipse cx='155' cy='38' rx='2.5' ry='1.5' fill='#ffe060'/>
+
+  <!-- snout/nostrils -->
+  <ellipse cx='115' cy='55' rx='3' ry='2' fill='#080402' opacity='0.7'/>
+  <ellipse cx='135' cy='55' rx='3' ry='2' fill='#080402' opacity='0.7'/>
+
+  <!-- teeth -->
+  <path d='M 100,52 L 102,60 L 104,52 Z' fill='#fff8e0' opacity='0.6'/>
+  <path d='M 112,56 L 114,64 L 116,56 Z' fill='#fff8e0' opacity='0.55'/>
+  <path d='M 134,56 L 136,64 L 138,56 Z' fill='#fff8e0' opacity='0.55'/>
+  <path d='M 146,52 L 148,60 L 150,52 Z' fill='#fff8e0' opacity='0.6'/>
+
+  <!-- rim light on jaw from fire glow -->
+  <path d='M 70,50 L 85,48 L 95,55 L 105,52' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.35'/>
+  <path d='M 145,52 L 155,55 L 165,48 L 180,50' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.35'/>
+
+  <!-- fire breath glow behind -->
+  <ellipse cx='125' cy='100' rx='60' ry='50' fill='url(#emberGlowDB)' opacity='0.25' filter='url(#bigBlurDB)'/>
+
+  <!-- outer fire breath (widest, filling lower half) -->
+  <path d='M 80,58 Q 95,75 85,100 Q 80,130 100,155 Q 110,175 125,185 Q 140,175 150,155 Q 170,130 165,100 Q 155,75 170,58 Q 150,68 140,62 Q 130,72 125,66 Q 120,72 110,62 Q 100,68 80,58 Z' fill='url(#flameMidDB)' opacity='0.7'/>
+
+  <!-- mid fire breath -->
+  <path d='M 95,60 Q 105,80 100,105 Q 97,130 110,150 Q 118,168 125,180 Q 132,168 140,150 Q 153,130 150,105 Q 145,80 155,60 Q 140,68 132,64 Q 128,72 125,68 Q 122,72 118,64 Q 110,68 95,60 Z' fill='url(#flameCoreDB)' opacity='0.75'/>
+
+  <!-- inner bright fire -->
+  <path d='M 108,62 Q 115,82 112,105 Q 110,125 118,145 Q 122,160 125,172 Q 128,160 132,145 Q 140,125 138,105 Q 135,82 142,62 Q 132,66 128,64 Q 127,70 125,68 Q 123,70 122,64 Q 118,66 108,62 Z' fill='#ffaa00' opacity='0.55'/>
+
+  <!-- core (brightest) -->
+  <path d='M 118,64 Q 122,84 120,105 Q 119,125 124,142 Q 126,155 125,165 Q 124,155 126,142 Q 131,125 130,105 Q 128,84 132,64 Q 128,66 126,64 Q 126,68 125,67 Q 124,68 124,64 Q 122,66 118,64 Z' fill='#ffe060' opacity='0.6'/>
+
+  <!-- fire tongues licking outward -->
+  <path d='M 85,75 Q 72,90 78,110 Q 70,95 75,75 Z' fill='#e6591a' opacity='0.5' filter='url(#glowDB)'/>
+  <path d='M 165,75 Q 178,90 172,110 Q 180,95 175,75 Z' fill='#e6591a' opacity='0.5' filter='url(#glowDB)'/>
+  <path d='M 80,120 Q 65,135 72,155 Q 62,140 68,120 Z' fill='#c41a05' opacity='0.45'/>
+  <path d='M 170,120 Q 185,135 178,155 Q 188,140 182,120 Z' fill='#c41a05' opacity='0.45'/>
+
+  <!-- embers in breath -->
+  <circle cx='105' cy='80' r='1.5' fill='#ffe060' opacity='0.75' filter='url(#glowDB)'/>
+  <circle cx='145' cy='85' r='1.2' fill='#ffaa00' opacity='0.65'/>
+  <circle cx='115' cy='110' r='1.8' fill='#ffe060' opacity='0.7' filter='url(#glowDB)'/>
+  <circle cx='140' cy='115' r='1.3' fill='#ff8800' opacity='0.6'/>
+  <circle cx='100' cy='140' r='1.2' fill='#ffaa00' opacity='0.55'/>
+  <circle cx='155' cy='145' r='1.5' fill='#ff8800' opacity='0.55'/>
+  <circle cx='120' cy='160' r='1' fill='#c41a05' opacity='0.4'/>
+
+  <!-- scattered sparks -->
+  <circle cx='70' cy='100' r='1' fill='#ff8800' opacity='0.45' filter='url(#glowDB)'/>
+  <circle cx='185' cy='95' r='1' fill='#ff8800' opacity='0.45' filter='url(#glowDB)'/>
+  <circle cx='65' cy='130' r='0.8' fill='#c41a05' opacity='0.3'/>
+  <circle cx='190' cy='135' r='0.8' fill='#c41a05' opacity='0.3'/>
+
+  <!-- bottom glow -->
+  <ellipse cx='125' cy='185' rx='55' ry='8' fill='#8a2a05' opacity='0.3' filter='url(#glowDB)'/>
+</svg>

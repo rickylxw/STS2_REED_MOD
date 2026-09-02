@@ -1,0 +1,79 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+  <defs>
+    <radialGradient id='bgARP' cx='50%' cy='60%' r='60%'>
+      <stop offset='0%' stop-color='#2a1815'/>
+      <stop offset='60%' stop-color='#1a0d08'/>
+      <stop offset='100%' stop-color='#0a0503'/>
+    </radialGradient>
+    <radialGradient id='ashGlowARP' cx='50%' cy='55%' r='55%'>
+      <stop offset='0%' stop-color='#8a8278' stop-opacity='0.25'/>
+      <stop offset='100%' stop-color='#1a0d08' stop-opacity='0'/>
+    </radialGradient>
+    <radialGradient id='emberARP' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='35%' stop-color='#ffcc40'/>
+      <stop offset='70%' stop-color='#ff8800'/>
+      <stop offset='100%' stop-color='#c41a05' stop-opacity='0'/>
+    </radialGradient>
+    <radialGradient id='healARP' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#ffe060' stop-opacity='0.9'/>
+      <stop offset='50%' stop-color='#ff8800' stop-opacity='0.5'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='glowARP'><feGaussianBlur stdDeviation='1.5' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>
+    <filter id='softARP'><feGaussianBlur stdDeviation='3'/></filter>
+  </defs>
+
+  <rect width='64' height='64' fill='url(#bgARP)' rx='8'/>
+  <rect width='64' height='64' fill='url(#ashGlowARP)' rx='8'/>
+
+  <!-- ash base at bottom -->
+  <ellipse cx='32' cy='56' rx='20' ry='5' fill='#4a423c' opacity='0.5'/>
+  <ellipse cx='32' cy='54' rx='14' ry='4' fill='#5a5248' opacity='0.4'/>
+
+  <!-- rising ash particles (forming a healing cross/plus shape) -->
+  <!-- vertical bar of cross -->
+  <circle cx='32' cy='48' r='2.5' fill='#7a7268' opacity='0.6'/>
+  <circle cx='32' cy='42' r='2' fill='#8a8278' opacity='0.55'/>
+  <circle cx='32' cy='36' r='2.5' fill='#9a9288' opacity='0.5'/>
+  <circle cx='32' cy='30' r='2' fill='#8a8278' opacity='0.45'/>
+  <circle cx='32' cy='24' r='1.8' fill='#7a7268' opacity='0.4'/>
+  <circle cx='32' cy='18' r='1.5' fill='#6a6258' opacity='0.35'/>
+
+  <!-- horizontal bar of cross -->
+  <circle cx='20' cy='33' r='2' fill='#8a8278' opacity='0.55'/>
+  <circle cx='24' cy='33' r='1.8' fill='#9a9288' opacity='0.5'/>
+  <circle cx='28' cy='33' r='2' fill='#8a8278' opacity='0.5'/>
+  <circle cx='36' cy='33' r='2' fill='#9a9288' opacity='0.5'/>
+  <circle cx='40' cy='33' r='1.8' fill='#8a8278' opacity='0.5'/>
+  <circle cx='44' cy='33' r='2' fill='#7a7268' opacity='0.45'/>
+
+  <!-- finer ash dust forming the shape -->
+  <circle cx='30' cy='46' r='1' fill='#6a6258' opacity='0.4'/>
+  <circle cx='34' cy='44' r='0.8' fill='#7a7268' opacity='0.35'/>
+  <circle cx='29' cy='40' r='0.8' fill='#5a5248' opacity='0.3'/>
+  <circle cx='35' cy='38' r='0.8' fill='#6a6258' opacity='0.3'/>
+  <circle cx='26' cy='35' r='0.6' fill='#7a7268' opacity='0.3'/>
+  <circle cx='38' cy='35' r='0.6' fill='#6a6258' opacity='0.3'/>
+  <circle cx='28' cy='28' r='0.6' fill='#5a5248' opacity='0.25'/>
+  <circle cx='36' cy='28' r='0.6' fill='#6a6258' opacity='0.25'/>
+
+  <!-- central ember glow (healing warmth) -->
+  <circle cx='32' cy='33' r='6' fill='url(#healARP)' opacity='0.6' filter='url(#glowARP)'/>
+  <circle cx='32' cy='33' r='2.5' fill='#ffe060' opacity='0.7' filter='url(#glowARP)'/>
+  <circle cx='32' cy='33' r='1' fill='#fff8e0' opacity='0.9'/>
+
+  <!-- ember particles rising -->
+  <circle cx='26' cy='42' r='1' fill='#ff8800' opacity='0.5' filter='url(#glowARP)'/>
+  <circle cx='38' cy='40' r='0.8' fill='#ffaa00' opacity='0.45'/>
+  <circle cx='24' cy='50' r='0.8' fill='#e6591a' opacity='0.4'/>
+  <circle cx='40' cy='48' r='0.8' fill='#ff8800' opacity='0.4'/>
+  <circle cx='30' cy='15' r='1' fill='#ffe060' opacity='0.4' filter='url(#glowARP)'/>
+  <circle cx='34' cy='12' r='0.8' fill='#ff8800' opacity='0.35'/>
+
+  <!-- ash trails rising (swirl) -->
+  <path d='M 22 50 Q 26 45 28 40' fill='none' stroke='#5a5248' stroke-width='0.8' stroke-opacity='0.3'/>
+  <path d='M 42 50 Q 38 45 36 40' fill='none' stroke='#5a5248' stroke-width='0.8' stroke-opacity='0.3'/>
+  <path d='M 28 20 Q 30 16 32 12' fill='none' stroke='#6a6258' stroke-width='0.6' stroke-opacity='0.25'/>
+  <path d='M 36 20 Q 34 16 32 12' fill='none' stroke='#6a6258' stroke-width='0.6' stroke-opacity='0.25'/>
+</svg>

@@ -21,5 +21,14 @@
     "REED_POWER_EVERFLAME_POWER.description": "每回合结束时，若有敌人带有[red]灼燃[/red]，获得 {Amount} 层[blue]灰烬[/blue]。",
 
     "REED_POWER_UNITED_FRONT_POWER.title": "同燃共阵",
-    "REED_POWER_UNITED_FRONT_POWER.description": "每回合开始时，对所有敌人施加[red]灼燃[/red]，层数等于友方数量 × {Amount}。"
+    "REED_POWER_UNITED_FRONT_POWER.description": "每回合开始时，对所有敌人施加[red]灼燃[/red]，层数等于友方数量 × {Amount}。",
+
+    "REED_POWER_DRAGONS_LEGACY_POWER.title": "龙之传承",
+    "REED_POWER_DRAGONS_LEGACY_POWER.description": "每回合开始时，获得 {Amount} 层[gold]力量[/gold]，并对所有敌人施加 {Amount} 层[red]灼燃[/red]。",
+
+    "REED_POWER_ASH_RECOVERY_POWER.title": "灰烬复苏",
+    "REED_POWER_ASH_RECOVERY_POWER.description": "每当你消耗一张牌时，恢复 {Amount} 点生命。",
+
+    "REED_POWER_SCORCH_IMMUNITY.title": "灼燃免疫",
+    "REED_POWER_SCORCH_IMMUNITY.description": "不再受到灼燃伤害。"
 }

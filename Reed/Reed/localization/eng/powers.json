@@ -21,5 +21,14 @@
     "REED_POWER_EVERFLAME_POWER.description": "At the end of each turn, if any enemy has [red]Scorch[/red], gain {Amount} [blue]Ash[/blue].",
 
     "REED_POWER_UNITED_FRONT_POWER.title": "United Front",
-    "REED_POWER_UNITED_FRONT_POWER.description": "At the start of each turn, apply [red]Scorch[/red] to ALL enemies equal to ally count x {Amount}."
+    "REED_POWER_UNITED_FRONT_POWER.description": "At the start of each turn, apply [red]Scorch[/red] to ALL enemies equal to ally count x {Amount}.",
+
+    "REED_POWER_DRAGONS_LEGACY_POWER.title": "Dragon's Legacy",
+    "REED_POWER_DRAGONS_LEGACY_POWER.description": "At the start of each turn, gain {Amount} [gold]Strength[/gold] and apply {Amount} [red]Scorch[/red] to ALL enemies.",
+
+    "REED_POWER_ASH_RECOVERY_POWER.title": "Ash Recovery",
+    "REED_POWER_ASH_RECOVERY_POWER.description": "Whenever you Exhaust a card, heal {Amount} HP.",
+
+    "REED_POWER_SCORCH_IMMUNITY.title": "Scorch Immunity",
+    "REED_POWER_SCORCH_IMMUNITY.description": "No longer takes Scorch damage."
 }

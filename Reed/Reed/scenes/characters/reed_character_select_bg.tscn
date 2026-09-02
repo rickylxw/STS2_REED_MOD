@@ -15,17 +15,18 @@ offset_bottom = 0.0
 color = Color(0.08, 0.04, 0.02, 1)
 
 [node name="Poster" type="TextureRect" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -420.0
-offset_top = 20.0
-offset_right = 420.0
-offset_bottom = 1020.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="NameLabel" type="Label" parent="."]
 anchors_preset = 7
@@ -40,14 +41,25 @@ text = "焰影苇草"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="SelectionBox" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 170.0
+offset_top = 540.0
+offset_right = 570.0
+offset_bottom = 760.0
+grow_horizontal = 2
+color = Color(0.2, 0.2, 0.2, 0.8)
+
 [node name="PrevButton" type="Button" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -510.0
-offset_top = 480.0
-offset_right = -440.0
-offset_bottom = 540.0
+offset_left = 190.0
+offset_top = 630.0
+offset_right = 260.0
+offset_bottom = 690.0
 grow_horizontal = 2
 text = "◀"
 mouse_default_cursor_shape = 2
@@ -56,10 +68,10 @@ mouse_default_cursor_shape = 2
 anchors_preset = 7
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 440.0
-offset_top = 480.0
-offset_right = 510.0
-offset_bottom = 540.0
+offset_left = 490.0
+offset_top = 630.0
+offset_right = 560.0
+offset_bottom = 690.0
 grow_horizontal = 2
 text = "▶"
 mouse_default_cursor_shape = 2
@@ -76,6 +88,20 @@ grow_horizontal = 2
 text = "默认"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ChibiPreview" type="TextureRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 130.0
+offset_top = 120.0
+offset_right = 640.0
+offset_bottom = 820.0
+grow_horizontal = 2
+expand_mode = 1
+stretch_mode = 5
+z_index = 100
+mouse_filter = 2
 
 [connection signal="pressed" from="PrevButton" to="." method="_on_prev_pressed"]
 [connection signal="pressed" from="NextButton" to="." method="_on_next_pressed"]

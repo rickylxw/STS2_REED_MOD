@@ -1,0 +1,117 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgSFC' cx='50%' cy='50%' r='75%'>
+      <stop offset='0%' stop-color='#2a1505'/>
+      <stop offset='50%' stop-color='#1a0d08'/>
+      <stop offset='100%' stop-color='#0a0503'/>
+    </radialGradient>
+    <linearGradient id='scaleMetalSFC' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#8a7060'/>
+      <stop offset='25%' stop-color='#5a4838'/>
+      <stop offset='50%' stop-color='#3a2c20'/>
+      <stop offset='75%' stop-color='#2a2018'/>
+      <stop offset='100%' stop-color='#1a1410'/>
+    </linearGradient>
+    <linearGradient id='scaleRimSFC' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.8'/>
+      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.6'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0.4'/>
+    </linearGradient>
+    <linearGradient id='chainSFC' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#5a4838'/>
+      <stop offset='50%' stop-color='#3a2c20'/>
+      <stop offset='100%' stop-color='#1a1410'/>
+    </linearGradient>
+    <linearGradient id='flamePatSFC' x1='0%' y1='100%' x2='0%' y2='0%'>
+      <stop offset='0%' stop-color='#ffe060' stop-opacity='0.9'/>
+      <stop offset='40%' stop-color='#ff8800' stop-opacity='0.7'/>
+      <stop offset='80%' stop-color='#c41a05' stop-opacity='0.4'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </linearGradient>
+    <radialGradient id='charmGlowSFC' cx='50%' cy='45%' r='50%'>
+      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.5'/>
+      <stop offset='40%' stop-color='#e6591a' stop-opacity='0.25'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <radialGradient id='emberSFC' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='40%' stop-color='#ffcc40'/>
+      <stop offset='80%' stop-color='#e6591a'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='glowSFC'><feGaussianBlur stdDeviation='3' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>
+    <filter id='softSFC'><feGaussianBlur stdDeviation='2'/></filter>
+  </defs>
+
+  <rect width='250' height='190' rx='8' fill='url(#bgSFC)'/>
+
+  <!-- ambient glow -->
+  <ellipse cx='125' cy='110' rx='80' ry='85' fill='url(#charmGlowSFC)' filter='url(#glowSFC)' opacity='0.6'/>
+
+  <!-- background embers -->
+  <circle cx='35' cy='40' r='1.2' fill='#ff8800' opacity='0.5' filter='url(#glowSFC)'/>
+  <circle cx='215' cy='45' r='1.5' fill='#ffaa00' opacity='0.5'/>
+  <circle cx='200' cy='160' r='1.2' fill='#e6591a' opacity='0.4'/>
+  <circle cx='45' cy='155' r='1' fill='#ff8800' opacity='0.4'/>
+  <circle cx='20' cy='90' r='0.8' fill='#ffaa00' opacity='0.3'/>
+  <circle cx='230' cy='95' r='0.8' fill='#c41a05' opacity='0.3'/>
+
+  <!-- chain (hanging from top) -->
+  <ellipse cx='125' cy='15' rx='6' ry='3' fill='url(#chainSFC)' stroke='#1a0d08' stroke-width='0.5'/>
+  <!-- chain links -->
+  <ellipse cx='125' cy='25' rx='4' ry='6' fill='none' stroke='url(#chainSFC)' stroke-width='2'/>
+  <ellipse cx='125' cy='37' rx='4' ry='6' fill='none' stroke='url(#chainSFC)' stroke-width='2'/>
+  <ellipse cx='125' cy='49' rx='4' ry='6' fill='none' stroke='url(#chainSFC)' stroke-width='2'/>
+
+  <!-- bail/loop connecting chain to pendant -->
+  <ellipse cx='125' cy='62' rx='8' ry='10' fill='none' stroke='url(#scaleMetalSFC)' stroke-width='3'/>
+  <ellipse cx='125' cy='62' rx='8' ry='10' fill='none' stroke='#1a0d08' stroke-width='0.5'/>
+
+  <!-- pendant frame (decorative ring) -->
+  <ellipse cx='125' cy='115' rx='55' ry='60' fill='none' stroke='url(#scaleMetalSFC)' stroke-width='4' rx='3'/>
+  <ellipse cx='125' cy='115' rx='55' ry='60' fill='none' stroke='#1a0d08' stroke-width='1'/>
+  <ellipse cx='125' cy='115' rx='50' ry='55' fill='none' stroke='url(#scaleRimSFC)' stroke-width='1.5' opacity='0.6'/>
+
+  <!-- pendant inner fill -->
+  <ellipse cx='125' cy='115' rx='50' ry='55' fill='#1a0d08' opacity='0.5'/>
+
+  <!-- dragon scale (main charm element) -->
+  <path d='M 125,75 C 95,80 75,100 72,125 C 70,145 80,160 100,170 C 110,174 118,176 125,177 C 132,176 140,174 150,170 C 170,160 180,145 178,125 C 175,100 155,80 125,75 Z' fill='url(#scaleMetalSFC)' stroke='url(#scaleRimSFC)' stroke-width='2'/>
+
+  <!-- scale inner rim -->
+  <path d='M 125,82 C 100,87 82,103 80,125 C 78,142 88,155 105,165 C 112,169 118,171 125,172 C 132,171 138,169 145,165 C 162,155 172,142 170,125 C 168,103 150,87 125,82 Z' fill='none' stroke='#3a2818' stroke-width='0.8' opacity='0.5'/>
+
+  <!-- metallic sheen (top-left highlight) -->
+  <path d='M 100,88 C 88,95 78,108 76,120 C 74,110 80,95 90,85 C 95,82 98,84 100,88 Z' fill='#9a8878' opacity='0.25'/>
+
+  <!-- flame pattern on scale (central vertical) -->
+  <path d='M 125,90 C 121,105 129,110 125,125 C 121,140 129,145 125,160 C 122,168 128,170 125,175' fill='none' stroke='url(#flamePatSFC)' stroke-width='2.5' opacity='0.8' filter='url(#softSFC)'/>
+
+  <!-- flame side tongues -->
+  <path d='M 100,105 C 95,115 98,125 93,135 C 90,145 94,150 90,158' fill='none' stroke='url(#flamePatSFC)' stroke-width='1.5' opacity='0.5'/>
+  <path d='M 150,105 C 155,115 152,125 157,135 C 160,145 156,150 160,158' fill='none' stroke='url(#flamePatSFC)' stroke-width='1.5' opacity='0.5'/>
+
+  <!-- central ember glow -->
+  <ellipse cx='125' cy='120' rx='15' ry='25' fill='url(#emberSFC)' opacity='0.4' filter='url(#glowSFC)'/>
+  <circle cx='125' cy='115' r='3' fill='#ffe060' opacity='0.65' filter='url(#glowSFC)'/>
+
+  <!-- scale ridge lines -->
+  <path d='M 125,85 L 125,170' fill='none' stroke='#2a2018' stroke-width='0.6' opacity='0.35'/>
+  <path d='M 105,92 Q 95,125 100,162' fill='none' stroke='#2a2018' stroke-width='0.4' opacity='0.3'/>
+  <path d='M 145,92 Q 155,125 150,162' fill='none' stroke='#2a2018' stroke-width='0.4' opacity='0.3'/>
+
+  <!-- pendant decorative gems at frame points -->
+  <circle cx='125' cy='55' r='3' fill='url(#emberSFC)' opacity='0.8' filter='url(#glowSFC)'/>
+  <circle cx='125' cy='55' r='1.5' fill='#ffe060' opacity='0.9'/>
+  <circle cx='70' cy='115' r='2' fill='#ff8800' opacity='0.5' filter='url(#glowSFC)'/>
+  <circle cx='180' cy='115' r='2' fill='#ffaa00' opacity='0.5' filter='url(#glowSFC)'/>
+  <circle cx='125' cy='175' r='2.5' fill='#ff8800' opacity='0.6' filter='url(#glowSFC)'/>
+
+  <!-- floating sparks -->
+  <circle cx='85' cy='70' r='1' fill='#ffe060' opacity='0.55' filter='url(#glowSFC)'/>
+  <circle cx='165' cy='70' r='1' fill='#ff8800' opacity='0.5'/>
+  <circle cx='95' cy='175' r='0.8' fill='#ffaa00' opacity='0.4'/>
+  <circle cx='155' cy='175' r='0.8' fill='#c41a05' opacity='0.35'/>
+  <circle cx='60' cy='130' r='0.8' fill='#ff8800' opacity='0.35'/>
+  <circle cx='190' cy='130' r='0.8' fill='#c41a05' opacity='0.3'/>
+</svg>

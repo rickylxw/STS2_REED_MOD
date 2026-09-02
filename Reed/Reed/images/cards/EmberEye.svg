@@ -1,0 +1,108 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgEE' cx='50%' cy='50%' r='75%'>
+      <stop offset='0%' stop-color='#2a1505'/>
+      <stop offset='50%' stop-color='#1a0d08'/>
+      <stop offset='100%' stop-color='#0a0503'/>
+    </radialGradient>
+    <radialGradient id='irisEE' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#ffe060'/>
+      <stop offset='25%' stop-color='#ff8800'/>
+      <stop offset='55%' stop-color='#e6591a'/>
+      <stop offset='80%' stop-color='#c41a05'/>
+      <stop offset='100%' stop-color='#8a2a05'/>
+    </radialGradient>
+    <radialGradient id='pupilEE' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='15%' stop-color='#ffe060'/>
+      <stop offset='40%' stop-color='#ff8800'/>
+      <stop offset='70%' stop-color='#c41a05'/>
+      <stop offset='100%' stop-color='#1a0d08'/>
+    </radialGradient>
+    <radialGradient id='scleraEE' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#3a2218'/>
+      <stop offset='60%' stop-color='#2a1505'/>
+      <stop offset='100%' stop-color='#1a0d08'/>
+    </radialGradient>
+    <radialGradient id='glowEE' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.5'/>
+      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.2'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='glowEE'><feGaussianBlur stdDeviation='3' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>
+    <filter id='bigEE'><feGaussianBlur stdDeviation='8'/></filter>
+  </defs>
+
+  <rect width='250' height='190' rx='8' fill='url(#bgEE)'/>
+
+  <!-- ambient glow -->
+  <ellipse cx='125' cy='95' rx='120' ry='80' fill='url(#glowEE)' filter='url(#bigEE)'/>
+
+  <!-- flame wisps in background -->
+  <path d='M 30,150 Q 25,120 35,100 Q 28,80 40,60 Q 35,50 45,35' fill='none' stroke='#e6591a' stroke-width='1' opacity='0.15' filter='url(#glowEE)'/>
+  <path d='M 220,150 Q 225,120 215,100 Q 222,80 210,60 Q 215,50 205,35' fill='none' stroke='#e6591a' stroke-width='1' opacity='0.15' filter='url(#glowEE)'/>
+
+  <!-- background embers -->
+  <circle cx='35' cy='45' r='1.5' fill='#ff8800' opacity='0.5' filter='url(#glowEE)'/>
+  <circle cx='215' cy='40' r='1.2' fill='#ffaa00' opacity='0.45'/>
+  <circle cx='50' cy='160' r='1' fill='#e6591a' opacity='0.4'/>
+  <circle cx='200' cy='165' r='1.5' fill='#ff8800' opacity='0.45'/>
+  <circle cx='20' cy='95' r='0.8' fill='#ffaa00' opacity='0.3'/>
+  <circle cx='230' cy='100' r='0.8' fill='#c41a05' opacity='0.3'/>
+
+  <!-- outer eye glow -->
+  <ellipse cx='125' cy='95' rx='80' ry='50' fill='url(#glowEE)' opacity='0.5' filter='url(#bigEE)'/>
+
+  <!-- eye socket / dark surround -->
+  <ellipse cx='125' cy='95' rx='82' ry='48' fill='#080402' opacity='0.8'/>
+
+  <!-- sclera (dark, ember-lit) -->
+  <ellipse cx='125' cy='95' rx='75' ry='42' fill='url(#scleraEE)'/>
+
+  <!-- sclera veins (ember texture) -->
+  <path d='M 55,85 Q 65,92 72,80' fill='none' stroke='#8a2a05' stroke-width='0.5' opacity='0.4'/>
+  <path d='M 195,85 Q 185,92 178,80' fill='none' stroke='#8a2a05' stroke-width='0.5' opacity='0.4'/>
+  <path d='M 60,110 Q 70,115 78,108' fill='none' stroke='#8a2a05' stroke-width='0.4' opacity='0.3'/>
+  <path d='M 190,110 Q 180,115 172,108' fill='none' stroke='#8a2a05' stroke-width='0.4' opacity='0.3'/>
+
+  <!-- iris (flame-colored) -->
+  <ellipse cx='125' cy='95' rx='38' ry='36' fill='url(#irisEE)'/>
+
+  <!-- iris flame patterns radiating -->
+  <path d='M 125,95 L 100,75 M 125,95 L 150,75 M 125,95 L 100,115 M 125,95 L 150,115 M 125,95 L 88,95 M 125,95 L 162,95 M 125,95 L 125,59 M 125,95 L 125,131' fill='none' stroke='#ffe060' stroke-width='0.8' opacity='0.3'/>
+  <path d='M 125,95 L 110,68 M 125,95 L 140,68 M 125,95 L 108,122 M 125,95 L 142,122' fill='none' stroke='#ff8800' stroke-width='0.6' opacity='0.25'/>
+
+  <!-- pupil (glowing ember) -->
+  <ellipse cx='125' cy='95' rx='14' ry='20' fill='url(#pupilEE)' filter='url(#glowEE)'/>
+
+  <!-- pupil bright core -->
+  <ellipse cx='125' cy='92' rx='6' ry='8' fill='#fff8e0' opacity='0.85' filter='url(#glowEE)'/>
+  <ellipse cx='125' cy='90' rx='3' ry='4' fill='#fff8e0' opacity='0.95'/>
+
+  <!-- catch light -->
+  <circle cx='120' cy='85' r='2' fill='#ffffff' opacity='0.9'/>
+
+  <!-- upper eyelid rim (dark, scaled) -->
+  <path d='M 50,92 Q 80,55 125,53 Q 170,55 200,92' fill='none' stroke='#1a0d08' stroke-width='3'/>
+  <path d='M 50,92 Q 80,55 125,53 Q 170,55 200,92' fill='none' stroke='#3a2010' stroke-width='1' opacity='0.6'/>
+
+  <!-- lower eyelid rim -->
+  <path d='M 50,95 Q 80,130 125,135 Q 170,130 200,95' fill='none' stroke='#1a0d08' stroke-width='2.5'/>
+  <path d='M 50,95 Q 80,130 125,135 Q 170,130 200,95' fill='none' stroke='#3a2010' stroke-width='0.8' opacity='0.5'/>
+
+  <!-- eyelid ember highlights (scales) -->
+  <circle cx='75' cy='62' r='2' fill='#ff8800' opacity='0.4' filter='url(#glowEE)'/>
+  <circle cx='100' cy='55' r='1.5' fill='#ffaa00' opacity='0.35'/>
+  <circle cx='150' cy='55' r='1.5' fill='#ff8800' opacity='0.35'/>
+  <circle cx='175' cy='62' r='2' fill='#ffaa00' opacity='0.4' filter='url(#glowEE)'/>
+
+  <!-- tear duct ember (corner) -->
+  <circle cx='52' cy='90' r='2.5' fill='#ff8800' opacity='0.6' filter='url(#glowEE)'/>
+  <circle cx='198' cy='90' r='2.5' fill='#ff8800' opacity='0.6' filter='url(#glowEE)'/>
+
+  <!-- floating embers near eye -->
+  <circle cx='60' cy='70' r='1' fill='#ffe060' opacity='0.6' filter='url(#glowEE)'/>
+  <circle cx='190' cy='70' r='1' fill='#ffaa00' opacity='0.55'/>
+  <circle cx='70' cy='125' r='0.8' fill='#ff8800' opacity='0.4'/>
+  <circle cx='180' cy='125' r='0.8' fill='#c41a05' opacity='0.35'/>
+</svg>

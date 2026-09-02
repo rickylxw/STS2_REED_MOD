@@ -12,5 +12,8 @@
     "REED_RELIC_FLAME_OF_VICTORIA.description": "每回合结束时，对所有带有[red]灼燃[/red]的敌人造成 {Damage:diff()} 点伤害。",
 
     "REED_RELIC_ASHEN_CORE.title": "灰烬核心",
-    "REED_RELIC_ASHEN_CORE.description": "每次消耗卡牌时，获得 1 层[blue]灰烬[/blue]。"
+    "REED_RELIC_ASHEN_CORE.description": "每次消耗卡牌时，获得 1 层[blue]灰烬[/blue]。",
+
+    "REED_RELIC_SCALE_FLAME_CHARM.title": "鳞火护符",
+    "REED_RELIC_SCALE_FLAME_CHARM.description": "每场战斗中第一次受到伤害时，对攻击者施加3层[red]灼燃[/red]。"
 }

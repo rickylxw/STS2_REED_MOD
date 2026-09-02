@@ -1,0 +1,97 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgFS' cx='50%' cy='50%' r='75%'>
+      <stop offset='0%' stop-color='#2a1505'/>
+      <stop offset='50%' stop-color='#1a0d08'/>
+      <stop offset='100%' stop-color='#0a0503'/>
+    </radialGradient>
+    <linearGradient id='scaleMetalFS' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#8a7060'/>
+      <stop offset='25%' stop-color='#5a4838'/>
+      <stop offset='50%' stop-color='#3a2c20'/>
+      <stop offset='75%' stop-color='#2a2018'/>
+      <stop offset='100%' stop-color='#1a1410'/>
+    </linearGradient>
+    <linearGradient id='scaleRimFS' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.8'/>
+      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.6'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0.4'/>
+    </linearGradient>
+    <radialGradient id='scaleGlowFS' cx='50%' cy='45%' r='50%'>
+      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.5'/>
+      <stop offset='40%' stop-color='#e6591a' stop-opacity='0.25'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='flamePatFS' x1='0%' y1='100%' x2='0%' y2='0%'>
+      <stop offset='0%' stop-color='#ffe060' stop-opacity='0.9'/>
+      <stop offset='40%' stop-color='#ff8800' stop-opacity='0.7'/>
+      <stop offset='80%' stop-color='#c41a05' stop-opacity='0.4'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </linearGradient>
+    <radialGradient id='emberFS' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='40%' stop-color='#ffcc40'/>
+      <stop offset='80%' stop-color='#e6591a'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='glowFS'><feGaussianBlur stdDeviation='3' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>
+    <filter id='softFS'><feGaussianBlur stdDeviation='2'/></filter>
+  </defs>
+
+  <rect width='250' height='190' rx='8' fill='url(#bgFS)'/>
+
+  <!-- ambient glow behind scale -->
+  <ellipse cx='125' cy='90' rx='80' ry='85' fill='url(#scaleGlowFS)' filter='url(#glowFS)' opacity='0.6'/>
+
+  <!-- background embers -->
+  <circle cx='35' cy='40' r='1.2' fill='#ff8800' opacity='0.5' filter='url(#glowFS)'/>
+  <circle cx='215' cy='45' r='1.5' fill='#ffaa00' opacity='0.5'/>
+  <circle cx='200' cy='150' r='1.2' fill='#e6591a' opacity='0.4'/>
+  <circle cx='45' cy='155' r='1' fill='#ff8800' opacity='0.4'/>
+  <circle cx='20' cy='90' r='0.8' fill='#ffaa00' opacity='0.3'/>
+  <circle cx='230' cy='95' r='0.8' fill='#c41a05' opacity='0.3'/>
+
+  <!-- main dragon scale shape (teardrop/shield scale) -->
+  <path d='M 125,20 C 80,25 55,55 50,95 C 48,130 65,160 100,175 C 112,180 120,183 125,184 C 130,183 138,180 150,175 C 185,160 202,130 200,95 C 195,55 170,25 125,20 Z' fill='url(#scaleMetalFS)' stroke='url(#scaleRimFS)' stroke-width='2'/>
+
+  <!-- scale inner rim highlight -->
+  <path d='M 125,28 C 85,33 62,58 58,95 C 56,125 70,152 100,168 C 110,173 118,175 125,176 C 132,175 140,173 150,168 C 180,152 194,125 192,95 C 188,58 165,33 125,28 Z' fill='none' stroke='#3a2818' stroke-width='1' opacity='0.6'/>
+
+  <!-- metallic sheen highlight (top-left) -->
+  <path d='M 95,35 C 78,42 65,58 60,80 C 58,70 62,50 75,38 C 82,33 88,32 95,35 Z' fill='#9a8878' opacity='0.25'/>
+
+  <!-- flame patterns etched into scale (vertical central) -->
+  <path d='M 125,50 C 120,65 130,70 125,85 C 120,100 132,105 125,120 C 118,135 130,140 125,155 C 122,165 128,168 125,175 C 122,168 128,165 125,155 C 128,140 116,135 125,120 C 132,105 118,100 125,85 C 130,70 120,65 125,50 Z' fill='url(#flamePatFS)' opacity='0.8' filter='url(#softFS)'/>
+
+  <!-- flame pattern side tongues -->
+  <path d='M 95,70 C 88,80 92,95 85,105 C 82,115 88,120 82,130 C 80,138 84,142 80,150' fill='none' stroke='url(#flamePatFS)' stroke-width='2' opacity='0.5'/>
+  <path d='M 155,70 C 162,80 158,95 165,105 C 168,115 162,120 168,130 C 170,138 166,142 170,150' fill='none' stroke='url(#flamePatFS)' stroke-width='2' opacity='0.5'/>
+
+  <!-- scale ridge lines (metallic texture) -->
+  <path d='M 125,30 L 125,175' fill='none' stroke='#2a2018' stroke-width='0.8' opacity='0.4'/>
+  <path d='M 100,38 Q 90,95 92,165' fill='none' stroke='#2a2018' stroke-width='0.5' opacity='0.3'/>
+  <path d='M 150,38 Q 160,95 158,165' fill='none' stroke='#2a2018' stroke-width='0.5' opacity='0.3'/>
+  <path d='M 75,65 Q 65,95 70,145' fill='none' stroke='#2a2018' stroke-width='0.4' opacity='0.25'/>
+  <path d='M 175,65 Q 185,95 180,145' fill='none' stroke='#2a2018' stroke-width='0.4' opacity='0.25'/>
+
+  <!-- scale segment borders (overlapping scale pattern) -->
+  <path d='M 70,90 Q 125,85 180,90' fill='none' stroke='#2a2018' stroke-width='0.6' opacity='0.35'/>
+  <path d='M 68,120 Q 125,115 182,120' fill='none' stroke='#2a2018' stroke-width='0.6' opacity='0.3'/>
+  <path d='M 75,145 Q 125,142 175,145' fill='none' stroke='#2a2018' stroke-width='0.5' opacity='0.25'/>
+
+  <!-- central ember glow (warm core) -->
+  <ellipse cx='125' cy='100' rx='18' ry='30' fill='url(#emberFS)' opacity='0.4' filter='url(#glowFS)'/>
+  <circle cx='125' cy='95' r='3' fill='#ffe060' opacity='0.6' filter='url(#glowFS)'/>
+
+  <!-- outer rim ember highlights -->
+  <circle cx='55' cy='95' r='2' fill='#ff8800' opacity='0.5' filter='url(#glowFS)'/>
+  <circle cx='195' cy='95' r='2' fill='#ffaa00' opacity='0.5' filter='url(#glowFS)'/>
+  <circle cx='100' cy='170' r='1.5' fill='#ff8800' opacity='0.45'/>
+  <circle cx='150' cy='170' r='1.5' fill='#ffaa00' opacity='0.45'/>
+
+  <!-- floating sparks -->
+  <circle cx='115' cy='45' r='1.2' fill='#ffe060' opacity='0.6' filter='url(#glowFS)'/>
+  <circle cx='140' cy='40' r='1' fill='#ff8800' opacity='0.5'/>
+  <circle cx='85' cy='55' r='0.8' fill='#ffaa00' opacity='0.4'/>
+  <circle cx='170' cy='55' r='0.8' fill='#c41a05' opacity='0.35'/>
+</svg>

@@ -14,7 +14,6 @@ namespace Reed.Scripts.Relics;
 /// 每次消耗任何卡牌时，获得1层灰烬。
 /// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
-[RegisterCharacterStarterRelic(typeof(ReedCharacter))]
 public sealed class AshenCore : ModRelicTemplate
 {
     public override RelicRarity Rarity => RelicRarity.Common;

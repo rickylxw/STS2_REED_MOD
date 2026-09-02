@@ -1,0 +1,108 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <linearGradient id='skySEP' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#1a0d08'/>
+      <stop offset='55%' stop-color='#2a1505'/>
+      <stop offset='80%' stop-color='#8a2a05'/>
+      <stop offset='100%' stop-color='#c41a05'/>
+    </linearGradient>
+    <linearGradient id='groundSEP' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#3a2418'/>
+      <stop offset='30%' stop-color='#1a0d08'/>
+      <stop offset='100%' stop-color='#0a0504'/>
+    </linearGradient>
+    <radialGradient id='horizonSEP' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.85'/>
+      <stop offset='50%' stop-color='#c41a05' stop-opacity='0.4'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='lavaSEP' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='35%' stop-color='#ffe060'/>
+      <stop offset='70%' stop-color='#ff8800'/>
+      <stop offset='100%' stop-color='#c41a05'/>
+    </linearGradient>
+    <linearGradient id='flameVentSEP' x1='0%' y1='100%' x2='0%' y2='0%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='30%' stop-color='#ffe060'/>
+      <stop offset='60%' stop-color='#ff8800'/>
+      <stop offset='100%' stop-color='#c41a05' stop-opacity='0'/>
+    </linearGradient>
+    <radialGradient id='emberSEP' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='40%' stop-color='#ffcc40'/>
+      <stop offset='80%' stop-color='#e6591a'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='softSEP'><feGaussianBlur stdDeviation='2.5'/></filter>
+    <filter id='bigSEP'><feGaussianBlur stdDeviation='7'/></filter>
+  </defs>
+
+  <!-- sky -->
+  <rect width='250' height='190' rx='8' fill='#1a0d08'/>
+  <rect width='250' height='100' rx='8' fill='url(#skySEP)'/>
+  <!-- horizon glow -->
+  <ellipse cx='125' cy='92' rx='150' ry='35' fill='url(#horizonSEP)' filter='url(#bigSEP)' opacity='0.8'/>
+
+  <!-- scorched ground -->
+  <path d='M0,82 Q60,74 125,80 T250,82 L250,190 L0,190 Z' fill='url(#groundSEP)'/>
+  <!-- ground texture -->
+  <path d='M0,115 Q70,109 140,117 T250,113 L250,190 L0,190 Z' fill='#1a0d08' opacity='0.5'/>
+
+  <!-- distant mountain silhouettes -->
+  <path d='M0,82 L25,68 L45,80 L70,62 L95,80 L120,70 L150,78 L180,60 L210,76 L235,66 L250,80 L250,90 L0,90 Z' fill='#0a0504' opacity='0.85'/>
+
+  <!-- dark charred crack edges (behind lava) -->
+  <path d='M15,105 C35,113 55,109 80,125 C95,137 85,155 105,170 C120,182 140,175 160,185 C180,192 195,178 220,185 C230,188 240,175 250,183' fill='none' stroke='#0a0504' stroke-width='5' opacity='0.6'/>
+
+  <!-- glowing lava cracks (main) -->
+  <path d='M15,105 C35,113 55,109 80,125 C95,137 85,155 105,170 C120,182 140,175 160,185 C180,192 195,178 220,185 C230,188 240,175 250,183' fill='none' stroke='url(#lavaSEP)' stroke-width='2.2' filter='url(#softSEP)' opacity='0.9'/>
+  <path d='M15,105 C35,113 55,109 80,125 C95,137 85,155 105,170 C120,182 140,175 160,185 C180,192 195,178 220,185 C230,188 240,175 250,183' fill='none' stroke='#fff8e0' stroke-width='0.8' opacity='0.7'/>
+
+  <!-- second lava crack -->
+  <path d='M5,135 C25,133 50,145 70,140 C95,133 115,150 135,147 C160,143 175,163 200,155 C220,149 240,165 250,160' fill='none' stroke='url(#lavaSEP)' stroke-width='1.8' filter='url(#softSEP)' opacity='0.85'/>
+  <path d='M5,135 C25,133 50,145 70,140 C95,133 115,150 135,147 C160,143 175,163 200,155 C220,149 240,165 250,160' fill='none' stroke='#ffe060' stroke-width='0.6' opacity='0.6'/>
+
+  <!-- branching cracks -->
+  <path d='M80,125 C85,113 100,105 110,100 C120,95 130,100 140,105' fill='none' stroke='url(#lavaSEP)' stroke-width='1.6' filter='url(#softSEP)' opacity='0.85'/>
+  <path d='M105,170 C110,155 105,143 100,133' fill='none' stroke='url(#lavaSEP)' stroke-width='1.4' filter='url(#softSEP)' opacity='0.8'/>
+  <path d='M160,185 C170,170 175,155 170,140' fill='none' stroke='url(#lavaSEP)' stroke-width='1.5' filter='url(#softSEP)' opacity='0.8'/>
+
+  <!-- small cracks -->
+  <path d='M30,150 L42,158 M55,135 L48,148 M180,113 L195,105 M210,135 L222,145 M115,123 L128,115 M165,125 L178,133' stroke='url(#lavaSEP)' stroke-width='1.2' fill='none' opacity='0.75'/>
+
+  <!-- flame vents -->
+  <path d='M80,125 C75,113 83,101 78,89 C85,97 81,83 87,75 C91,85 95,95 93,105 C97,113 93,123 80,125 Z' fill='url(#flameVentSEP)' opacity='0.9'/>
+  <path d='M160,185 C155,173 162,161 158,149 C165,155 168,143 172,135 C176,145 180,155 175,165 C180,173 172,183 160,185 Z' fill='url(#flameVentSEP)' opacity='0.9'/>
+  <path d='M220,185 C215,173 221,161 217,149 C224,155 226,143 229,135 C233,147 235,157 231,167 C235,175 229,183 220,185 Z' fill='url(#flameVentSEP)' opacity='0.85'/>
+
+  <!-- glowing spots along cracks -->
+  <circle cx='80' cy='125' r='3' fill='url(#emberSEP)' opacity='0.95'/>
+  <circle cx='160' cy='185' r='3' fill='url(#emberSEP)' opacity='0.95'/>
+  <circle cx='220' cy='185' r='3' fill='url(#emberSEP)' opacity='0.9'/>
+  <circle cx='105' cy='170' r='2.5' fill='url(#emberSEP)' opacity='0.9'/>
+  <circle cx='40' cy='113' r='2' fill='url(#emberSEP)' opacity='0.85'/>
+  <circle cx='135' cy='147' r='2' fill='url(#emberSEP)' opacity='0.85'/>
+  <circle cx='200' cy='155' r='2' fill='url(#emberSEP)' opacity='0.85'/>
+
+  <!-- ash/dust in air -->
+  <circle cx='60' cy='50' r='1.4' fill='#3a2418' opacity='0.6'/>
+  <circle cx='90' cy='35' r='1.2' fill='#2a1815' opacity='0.55'/>
+  <circle cx='130' cy='45' r='1.4' fill='#3a2418' opacity='0.6'/>
+  <circle cx='170' cy='30' r='1.2' fill='#2a1815' opacity='0.55'/>
+  <circle cx='200' cy='50' r='1.4' fill='#3a2418' opacity='0.6'/>
+  <circle cx='40' cy='65' r='1' fill='#2a1815' opacity='0.5'/>
+  <circle cx='110' cy='60' r='1' fill='#3a2418' opacity='0.5'/>
+  <circle cx='220' cy='65' r='1' fill='#2a1815' opacity='0.5'/>
+
+  <!-- floating embers -->
+  <circle cx='83' cy='80' r='1' fill='#ffe060' opacity='0.8'/>
+  <circle cx='162' cy='145' r='1' fill='#ffcc40' opacity='0.75'/>
+  <circle cx='223' cy='145' r='1' fill='#ffe060' opacity='0.75'/>
+  <circle cx='100' cy='125' r='0.9' fill='#ff8800' opacity='0.7'/>
+
+  <!-- top vignette -->
+  <rect width='250' height='45' rx='8' fill='#1a0d08' opacity='0.4'/>
+  <!-- bottom vignette -->
+  <rect y='150' width='250' height='40' rx='8' fill='#0a0504' opacity='0.5'/>
+</svg>

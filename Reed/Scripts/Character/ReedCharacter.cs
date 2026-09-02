@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
@@ -6,6 +8,7 @@ using STS2RitsuLib.Interop.AutoRegistration;
 using STS2RitsuLib.Scaffolding.Characters;
 using STS2RitsuLib.Scaffolding.Godot;
 using STS2RitsuLib.Scaffolding.Visuals.StateMachine;
+using Reed.Scripts.Relics;
 
 namespace Reed.Scripts.Character;
 
@@ -39,6 +42,9 @@ public sealed class ReedCharacter : ModCharacterTemplate<ReedCardPool, ReedRelic
     // 初始血量和金币
     public override int StartingHp => 72;
     public override int StartingGold => 99;
+
+    // 开局遗物：苇草之锋 + 灰烬核心
+    protected override IEnumerable<Type> StartingRelicTypes => new[] { typeof(ReedsSpearhead), typeof(AshenCore) };
 
     public override CharacterAssetProfile AssetProfile => new(
         Scenes: new CharacterSceneAssetSet(

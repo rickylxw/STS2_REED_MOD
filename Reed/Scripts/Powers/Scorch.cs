@@ -30,9 +30,12 @@ public sealed class Scorch : ModPowerTemplate
         if (Amount <= 0) return;
         if (side != CombatSide.Enemy) return;
 
-        // 敌人每层灼燃造成1点不可格挡的伤害
-        var damage = new DamageVar(Amount, ValueProp.Unpowered | ValueProp.Unblockable);
-        await CreatureCmd.Damage(choiceContext, Owner, damage, null, null);
+        // 灼燃免疫：不造成伤害，但层数仍衰减
+        if (!ReedCombatHelper.HasPower<ScorchImmunity>(Owner))
+        {
+            var damage = new DamageVar(Amount, ValueProp.Unpowered | ValueProp.Unblockable);
+            await CreatureCmd.Damage(choiceContext, Owner, damage, null, null);
+        }
 
         // 层数减少1
         SetAmount(Amount - 1, false);
