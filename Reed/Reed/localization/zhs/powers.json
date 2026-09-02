@@ -1,0 +1,25 @@
+{
+    "REED_POWER_SCORCH.title": "灼燃",
+    "REED_POWER_SCORCH.description": "回合结束时每层造成1点伤害并减1层。",
+
+    "REED_POWER_SCORCH_COUNTER.title": "灼燃",
+    "REED_POWER_SCORCH_COUNTER.description": "累积的灼燃层数，可被其他卡牌消耗以触发效果。",
+
+    "REED_POWER_ASH.title": "灰烬",
+    "REED_POWER_ASH.description": "累积的灰烬层数，可被其他卡牌消耗。",
+
+    "REED_POWER_FLAME_SHADOW_FORM.title": "焰影形态",
+    "REED_POWER_FLAME_SHADOW_FORM.description": "每回合结束时，对所有敌人造成等于其[red]灼燃[/red]层数的伤害。",
+
+    "REED_POWER_CALAMITY_BREATH.title": "灾厄之息",
+    "REED_POWER_CALAMITY_BREATH.description": "每回合开始时，对所有带有[red]灼燃[/red]的敌人施加 {Amount} 层[red]易伤[/red]。",
+
+    "REED_POWER_EMBER_SPREAD.title": "余烬蔓延",
+    "REED_POWER_EMBER_SPREAD.description": "当敌人死亡时，将其身上的[red]灼燃[/red]层数分配给其他存活敌人。",
+
+    "REED_POWER_EVERFLAME_POWER.title": "不灭之焰",
+    "REED_POWER_EVERFLAME_POWER.description": "每回合结束时，若有敌人带有[red]灼燃[/red]，获得 {Amount} 层[blue]灰烬[/blue]。",
+
+    "REED_POWER_UNITED_FRONT_POWER.title": "同燃共阵",
+    "REED_POWER_UNITED_FRONT_POWER.description": "每回合开始时，对所有敌人施加[red]灼燃[/red]，层数等于友方数量 × {Amount}。"
+}

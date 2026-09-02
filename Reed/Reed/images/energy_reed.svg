@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24">
+  <defs>
+    <linearGradient id="flame" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff4400"/>
+      <stop offset="50%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Flame shape -->
+  <path d="M7,2 C5,5 4,7 4,10 C4,14 5,17 7,22 C9,17 10,14 10,10 C10,7 9,5 7,2 Z" fill="url(#flame)"/>
+  <!-- Inner glow -->
+  <path d="M7,6 C6.2,8 5.5,9.5 5.5,11.5 C5.5,14 6,16 7,19 C8,16 8.5,14 8.5,11.5 C8.5,9.5 7.8,8 7,6 Z" fill="url(#core)"/>
+  <!-- Tiny ember at tip -->
+  <circle cx="7" cy="2" r="0.8" fill="#ffdd00" opacity="0.8"/>
+</svg>

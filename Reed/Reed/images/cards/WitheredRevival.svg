@@ -1,0 +1,99 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgRev' cx='0.5' cy='0.7' r='0.8'>
+      <stop offset='0' stop-color='#2a1815'/>
+      <stop offset='0.55' stop-color='#1a0d08'/>
+      <stop offset='1' stop-color='#0a0504'/>
+    </radialGradient>
+    <linearGradient id='witheredStem' x1='0' y1='1' x2='0' y2='0'>
+      <stop offset='0' stop-color='#3a2418'/>
+      <stop offset='0.5' stop-color='#2a1815'/>
+      <stop offset='1' stop-color='#4a2e1a'/>
+    </linearGradient>
+    <linearGradient id='reviveStem' x1='0' y1='1' x2='0' y2='0'>
+      <stop offset='0' stop-color='#8a2a05'/>
+      <stop offset='0.4' stop-color='#c41a05'/>
+      <stop offset='0.7' stop-color='#e6591a'/>
+      <stop offset='1' stop-color='#ff8800'/>
+    </linearGradient>
+    <linearGradient id='flameShoot' x1='0' y1='1' x2='0' y2='0'>
+      <stop offset='0' stop-color='#e6591a'/>
+      <stop offset='0.4' stop-color='#ff8800'/>
+      <stop offset='0.75' stop-color='#ffe060'/>
+      <stop offset='1' stop-color='#fff8e0'/>
+    </linearGradient>
+    <radialGradient id='emberGlow' cx='0.5' cy='0.5' r='0.5'>
+      <stop offset='0' stop-color='#fff8e0'/>
+      <stop offset='0.4' stop-color='#ffcc40'/>
+      <stop offset='0.8' stop-color='#e6591a'/>
+      <stop offset='1' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <radialGradient id='groundGlow' cx='0.5' cy='0.5' r='0.5'>
+      <stop offset='0' stop-color='#ff8800'/>
+      <stop offset='1' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='softBlur'><feGaussianBlur stdDeviation='2'/></filter>
+    <filter id='bigBlur'><feGaussianBlur stdDeviation='5'/></filter>
+  </defs>
+
+  <!-- background -->
+  <rect width='250' height='190' rx='8' fill='url(#bgRev)'/>
+  <!-- ground glow where revival happens -->
+  <ellipse cx='135' cy='175' rx='90' ry='20' fill='url(#groundGlow)' filter='url(#bigBlur)' opacity='0.55'/>
+
+  <!-- withered dead stem (left/curving down, cracked, dark) -->
+  <path d='M115,175 C108,150 95,135 88,110 C82,90 78,70 75,52 C73,42 72,32 73,24 L80,26 C82,42 86,60 92,80 C98,100 108,118 116,140 C120,152 120,164 118,175 Z' fill='url(#witheredStem)' opacity='0.95'/>
+  <!-- cracks on withered stem -->
+  <path d='M88,70 L92,75 M82,95 L86,98 M95,55 L99,58 M90,120 L94,123 M98,40 L102,43' stroke='#1a0d08' stroke-width='0.8' fill='none' opacity='0.8'/>
+  <!-- dead dry leaves hanging on withered side -->
+  <path d='M78,60 C70,58 66,64 70,70 C74,68 78,64 78,60 Z' fill='#3a2418' opacity='0.85'/>
+  <path d='M84,95 C76,94 72,100 76,106 C80,103 84,99 84,95 Z' fill='#3a2418' opacity='0.85'/>
+  <path d='M92,48 C84,46 80,52 84,58 C88,55 92,51 92,48 Z' fill='#3a2418' opacity='0.8'/>
+
+  <!-- transition zone: stem becomes revived (right side rising) -->
+  <path d='M118,175 C122,155 132,140 138,118 C144,98 150,78 158,60 C164,46 170,36 178,28 L184,32 C178,44 172,56 166,72 C160,90 154,110 148,130 C142,148 138,162 136,175 Z' fill='url(#reviveStem)' opacity='0.95'/>
+
+  <!-- glowing inner core of revived stem -->
+  <path d='M120,170 C124,150 133,138 139,118 C145,98 151,80 158,62 C163,50 168,42 174,34 L176,36 C171,46 166,56 161,70 C156,88 150,108 145,128 C140,146 137,160 134,170 Z' fill='#ffe060' opacity='0.4'/>
+
+  <!-- new flame-colored shoots bursting from revived stem -->
+  <!-- shoot 1 lower right -->
+  <path d='M145,120 C138,108 135,92 140,76 C143,88 147,100 150,112 C151,118 149,120 145,120 Z' fill='url(#flameShoot)' opacity='0.95'/>
+  <!-- shoot 2 mid -->
+  <path d='M155,95 C146,82 144,64 150,48 C154,60 158,72 161,84 C163,90 160,95 155,95 Z' fill='url(#flameShoot)' opacity='0.95'/>
+  <!-- shoot 3 upper -->
+  <path d='M165,68 C156,54 156,36 163,22 C168,34 172,46 174,58 C175,64 170,68 165,68 Z' fill='url(#flameShoot)' opacity='0.95'/>
+  <!-- shoot 4 top tip -->
+  <path d='M175,40 C168,28 170,14 178,6 C182,18 184,28 183,36 C182,42 178,42 175,40 Z' fill='url(#flameShoot)' opacity='0.95'/>
+  <!-- shoot left small -->
+  <path d='M130,150 C124,142 120,130 124,118 C128,128 132,138 134,146 C134,150 132,151 130,150 Z' fill='url(#flameShoot)' opacity='0.9'/>
+
+  <!-- white-hot tips of new growth -->
+  <circle cx='178' cy='6' r='2.5' fill='#fff8e0' filter='url(#softBlur)' opacity='0.95'/>
+  <circle cx='163' cy='22' r='2' fill='#fff8e0' filter='url(#softBlur)' opacity='0.9'/>
+  <circle cx='150' cy='48' r='1.8' fill='#ffe060' filter='url(#softBlur)' opacity='0.9'/>
+  <circle cx='140' cy='76' r='1.8' fill='#ffcc40' filter='url(#softBlur)' opacity='0.85'/>
+
+  <!-- ash/embers floating around new growth -->
+  <circle cx='160' cy='20' r='1.2' fill='#ffe060' opacity='0.85'/>
+  <circle cx='170' cy='35' r='1' fill='#fff8e0' opacity='0.7'/>
+  <circle cx='155' cy='55' r='1.2' fill='#ffcc40' opacity='0.8'/>
+  <circle cx='145' cy='90' r='1' fill='#ff8800' opacity='0.75'/>
+  <circle cx='135' cy='115' r='1.2' fill='#ffe060' opacity='0.8'/>
+  <circle cx='148' cy='105' r='1' fill='#fff8e0' opacity='0.65'/>
+  <circle cx='158' cy='75' r='0.9' fill='#fff8e0' opacity='0.6'/>
+
+  <!-- dead ash falling from withered side -->
+  <circle cx='70' cy='65' r='1' fill='#2a1815' opacity='0.7'/>
+  <circle cx='68' cy='85' r='1.1' fill='#2a1815' opacity='0.65'/>
+  <circle cx='72' cy='100' r='1' fill='#3a2418' opacity='0.6'/>
+  <circle cx='66' cy='115' r='1.2' fill='#2a1815' opacity='0.6'/>
+  <circle cx='74' cy='130' r='1' fill='#3a2418' opacity='0.55'/>
+
+  <!-- base ember glow where revival meets ground -->
+  <ellipse cx='130' cy='175' rx='30' ry='8' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.85'/>
+  <ellipse cx='130' cy='176' rx='14' ry='4' fill='#fff8e0' filter='url(#softBlur)' opacity='0.7'/>
+
+  <!-- vignette -->
+  <rect width='250' height='190' rx='8' fill='#1a0d08' opacity='0.18'/>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="coreGlow" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#cc4400" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#331100" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="ashGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#aaa" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#555" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <!-- 灰烬底座 -->
+  <ellipse cx="125" cy="165" rx="70" ry="14" fill="url(#ashGrad)" opacity="0.7"/>
+  <!-- 核心晶体 -->
+  <polygon points="125,55 160,100 145,150 105,150 90,100" fill="url(#coreGlow)" stroke="#ff6600" stroke-width="2"/>
+  <!-- 内部裂纹 -->
+  <line x1="125" y1="70" x2="125" y2="140" stroke="#ffaa00" stroke-width="1.5" opacity="0.6"/>
+  <line x1="100" y1="105" x2="150" y2="105" stroke="#ffaa00" stroke-width="1" opacity="0.4"/>
+  <!-- 灰烬粒子 -->
+  <circle cx="95" cy="80" r="3" fill="#888" opacity="0.5"/>
+  <circle cx="160" cy="90" r="2.5" fill="#777" opacity="0.4"/>
+  <circle cx="80" cy="120" r="2" fill="#999" opacity="0.3"/>
+  <circle cx="170" cy="130" r="3" fill="#777" opacity="0.4"/>
+  <circle cx="110" cy="75" r="2" fill="#aaa" opacity="0.3"/>
+  <circle cx="145" cy="80" r="2.5" fill="#888" opacity="0.4"/>
+  <circle cx="75" cy="140" r="2" fill="#999" opacity="0.3"/>
+  <circle cx="180" cy="110" r="2.5" fill="#888" opacity="0.3"/>
+  <!-- 上升火星 -->
+  <circle cx="125" cy="40" r="2" fill="#ff6600" opacity="0.8"/>
+  <circle cx="105" cy="30" r="1.5" fill="#ff8800" opacity="0.6"/>
+  <circle cx="145" cy="35" r="1.5" fill="#ff6600" opacity="0.5"/>
+  <circle cx="125" cy="20" r="1" fill="#ffaa00" opacity="0.4"/>
+  <!-- 光晕 -->
+  <circle cx="125" cy="100" r="50" fill="none" stroke="#ff6600" stroke-width="1" opacity="0.2"/>
+</svg>

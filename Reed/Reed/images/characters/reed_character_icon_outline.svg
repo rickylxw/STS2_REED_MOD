@@ -1,0 +1,44 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'>
+  <defs>
+    <linearGradient id='olHorn' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ffffff' stop-opacity='0.9'/>
+      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.8'/>
+      <stop offset='100%' stop-color='#6a1a05' stop-opacity='0.6'/>
+    </linearGradient>
+    <linearGradient id='olHair' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#e6591a' stop-opacity='0.7'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0.5'/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width='128' height='128' fill='none' rx='8'/>
+  <!-- Flame aura outline -->
+  <path d='M64 10 C56 16 54 24 58 32 C52 28 48 20 50 12 C46 22 48 32 56 38 L64 34 L72 38 C80 32 82 22 78 12 C80 20 76 28 70 32 C74 24 72 16 64 10 Z' fill='none' stroke='#e6591a' stroke-width='1.5' stroke-opacity='0.5'/>
+  <!-- Hair back outline -->
+  <path d='M40 44 C30 56 26 76 28 96 C30 106 36 110 40 106 C38 92 38 74 42 60 Z' fill='none' stroke='url(#olHair)' stroke-width='1.5'/>
+  <path d='M88 44 C98 56 102 76 100 96 C98 106 92 110 88 106 C90 92 90 74 86 60 Z' fill='none' stroke='url(#olHair)' stroke-width='1.5'/>
+  <!-- Left horn outline -->
+  <path d='M48 34 C42 24 38 14 40 6 C42 4 48 10 52 18 C54 24 54 32 50 34 Z' fill='none' stroke='url(#olHorn)' stroke-width='1.5'/>
+  <!-- Right horn outline -->
+  <path d='M80 34 C86 24 90 14 88 6 C86 4 80 10 76 18 C74 24 74 32 78 34 Z' fill='none' stroke='url(#olHorn)' stroke-width='1.5'/>
+  <!-- Hair top outline -->
+  <path d='M46 38 C50 28 58 22 64 22 C70 22 78 28 82 38 C84 44 84 48 82 50 C74 44 68 42 64 44 C60 42 54 44 46 50 C44 48 44 44 46 38 Z' fill='none' stroke='#e6591a' stroke-width='1.5' stroke-opacity='0.6'/>
+  <!-- Hair bangs outline -->
+  <path d='M48 46 C52 42 56 42 58 46 C57 48 55 50 54 52 Z' fill='none' stroke='#e6591a' stroke-width='1' stroke-opacity='0.5'/>
+  <path d='M58 44 C62 40 66 40 68 44 C67 48 65 50 64 52 Z' fill='none' stroke='#e6591a' stroke-width='1' stroke-opacity='0.5'/>
+  <path d='M68 44 C72 40 76 40 78 44 C77 48 75 50 74 52 Z' fill='none' stroke='#e6591a' stroke-width='1' stroke-opacity='0.5'/>
+  <!-- Face outline -->
+  <ellipse cx='64' cy='62' rx='15' ry='20' fill='none' stroke='#e6591a' stroke-width='1.5' stroke-opacity='0.4'/>
+  <!-- Eyes outline -->
+  <ellipse cx='58' cy='60' rx='3.5' ry='2.5' fill='none' stroke='#ffe060' stroke-width='1' stroke-opacity='0.5'/>
+  <ellipse cx='70' cy='60' rx='3.5' ry='2.5' fill='none' stroke='#ffe060' stroke-width='1' stroke-opacity='0.5'/>
+  <!-- Small flame on head outline -->
+  <path d='M62 22 C60 17 61 12 63 9 C62 14 64 17 63 22 Z' fill='none' stroke='#ff8800' stroke-width='1' stroke-opacity='0.5'/>
+  <path d='M64 20 C63 14 64 10 66 7 C65 12 67 15 66 20 Z' fill='none' stroke='#ffcc40' stroke-width='1' stroke-opacity='0.4'/>
+  <!-- Neck/shoulders outline -->
+  <path d='M54 80 L50 94 L44 102 L64 104 L84 102 L78 94 L74 80 Z' fill='none' stroke='url(#olHair)' stroke-width='1.5'/>
+  <!-- Collar outline -->
+  <path d='M46 96 L64 100 L82 96 L82 100 L64 104 L46 100 Z' fill='none' stroke='#e6591a' stroke-width='1' stroke-opacity='0.4'/>
+  <!-- Outer border -->
+  <rect width='128' height='128' fill='none' stroke='#e6591a' stroke-width='2' stroke-opacity='0.3' rx='8'/>
+</svg>

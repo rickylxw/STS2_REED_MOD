@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgGather" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#2a221c"/>
+      <stop offset="40%" stop-color="#18120e"/>
+      <stop offset="100%" stop-color="#070504"/>
+    </radialGradient>
+    <radialGradient id="ashCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b0a89e" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#6a605a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2a221c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ashStream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8a807a" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#5a504a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#332c27" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="emberSpark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowGather">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigGlowGather">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgGather)" rx="8"/>
+
+  <!-- Central ash vortex glow -->
+  <ellipse cx="125" cy="95" rx="60" ry="55" fill="url(#ashCore)" opacity="0.4" filter="url(#bigGlowGather)"/>
+
+  <!-- Spiral ash streams converging to center -->
+  <path d="M 40 50 Q 80 60 105 80 Q 115 88 120 92" stroke="url(#ashStream)" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M 210 50 Q 170 60 145 80 Q 135 88 130 92" stroke="url(#ashStream)" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M 30 95 Q 70 95 100 95" stroke="url(#ashStream)" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M 220 95 Q 180 95 150 95" stroke="url(#ashStream)" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M 40 150 Q 80 130 105 110 Q 115 102 120 98" stroke="url(#ashStream)" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M 210 150 Q 170 130 145 110 Q 135 102 130 98" stroke="url(#ashStream)" stroke-width="2.5" fill="none" opacity="0.6"/>
+
+  <!-- Secondary spiral streams -->
+  <path d="M 55 35 Q 90 55 110 75" stroke="#5a504a" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 195 35 Q 160 55 140 75" stroke="#5a504a" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 50 160 Q 85 135 110 115" stroke="#5a504a" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M 200 160 Q 165 135 140 115" stroke="#5a504a" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Central ash orb (gathered ash) -->
+  <ellipse cx="125" cy="95" rx="28" ry="28" fill="url(#ashCore)" opacity="0.8" filter="url(#glowGather)"/>
+  <ellipse cx="125" cy="95" rx="18" ry="18" fill="#8a807a" opacity="0.6" filter="url(#glowGather)"/>
+  <ellipse cx="125" cy="95" rx="10" ry="10" fill="#b0a89e" opacity="0.7" filter="url(#glowGather)"/>
+  <ellipse cx="125" cy="95" rx="4" ry="4" fill="#d0c8be" opacity="0.8" filter="url(#glowGather)"/>
+
+  <!-- Ash particles spiraling inward -->
+  <circle cx="55" cy="60" r="3" fill="#8a807a" opacity="0.6" filter="url(#glowGather)"/>
+  <circle cx="195" cy="60" r="3" fill="#8a807a" opacity="0.6" filter="url(#glowGather)"/>
+  <circle cx="50" cy="95" r="2.5" fill="#6a605a" opacity="0.55" filter="url(#glowGather)"/>
+  <circle cx="200" cy="95" r="2.5" fill="#6a605a" opacity="0.55" filter="url(#glowGather)"/>
+  <circle cx="60" cy="135" r="3" fill="#8a807a" opacity="0.55" filter="url(#glowGather)"/>
+  <circle cx="190" cy="135" r="3" fill="#8a807a" opacity="0.55" filter="url(#glowGather)"/>
+  <circle cx="80" cy="45" r="2" fill="#6a605a" opacity="0.5"/>
+  <circle cx="170" cy="45" r="2" fill="#6a605a" opacity="0.5"/>
+  <circle cx="75" cy="150" r="2" fill="#6a605a" opacity="0.5"/>
+  <circle cx="175" cy="150" r="2" fill="#6a605a" opacity="0.5"/>
+
+  <!-- Ember sparks within the ash (residual heat) -->
+  <circle cx="115" cy="88" r="2" fill="url(#emberSpark)" opacity="0.7" filter="url(#glowGather)"/>
+  <circle cx="135" cy="92" r="1.5" fill="url(#emberSpark)" opacity="0.6" filter="url(#glowGather)"/>
+  <circle cx="122" cy="103" r="1.5" fill="url(#emberSpark)" opacity="0.6" filter="url(#glowGather)"/>
+  <circle cx="128" cy="100" r="1" fill="#ff8800" opacity="0.5" filter="url(#glowGather)"/>
+
+  <!-- Fine ash dust scattered -->
+  <circle cx="35" cy="80" r="1" fill="#6a605a" opacity="0.4"/>
+  <circle cx="215" cy="80" r="1" fill="#6a605a" opacity="0.4"/>
+  <circle cx="40" cy="120" r="0.8" fill="#4a423c" opacity="0.35"/>
+  <circle cx="210" cy="120" r="0.8" fill="#4a423c" opacity="0.35"/>
+  <circle cx="95" cy="30" r="1" fill="#8a807a" opacity="0.4"/>
+  <circle cx="155" cy="30" r="1" fill="#8a807a" opacity="0.4"/>
+  <circle cx="100" cy="165" r="0.8" fill="#6a605a" opacity="0.35"/>
+  <circle cx="150" cy="165" r="0.8" fill="#6a605a" opacity="0.35"/>
+
+  <!-- Ground ash shadow -->
+  <ellipse cx="125" cy="175" rx="40" ry="4" fill="#1a1410" opacity="0.4" filter="url(#glowGather)"/>
+</svg>

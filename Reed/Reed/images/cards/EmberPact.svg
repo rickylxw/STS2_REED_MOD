@@ -1,0 +1,145 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgEP' cx='50%' cy='50%' r='80%'>
+      <stop offset='0%' stop-color='#1a0d08'/>
+      <stop offset='60%' stop-color='#0d0604'/>
+      <stop offset='100%' stop-color='#050201'/>
+    </radialGradient>
+    <filter id='epGlow' x='-200%' y='-200%' width='500%' height='500%'>
+      <feGaussianBlur stdDeviation='3' result='b'/>
+      <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>
+    </filter>
+    <filter id='epBigGlow' x='-200%' y='-200%' width='500%' height='500%'>
+      <feGaussianBlur stdDeviation='6' result='b'/>
+      <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>
+    </filter>
+    <filter id='epSoft' x='-200%' y='-200%' width='500%' height='500%'>
+      <feGaussianBlur stdDeviation='10' result='b'/>
+      <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>
+    </filter>
+    <radialGradient id='epEmber' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='30%' stop-color='#ffe060'/>
+      <stop offset='70%' stop-color='#ff8800' stop-opacity='0.5'/>
+      <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='epChain' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.8'/>
+      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.6'/>
+      <stop offset='100%' stop-color='#c41a05' stop-opacity='0.4'/>
+    </linearGradient>
+    <radialGradient id='epImpact' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0' stop-opacity='0.9'/>
+      <stop offset='20%' stop-color='#ffe060' stop-opacity='0.5'/>
+      <stop offset='50%' stop-color='#ff8800' stop-opacity='0.2'/>
+      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+  </defs>
+
+  <rect width='250' height='190' fill='url(#bgEP)' rx='8'/>
+
+  <!-- Atmospheric heat haze layers -->
+  <ellipse cx='125' cy='90' rx='120' ry='80' fill='#e6591a' opacity='0.04' filter='url(#epSoft)'/>
+  <ellipse cx='125' cy='30' rx='80' ry='20' fill='#ff8800' opacity='0.03'/>
+  <ellipse cx='125' cy='150' rx='80' ry='20' fill='#c41a05' opacity='0.03'/>
+
+  <ellipse cx='125' cy='175' rx='90' ry='15' fill='#2a1815' opacity='0.3'/>
+
+  <!-- Background ember particles -->
+  <circle cx='30' cy='40' r='1.5' fill='#ff8800' opacity='0.5' filter='url(#epGlow)'/>
+  <circle cx='55' cy='20' r='1' fill='#ffaa30' opacity='0.4'/>
+  <circle cx='15' cy='70' r='1.2' fill='#e6591a' opacity='0.4'/>
+  <circle cx='220' cy='35' r='1.5' fill='#ff8800' opacity='0.5'/>
+  <circle cx='235' cy='70' r='1' fill='#ffaa30' opacity='0.4'/>
+  <circle cx='200' cy='15' r='0.8' fill='#ffe060' opacity='0.4'/>
+  <circle cx='20' cy='150' r='1.2' fill='#e6591a' opacity='0.4'/>
+  <circle cx='225' cy='155' r='1' fill='#ff8800' opacity='0.4'/>
+  <circle cx='10' cy='110' r='1' fill='#ffaa30' opacity='0.3'/>
+  <circle cx='240' cy='120' r='1' fill='#ff8800' opacity='0.3'/>
+  <circle cx='45' cy='175' r='0.8' fill='#c41a05' opacity='0.25'/>
+  <circle cx='210' cy='170' r='0.8' fill='#e6591a' opacity='0.25'/>
+
+  <!-- Motion lines (energy converging) -->
+  <line x1='30' y1='40' x2='80' y2='75' stroke='#e6591a' stroke-width='1' opacity='0.2'/>
+  <line x1='220' y1='35' x2='170' y2='75' stroke='#e6591a' stroke-width='1' opacity='0.2'/>
+  <line x1='15' y1='110' x2='80' y2='95' stroke='#ff8800' stroke-width='0.8' opacity='0.15'/>
+  <line x1='235' y1='120' x2='170' y2='95' stroke='#ff8800' stroke-width='0.8' opacity='0.15'/>
+  <line x1='55' y1='175' x2='100' y2='130' stroke='#ffaa30' stroke-width='0.8' opacity='0.15'/>
+  <line x1='195' y1='175' x2='150' y2='130' stroke='#ffaa30' stroke-width='0.8' opacity='0.15'/>
+
+  <!-- Central pact circle -->
+  <circle cx='125' cy='90' r='45' fill='none' stroke='url(#epChain)' stroke-width='2' opacity='0.6' filter='url(#epGlow)'/>
+  <circle cx='125' cy='90' r='38' fill='none' stroke='#ff8800' stroke-width='1' opacity='0.3' stroke-dasharray='4 3'/>
+  <circle cx='125' cy='90' r='52' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.2' stroke-dasharray='2 5'/>
+
+  <!-- impact glow at center -->
+  <circle cx='125' cy='88' r='25' fill='url(#epImpact)' filter='url(#epBigGlow)'/>
+
+  <!-- Linked hands suggestion - two angular forms meeting -->
+  <g filter='url(#epGlow)'>
+    <!-- Left hand -->
+    <path d='M70 95 L60 88 L55 82 L58 76 L65 80 L72 86 L78 90 Z' fill='#c4520a' opacity='0.7'/>
+    <!-- Right hand -->
+    <path d='M180 95 L190 88 L195 82 L192 76 L185 80 L178 86 L172 90 Z' fill='#c4520a' opacity='0.7'/>
+    <!-- Central ember -->
+    <circle cx='125' cy='88' r='8' fill='url(#epEmber)' filter='url(#epBigGlow)'/>
+    <circle cx='125' cy='88' r='4' fill='#fff8e0' opacity='0.9'/>
+  </g>
+
+  <!-- Bond lines connecting hands to center -->
+  <g stroke='url(#epChain)' stroke-width='1.5' opacity='0.5' filter='url(#epGlow)'>
+    <line x1='78' y1='90' x2='117' y2='88'/>
+    <line x1='172' y1='90' x2='133' y2='88'/>
+  </g>
+
+  <!-- Spark burst at center -->
+  <g filter='url(#epGlow)'>
+    <line x1='125' y1='88' x2='110' y2='72' stroke='#fff8e0' stroke-width='1.2' opacity='0.7'/>
+    <line x1='125' y1='88' x2='140' y2='72' stroke='#ffe060' stroke-width='1' opacity='0.6'/>
+    <line x1='125' y1='88' x2='108' y2='88' stroke='#ffaa30' stroke-width='1' opacity='0.6'/>
+    <line x1='125' y1='88' x2='142' y2='88' stroke='#ff8800' stroke-width='0.8' opacity='0.5'/>
+    <line x1='125' y1='88' x2='115' y2='75' stroke='#ff8800' stroke-width='0.8' opacity='0.5'/>
+    <line x1='125' y1='88' x2='135' y2='75' stroke='#ff8800' stroke-width='0.8' opacity='0.5'/>
+  </g>
+
+  <!-- Floating embers -->
+  <g filter='url(#epGlow)'>
+    <circle cx='45' cy='40' r='2.5' fill='#ffe060' opacity='0.8'/>
+    <circle cx='205' cy='35' r='2' fill='#ffaa30' opacity='0.75'/>
+    <circle cx='125' cy='30' r='3' fill='#ffe060' opacity='0.85'/>
+    <circle cx='85' cy='55' r='1.5' fill='#ff8800' opacity='0.6'/>
+    <circle cx='165' cy='50' r='2' fill='#ffaa30' opacity='0.7'/>
+    <circle cx='55' cy='130' r='2' fill='#ffe060' opacity='0.65'/>
+    <circle cx='195' cy='125' r='1.5' fill='#ff8800' opacity='0.6'/>
+    <circle cx='125' cy='155' r='2.5' fill='#ffaa30' opacity='0.7'/>
+  </g>
+
+  <!-- Flame trails -->
+  <g opacity='0.4' filter='url(#epGlow)'>
+    <path d='M45,37 Q43,30 45,22 Q47,30 45,37 Z' fill='#ff8800'/>
+    <path d='M125,27 Q123,18 125,8 Q127,18 125,27 Z' fill='#ff8800'/>
+    <path d='M205,32 Q203,24 205,16 Q207,24 205,32 Z' fill='#ff8800'/>
+  </g>
+
+  <!-- Small dim embers -->
+  <g>
+    <circle cx='30' cy='65' r='1' fill='#ff8800' opacity='0.4'/>
+    <circle cx='220' cy='60' r='1' fill='#ffe060' opacity='0.45'/>
+    <circle cx='100' cy='120' r='1' fill='#c41a05' opacity='0.3'/>
+    <circle cx='150' cy='115' r='1' fill='#e6591a' opacity='0.35'/>
+    <circle cx='40' cy='100' r='0.8' fill='#ff8800' opacity='0.3'/>
+    <circle cx='210' cy='95' r='0.8' fill='#ffe060' opacity='0.35'/>
+    <circle cx='75' cy='150' r='1' fill='#ff8800' opacity='0.35'/>
+    <circle cx='175' cy='145' r='0.8' fill='#c41a05' opacity='0.25'/>
+    <circle cx='115' cy='170' r='0.8' fill='#ff8800' opacity='0.3'/>
+    <circle cx='140' cy='168' r='0.6' fill='#c41a05' opacity='0.2'/>
+  </g>
+
+  <!-- Bottom ember glow -->
+  <ellipse cx='125' cy='185' rx='50' ry='5' fill='#8a2a05' opacity='0.2'/>
+  <circle cx='115' cy='183' r='1.2' fill='#ff8800' opacity='0.4'/>
+  <circle cx='135' cy='184' r='1' fill='#ffaa30' opacity='0.3'/>
+
+  <!-- Top ember glow -->
+  <ellipse cx='125' cy='5' rx='30' ry='4' fill='#8a2a05' opacity='0.15'/>
+</svg>

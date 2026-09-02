@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgBulwark" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="50%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0a0503"/>
+    </radialGradient>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a2818"/>
+      <stop offset="30%" stop-color="#3a1f15"/>
+      <stop offset="60%" stop-color="#2a1815"/>
+      <stop offset="100%" stop-color="#1a0d08"/>
+    </linearGradient>
+    <linearGradient id="wallEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a3828"/>
+      <stop offset="50%" stop-color="#3a1f15"/>
+      <stop offset="100%" stop-color="#1a0d08"/>
+    </linearGradient>
+    <radialGradient id="crackGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#ffe060" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flameLick" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#ffe060" stop-opacity="0.7"/>
+      <stop offset="55%" stop-color="#ff8800" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#c41a05" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="shieldGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#e6591a" stop-opacity="0"/>
+      <stop offset="90%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffaa30" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowBulwark">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlowBulwark">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgBulwark)" rx="8"/>
+
+  <!-- Ambient glow behind wall -->
+  <ellipse cx="125" cy="100" rx="90" ry="70" fill="#e6591a" opacity="0.05"/>
+  <ellipse cx="125" cy="85" rx="70" ry="50" fill="url(#shieldGlow2)" filter="url(#softGlowBulwark)"/>
+
+  <!-- Falling ash particles (background) -->
+  <circle cx="30" cy="25" r="1.5" fill="#4a2818" opacity="0.5"/>
+  <circle cx="55" cy="40" r="1" fill="#3a1f15" opacity="0.4"/>
+  <circle cx="200" cy="30" r="1.5" fill="#4a2818" opacity="0.5"/>
+  <circle cx="225" cy="50" r="1" fill="#3a1f15" opacity="0.4"/>
+  <circle cx="15" cy="60" r="1" fill="#5a3828" opacity="0.3"/>
+  <circle cx="240" cy="80" r="1.5" fill="#4a2818" opacity="0.4"/>
+  <circle cx="35" cy="150" r="1" fill="#3a1f15" opacity="0.3"/>
+  <circle cx="220" cy="160" r="1" fill="#4a2818" opacity="0.3"/>
+
+  <!-- Glowing ash particles -->
+  <circle cx="45" cy="30" r="1" fill="#ff8800" opacity="0.3" filter="url(#glowBulwark)"/>
+  <circle cx="210" cy="35" r="0.8" fill="#ffaa30" opacity="0.3"/>
+  <circle cx="25" cy="100" r="1" fill="#e6591a" opacity="0.25"/>
+
+  <!-- Shield/wall body - large curved wall shape -->
+  <path d="M 40 170 L 40 80 Q 40 50 60 40 L 190 40 Q 210 50 210 80 L 210 170 Z"
+        fill="url(#wallGrad)"/>
+
+  <!-- Wall top edge (irregular, broken) -->
+  <path d="M 40 80 Q 38 50 55 42 L 65 38 L 72 44 L 80 36 L 90 42 L 100 35 L 110 43 L 120 37 L 130 42 L 140 36 L 150 43 L 160 37 L 170 42 L 180 36 L 190 42 Q 207 50 210 80"
+        fill="url(#wallEdge)" stroke="#1a0d08" stroke-width="1"/>
+
+  <!-- Wall block divisions (brick/compressed ash lines) -->
+  <line x1="40" y1="90" x2="210" y2="90" stroke="#1a0d08" stroke-width="1.5" opacity="0.7"/>
+  <line x1="40" y1="120" x2="210" y2="120" stroke="#1a0d08" stroke-width="1.5" opacity="0.7"/>
+  <line x1="40" y1="150" x2="210" y2="150" stroke="#1a0d08" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Vertical block divisions (offset per row) -->
+  <line x1="80" y1="90" x2="80" y2="120" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+  <line x1="130" y1="90" x2="130" y2="120" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+  <line x1="175" y1="90" x2="175" y2="120" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+
+  <line x1="60" y1="120" x2="60" y2="150" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+  <line x1="105" y1="120" x2="105" y2="150" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+  <line x1="150" y1="120" x2="150" y2="150" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+  <line x1="195" y1="120" x2="195" y2="150" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+
+  <line x1="85" y1="150" x2="85" y2="170" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+  <line x1="135" y1="150" x2="135" y2="170" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+  <line x1="180" y1="150" x2="180" y2="170" stroke="#1a0d08" stroke-width="1" opacity="0.6"/>
+
+  <!-- Glowing cracks across wall (ember veins) -->
+  <path d="M 55 170 Q 60 155 58 140 Q 62 125 55 110 Q 58 95 52 80"
+        stroke="#ff8800" stroke-width="2" fill="none" opacity="0.7" filter="url(#glowBulwark)"/>
+  <path d="M 55 170 Q 60 155 58 140 Q 62 125 55 110 Q 58 95 52 80"
+        stroke="#fff8e0" stroke-width="0.8" fill="none" opacity="0.5" filter="url(#glowBulwark)"/>
+
+  <path d="M 100 170 Q 95 155 100 140 Q 92 120 98 100 Q 95 85 100 70"
+        stroke="#ff8800" stroke-width="2" fill="none" opacity="0.6" filter="url(#glowBulwark)"/>
+  <path d="M 100 170 Q 95 155 100 140 Q 92 120 98 100 Q 95 85 100 70"
+        stroke="#ffe060" stroke-width="0.6" fill="none" opacity="0.4"/>
+
+  <path d="M 155 170 Q 160 150 155 135 Q 162 115 158 95 Q 155 80 160 65"
+        stroke="#ff8800" stroke-width="2" fill="none" opacity="0.6" filter="url(#glowBulwark)"/>
+  <path d="M 155 170 Q 160 150 155 135 Q 162 115 158 95 Q 155 80 160 65"
+        stroke="#ffe060" stroke-width="0.6" fill="none" opacity="0.4"/>
+
+  <path d="M 195 170 Q 190 150 195 130 Q 188 110 192 90"
+        stroke="#e6591a" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glowBulwark)"/>
+
+  <!-- Horizontal glowing cracks -->
+  <path d="M 45 105 Q 80 103 120 106 Q 160 104 205 107" stroke="#ff8800" stroke-width="1" fill="none" opacity="0.3" filter="url(#glowBulwark)"/>
+  <path d="M 45 135 Q 85 137 125 134 Q 165 136 205 134" stroke="#e6591a" stroke-width="1" fill="none" opacity="0.25" filter="url(#glowBulwark)"/>
+
+  <!-- Crack glow spots (ember nodes at crack intersections) -->
+  <circle cx="58" cy="140" r="4" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+  <circle cx="58" cy="140" r="1.5" fill="#fff8e0" filter="url(#glowBulwark)"/>
+  <circle cx="100" cy="140" r="4" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+  <circle cx="100" cy="140" r="1.5" fill="#ffe060" filter="url(#glowBulwark)"/>
+  <circle cx="155" cy="135" r="3.5" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+  <circle cx="155" cy="135" r="1.2" fill="#fff8e0" filter="url(#glowBulwark)"/>
+  <circle cx="195" cy="130" r="3" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+  <circle cx="195" cy="130" r="1" fill="#ff8800" filter="url(#glowBulwark)"/>
+  <circle cx="55" cy="110" r="3" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+  <circle cx="98" cy="100" r="3" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+  <circle cx="158" cy="95" r="3" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+  <circle cx="192" cy="90" r="2.5" fill="url(#crackGlow)" filter="url(#glowBulwark)"/>
+
+  <!-- Flames licking the top of the wall -->
+  <path d="M 65 38 Q 62 25 68 15 Q 65 8 70 2 Q 73 12 75 22 Q 72 32 68 38 Z"
+        fill="url(#flameLick)" filter="url(#glowBulwark)"/>
+  <path d="M 85 36 Q 82 20 88 10 Q 85 3 90 0 Q 92 10 94 20 Q 90 30 88 36 Z"
+        fill="url(#flameLick)" opacity="0.8" filter="url(#glowBulwark)"/>
+  <path d="M 105 35 Q 102 18 108 8 Q 105 0 110 0 Q 112 10 114 18 Q 110 28 108 35 Z"
+        fill="url(#flameLick)" filter="url(#glowBulwark)"/>
+  <path d="M 125 37 Q 122 20 128 10 Q 125 0 130 0 Q 132 10 134 20 Q 130 30 128 37 Z"
+        fill="url(#flameLick)" opacity="0.8" filter="url(#glowBulwark)"/>
+  <path d="M 145 36 Q 142 18 148 8 Q 145 0 150 0 Q 152 10 154 18 Q 150 28 148 36 Z"
+        fill="url(#flameLick)" filter="url(#glowBulwark)"/>
+  <path d="M 165 37 Q 162 22 168 12 Q 165 5 170 0 Q 172 10 174 22 Q 170 32 168 37 Z"
+        fill="url(#flameLick)" opacity="0.7" filter="url(#glowBulwark)"/>
+  <path d="M 185 36 Q 182 20 188 10 Q 185 3 190 0 Q 192 10 194 20 Q 190 30 188 36 Z"
+        fill="url(#flameLick)" opacity="0.8" filter="url(#glowBulwark)"/>
+
+  <!-- Brighter inner flames at wall top -->
+  <path d="M 68 38 Q 67 25 70 15 Q 72 25 73 35 Z" fill="#ffe060" opacity="0.6" filter="url(#glowBulwark)"/>
+  <path d="M 108 35 Q 107 22 110 12 Q 112 22 113 32 Z" fill="#ffe060" opacity="0.6" filter="url(#glowBulwark)"/>
+  <path d="M 128 37 Q 127 24 130 14 Q 132 24 133 34 Z" fill="#ffe060" opacity="0.6" filter="url(#glowBulwark)"/>
+  <path d="M 148 36 Q 147 23 150 13 Q 152 23 153 33 Z" fill="#ffe060" opacity="0.6" filter="url(#glowBulwark)"/>
+  <path d="M 188 36 Q 187 23 190 13 Q 192 23 193 33 Z" fill="#ffe060" opacity="0.6" filter="url(#glowBulwark)"/>
+
+  <!-- Embers floating up from flames -->
+  <circle cx="72" cy="10" r="1.5" fill="#fff8e0" opacity="0.7" filter="url(#glowBulwark)"/>
+  <circle cx="90" cy="5" r="1" fill="#ffe060" opacity="0.6" filter="url(#glowBulwark)"/>
+  <circle cx="110" cy="8" r="1.2" fill="#ffaa30" opacity="0.6" filter="url(#glowBulwark)"/>
+  <circle cx="130" cy="5" r="1" fill="#ff8800" opacity="0.6" filter="url(#glowBulwark)"/>
+  <circle cx="150" cy="8" r="1.2" fill="#fff8e0" opacity="0.6" filter="url(#glowBulwark)"/>
+  <circle cx="170" cy="5" r="1" fill="#ffe060" opacity="0.5" filter="url(#glowBulwark)"/>
+  <circle cx="190" cy="8" r="1.2" fill="#ffaa30" opacity="0.5" filter="url(#glowBulwark)"/>
+
+  <!-- Wall base ground glow -->
+  <ellipse cx="125" cy="172" rx="90" ry="8" fill="#ff8800" opacity="0.15" filter="url(#softGlowBulwark)"/>
+
+  <!-- Base embers on ground -->
+  <circle cx="50" cy="170" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowBulwark)"/>
+  <circle cx="100" cy="175" r="1" fill="#ffaa30" opacity="0.4"/>
+  <circle cx="150" cy="172" r="1.2" fill="#ff8800" opacity="0.4" filter="url(#glowBulwark)"/>
+  <circle cx="200" cy="170" r="1" fill="#e6591a" opacity="0.4"/>
+
+  <!-- Wall side edge highlights -->
+  <path d="M 40 80 Q 40 50 60 40 L 60 170" fill="none" stroke="#5a3828" stroke-width="1" opacity="0.4"/>
+  <path d="M 210 80 Q 210 50 190 40 L 190 170" fill="none" stroke="#5a3828" stroke-width="1" opacity="0.3"/>
+</svg>

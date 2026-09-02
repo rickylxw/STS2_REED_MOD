@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="bg-glow" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#3a1a0a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#120800" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="blade-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#ffc060" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#e6591a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="flame-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#e6591a" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffaa30" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#fff8a0" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="ember-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcc40" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e6591a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" fill="url(#bg-glow)" rx="8"/>
+
+  <!-- Outer decorative ring -->
+  <circle cx="64" cy="64" r="58" fill="none" stroke="#e6591a" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- Background ember glow -->
+  <ellipse cx="64" cy="70" rx="30" ry="40" fill="url(#ember-glow)"/>
+
+  <!-- Flame aura behind spear -->
+  <path d="M 64 15 C 58 25 56 35 60 48 C 54 42 50 35 52 28 C 48 38 46 48 52 58 L 64 55 L 76 58 C 82 48 80 38 76 28 C 78 35 74 42 68 48 C 72 35 70 25 64 15 Z" fill="url(#flame-grad)" opacity="0.5"/>
+
+  <!-- Spearhead main blade -->
+  <path d="M 64 18 L 74 55 L 71 60 L 68 56 L 64 62 L 60 56 L 57 60 L 54 55 Z" fill="url(#blade-grad)" stroke="#fff8e0" stroke-width="0.5" stroke-opacity="0.6"/>
+
+  <!-- Spearhead inner highlight -->
+  <path d="M 64 24 L 69 50 L 64 55 L 59 50 Z" fill="#fff8e0" opacity="0.15"/>
+
+  <!-- Spearhead edge shine -->
+  <path d="M 64 18 L 66 40 L 64 45 L 62 40 Z" fill="#ffffff" opacity="0.2"/>
+
+  <!-- Socket/collar -->
+  <rect x="58" y="60" width="12" height="5" rx="1" fill="#3a1a0a" stroke="#e6591a" stroke-width="0.8"/>
+
+  <!-- Shaft -->
+  <rect x="61.5" y="65" width="5" height="35" fill="#4a2008" rx="0.5"/>
+  <rect x="62.5" y="65" width="1.5" height="35" fill="#6a3010" opacity="0.6"/>
+
+  <!-- Grip wrapping -->
+  <rect x="60" y="72" width="8" height="2" fill="#8a2a05"/>
+  <rect x="60" y="78" width="8" height="2" fill="#8a2a05"/>
+  <rect x="60" y="84" width="8" height="2" fill="#8a2a05"/>
+
+  <!-- Pommel -->
+  <circle cx="64" cy="102" r="5" fill="#3a1a0a" stroke="#e6591a" stroke-width="1.2"/>
+  <circle cx="64" cy="102" r="2" fill="#e6591a" opacity="0.7"/>
+
+  <!-- Small embers floating -->
+  <circle cx="45" cy="35" r="1.5" fill="#ffaa30" opacity="0.6"/>
+  <circle cx="83" cy="40" r="1" fill="#ffcc40" opacity="0.5"/>
+  <circle cx="40" cy="55" r="1.2" fill="#e6591a" opacity="0.4"/>
+  <circle cx="88" cy="58" r="0.8" fill="#ff8800" opacity="0.5"/>
+  <circle cx="50" cy="22" r="0.8" fill="#ffcc40" opacity="0.4"/>
+  <circle cx="78" cy="20" r="1" fill="#ffaa30" opacity="0.3"/>
+</svg>

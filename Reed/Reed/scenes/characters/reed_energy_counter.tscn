@@ -1,0 +1,3 @@
+[gd_scene load_steps=1 format=3 uid="uid://b_reed_energy_002"]
+
+[node name="ReedEnergyCounter" type="Control"]

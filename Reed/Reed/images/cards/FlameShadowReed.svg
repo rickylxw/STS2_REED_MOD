@@ -1,0 +1,168 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+<defs>
+  <radialGradient id='bgFS' cx='50%' cy='50%' r='70%'>
+    <stop offset='0%' stop-color='#2a1815'/>
+    <stop offset='50%' stop-color='#1a0d08'/>
+    <stop offset='100%' stop-color='#0a0504'/>
+  </radialGradient>
+  <radialGradient id='flameGFS' cx='50%' cy='50%' r='50%'>
+    <stop offset='0%' stop-color='#fff8e0' stop-opacity='0.9'/>
+    <stop offset='15%' stop-color='#ffe060' stop-opacity='0.8'/>
+    <stop offset='35%' stop-color='#ffaa30' stop-opacity='0.7'/>
+    <stop offset='60%' stop-color='#ff8800' stop-opacity='0.5'/>
+    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
+  </radialGradient>
+  <radialGradient id='glowFS' cx='50%' cy='50%' r='50%'>
+    <stop offset='0%' stop-color='#ff8800' stop-opacity='0.5'/>
+    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
+  </radialGradient>
+  <radialGradient id='bigGlowFS' cx='50%' cy='50%' r='50%'>
+    <stop offset='0%' stop-color='#c41a05' stop-opacity='0.2'/>
+    <stop offset='100%' stop-color='#1a0d08' stop-opacity='0'/>
+  </radialGradient>
+  <radialGradient id='shadowGFS' cx='50%' cy='50%' r='50%'>
+    <stop offset='0%' stop-color='#000000' stop-opacity='0.7'/>
+    <stop offset='60%' stop-color='#0a0504' stop-opacity='0.4'/>
+    <stop offset='100%' stop-color='#0a0504' stop-opacity='0'/>
+  </radialGradient>
+  <radialGradient id='eyeGlowFS' cx='50%' cy='50%' r='50%'>
+    <stop offset='0%' stop-color='#fff8e0' stop-opacity='1'/>
+    <stop offset='30%' stop-color='#ffe060' stop-opacity='0.9'/>
+    <stop offset='70%' stop-color='#ff8800' stop-opacity='0.5'/>
+    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
+  </radialGradient>
+  <filter id='blurFS' x='-20%' y='-20%' width='140%' height='140%'>
+    <feGaussianBlur stdDeviation='3'/>
+  </filter>
+  <filter id='bigBlurFS' x='-30%' y='-30%' width='160%' height='160%'>
+    <feGaussianBlur stdDeviation='8'/>
+  </filter>
+</defs>
+
+<!-- Background -->
+<rect width='250' height='190' fill='url(#bgFS)' rx='8'/>
+
+<!-- Outer ambient glow -->
+<ellipse cx='125' cy='95' rx='110' ry='90' fill='url(#bigGlowFS)'/>
+
+<!-- Shadow aura around character -->
+<ellipse cx='125' cy='100' rx='55' ry='85' fill='url(#shadowGFS)' opacity='0.8'/>
+
+<!-- Shadow tendrils - dark wispy shapes intertwining -->
+<path d='M 80 50 Q 60 65 55 90 Q 50 115 65 140 Q 58 155 70 170 Q 80 160 75 145 Q 68 120 73 95 Q 78 70 90 55 Z' fill='#0a0504' opacity='0.6'/>
+<path d='M 170 50 Q 190 65 195 90 Q 200 115 185 140 Q 192 155 180 170 Q 170 160 175 145 Q 182 120 177 95 Q 172 70 160 55 Z' fill='#0a0504' opacity='0.6'/>
+<path d='M 70 80 Q 45 90 50 120 Q 55 145 75 160 Q 65 140 68 110 Q 72 95 80 85 Z' fill='#000000' opacity='0.4'/>
+<path d='M 180 80 Q 205 90 200 120 Q 195 145 175 160 Q 185 140 182 110 Q 178 95 170 85 Z' fill='#000000' opacity='0.4'/>
+
+<!-- Flame aura - surrounding fire glow -->
+<ellipse cx='125' cy='95' rx='60' ry='80' fill='url(#flameGFS)' opacity='0.3' filter='url(#blurFS)'/>
+
+<!-- Character silhouette - body/torso -->
+<path d='M 108 60 Q 100 75 105 95 Q 102 115 108 135 Q 110 150 115 165 L 135 165 Q 140 150 142 135 Q 148 115 145 95 Q 150 75 142 60 Q 135 55 125 54 Q 115 55 108 60 Z' fill='#0a0504'/>
+<!-- Body rim light -->
+<path d='M 108 60 Q 100 75 105 95 Q 102 115 108 135 Q 110 150 115 165' fill='none' stroke='#e6591a' stroke-width='1.5' opacity='0.5'/>
+<path d='M 142 60 Q 150 75 145 95 Q 148 115 142 135 Q 140 150 135 165' fill='none' stroke='#c41a05' stroke-width='1' opacity='0.4'/>
+
+<!-- Head -->
+<ellipse cx='125' cy='50' rx='14' ry='16' fill='#0a0504'/>
+<!-- Head rim light -->
+<path d='M 111 50 Q 112 38 119 36' fill='none' stroke='#e6591a' stroke-width='1.5' opacity='0.5'/>
+<path d='M 139 50 Q 138 38 131 36' fill='none' stroke='#c41a05' stroke-width='1' opacity='0.4'/>
+
+<!-- Dragon horns -->
+<!-- Left horn -->
+<path d='M 114 38 Q 98 20 90 5 Q 92 2 96 6 Q 104 22 116 40 Z' fill='#0a0504'/>
+<path d='M 114 38 Q 98 20 90 5' fill='none' stroke='#e6591a' stroke-width='1' opacity='0.4'/>
+<!-- Left horn inner ridge -->
+<path d='M 100 15 Q 103 25 110 35' fill='none' stroke='#8a2a05' stroke-width='0.8' opacity='0.3'/>
+
+<!-- Right horn -->
+<path d='M 136 38 Q 152 20 160 5 Q 158 2 154 6 Q 146 22 134 40 Z' fill='#0a0504'/>
+<path d='M 136 38 Q 152 20 160 5' fill='none' stroke='#e6591a' stroke-width='1' opacity='0.4'/>
+<!-- Right horn inner ridge -->
+<path d='M 150 15 Q 147 25 140 35' fill='none' stroke='#8a2a05' stroke-width='0.8' opacity='0.3'/>
+
+<!-- Glowing eyes -->
+<ellipse cx='119' cy='50' rx='2.5' ry='2' fill='url(#eyeGlowFS)'/>
+<ellipse cx='119' cy='50' rx='1.2' ry='1' fill='#fff8e0'/>
+<ellipse cx='131' cy='50' rx='2.5' ry='2' fill='url(#eyeGlowFS)'/>
+<ellipse cx='131' cy='50' rx='1.2' ry='1' fill='#fff8e0'/>
+
+<!-- Flames surrounding the character - left side -->
+<!-- Left upper flame -->
+<path d='M 85 70 Q 70 50 75 35 Q 82 28 92 35 Q 95 50 88 65 Q 87 72 85 70 Z' fill='#c41a05' opacity='0.5'/>
+<path d='M 87 68 Q 75 52 78 40 Q 84 35 90 40 Q 92 52 87 64 Q 88 68 87 68 Z' fill='#e6591a' opacity='0.45'/>
+<path d='M 89 65 Q 80 55 82 45 Q 86 42 88 48 Q 89 58 89 62 Z' fill='#ff8800' opacity='0.4'/>
+<path d='M 90 62 Q 85 55 86 50 Q 88 50 89 55 Q 90 60 90 62 Z' fill='#ffaa30' opacity='0.35'/>
+
+<!-- Left mid flame -->
+<path d='M 78 100 Q 60 90 58 105 Q 62 120 80 115 Q 85 110 78 100 Z' fill='#c41a05' opacity='0.4'/>
+<path d='M 80 102 Q 65 95 63 107 Q 67 117 82 113 Q 83 108 80 102 Z' fill='#e6591a' opacity='0.35'/>
+<path d='M 82 104 Q 72 98 70 108 Q 73 113 83 110 Z' fill='#ff8800' opacity='0.3'/>
+
+<!-- Left lower flame -->
+<path d='M 82 135 Q 68 130 65 145 Q 70 160 85 155 Q 90 145 82 135 Z' fill='#c41a05' opacity='0.45'/>
+<path d='M 84 137 Q 72 133 70 145 Q 74 155 86 152 Q 88 145 84 137 Z' fill='#e6591a' opacity='0.4'/>
+<path d='M 86 140 Q 76 138 74 148 Q 78 152 86 148 Z' fill='#ff8800' opacity='0.35'/>
+<path d='M 86 142 Q 80 141 79 146 Q 82 148 86 146 Z' fill='#ffaa30' opacity='0.3'/>
+
+<!-- Flames surrounding the character - right side -->
+<!-- Right upper flame -->
+<path d='M 165 70 Q 180 50 175 35 Q 168 28 158 35 Q 155 50 162 65 Q 163 72 165 70 Z' fill='#c41a05' opacity='0.5'/>
+<path d='M 163 68 Q 175 52 172 40 Q 166 35 160 40 Q 158 52 163 64 Q 162 68 163 68 Z' fill='#e6591a' opacity='0.45'/>
+<path d='M 161 65 Q 170 55 168 45 Q 164 42 162 48 Q 161 58 161 62 Z' fill='#ff8800' opacity='0.4'/>
+<path d='M 160 62 Q 165 55 164 50 Q 162 50 161 55 Q 160 60 160 62 Z' fill='#ffaa30' opacity='0.35'/>
+
+<!-- Right mid flame -->
+<path d='M 172 100 Q 190 90 192 105 Q 188 120 170 115 Q 165 110 172 100 Z' fill='#c41a05' opacity='0.4'/>
+<path d='M 170 102 Q 185 95 187 107 Q 183 117 168 113 Q 167 108 170 102 Z' fill='#e6591a' opacity='0.35'/>
+<path d='M 168 104 Q 178 98 180 108 Q 177 113 167 110 Z' fill='#ff8800' opacity='0.3'/>
+
+<!-- Right lower flame -->
+<path d='M 168 135 Q 182 130 185 145 Q 180 160 165 155 Q 160 145 168 135 Z' fill='#c41a05' opacity='0.45'/>
+<path d='M 166 137 Q 178 133 180 145 Q 176 155 164 152 Q 162 145 166 137 Z' fill='#e6591a' opacity='0.4'/>
+<path d='M 164 140 Q 174 138 176 148 Q 172 152 164 148 Z' fill='#ff8800' opacity='0.35'/>
+<path d='M 164 142 Q 170 141 171 146 Q 168 148 164 146 Z' fill='#ffaa30' opacity='0.3'/>
+
+<!-- Top crown flames above horns -->
+<path d='M 100 15 Q 98 5 105 0 Q 108 5 108 12 Q 106 18 100 15 Z' fill='#c41a05' opacity='0.4'/>
+<path d='M 103 14 Q 102 7 106 3 Q 108 8 107 13 Q 106 16 103 14 Z' fill='#ff8800' opacity='0.35'/>
+<path d='M 150 15 Q 152 5 145 0 Q 142 5 142 12 Q 144 18 150 15 Z' fill='#c41a05' opacity='0.4'/>
+<path d='M 147 14 Q 148 7 144 3 Q 142 8 143 13 Q 144 16 147 14 Z' fill='#ff8800' opacity='0.35'/>
+
+<!-- Central top flame between horns -->
+<path d='M 118 25 Q 115 10 125 0 Q 135 10 132 25 Q 128 30 125 28 Q 122 30 118 25 Z' fill='#c41a05' opacity='0.5'/>
+<path d='M 120 23 Q 118 12 125 5 Q 132 12 130 23 Q 128 26 125 25 Q 122 26 120 23 Z' fill='#e6591a' opacity='0.45'/>
+<path d='M 122 20 Q 121 13 125 8 Q 129 13 128 20 Q 127 23 125 22 Q 123 23 122 20 Z' fill='#ff8800' opacity='0.4'/>
+<path d='M 124 18 Q 124 14 125 10 Q 126 14 126 18 Q 126 20 125 19 Q 124 20 124 18 Z' fill='#ffaa30' opacity='0.35'/>
+<path d='M 125 15 Q 125 13 125 12 Q 126 13 125 15 Z' fill='#ffe060' opacity='0.3'/>
+
+<!-- Ground fire glow -->
+<ellipse cx='125' cy='168' rx='45' ry='12' fill='url(#glowFS)' opacity='0.6'/>
+<ellipse cx='125' cy='168' rx='30' ry='8' fill='#ff8800' opacity='0.3' filter='url(#blurFS)'/>
+
+<!-- Shadow pooling at feet -->
+<ellipse cx='125' cy='170' rx='35' ry='6' fill='#000000' opacity='0.5'/>
+
+<!-- Embers around character -->
+<circle cx='70' cy='60' r='1.5' fill='#ff8800' opacity='0.6'/>
+<circle cx='70' cy='60' r='3' fill='url(#glowFS)' opacity='0.3'/>
+<circle cx='180' cy='60' r='1.5' fill='#ff8800' opacity='0.6'/>
+<circle cx='180' cy='60' r='3' fill='url(#glowFS)' opacity='0.3'/>
+<circle cx='60' cy='115' r='1.2' fill='#ffaa30' opacity='0.5'/>
+<circle cx='190' cy='115' r='1.2' fill='#ffaa30' opacity='0.5'/>
+<circle cx='65' cy='150' r='1' fill='#ff8800' opacity='0.5'/>
+<circle cx='185' cy='150' r='1' fill='#ff8800' opacity='0.5'/>
+<circle cx='95' cy='30' r='1' fill='#ffe060' opacity='0.4'/>
+<circle cx='155' cy='30' r='1' fill='#ffe060' opacity='0.4'/>
+<circle cx='50' cy='85' r='0.8' fill='#e6591a' opacity='0.4'/>
+<circle cx='200' cy='85' r='0.8' fill='#e6591a' opacity='0.4'/>
+<circle cx='50' cy='140' r='0.8' fill='#c41a05' opacity='0.3'/>
+<circle cx='200' cy='140' r='0.8' fill='#c41a05' opacity='0.3'/>
+<circle cx='110' cy='15' r='0.7' fill='#ffaa30' opacity='0.4'/>
+<circle cx='140' cy='15' r='0.7' fill='#ffaa30' opacity='0.4'/>
+
+<!-- Shadow wisp trails -->
+<path d='M 75 165 Q 60 168 45 160 Q 50 170 70 175 Q 78 172 75 165 Z' fill='#0a0504' opacity='0.4'/>
+<path d='M 175 165 Q 190 168 205 160 Q 200 170 180 175 Q 172 172 175 165 Z' fill='#0a0504' opacity='0.4'/>
+</svg>

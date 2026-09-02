@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b_reed_rest_004"]
+
+[ext_resource type="Script" path="res://Reed/scripts/reed_chibi_sprite.gd" id="1"]
+
+[node name="ReedRestSite" type="Node2D"]
+
+[node name="Visuals" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -420)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1")

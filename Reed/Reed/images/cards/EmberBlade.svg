@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgBlade" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#2a1810"/>
+      <stop offset="40%" stop-color="#180c06"/>
+      <stop offset="100%" stop-color="#070302"/>
+    </radialGradient>
+    <linearGradient id="bladeSteel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d0c8be"/>
+      <stop offset="30%" stop-color="#8a807a"/>
+      <stop offset="60%" stop-color="#4a423c"/>
+      <stop offset="100%" stop-color="#2a221c"/>
+    </linearGradient>
+    <linearGradient id="emberBlade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="25%" stop-color="#ffe060"/>
+      <stop offset="50%" stop-color="#ff8800"/>
+      <stop offset="80%" stop-color="#e6591a"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
+    </linearGradient>
+    <radialGradient id="emberGlowBlade" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ashParticleBlade" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8a807a" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#4a423c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#251e1a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowBlade">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigGlowBlade">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgBlade)" rx="8"/>
+
+  <!-- Ember aura behind blade -->
+  <ellipse cx="125" cy="95" rx="70" ry="85" fill="url(#emberGlowBlade)" opacity="0.2" filter="url(#bigGlowBlade)"/>
+
+  <!-- Blade ember trail glow (vertical) -->
+  <ellipse cx="125" cy="80" rx="20" ry="55" fill="url(#emberGlowBlade)" opacity="0.25" filter="url(#bigGlowBlade)"/>
+
+  <!-- Sword blade (pointing upward, diagonal) -->
+  <!-- Blade tip -->
+  <path d="M 150 25 L 165 40 L 155 50 Z" fill="url(#bladeSteel)" stroke="#1a1410" stroke-width="1"/>
+  <!-- Blade body -->
+  <path d="M 155 50 L 145 120 L 130 140 L 120 130 L 140 55 Z"
+        fill="url(#bladeSteel)" stroke="#1a1410" stroke-width="1.5"/>
+  <!-- Blade edge highlight (ember-lit) -->
+  <path d="M 150 30 L 142 115 L 132 135" stroke="url(#emberBlade)" stroke-width="2" fill="none" opacity="0.7" filter="url(#glowBlade)"/>
+
+  <!-- Crossguard -->
+  <path d="M 100 135 L 170 115 L 180 130 L 110 150 Z"
+        fill="url(#bladeSteel)" stroke="#1a1410" stroke-width="1.5"/>
+
+  <!-- Guard ember gem -->
+  <ellipse cx="140" cy="130" rx="8" ry="6" fill="url(#emberGlowBlade)" opacity="0.8" filter="url(#glowBlade)"/>
+  <circle cx="140" cy="130" r="3" fill="#ffe060" opacity="0.8" filter="url(#glowBlade)"/>
+
+  <!-- Handle -->
+  <path d="M 110 150 L 95 170 L 85 165 L 100 145 Z" fill="url(#bladeSteel)" stroke="#1a1410" stroke-width="1"/>
+
+  <!-- Pommel -->
+  <circle cx="90" cy="168" r="5" fill="url(#bladeSteel)" stroke="#1a1410" stroke-width="1"/>
+  <circle cx="90" cy="168" r="2.5" fill="url(#emberGlowBlade)" opacity="0.7" filter="url(#glowBlade)"/>
+
+  <!-- Ember cracks along the blade -->
+  <path d="M 148 55 L 144 80" stroke="#ffe060" stroke-width="1" fill="none" opacity="0.6" filter="url(#glowBlade)"/>
+  <path d="M 143 85 L 138 110" stroke="#ff8800" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowBlade)"/>
+  <path d="M 135 115 L 128 130" stroke="#e6591a" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowBlade)"/>
+
+  <!-- Ember sparks rising from blade -->
+  <circle cx="155" cy="45" r="2.5" fill="url(#emberGlowBlade)" opacity="0.8" filter="url(#glowBlade)"/>
+  <circle cx="150" cy="70" r="2" fill="url(#emberGlowBlade)" opacity="0.7" filter="url(#glowBlade)"/>
+  <circle cx="145" cy="95" r="2" fill="url(#emberGlowBlade)" opacity="0.6" filter="url(#glowBlade)"/>
+  <circle cx="138" cy="118" r="1.5" fill="url(#emberGlowBlade)" opacity="0.5" filter="url(#glowBlade)"/>
+
+  <!-- Ember sparks floating upward -->
+  <circle cx="165" cy="30" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glowBlade)"/>
+  <circle cx="175" cy="55" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glowBlade)"/>
+  <circle cx="170" cy="80" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowBlade)"/>
+  <circle cx="180" cy="100" r="1.2" fill="#ffaa30" opacity="0.45" filter="url(#glowBlade)"/>
+  <circle cx="165" cy="110" r="1" fill="#ff8800" opacity="0.4" filter="url(#glowBlade)"/>
+
+  <!-- Ember streaks rising -->
+  <line x1="155" y1="45" x2="170" y2="25" stroke="#ff8800" stroke-width="0.8" opacity="0.3"/>
+  <line x1="150" y1="70" x2="175" y2="50" stroke="#ffe060" stroke-width="0.8" opacity="0.25"/>
+  <line x1="145" y1="95" x2="172" y2="78" stroke="#ff8800" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Ash particles falling from blade -->
+  <circle cx="115" cy="50" r="2" fill="url(#ashParticleBlade)" opacity="0.5"/>
+  <circle cx="100" cy="80" r="1.5" fill="url(#ashParticleBlade)" opacity="0.45"/>
+  <circle cx="85" cy="100" r="2" fill="url(#ashParticleBlade)" opacity="0.5"/>
+  <circle cx="75" cy="130" r="1.5" fill="url(#ashParticleBlade)" opacity="0.45"/>
+  <circle cx="65" cy="155" r="2" fill="url(#ashParticleBlade)" opacity="0.4"/>
+  <circle cx="55" cy="50" r="1.5" fill="url(#ashParticleBlade)" opacity="0.45"/>
+  <circle cx="45" cy="90" r="1.5" fill="url(#ashParticleBlade)" opacity="0.4"/>
+  <circle cx="60" cy="120" r="1" fill="url(#ashParticleBlade)" opacity="0.35"/>
+
+  <!-- Small scattered embers -->
+  <circle cx="50" cy="35" r="1" fill="#ff8800" opacity="0.35" filter="url(#glowBlade)"/>
+  <circle cx="200" cy="40" r="1" fill="#ff8800" opacity="0.35" filter="url(#glowBlade)"/>
+  <circle cx="195" cy="130" r="1" fill="#e6591a" opacity="0.3" filter="url(#glowBlade)"/>
+  <circle cx="40" cy="160" r="1" fill="#ff8800" opacity="0.3" filter="url(#glowBlade)"/>
+
+  <!-- Ground ember glow -->
+  <ellipse cx="125" cy="175" rx="50" ry="5" fill="#8a2a05" opacity="0.25" filter="url(#glowBlade)"/>
+</svg>

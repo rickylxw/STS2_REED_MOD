@@ -1,0 +1,11 @@
+global using System;
+global using System.Threading.Tasks;
+global using System.Collections.Generic;
+global using System.Linq;
+global using MegaCrit.Sts2.Core.Entities.Creatures;
+global using MegaCrit.Sts2.Core.Entities.Players;
+global using MegaCrit.Sts2.Core.Entities.Relics;
+global using MegaCrit.Sts2.Core.Combat;
+global using MegaCrit.Sts2.Core.Models.Powers;
+global using MegaCrit.Sts2.Core.Entities.Cards;
+global using MegaCrit.Sts2.Core.Models;

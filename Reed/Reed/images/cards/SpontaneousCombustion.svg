@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgCombust" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="40%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#080402"/>
+    </radialGradient>
+    <radialGradient id="explosionCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/>
+      <stop offset="15%" stop-color="#ffe060" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#ffaa30" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#ff8800" stop-opacity="0.4"/>
+      <stop offset="85%" stop-color="#e6591a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bodySilhouette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0d08"/>
+      <stop offset="50%" stop-color="#0a0503"/>
+      <stop offset="100%" stop-color="#080402"/>
+    </linearGradient>
+    <linearGradient id="crackFire" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="30%" stop-color="#ffe060"/>
+      <stop offset="60%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#c41a05"/>
+    </linearGradient>
+    <radialGradient id="emberFlyGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowCombust">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigGlowCombust">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgCombust)" rx="8"/>
+
+  <!-- Explosion outer glow (behind everything) -->
+  <ellipse cx="125" cy="95" rx="80" ry="90" fill="url(#explosionCore)" opacity="0.3" filter="url(#bigGlowCombust)"/>
+
+  <!-- Explosion burst rays (radiating from center of body) -->
+  <path d="M 125 95 L 60 30" stroke="#ff8800" stroke-width="2" opacity="0.15" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 30 60" stroke="#ffaa30" stroke-width="2.5" opacity="0.2" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 15 95" stroke="#ff8800" stroke-width="2" opacity="0.15" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 30 130" stroke="#e6591a" stroke-width="2" opacity="0.18" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 60 165" stroke="#ff8800" stroke-width="2.5" opacity="0.2" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 125 175" stroke="#ffaa30" stroke-width="2" opacity="0.15" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 190 165" stroke="#ff8800" stroke-width="2.5" opacity="0.2" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 225 130" stroke="#e6591a" stroke-width="2" opacity="0.18" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 240 95" stroke="#ff8800" stroke-width="2" opacity="0.15" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 225 60" stroke="#ffaa30" stroke-width="2.5" opacity="0.2" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 190 30" stroke="#ff8800" stroke-width="2" opacity="0.15" filter="url(#glowCombust)"/>
+  <path d="M 125 95 L 125 20" stroke="#e6591a" stroke-width="2" opacity="0.15" filter="url(#glowCombust)"/>
+
+  <!-- Inner explosion burst (bright) -->
+  <ellipse cx="125" cy="95" rx="35" ry="40" fill="url(#explosionCore)" opacity="0.5" filter="url(#glowCombust)"/>
+
+  <!-- Humanoid silhouette (dark, burning from within) -->
+  <!-- Head -->
+  <ellipse cx="125" cy="35" rx="13" ry="15" fill="url(#bodySilhouette)"/>
+
+  <!-- Neck -->
+  <rect x="120" y="48" width="10" height="8" fill="url(#bodySilhouette)"/>
+
+  <!-- Torso -->
+  <path d="M 108 55 Q 105 65 102 80 L 100 120 Q 100 130 105 135 L 145 135 Q 150 130 150 120 L 148 80 Q 145 65 142 55 Z"
+        fill="url(#bodySilhouette)"/>
+
+  <!-- Left arm (raised) -->
+  <path d="M 108 60 Q 95 55 82 45 Q 75 38 72 28 L 80 25 Q 85 35 92 42 Q 100 50 108 52 Z"
+        fill="url(#bodySilhouette)"/>
+
+  <!-- Right arm (raised) -->
+  <path d="M 142 60 Q 155 55 168 45 Q 175 38 178 28 L 170 25 Q 165 35 158 42 Q 150 50 142 52 Z"
+        fill="url(#bodySilhouette)"/>
+
+  <!-- Left leg -->
+  <path d="M 105 135 Q 100 150 95 170 L 108 172 Q 110 155 113 140 Z"
+        fill="url(#bodySilhouette)"/>
+
+  <!-- Right leg -->
+  <path d="M 145 135 Q 150 150 155 170 L 142 172 Q 140 155 137 140 Z"
+        fill="url(#bodySilhouette)"/>
+
+  <!-- Fire cracks across the body (glowing from within) -->
+  <!-- Head cracks -->
+  <path d="M 118 28 L 125 35 L 120 42" stroke="url(#crackFire)" stroke-width="1.5" fill="none" opacity="0.8" filter="url(#glowCombust)"/>
+  <path d="M 128 30 L 132 38 L 130 44" stroke="url(#crackFire)" stroke-width="1" fill="none" opacity="0.7" filter="url(#glowCombust)"/>
+
+  <!-- Torso cracks (main vertical) -->
+  <path d="M 125 55 L 125 130" stroke="url(#crackFire)" stroke-width="2" fill="none" opacity="0.9" filter="url(#glowCombust)"/>
+  <path d="M 120 60 Q 115 80 118 100 Q 115 115 120 130" stroke="url(#crackFire)" stroke-width="1.5" fill="none" opacity="0.7" filter="url(#glowCombust)"/>
+  <path d="M 130 60 Q 135 80 132 100 Q 135 115 130 130" stroke="url(#crackFire)" stroke-width="1.5" fill="none" opacity="0.7" filter="url(#glowCombust)"/>
+
+  <!-- Torso horizontal cracks -->
+  <path d="M 105 75 Q 125 73 145 75" stroke="url(#crackFire)" stroke-width="1.2" fill="none" opacity="0.6" filter="url(#glowCombust)"/>
+  <path d="M 103 95 Q 125 97 147 95" stroke="url(#crackFire)" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowCombust)"/>
+  <path d="M 105 115 Q 125 113 145 115" stroke="url(#crackFire)" stroke-width="1.2" fill="none" opacity="0.6" filter="url(#glowCombust)"/>
+
+  <!-- Arm cracks -->
+  <path d="M 100 50 Q 90 45 80 35" stroke="url(#crackFire)" stroke-width="1" fill="none" opacity="0.6" filter="url(#glowCombust)"/>
+  <path d="M 150 50 Q 160 45 170 35" stroke="url(#crackFire)" stroke-width="1" fill="none" opacity="0.6" filter="url(#glowCombust)"/>
+
+  <!-- Leg cracks -->
+  <path d="M 105 145 L 100 165" stroke="url(#crackFire)" stroke-width="1" fill="none" opacity="0.6" filter="url(#glowCombust)"/>
+  <path d="M 145 145 L 150 165" stroke="url(#crackFire)" stroke-width="1" fill="none" opacity="0.6" filter="url(#glowCombust)"/>
+
+  <!-- Bright crack nodes (where fire bursts through) -->
+  <circle cx="125" cy="80" r="4" fill="url(#emberFlyGlow)" filter="url(#glowCombust)"/>
+  <circle cx="125" cy="80" r="1.5" fill="#fff8e0" filter="url(#glowCombust)"/>
+  <circle cx="118" cy="100" r="3" fill="url(#emberFlyGlow)" filter="url(#glowCombust)"/>
+  <circle cx="132" cy="100" r="3" fill="url(#emberFlyGlow)" filter="url(#glowCombust)"/>
+  <circle cx="125" cy="35" r="3" fill="url(#emberFlyGlow)" filter="url(#glowCombust)"/>
+  <circle cx="125" cy="115" r="3" fill="url(#emberFlyGlow)" filter="url(#glowCombust)"/>
+
+  <!-- Flames bursting from chest center -->
+  <path d="M 118 85 Q 112 70 118 55 Q 115 45 120 35 Q 125 30 125 25 Q 125 30 130 35 Q 135 45 132 55 Q 138 70 132 85 Z"
+        fill="url(#explosionCore)" opacity="0.7" filter="url(#glowCombust)"/>
+  <path d="M 121 82 Q 118 68 122 55 Q 120 45 123 38 Q 125 33 125 30 Q 125 33 127 38 Q 130 45 128 55 Q 132 68 129 82 Z"
+        fill="#ffe060" opacity="0.5" filter="url(#glowCombust)"/>
+
+  <!-- Embers flying outward (radial pattern) -->
+  <circle cx="60" cy="40" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glowCombust)"/>
+  <circle cx="40" cy="70" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glowCombust)"/>
+  <circle cx="30" cy="100" r="1.2" fill="#ffaa30" opacity="0.5" filter="url(#glowCombust)"/>
+  <circle cx="40" cy="130" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowCombust)"/>
+  <circle cx="60" cy="160" r="2" fill="#ffe060" opacity="0.6" filter="url(#glowCombust)"/>
+  <circle cx="100" cy="180" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowCombust)"/>
+  <circle cx="150" cy="180" r="2" fill="#fff8e0" opacity="0.6" filter="url(#glowCombust)"/>
+  <circle cx="190" cy="160" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glowCombust)"/>
+  <circle cx="210" cy="130" r="1.2" fill="#ffaa30" opacity="0.5" filter="url(#glowCombust)"/>
+  <circle cx="220" cy="100" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowCombust)"/>
+  <circle cx="210" cy="70" r="2" fill="#ffe060" opacity="0.6" filter="url(#glowCombust)"/>
+  <circle cx="190" cy="40" r="1.5" fill="#fff8e0" opacity="0.6" filter="url(#glowCombust)"/>
+  <circle cx="125" cy="15" r="1.2" fill="#ff8800" opacity="0.5" filter="url(#glowCombust)"/>
+
+  <!-- Ember trails (streaks) -->
+  <line x1="125" y1="95" x2="70" y2="35" stroke="#ff8800" stroke-width="0.8" opacity="0.3"/>
+  <line x1="125" y1="95" x2="35" y2="70" stroke="#ffaa30" stroke-width="0.8" opacity="0.25"/>
+  <line x1="125" y1="95" x2="65" y2="155" stroke="#ff8800" stroke-width="0.8" opacity="0.3"/>
+  <line x1="125" y1="95" x2="185" y2="155" stroke="#ffaa30" stroke-width="0.8" opacity="0.3"/>
+  <line x1="125" y1="95" x2="215" y2="70" stroke="#ff8800" stroke-width="0.8" opacity="0.25"/>
+  <line x1="125" y1="95" x2="125" y2="20" stroke="#ffe060" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Small scattered embers -->
+  <circle cx="75" cy="50" r="1" fill="#ff8800" opacity="0.4"/>
+  <circle cx="50" cy="115" r="0.8" fill="#e6591a" opacity="0.3"/>
+  <circle cx="80" cy="145" r="1" fill="#ffaa30" opacity="0.4"/>
+  <circle cx="170" cy="145" r="1" fill="#ff8800" opacity="0.4"/>
+  <circle cx="200" cy="115" r="0.8" fill="#e6591a" opacity="0.3"/>
+  <circle cx="175" cy="50" r="1" fill="#ffaa30" opacity="0.4"/>
+
+  <!-- Ground shadow/glow -->
+  <ellipse cx="125" cy="175" rx="50" ry="6" fill="#8a2a05" opacity="0.3" filter="url(#glowCombust)"/>
+</svg>

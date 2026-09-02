@@ -1,0 +1,183 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+<defs>
+  <radialGradient id='bgWF' cx='70%' cy='50%' r='80%'>
+    <stop offset='0%' stop-color='#3a2010'/>
+    <stop offset='40%' stop-color='#2a1815'/>
+    <stop offset='100%' stop-color='#1a0d08'/>
+  </radialGradient>
+  <radialGradient id='flameGWF' cx='50%' cy='50%' r='50%'>
+    <stop offset='0%' stop-color='#fff8e0' stop-opacity='0.9'/>
+    <stop offset='15%' stop-color='#ffe060' stop-opacity='0.8'/>
+    <stop offset='35%' stop-color='#ffaa30' stop-opacity='0.7'/>
+    <stop offset='60%' stop-color='#ff8800' stop-opacity='0.5'/>
+    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
+  </radialGradient>
+  <radialGradient id='glowWF' cx='50%' cy='50%' r='50%'>
+    <stop offset='0%' stop-color='#ff8800' stop-opacity='0.5'/>
+    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
+  </radialGradient>
+  <radialGradient id='bigGlowWF' cx='60%' cy='50%' r='60%'>
+    <stop offset='0%' stop-color='#c41a05' stop-opacity='0.2'/>
+    <stop offset='100%' stop-color='#1a0d08' stop-opacity='0'/>
+  </radialGradient>
+  <linearGradient id='smokeGWF' x1='0%' y1='100%' x2='0%' y2='0%'>
+    <stop offset='0%' stop-color='#3a2818' stop-opacity='0.6'/>
+    <stop offset='50%' stop-color='#2a1815' stop-opacity='0.4'/>
+    <stop offset='100%' stop-color='#1a0d08' stop-opacity='0'/>
+  </linearGradient>
+  <linearGradient id='groundGWF' x1='0%' y1='0%' x2='100%' y2='0%'>
+    <stop offset='0%' stop-color='#ff8800' stop-opacity='0.4'/>
+    <stop offset='30%' stop-color='#c41a05' stop-opacity='0.3'/>
+    <stop offset='70%' stop-color='#8a2a05' stop-opacity='0.15'/>
+    <stop offset='100%' stop-color='#2a1815' stop-opacity='0'/>
+  </linearGradient>
+  <filter id='blurWF' x='-20%' y='-20%' width='140%' height='140%'>
+    <feGaussianBlur stdDeviation='3'/>
+  </filter>
+  <filter id='bigBlurWF' x='-30%' y='-30%' width='160%' height='160%'>
+    <feGaussianBlur stdDeviation='8'/>
+  </filter>
+</defs>
+
+<!-- Background -->
+<rect width='250' height='190' fill='url(#bgWF)' rx='8'/>
+
+<!-- Outer ambient glow biased to the left (fire source side) -->
+<ellipse cx='90' cy='95' rx='100' ry='85' fill='url(#bigGlowWF)'/>
+
+<!-- Distant sky haze -->
+<ellipse cx='80' cy='40' rx='80' ry='35' fill='#c41a05' opacity='0.12' filter='url(#bigBlurWF)'/>
+
+<!-- Ground / terrain -->
+<path d='M 0 155 Q 50 150 100 158 Q 150 155 200 162 Q 250 158 250 165 L 250 190 L 0 190 Z' fill='#1a0d08'/>
+<!-- Ground fire glow spreading right -->
+<path d='M 0 155 Q 50 150 100 158 Q 150 155 200 162 Q 250 158 250 165 L 250 175 L 0 175 Z' fill='url(#groundGWF)' opacity='0.7'/>
+<ellipse cx='60' cy='165' rx='50' ry='10' fill='url(#glowWF)' opacity='0.5' filter='url(#blurWF)'/>
+
+<!-- Consumed tree silhouettes (left side, already burning) -->
+<path d='M 35 155 L 33 130 L 30 135 L 28 125 L 31 120 L 34 128 L 36 115 L 38 125 L 37 135 L 40 155 Z' fill='#1a0d08'/>
+<!-- Tree on fire -->
+<path d='M 35 155 L 33 130 L 30 135 L 28 125 L 31 120 L 34 128 L 36 115 L 38 125 L 37 135 L 40 155 Z' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.4'/>
+<circle cx='31' cy='122' r='1' fill='#ff8800' opacity='0.6'/>
+<circle cx='36' cy='118' r='0.8' fill='#ffaa30' opacity='0.5'/>
+<circle cx='33' cy='130' r='0.7' fill='#ff8800' opacity='0.5'/>
+
+<path d='M 55 155 L 54 140 L 52 143 L 51 135 L 53 130 L 55 135 L 56 125 L 57 133 L 58 155 Z' fill='#1a0d08'/>
+<path d='M 55 155 L 54 140 L 52 143 L 51 135 L 53 130 L 55 135 L 56 125 L 57 133 L 58 155 Z' fill='none' stroke='#c41a05' stroke-width='0.6' opacity='0.3'/>
+<circle cx='53' cy='132' r='0.8' fill='#ff8800' opacity='0.5'/>
+<circle cx='56' cy='128' r='0.6' fill='#ffaa30' opacity='0.4'/>
+
+<!-- Tree not yet consumed (right side, dark silhouette) -->
+<path d='M 215 158 L 213 135 L 210 140 L 208 128 L 211 122 L 214 130 L 216 118 L 218 128 L 220 140 L 222 158 Z' fill='#0a0504'/>
+<path d='M 215 158 L 213 135 L 210 140 L 208 128 L 211 122 L 214 130 L 216 118 L 218 128 L 220 140 L 222 158 Z' fill='none' stroke='#2a1815' stroke-width='0.5' opacity='0.5'/>
+
+<!-- Smoke plumes rising -->
+<path d='M 20 130 Q 15 100 25 70 Q 35 45 30 20 Q 20 15 15 30 Q 10 55 18 80 Q 10 105 20 130 Z' fill='url(#smokeGWF)' opacity='0.6' filter='url(#blurWF)'/>
+<path d='M 50 140 Q 45 110 55 85 Q 65 60 58 35 Q 50 30 45 45 Q 42 70 50 95 Q 43 115 50 140 Z' fill='url(#smokeGWF)' opacity='0.5' filter='url(#blurWF)'/>
+<path d='M 85 145 Q 80 115 90 90 Q 100 65 92 40 Q 85 35 80 50 Q 77 75 85 100 Q 78 120 85 145 Z' fill='url(#smokeGWF)' opacity='0.4'/>
+<path d='M 120 150 Q 115 125 125 100 Q 135 75 128 55 Q 120 50 115 65 Q 112 90 120 110 Q 113 130 120 150 Z' fill='url(#smokeGWF)' opacity='0.3'/>
+
+<!-- Smoke puffs -->
+<ellipse cx='22' cy='25' rx='15' ry='8' fill='#3a2818' opacity='0.4' filter='url(#blurWF)'/>
+<ellipse cx='50' cy='38' rx='12' ry='7' fill='#3a2818' opacity='0.35' filter='url(#blurWF)'/>
+<ellipse cx='88' cy='42' rx='14' ry='8' fill='#3a2818' opacity='0.3' filter='url(#blurWF)'/>
+<ellipse cx='125' cy='55' rx='12' ry='7' fill='#3a2818' opacity='0.25'/>
+
+<!-- MAIN FIRE WALL - advancing from left to right -->
+
+<!-- Fire wall - outer red layer (largest) -->
+<path d='M 0 155 Q 5 100 15 80 Q 10 60 20 45 Q 15 30 30 25 Q 25 15 40 20 Q 45 10 55 25 Q 60 15 70 30 Q 75 20 85 35 Q 90 25 100 40 Q 105 30 115 50 Q 120 35 130 55 Q 135 45 140 65 Q 145 55 150 75 Q 155 65 158 85 Q 160 95 155 120 Q 160 140 150 155 Z' fill='#c41a05' opacity='0.5' filter='url(#blurWF)'/>
+
+<!-- Fire wall - outer orange layer -->
+<path d='M 0 155 Q 5 110 12 90 Q 8 70 18 55 Q 14 40 28 35 Q 24 25 38 30 Q 42 20 52 35 Q 57 25 67 40 Q 72 30 82 45 Q 87 35 97 50 Q 102 40 112 60 Q 117 45 127 65 Q 132 55 137 75 Q 142 65 147 85 Q 150 100 145 125 Q 150 145 140 155 Z' fill='#e6591a' opacity='0.6'/>
+
+<!-- Fire wall - mid orange layer -->
+<path d='M 0 155 Q 3 120 10 100 Q 6 85 15 70 Q 12 55 25 50 Q 22 40 35 45 Q 40 35 48 48 Q 53 40 62 52 Q 67 45 75 55 Q 80 48 88 60 Q 93 53 100 65 Q 105 55 112 70 Q 117 60 122 75 Q 127 68 132 82 Q 135 95 130 115 Q 135 140 125 155 Z' fill='#ff8800' opacity='0.65'/>
+
+<!-- Fire wall - inner bright orange layer -->
+<path d='M 0 155 Q 2 130 8 115 Q 5 100 12 88 Q 10 75 20 72 Q 18 62 28 62 Q 33 55 40 60 Q 45 53 52 60 Q 57 55 64 62 Q 69 58 75 65 Q 80 62 85 70 Q 90 67 95 75 Q 100 70 105 80 Q 108 88 105 100 Q 108 115 103 130 Q 105 145 98 155 Z' fill='#ffaa30' opacity='0.7'/>
+
+<!-- Fire wall - core yellow-white layer -->
+<path d='M 0 155 Q 1 140 5 128 Q 3 118 8 108 Q 7 98 13 95 Q 12 88 18 87 Q 22 82 27 84 Q 32 80 37 82 Q 42 78 47 80 Q 52 77 57 80 Q 62 78 67 82 Q 72 80 76 84 Q 80 83 84 88 Q 87 92 85 100 Q 87 110 83 120 Q 85 135 78 155 Z' fill='#ffe060' opacity='0.6'/>
+
+<!-- Fire wall - hottest white core -->
+<path d='M 0 155 Q 1 145 3 135 Q 2 128 5 122 Q 4 115 9 112 Q 8 106 13 105 Q 17 102 21 103 Q 25 100 29 101 Q 33 99 37 100 Q 41 98 45 99 Q 49 98 53 100 Q 56 99 59 102 Q 62 103 64 107 Q 66 112 64 118 Q 65 125 62 132 Q 63 142 58 155 Z' fill='#fff8e0' opacity='0.5'/>
+
+<!-- Individual large flame tongues at the fire front edge -->
+
+<!-- Flame 1 (leftmost, tallest) -->
+<path d='M 15 80 Q 8 50 12 25 Q 20 15 28 30 Q 25 55 22 75 Q 20 85 15 80 Z' fill='#c41a05' opacity='0.6'/>
+<path d='M 17 78 Q 12 52 15 32 Q 20 25 25 35 Q 23 55 20 73 Q 18 80 17 78 Z' fill='#e6591a' opacity='0.5'/>
+<path d='M 18 75 Q 15 55 17 40 Q 20 35 22 42 Q 21 58 19 70 Q 18 75 18 75 Z' fill='#ff8800' opacity='0.45'/>
+<path d='M 19 70 Q 18 58 19 48 Q 21 45 22 50 Q 22 60 20 68 Q 19 72 19 70 Z' fill='#ffaa30' opacity='0.35'/>
+<path d='M 20 65 Q 20 58 20 52 Q 21 52 21 58 Q 21 63 20 65 Z' fill='#ffe060' opacity='0.3'/>
+
+<!-- Flame 2 -->
+<path d='M 40 65 Q 35 35 42 15 Q 50 10 55 28 Q 50 50 48 62 Q 44 70 40 65 Z' fill='#c41a05' opacity='0.55'/>
+<path d='M 42 63 Q 38 38 44 22 Q 49 18 52 32 Q 48 48 46 60 Q 44 65 42 63 Z' fill='#e6591a' opacity='0.45'/>
+<path d='M 43 60 Q 41 42 45 30 Q 48 28 50 38 Q 47 50 46 58 Q 44 62 43 60 Z' fill='#ff8800' opacity='0.4'/>
+<path d='M 44 55 Q 43 45 45 38 Q 47 38 48 45 Q 47 52 46 55 Q 45 58 44 55 Z' fill='#ffaa30' opacity='0.35'/>
+
+<!-- Flame 3 -->
+<path d='M 65 65 Q 60 40 65 20 Q 72 15 78 32 Q 73 52 72 62 Q 68 70 65 65 Z' fill='#c41a05' opacity='0.5'/>
+<path d='M 67 63 Q 63 42 68 28 Q 73 25 76 38 Q 72 52 71 60 Q 69 65 67 63 Z' fill='#e6591a' opacity='0.4'/>
+<path d='M 68 60 Q 66 45 69 35 Q 72 33 74 42 Q 71 52 70 58 Q 69 62 68 60 Z' fill='#ff8800' opacity='0.35'/>
+
+<!-- Flame 4 -->
+<path d='M 88 70 Q 84 48 88 30 Q 95 25 100 42 Q 96 58 95 68 Q 91 75 88 70 Z' fill='#c41a05' opacity='0.45'/>
+<path d='M 90 68 Q 87 50 90 35 Q 95 32 98 44 Q 95 56 94 65 Q 92 70 90 68 Z' fill='#e6591a' opacity='0.35'/>
+<path d='M 91 65 Q 89 52 92 42 Q 95 40 97 48 Q 94 58 93 62 Q 92 66 91 65 Z' fill='#ff8800' opacity='0.3'/>
+
+<!-- Flame 5 (advancing front) -->
+<path d='M 112 80 Q 108 60 112 45 Q 118 40 123 55 Q 120 70 120 78 Q 116 85 112 80 Z' fill='#c41a05' opacity='0.4'/>
+<path d='M 114 78 Q 111 62 114 50 Q 118 48 121 58 Q 119 70 118 76 Q 116 82 114 78 Z' fill='#e6591a' opacity='0.3'/>
+<path d='M 115 75 Q 113 65 115 55 Q 118 54 119 62 Q 117 72 116 74 Q 115 77 115 75 Z' fill='#ff8800' opacity='0.25'/>
+
+<!-- Flame 6 (edge of advance, smaller) -->
+<path d='M 138 95 Q 135 80 138 70 Q 142 65 146 75 Q 143 85 145 92 Q 142 100 138 95 Z' fill='#c41a05' opacity='0.35'/>
+<path d='M 140 93 Q 138 82 140 75 Q 143 73 144 80 Q 142 88 142 90 Q 141 95 140 93 Z' fill='#e6591a' opacity='0.25'/>
+
+<!-- Flame 7 (furthest advancing, smallest and dimmest) -->
+<path d='M 158 110 Q 156 100 158 92 Q 161 88 163 96 Q 161 105 162 108 Q 160 115 158 110 Z' fill='#c41a05' opacity='0.25'/>
+<path d='M 159 108 Q 158 102 159 96 Q 161 95 161 100 Q 160 106 160 107 Z' fill='#8a2a05' opacity='0.2'/>
+
+<!-- Ground-level spreading flames -->
+<path d='M 0 155 Q 5 148 15 150 Q 25 145 35 152 Q 45 148 55 153 Q 65 148 75 153 Q 85 148 95 155 Q 105 150 115 155 Q 125 150 135 155 Q 140 155 145 160 L 0 160 Z' fill='#ff8800' opacity='0.3'/>
+<path d='M 0 155 Q 5 150 12 152 Q 22 148 32 153 Q 42 149 52 154 Q 62 150 72 154 Q 82 150 92 156 Q 100 153 108 157 Q 115 154 122 158 Q 125 158 128 162 L 0 162 Z' fill='#ffaa30' opacity='0.25'/>
+<path d='M 0 157 Q 5 154 10 155 Q 18 152 28 156 Q 38 153 48 157 Q 55 155 65 158 Q 72 155 82 159 Q 88 157 95 160 L 0 160 Z' fill='#ffe060' opacity='0.2'/>
+
+<!-- Ember sparks flying -->
+<circle cx='25' cy='20' r='1.5' fill='#ff8800' opacity='0.7'/>
+<circle cx='25' cy='20' r='3' fill='url(#glowWF)' opacity='0.3'/>
+<circle cx='50' cy='12' r='1.2' fill='#ffaa30' opacity='0.6'/>
+<circle cx='50' cy='12' r='2.5' fill='url(#glowWF)' opacity='0.25'/>
+<circle cx='75' cy='18' r='1' fill='#ffe060' opacity='0.6'/>
+<circle cx='100' cy='30' r='1.2' fill='#ff8800' opacity='0.5'/>
+<circle cx='125' cy='40' r='1' fill='#ffaa30' opacity='0.4'/>
+<circle cx='15' cy='45' r='0.8' fill='#ffe060' opacity='0.5'/>
+<circle cx='40' cy='50' r='0.7' fill='#ff8800' opacity='0.4'/>
+<circle cx='70' cy='45' r='0.8' fill='#ffaa30' opacity='0.4'/>
+<circle cx='95' cy='55' r='0.7' fill='#ff8800' opacity='0.35'/>
+<circle cx='30' cy='65' r='0.6' fill='#ffe060' opacity='0.3'/>
+<circle cx='60' cy='70' r='0.6' fill='#ffaa30' opacity='0.3'/>
+<circle cx='110' cy='60' r='0.6' fill='#e6591a' opacity='0.25'/>
+<circle cx='140' cy='70' r='0.5' fill='#c41a05' opacity='0.2'/>
+<circle cx='160' cy='80' r='0.5' fill='#8a2a05' opacity='0.2'/>
+
+<!-- Ember streaks showing motion -->
+<line x1='28' y1='18' x2='32' y2='12' stroke='#ff8800' stroke-width='0.6' opacity='0.3'/>
+<line x1='52' y1='10' x2='56' y2='5' stroke='#ffaa30' stroke-width='0.5' opacity='0.25'/>
+<line x1='77' y1='16' x2='81' y2='10' stroke='#ffe060' stroke-width='0.5' opacity='0.2'/>
+<line x1='102' y1='28' x2='106' y2='22' stroke='#ff8800' stroke-width='0.5' opacity='0.2'/>
+<line x1='18' y1='43' x2='22' y2='38' stroke='#ffe060' stroke-width='0.4' opacity='0.15'/>
+
+<!-- Ash particles falling behind the fire -->
+<circle cx='170' cy='90' r='1' fill='#3a2818' opacity='0.4'/>
+<circle cx='185' cy='110' r='0.8' fill='#2a1815' opacity='0.35'/>
+<circle cx='200' cy='95' r='1' fill='#3a2818' opacity='0.3'/>
+<circle cx='175' cy='125' r='0.7' fill='#2a1815' opacity='0.3'/>
+<circle cx='195' cy='130' r='0.8' fill='#3a2818' opacity='0.25'/>
+<circle cx='210' cy='115' r='0.6' fill='#2a1815' opacity='0.25'/>
+<circle cx='220' cy='135' r='0.7' fill='#3a2818' opacity='0.2'/>
+<circle cx='165' cy='140' r='0.5' fill='#2a1815' opacity='0.2'/>
+</svg>

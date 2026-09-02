@@ -1,0 +1,123 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgSP' cx='0.5' cy='0.5' r='0.85'>
+      <stop offset='0' stop-color='#2a1815'/>
+      <stop offset='0.6' stop-color='#1a0d08'/>
+      <stop offset='1' stop-color='#0a0504'/>
+    </radialGradient>
+    <linearGradient id='beamCore' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0' stop-color='#fff8e0' stop-opacity='0'/>
+      <stop offset='0.15' stop-color='#fff8e0'/>
+      <stop offset='0.5' stop-color='#fff8e0'/>
+      <stop offset='0.85' stop-color='#fff8e0'/>
+      <stop offset='1' stop-color='#fff8e0' stop-opacity='0'/>
+    </linearGradient>
+    <linearGradient id='beamHalo' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0' stop-color='#ff8800' stop-opacity='0'/>
+      <stop offset='0.2' stop-color='#ffe060' stop-opacity='0.7'/>
+      <stop offset='0.5' stop-color='#ff8800' stop-opacity='0.85'/>
+      <stop offset='0.8' stop-color='#ffe060' stop-opacity='0.7'/>
+      <stop offset='1' stop-color='#ff8800' stop-opacity='0'/>
+    </linearGradient>
+    <linearGradient id='beamOuter' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0' stop-color='#c41a05' stop-opacity='0'/>
+      <stop offset='0.5' stop-color='#e6591a' stop-opacity='0.6'/>
+      <stop offset='1' stop-color='#c41a05' stop-opacity='0'/>
+    </linearGradient>
+    <linearGradient id='wallGrad' x1='0' y1='0' x2='1' y2='0'>
+      <stop offset='0' stop-color='#2a1815'/>
+      <stop offset='0.5' stop-color='#1a0d08'/>
+      <stop offset='1' stop-color='#2a1815'/>
+    </linearGradient>
+    <radialGradient id='impactGlow' cx='0.5' cy='0.5' r='0.5'>
+      <stop offset='0' stop-color='#fff8e0'/>
+      <stop offset='0.25' stop-color='#ffe060'/>
+      <stop offset='0.55' stop-color='#ff8800'/>
+      <stop offset='0.8' stop-color='#c41a05'/>
+      <stop offset='1' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <radialGradient id='emberGlow' cx='0.5' cy='0.5' r='0.5'>
+      <stop offset='0' stop-color='#fff8e0'/>
+      <stop offset='0.4' stop-color='#ffcc40'/>
+      <stop offset='0.8' stop-color='#e6591a'/>
+      <stop offset='1' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='softBlur'><feGaussianBlur stdDeviation='2.5'/></filter>
+    <filter id='bigBlur'><feGaussianBlur stdDeviation='7'/></filter>
+  </defs>
+
+  <!-- background -->
+  <rect width='250' height='190' rx='8' fill='url(#bgSP)'/>
+
+  <!-- distant glow around the beam path -->
+  <ellipse cx='125' cy='95' rx='125' ry='40' fill='url(#beamOuter)' filter='url(#bigBlur)' opacity='0.7'/>
+
+  <!-- heat distortion waves (wavy lines above beam) -->
+  <path d='M0,75 C30,68 60,80 90,72 C120,66 150,78 180,70 C210,64 230,76 250,70' fill='none' stroke='#ff8800' stroke-width='1' filter='url(#softBlur)' opacity='0.4'/>
+  <path d='M0,65 C30,58 60,70 90,62 C120,56 150,68 180,60 C210,54 230,66 250,60' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.3'/>
+  <!-- heat distortion waves (below beam) -->
+  <path d='M0,115 C30,122 60,110 90,118 C120,124 150,112 180,120 C210,126 230,114 250,120' fill='none' stroke='#ff8800' stroke-width='1' filter='url(#softBlur)' opacity='0.4'/>
+  <path d='M0,125 C30,132 60,120 90,128 C120,134 150,122 180,130 C210,136 230,124 250,130' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.3'/>
+
+  <!-- the wall/barrier (vertical stone, pierced) -->
+  <path d='M105,30 L145,30 L148,35 L150,45 L150,145 L148,155 L145,160 L105,160 L102,155 L100,145 L100,45 L102,35 Z' fill='url(#wallGrad)' opacity='0.95'/>
+  <!-- wall texture/cracks -->
+  <path d='M108,50 L112,55 L110,60 M135,80 L140,85 M115,100 L110,108 M130,120 L135,128 M120,140 L124,145' stroke='#0a0504' stroke-width='0.7' fill='none' opacity='0.7'/>
+  <!-- wall edge highlights (rim light from beam) -->
+  <path d='M100,45 L100,145' stroke='#e6591a' stroke-width='1.5' opacity='0.5' filter='url(#softBlur)'/>
+  <path d='M150,45 L150,145' stroke='#e6591a' stroke-width='1.5' opacity='0.5' filter='url(#softBlur)'/>
+
+  <!-- radiating cracks from the impact hole -->
+  <path d='M125,95 L95,60 M125,95 L155,60 M125,95 L90,95 M125,95 L160,95 M125,95 L95,130 M125,95 L155,130 M125,95 L110,40 M125,95 L140,40 M125,95 L110,150 M125,95 L140,150' stroke='#0a0504' stroke-width='1.2' fill='none' opacity='0.7'/>
+  <path d='M125,95 L100,70 M125,95 L150,70 M125,95 L100,120 M125,95 L150,120' stroke='#c41a05' stroke-width='0.8' fill='none' opacity='0.5'/>
+
+  <!-- beam outer halo (broad orange) -->
+  <rect x='0' y='88' width='250' height='14' fill='url(#beamOuter)' filter='url(#softBlur)' opacity='0.8'/>
+  <!-- beam mid halo (yellow-orange) -->
+  <rect x='0' y='90' width='250' height='10' fill='url(#beamHalo)' filter='url(#softBlur)' opacity='0.9'/>
+  <!-- beam core (white-hot) -->
+  <rect x='0' y='93' width='250' height='4' fill='url(#beamCore)'/>
+  <rect x='0' y='94' width='250' height='2' fill='#fff8e0'/>
+
+  <!-- blinding impact point (entry, left of wall) -->
+  <circle cx='105' cy='95' r='16' fill='url(#impactGlow)' filter='url(#softBlur)' opacity='0.95'/>
+  <circle cx='105' cy='95' r='7' fill='#fff8e0' filter='url(#softBlur)' opacity='0.95'/>
+  <circle cx='105' cy='95' r='3' fill='#fff8e0'/>
+  <!-- exit point (right of wall, brighter) -->
+  <circle cx='150' cy='95' r='18' fill='url(#impactGlow)' filter='url(#softBlur)' opacity='0.95'/>
+  <circle cx='150' cy='95' r='8' fill='#fff8e0' filter='url(#softBlur)' opacity='0.95'/>
+  <circle cx='150' cy='95' r='3.5' fill='#fff8e0'/>
+
+  <!-- the punched hole through the wall (dark with glowing rim) -->
+  <ellipse cx='125' cy='95' rx='10' ry='12' fill='#0a0504'/>
+  <ellipse cx='125' cy='95' rx='9' ry='11' fill='url(#impactGlow)' opacity='0.5' filter='url(#softBlur)'/>
+  <ellipse cx='125' cy='95' rx='6' ry='8' fill='#fff8e0' filter='url(#softBlur)' opacity='0.9'/>
+  <ellipse cx='125' cy='95' rx='2.5' ry='4' fill='#fff8e0'/>
+
+  <!-- molten debris flying from impact -->
+  <circle cx='115' cy='75' r='2' fill='url(#emberGlow)' opacity='0.9'/>
+  <circle cx='135' cy='70' r='1.8' fill='url(#emberGlow)' opacity='0.85'/>
+  <circle cx='110' cy='115' r='2' fill='url(#emberGlow)' opacity='0.9'/>
+  <circle cx='140' cy='118' r='1.8' fill='url(#emberGlow)' opacity='0.85'/>
+  <circle cx='120' cy='65' r='1.4' fill='#ffe060' opacity='0.8'/>
+  <circle cx='130' cy='125' r='1.4' fill='#ffe060' opacity='0.8'/>
+  <circle cx='100' cy='85' r='1.2' fill='#ff8800' opacity='0.75'/>
+  <circle cx='155' cy='105' r='1.2' fill='#ff8800' opacity='0.75'/>
+
+  <!-- sparks along beam path -->
+  <circle cx='50' cy='90' r='1' fill='#fff8e0' opacity='0.7'/>
+  <circle cx='70' cy='98' r='1' fill='#ffe060' opacity='0.7'/>
+  <circle cx='180' cy='90' r='1' fill='#fff8e0' opacity='0.7'/>
+  <circle cx='200' cy='98' r='1' fill='#ffe060' opacity='0.7'/>
+  <circle cx='40' cy='95' r='1.2' fill='#ffcc40' opacity='0.75'/>
+  <circle cx='210' cy='95' r='1.2' fill='#ffcc40' opacity='0.75'/>
+
+  <!-- vapor/smoke rising from the wall -->
+  <path d='M120,40 C118,28 124,20 120,8 M130,40 C132,28 126,18 130,6' stroke='#2a1815' stroke-width='1.5' fill='none' opacity='0.4' filter='url(#softBlur)'/>
+  <path d='M120,150 C118,162 124,170 120,182 M130,150 C132,162 126,172 130,184' stroke='#2a1815' stroke-width='1.5' fill='none' opacity='0.4' filter='url(#softBlur)'/>
+
+  <!-- vignette -->
+  <rect width='250' height='190' rx='8' fill='#1a0d08' opacity='0.2'/>
+  <rect width='250' height='40' rx='8' fill='#1a0d08' opacity='0.35'/>
+  <rect y='150' width='250' height='40' rx='8' fill='#1a0d08' opacity='0.35'/>
+</svg>

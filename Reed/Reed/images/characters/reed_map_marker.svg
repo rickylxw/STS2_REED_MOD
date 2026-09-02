@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="bg-marker" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3a1a0a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#120800" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="hair-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffaa30" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#e6591a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="horn-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#ffcc50" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#e6591a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6a1a05" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="face-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a2520" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#2a1815" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#1a0d08" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="eye-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ffe060" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flame-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#e6591a" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fff8a0" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="62" fill="url(#bg-marker)"/>
+  <circle cx="64" cy="64" r="60" fill="none" stroke="#e6591a" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Flame aura behind head -->
+  <path d="M 64 8 C 58 14 56 20 58 28 C 54 24 52 18 54 12 C 50 20 50 28 56 34 L 64 30 L 72 34 C 78 28 78 20 74 12 C 76 18 74 24 70 28 C 72 20 70 14 64 8 Z" fill="url(#flame-grad)" opacity="0.6"/>
+
+  <!-- Hair back (flowing) -->
+  <path d="M 44 40 C 36 50 32 70 34 88 C 36 96 40 100 44 96 C 42 84 42 68 46 56 Z" fill="url(#hair-grad)" opacity="0.7"/>
+  <path d="M 84 40 C 92 50 96 70 94 88 C 92 96 88 100 84 96 C 86 84 86 68 82 56 Z" fill="url(#hair-grad)" opacity="0.7"/>
+
+  <!-- Dragon horns (prominent, swept back) -->
+  <!-- Left horn -->
+  <path d="M 50 32 C 44 24 40 16 42 10 C 44 8 48 12 52 18 C 54 22 54 28 52 32 Z" fill="url(#horn-grad)" stroke="#ffcc40" stroke-width="0.5" stroke-opacity="0.5"/>
+  <path d="M 50 30 C 46 24 44 18 45 14 L 47 14 C 47 18 48 22 50 26 Z" fill="#fff8e0" opacity="0.3"/>
+
+  <!-- Right horn -->
+  <path d="M 78 32 C 84 24 88 16 86 10 C 84 8 80 12 76 18 C 74 22 74 28 76 32 Z" fill="url(#horn-grad)" stroke="#ffcc40" stroke-width="0.5" stroke-opacity="0.5"/>
+  <path d="M 78 30 C 82 24 84 18 83 14 L 81 14 C 81 18 80 22 78 26 Z" fill="#fff8e0" opacity="0.3"/>
+
+  <!-- Hair top -->
+  <path d="M 48 36 C 52 28 58 24 64 24 C 70 24 76 28 80 36 C 82 40 82 44 80 46 C 74 42 68 40 64 42 C 60 40 54 42 48 46 C 46 44 46 40 48 36 Z" fill="url(#hair-grad)"/>
+  
+  <!-- Hair front bangs -->
+  <path d="M 50 44 C 52 40 56 40 58 44 C 57 46 55 48 54 50 Z" fill="url(#hair-grad)" opacity="0.9"/>
+  <path d="M 58 42 C 60 38 64 38 66 42 C 65 46 63 48 62 50 Z" fill="url(#hair-grad)" opacity="0.9"/>
+  <path d="M 66 42 C 70 38 74 38 76 42 C 75 46 73 48 72 50 Z" fill="url(#hair-grad)" opacity="0.9"/>
+
+  <!-- Face -->
+  <ellipse cx="64" cy="60" rx="14" ry="18" fill="url(#face-grad)"/>
+
+  <!-- Face shading -->
+  <ellipse cx="60" cy="56" rx="4" ry="6" fill="#3a2520" opacity="0.3"/>
+  <ellipse cx="68" cy="56" rx="4" ry="6" fill="#3a2520" opacity="0.3"/>
+
+  <!-- Eyes (glowing dragon eyes) -->
+  <ellipse cx="58" cy="58" rx="3" ry="2" fill="url(#eye-glow)"/>
+  <ellipse cx="70" cy="58" rx="3" ry="2" fill="url(#eye-glow)"/>
+  <ellipse cx="58" cy="58" rx="1" ry="1.5" fill="#000000" opacity="0.7"/>
+  <ellipse cx="70" cy="58" rx="1" ry="1.5" fill="#000000" opacity="0.7"/>
+  <ellipse cx="58.5" cy="57.5" rx="0.4" ry="0.5" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="70.5" cy="57.5" rx="0.4" ry="0.5" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Nose -->
+  <path d="M 63 62 L 62 66 L 64 67 L 66 66 L 65 62 Z" fill="#1a0d08" opacity="0.4"/>
+
+  <!-- Mouth (subtle) -->
+  <path d="M 60 70 Q 64 72 68 70" fill="none" stroke="#1a0d08" stroke-width="0.8" stroke-opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Small flame on top of head -->
+  <path d="M 62 24 C 60 20 61 16 63 14 C 62 18 64 20 63 24 Z" fill="#ff8800" opacity="0.6"/>
+  <path d="M 64 22 C 63 17 64 14 66 12 C 65 16 67 18 66 22 Z" fill="#ffcc40" opacity="0.5"/>
+
+  <!-- Neck/shoulders -->
+  <path d="M 54 76 L 52 88 L 48 96 L 64 98 L 80 96 L 76 88 L 74 76 Z" fill="url(#hair-grad)" opacity="0.6"/>
+
+  <!-- Collar detail -->
+  <path d="M 48 90 L 64 93 L 80 90 L 80 94 L 64 97 L 48 94 Z" fill="#2a1005" opacity="0.8"/>
+  <path d="M 52 90 L 64 92 L 76 90" fill="none" stroke="#e6591a" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Floating embers around head -->
+  <circle cx="40" cy="36" r="1.2" fill="#ffcc40" opacity="0.6"/>
+  <circle cx="88" cy="38" r="1" fill="#ff8800" opacity="0.5"/>
+  <circle cx="36" cy="56" r="0.8" fill="#ffaa30" opacity="0.4"/>
+  <circle cx="92" cy="58" r="0.8" fill="#e6591a" opacity="0.4"/>
+  <circle cx="44" cy="18" r="0.8" fill="#ffcc40" opacity="0.4"/>
+  <circle cx="84" cy="16" r="0.6" fill="#ff8800" opacity="0.3"/>
+  <circle cx="30" cy="72" r="0.6" fill="#ff8800" opacity="0.3"/>
+  <circle cx="98" cy="72" r="0.6" fill="#ffcc40" opacity="0.3"/>
+</svg>

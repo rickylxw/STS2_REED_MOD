@@ -1,0 +1,115 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgEM' cx='50%' cy='50%' r='80%'>
+      <stop offset='0%' stop-color='#1a0d08'/>
+      <stop offset='60%' stop-color='#0d0604'/>
+      <stop offset='100%' stop-color='#050201'/>
+    </radialGradient>
+    <filter id='emberGlow' x='-200%' y='-200%' width='500%' height='500%'>
+      <feGaussianBlur stdDeviation='2.5' result='b'/>
+      <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>
+    </filter>
+    <filter id='emberBigGlow' x='-200%' y='-200%' width='500%' height='500%'>
+      <feGaussianBlur stdDeviation='5' result='b'/>
+      <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>
+    </filter>
+    <radialGradient id='emberRadG' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='30%' stop-color='#ffe060'/>
+      <stop offset='70%' stop-color='#ff8800' stop-opacity='0.5'/>
+      <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width='250' height='190' fill='url(#bgEM)' rx='8'/>
+
+  <!-- Faint ground glow -->
+  <ellipse cx='125' cy='170' rx='100' ry='20' fill='#2a1815' opacity='0.4'/>
+  <ellipse cx='120' cy='95' rx='80' ry='50' fill='#1a0d08' opacity='0.3'/>
+
+  <!-- Bright embers with glow and trails -->
+  <g filter='url(#emberBigGlow)'>
+    <circle cx='30' cy='25' r='2.5' fill='#ffe060' opacity='0.9'/>
+    <circle cx='100' cy='30' r='3' fill='#ffaa30' opacity='0.85'/>
+    <circle cx='175' cy='25' r='2' fill='#ffe060' opacity='0.8'/>
+    <circle cx='120' cy='60' r='3.5' fill='#ffe060' opacity='0.9'/>
+    <circle cx='135' cy='100' r='2.5' fill='#ffaa30' opacity='0.8'/>
+    <circle cx='125' cy='150' r='3.5' fill='#fff8e0' opacity='0.9'/>
+    <circle cx='150' cy='175' r='2.5' fill='#ffaa30' opacity='0.75'/>
+    <circle cx='80' cy='70' r='2.5' fill='#ffaa30' opacity='0.75'/>
+    <circle cx='190' cy='65' r='2' fill='#ff8800' opacity='0.7'/>
+    <circle cx='60' cy='95' r='2' fill='#ffe060' opacity='0.7'/>
+    <circle cx='55' cy='145' r='2' fill='#ffe060' opacity='0.7'/>
+  </g>
+
+  <!-- Flame trails on brightest embers -->
+  <g opacity='0.5' filter='url(#emberGlow)'>
+    <path d='M 30,22 Q 28,16 30,10 Q 32,16 30,22 Z' fill='#ff8800'/>
+    <path d='M 100,26 Q 98,18 100,10 Q 102,18 100,26 Z' fill='#ff8800'/>
+    <path d='M 120,56 Q 118,46 120,36 Q 122,46 120,56 Z' fill='#ff8800'/>
+    <path d='M 135,97 Q 133,89 135,80 Q 137,89 135,97 Z' fill='#ff8800'/>
+    <path d='M 125,146 Q 123,136 125,126 Q 127,136 125,146 Z' fill='#ff8800'/>
+    <path d='M 80,67 Q 78,60 80,52 Q 82,60 80,67 Z' fill='#ff8800'/>
+  </g>
+
+  <!-- Medium embers -->
+  <g>
+    <circle cx='65' cy='40' r='1.5' fill='#ff8800' opacity='0.7'/>
+    <circle cx='140' cy='45' r='1' fill='#e6591a' opacity='0.5'/>
+    <circle cx='210' cy='50' r='1.5' fill='#ff8800' opacity='0.6'/>
+    <circle cx='45' cy='65' r='1' fill='#c41a05' opacity='0.4'/>
+    <circle cx='155' cy='75' r='1' fill='#e6591a' opacity='0.5'/>
+    <circle cx='220' cy='80' r='1.5' fill='#ff8800' opacity='0.55'/>
+    <circle cx='25' cy='90' r='1.5' fill='#ff8800' opacity='0.6'/>
+    <circle cx='90' cy='85' r='1' fill='#c41a05' opacity='0.4'/>
+    <circle cx='170' cy='95' r='1' fill='#e6591a' opacity='0.5'/>
+    <circle cx='205' cy='105' r='1.5' fill='#ff8800' opacity='0.55'/>
+    <circle cx='40' cy='115' r='1' fill='#c41a05' opacity='0.4'/>
+    <circle cx='70' cy='120' r='2' fill='#ffe060' opacity='0.65' filter='url(#emberGlow)'/>
+    <circle cx='110' cy='115' r='1.5' fill='#ff8800' opacity='0.55'/>
+    <circle cx='180' cy='115' r='1' fill='#e6591a' opacity='0.4'/>
+    <circle cx='215' cy='125' r='1.5' fill='#ff8800' opacity='0.5'/>
+    <circle cx='30' cy='140' r='1' fill='#c41a05' opacity='0.4'/>
+    <circle cx='95' cy='140' r='1' fill='#ff8800' opacity='0.45'/>
+    <circle cx='160' cy='145' r='1.5' fill='#ffaa30' opacity='0.55' filter='url(#emberGlow)'/>
+    <circle cx='195' cy='155' r='1' fill='#e6591a' opacity='0.4'/>
+    <circle cx='225' cy='145' r='1' fill='#ff8800' opacity='0.4'/>
+    <circle cx='50' cy='165' r='2' fill='#ffe060' opacity='0.6' filter='url(#emberGlow)'/>
+    <circle cx='85' cy='170' r='1' fill='#c41a05' opacity='0.35'/>
+    <circle cx='115' cy='165' r='1.5' fill='#ff8800' opacity='0.5'/>
+    <circle cx='185' cy='170' r='1' fill='#e6591a' opacity='0.4'/>
+    <circle cx='220' cy='175' r='1' fill='#ff8800' opacity='0.35'/>
+    <circle cx='15' cy='160' r='1.5' fill='#ff8800' opacity='0.5'/>
+    <circle cx='100' cy='180' r='1' fill='#ff8800' opacity='0.4'/>
+  </g>
+
+  <!-- Small dim embers -->
+  <g>
+    <circle cx='15' cy='30' r='0.8' fill='#ff8800' opacity='0.4'/>
+    <circle cx='75' cy='55' r='0.8' fill='#fff8e0' opacity='0.5'/>
+    <circle cx='185' cy='35' r='1' fill='#fff8e0' opacity='0.6'/>
+    <circle cx='15' cy='55' r='0.8' fill='#ff8800' opacity='0.4'/>
+    <circle cx='235' cy='30' r='1' fill='#ffe060' opacity='0.5'/>
+    <circle cx='165' cy='50' r='0.8' fill='#fff8e0' opacity='0.45'/>
+    <circle cx='5' cy='120' r='0.8' fill='#c41a05' opacity='0.25'/>
+    <circle cx='240' cy='100' r='0.8' fill='#ff8800' opacity='0.35'/>
+    <circle cx='105' cy='175' r='0.8' fill='#ffe060' opacity='0.4'/>
+    <circle cx='50' cy='130' r='0.8' fill='#ff8800' opacity='0.35'/>
+    <circle cx='200' cy='135' r='0.8' fill='#ffe060' opacity='0.4'/>
+    <circle cx='145' cy='55' r='0.8' fill='#fff8e0' opacity='0.4'/>
+    <circle cx='35' cy='50' r='0.6' fill='#c41a05' opacity='0.3'/>
+    <circle cx='200' cy='40' r='0.6' fill='#c41a05' opacity='0.3'/>
+    <circle cx='130' cy='80' r='0.6' fill='#ffaa30' opacity='0.3'/>
+    <circle cx='65' cy='130' r='0.6' fill='#c41a05' opacity='0.25'/>
+    <circle cx='175' cy='130' r='0.6' fill='#c41a05' opacity='0.25'/>
+    <circle cx='10' cy='75' r='0.6' fill='#8a2a05' opacity='0.2'/>
+    <circle cx='240' cy='65' r='0.6' fill='#8a2a05' opacity='0.2'/>
+    <circle cx='75' cy='155' r='0.6' fill='#c41a05' opacity='0.25'/>
+    <circle cx='210' cy='160' r='0.6' fill='#c41a05' opacity='0.25'/>
+    <circle cx='20' cy='175' r='0.8' fill='#c41a05' opacity='0.3'/>
+    <circle cx='135' cy='120' r='0.6' fill='#8a2a05' opacity='0.2'/>
+    <circle cx='155' cy='130' r='0.5' fill='#8a2a05' opacity='0.15'/>
+    <circle cx='115' cy='100' r='0.5' fill='#8a2a05' opacity='0.15'/>
+  </g>
+</svg>

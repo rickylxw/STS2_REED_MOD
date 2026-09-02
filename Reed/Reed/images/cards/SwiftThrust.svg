@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgSwift" cx="60%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="50%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0a0503"/>
+    </radialGradient>
+    <linearGradient id="spearShaft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="50%" stop-color="#5a3828"/>
+      <stop offset="100%" stop-color="#2a1815"/>
+    </linearGradient>
+    <linearGradient id="spearBlade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="30%" stop-color="#ffe060"/>
+      <stop offset="60%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#c41a05"/>
+    </linearGradient>
+    <linearGradient id="motionBlur" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="tipGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffe060" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowSwift">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgSwift)" rx="8"/>
+
+  <!-- Motion direction gradient overlay (right to left = motion) -->
+  <rect width="250" height="190" fill="url(#motionBlur)" rx="8" opacity="0.3"/>
+
+  <!-- Speed/wind lines (horizontal, varying lengths) -->
+  <line x1="10" y1="60" x2="80" y2="60" stroke="#ff8800" stroke-width="1.5" opacity="0.2"/>
+  <line x1="5" y1="75" x2="70" y2="75" stroke="#ffaa30" stroke-width="1" opacity="0.15"/>
+  <line x1="15" y1="90" x2="85" y2="90" stroke="#e6591a" stroke-width="1.2" opacity="0.25"/>
+  <line x1="0" y1="105" x2="60" y2="105" stroke="#ff8800" stroke-width="1" opacity="0.2"/>
+  <line x1="10" y1="120" x2="75" y2="120" stroke="#ffaa30" stroke-width="1.2" opacity="0.18"/>
+  <line x1="5" y1="135" x2="65" y2="135" stroke="#e6591a" stroke-width="0.8" opacity="0.15"/>
+  <line x1="15" y1="45" x2="65" y2="45" stroke="#ff8800" stroke-width="0.8" opacity="0.15"/>
+
+  <!-- Secondary motion lines (thinner, faster feel) -->
+  <line x1="0" y1="50" x2="45" y2="50" stroke="#ffe060" stroke-width="0.5" opacity="0.12"/>
+  <line x1="5" y1="68" x2="50" y2="68" stroke="#ffaa30" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="82" x2="40" y2="82" stroke="#ff8800" stroke-width="0.5" opacity="0.12"/>
+  <line x1="10" y1="98" x2="55" y2="98" stroke="#ffe060" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="112" x2="45" y2="112" stroke="#ffaa30" stroke-width="0.5" opacity="0.12"/>
+  <line x1="5" y1="128" x2="48" y2="128" stroke="#ff8800" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="142" x2="40" y2="142" stroke="#e6591a" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Motion blur ghost of spear shaft (lighter, behind) -->
+  <rect x="20" y="88" width="130" height="6" fill="#ff8800" opacity="0.08" rx="3" transform="rotate(-8 85 91)"/>
+  <rect x="15" y="89" width="135" height="4" fill="#ffaa30" opacity="0.06" rx="2" transform="rotate(-8 82.5 91)"/>
+
+  <!-- Wind trail particles -->
+  <circle cx="40" cy="65" r="1" fill="#ff8800" opacity="0.4"/>
+  <circle cx="55" cy="80" r="0.8" fill="#ffaa30" opacity="0.3"/>
+  <circle cx="30" cy="100" r="1.2" fill="#e6591a" opacity="0.4"/>
+  <circle cx="50" cy="115" r="0.8" fill="#ff8800" opacity="0.3"/>
+  <circle cx="25" cy="130" r="1" fill="#ffaa30" opacity="0.35"/>
+  <circle cx="60" cy="55" r="0.8" fill="#e6591a" opacity="0.3"/>
+
+  <!-- Spear shaft (diagonal, rotated slightly) -->
+  <g transform="rotate(-8 125 95)">
+    <!-- Shaft body -->
+    <rect x="30" y="89" width="140" height="7" fill="url(#spearShaft)" rx="2"/>
+
+    <!-- Shaft wrap details -->
+    <rect x="45" y="88" width="3" height="9" fill="#1a0d08" opacity="0.6"/>
+    <rect x="55" y="88" width="2" height="9" fill="#1a0d08" opacity="0.5"/>
+    <rect x="70" y="88" width="3" height="9" fill="#1a0d08" opacity="0.6"/>
+    <rect x="85" y="88" width="2" height="9" fill="#1a0d08" opacity="0.5"/>
+    <rect x="100" y="88" width="3" height="9" fill="#1a0d08" opacity="0.6"/>
+    <rect x="115" y="88" width="2" height="9" fill="#1a0d08" opacity="0.5"/>
+
+    <!-- Shaft highlight -->
+    <line x1="32" y1="90" x2="168" y2="90" stroke="#5a3828" stroke-width="0.5" opacity="0.6"/>
+
+    <!-- Spear butt cap -->
+    <rect x="26" y="87" width="6" height="11" fill="#3a1f15" rx="1"/>
+
+    <!-- Spear blade (leaf-shaped) -->
+    <path d="M 170 92.5 L 175 82 Q 185 75 195 80 Q 200 92.5 195 105 Q 185 110 175 103 Z"
+          fill="url(#spearBlade)" filter="url(#glowSwift)"/>
+
+    <!-- Blade mid-rib -->
+    <line x1="172" y1="92.5" x2="197" y2="92.5" stroke="#8a2a05" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Blade highlight edge -->
+    <path d="M 175 82 Q 185 75 195 80 L 190 82 Q 183 78 177 84 Z" fill="#fff8e0" opacity="0.7"/>
+
+    <!-- Blade tip point glow -->
+    <circle cx="197" cy="92.5" r="8" fill="url(#tipGlow)" filter="url(#glowSwift)"/>
+
+    <!-- Blade leading edge white-hot -->
+    <line x1="175" y1="82" x2="195" y2="80" stroke="#fff8e0" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Tip impact glow (in original position after rotation) -->
+  <circle cx="185" cy="80" r="14" fill="url(#tipGlow)" filter="url(#glowSwift)" opacity="0.5"/>
+
+  <!-- Small embers trailing behind spear -->
+  <circle cx="25" cy="85" r="1.5" fill="#ff8800" opacity="0.6" filter="url(#glowSwift)"/>
+  <circle cx="40" cy="105" r="1" fill="#ffaa30" opacity="0.5"/>
+  <circle cx="55" cy="90" r="1.2" fill="#e6591a" opacity="0.4"/>
+  <circle cx="20" cy="110" r="0.8" fill="#ff8800" opacity="0.4"/>
+  <circle cx="60" cy="100" r="1" fill="#ffaa30" opacity="0.5" filter="url(#glowSwift)"/>
+  <circle cx="35" cy="125" r="0.8" fill="#e6591a" opacity="0.3"/>
+
+  <!-- Forward embers (at tip, pushed ahead) -->
+  <circle cx="200" cy="70" r="1" fill="#fff8e0" opacity="0.6" filter="url(#glowSwift)"/>
+  <circle cx="210" cy="85" r="1.2" fill="#ffe060" opacity="0.5" filter="url(#glowSwift)"/>
+  <circle cx="195" cy="95" r="0.8" fill="#ff8800" opacity="0.4"/>
+
+  <!-- Speed streak from tip -->
+  <line x1="170" y1="92" x2="220" y2="75" stroke="#fff8e0" stroke-width="0.8" opacity="0.4"/>
+  <line x1="172" y1="90" x2="218" y2="80" stroke="#ffe060" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Background ember particles -->
+  <circle cx="180" cy="140" r="1" fill="#ff8800" opacity="0.3"/>
+  <circle cx="200" cy="160" r="1.5" fill="#e6591a" opacity="0.3"/>
+  <circle cx="160" cy="50" r="1" fill="#ffaa30" opacity="0.3"/>
+  <circle cx="220" cy="110" r="1" fill="#ff8800" opacity="0.3"/>
+  <circle cx="140" cy="30" r="0.8" fill="#e6591a" opacity="0.25"/>
+</svg>

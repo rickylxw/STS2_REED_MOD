@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgDragon" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="50%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0a0503"/>
+    </radialGradient>
+    <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffaa30" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#ff8800" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#e6591a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a1f15" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#5a3828" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3a1f15" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="bubbleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffe060" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vialGlow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#e6591a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dragonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c41a05" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#8a2a05" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowDragon">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlowDragon">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgDragon)" rx="8"/>
+
+  <!-- Dragon silhouette glow (background) -->
+  <ellipse cx="125" cy="85" rx="100" ry="70" fill="url(#dragonGlow)" filter="url(#softGlowDragon)"/>
+
+  <!-- Dragon silhouette in background (large, faded) -->
+  <!-- Dragon body curve -->
+  <path d="M 20 80 Q 40 50 70 60 Q 90 40 120 50 Q 150 35 180 55 Q 210 45 235 70 Q 230 85 215 80 Q 200 95 180 85 Q 165 100 145 90 Q 130 105 110 95 Q 90 105 70 90 Q 50 100 30 88 Q 15 95 20 80 Z"
+        fill="#1a0d08" opacity="0.6"/>
+
+  <!-- Dragon head (left side) -->
+  <path d="M 15 75 Q 10 65 20 60 Q 30 55 35 62 Q 40 58 45 65 L 42 72 Q 38 70 35 73 Q 30 68 25 72 Q 20 70 15 75 Z"
+        fill="#1a0d08" opacity="0.7"/>
+
+  <!-- Dragon eye (glowing) -->
+  <ellipse cx="25" cy="67" rx="3" ry="2" fill="#c41a05" opacity="0.6" filter="url(#glowDragon)"/>
+  <circle cx="25" cy="67" r="1" fill="#ff8800" opacity="0.8" filter="url(#glowDragon)"/>
+
+  <!-- Dragon horns -->
+  <path d="M 35 58 Q 40 48 42 42" stroke="#1a0d08" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 42 56 Q 48 46 50 40" stroke="#1a0d08" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Dragon wing (upper right) -->
+  <path d="M 180 55 Q 190 35 210 30 Q 225 35 230 50 Q 220 45 210 50 Q 200 45 195 55 Q 185 50 180 55 Z"
+        fill="#1a0d08" opacity="0.5"/>
+
+  <!-- Dragon tail (lower right, curling) -->
+  <path d="M 230 75 Q 240 90 235 105 Q 225 115 230 130 Q 225 140 215 135"
+        stroke="#1a0d08" stroke-width="4" fill="none" opacity="0.6"/>
+  <!-- Tail spikes -->
+  <path d="M 235 95 L 240 88 L 238 95 Z" fill="#1a0d08" opacity="0.6"/>
+  <path d="M 228 110 L 234 104 L 232 112 Z" fill="#1a0d08" opacity="0.6"/>
+  <path d="M 225 125 L 232 120 L 229 128 Z" fill="#1a0d08" opacity="0.6"/>
+
+  <!-- Dragon back spines -->
+  <path d="M 60 60 L 65 52 L 70 60 Z" fill="#1a0d08" opacity="0.6"/>
+  <path d="M 80 55 L 85 47 L 90 55 Z" fill="#1a0d08" opacity="0.6"/>
+  <path d="M 100 52 L 105 44 L 110 52 Z" fill="#1a0d08" opacity="0.6"/>
+  <path d="M 130 48 L 135 40 L 140 48 Z" fill="#1a0d08" opacity="0.6"/>
+  <path d="M 155 52 L 160 44 L 165 52 Z" fill="#1a0d08" opacity="0.6"/>
+
+  <!-- Alchemical table/shelf -->
+  <rect x="40" y="155" width="170" height="5" fill="#2a1815" rx="1"/>
+  <rect x="40" y="160" width="170" height="3" fill="#1a0d08" rx="1"/>
+
+  <!-- === LEFT VIAL (taller, narrow neck) === -->
+  <!-- Vial glow -->
+  <ellipse cx="70" cy="135" rx="25" ry="30" fill="url(#vialGlow)" filter="url(#softGlowDragon)"/>
+
+  <!-- Vial body -->
+  <path d="M 58 100 Q 58 95 62 92 L 62 85 L 56 85 L 56 80 L 84 80 L 84 85 L 78 85 L 78 92 Q 82 95 82 100 L 82 148 Q 82 155 75 155 L 65 155 Q 58 155 58 148 Z"
+        fill="url(#glassGrad)" stroke="#3a1f15" stroke-width="1"/>
+
+  <!-- Liquid inside vial -->
+  <path d="M 60 120 Q 60 115 62 112 L 62 100 Q 62 97 65 97 L 75 97 Q 78 97 78 100 L 78 112 Q 80 115 80 120 L 80 148 Q 80 152 74 152 L 66 152 Q 60 152 60 148 Z"
+        fill="url(#liquidGrad)" opacity="0.85"/>
+
+  <!-- Liquid surface (meniscus) -->
+  <ellipse cx="70" cy="100" rx="8" ry="2" fill="#ffaa30" opacity="0.7"/>
+  <ellipse cx="70" cy="100" rx="6" ry="1.5" fill="#ffe060" opacity="0.5"/>
+
+  <!-- Bubbles in left vial -->
+  <circle cx="66" cy="130" r="2.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="66" cy="130" r="1" fill="#fff8e0" opacity="0.8"/>
+  <circle cx="73" cy="120" r="2" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="73" cy="120" r="0.8" fill="#ffe060" opacity="0.7"/>
+  <circle cx="68" cy="140" r="3" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="68" cy="140" r="1.2" fill="#fff8e0" opacity="0.7"/>
+  <circle cx="74" cy="135" r="1.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="65" cy="115" r="1.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+
+  <!-- Vial glass highlight -->
+  <path d="M 60 105 Q 60 100 62 97 L 62 92 L 64 92 L 64 97 Q 62 100 62 105 L 62 145"
+        fill="none" stroke="#ffe060" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Steam rising from left vial neck -->
+  <path d="M 65 80 Q 62 70 66 60 Q 63 50 67 42 Q 64 35 68 28" stroke="#3a1f15" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <path d="M 72 80 Q 75 68 71 58 Q 74 48 70 40 Q 73 32 69 25" stroke="#3a1f15" stroke-width="1.5" fill="none" opacity="0.2"/>
+
+  <!-- === RIGHT VIAL (wider, rounder) === -->
+  <!-- Vial glow -->
+  <ellipse cx="160" cy="130" rx="28" ry="32" fill="url(#vialGlow)" filter="url(#softGlowDragon)"/>
+
+  <!-- Vial body (round bottom flask) -->
+  <path d="M 150 95 Q 150 90 154 87 L 154 82 L 148 82 L 148 77 L 172 77 L 172 82 L 166 82 L 166 87 Q 170 90 170 95 L 170 110 Q 178 115 178 130 Q 178 150 160 155 Q 142 150 142 130 Q 142 115 150 110 Z"
+        fill="url(#glassGrad)" stroke="#3a1f15" stroke-width="1"/>
+
+  <!-- Liquid inside right vial -->
+  <path d="M 152 118 Q 152 112 154 108 L 154 95 Q 154 92 157 92 L 163 92 Q 166 92 166 95 L 166 108 Q 168 112 168 118 L 168 125 Q 175 130 175 132 Q 175 148 160 152 Q 145 148 145 132 Q 145 130 152 125 Z"
+        fill="url(#liquidGrad)" opacity="0.85"/>
+
+  <!-- Liquid surface -->
+  <ellipse cx="160" cy="95" rx="6" ry="1.5" fill="#ffaa30" opacity="0.7"/>
+  <ellipse cx="160" cy="95" rx="4" ry="1" fill="#ffe060" opacity="0.5"/>
+
+  <!-- Bubbles in right vial -->
+  <circle cx="155" cy="135" r="3" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="155" cy="135" r="1.2" fill="#fff8e0" opacity="0.8"/>
+  <circle cx="165" cy="125" r="2.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="165" cy="125" r="1" fill="#ffe060" opacity="0.7"/>
+  <circle cx="158" cy="145" r="2" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="158" cy="145" r="0.8" fill="#fff8e0" opacity="0.6"/>
+  <circle cx="168" cy="140" r="2.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="168" cy="140" r="1" fill="#ffe060" opacity="0.7"/>
+  <circle cx="152" cy="120" r="1.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="162" cy="115" r="1.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+
+  <!-- Vial glass highlight -->
+  <path d="M 152 100 Q 152 95 154 92 L 154 87 L 156 87 L 156 92 Q 154 95 154 100 L 154 120"
+        fill="none" stroke="#ffe060" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Steam rising from right vial -->
+  <path d="M 155 77 Q 152 65 157 55 Q 154 45 158 35 Q 155 28 159 20" stroke="#3a1f15" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <path d="M 165 77 Q 168 63 163 53 Q 166 43 162 35 Q 165 28 161 22" stroke="#3a1f15" stroke-width="1.5" fill="none" opacity="0.2"/>
+
+  <!-- === CENTER SMALL VIAL === -->
+  <!-- Vial glow -->
+  <ellipse cx="115" cy="145" rx="15" ry="18" fill="url(#vialGlow)" filter="url(#softGlowDragon)" opacity="0.6"/>
+
+  <!-- Small vial body -->
+  <path d="M 110 125 Q 110 122 112 120 L 112 115 L 108 115 L 108 112 L 122 112 L 122 115 L 118 115 L 118 120 Q 120 122 120 125 L 120 152 Q 120 155 115 155 Q 110 155 110 152 Z"
+        fill="url(#glassGrad)" stroke="#3a1f15" stroke-width="0.8"/>
+
+  <!-- Liquid inside small vial -->
+  <path d="M 111 132 Q 111 128 113 125 L 113 122 Q 113 120 115 120 L 115 120 Q 117 120 117 122 L 117 125 Q 119 128 119 132 L 119 152 Q 119 154 115 154 Q 111 154 111 152 Z"
+        fill="url(#liquidGrad)" opacity="0.85"/>
+
+  <!-- Small vial bubbles -->
+  <circle cx="114" cy="145" r="1.5" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+  <circle cx="116" cy="138" r="1.2" fill="url(#bubbleGlow)" filter="url(#glowDragon)"/>
+
+  <!-- Steam from small vial -->
+  <path d="M 113 112 Q 111 105 114 98 Q 112 90 115 85" stroke="#3a1f15" stroke-width="1" fill="none" opacity="0.2"/>
+
+  <!-- Rising embers/steam particles -->
+  <circle cx="65" cy="30" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowDragon)"/>
+  <circle cx="72" cy="15" r="1" fill="#ffaa30" opacity="0.4"/>
+  <circle cx="158" cy="25" r="1.2" fill="#ff8800" opacity="0.5" filter="url(#glowDragon)"/>
+  <circle cx="165" cy="10" r="1" fill="#ffe060" opacity="0.4"/>
+  <circle cx="115" cy="75" r="1" fill="#ffaa30" opacity="0.4"/>
+
+  <!-- Ground level glow -->
+  <ellipse cx="125" cy="158" rx="80" ry="5" fill="#e6591a" opacity="0.1" filter="url(#softGlowDragon)"/>
+
+  <!-- Small decorative embers -->
+  <circle cx="30" cy="120" r="1" fill="#ff8800" opacity="0.3"/>
+  <circle cx="220" cy="125" r="1" fill="#ffaa30" opacity="0.3"/>
+  <circle cx="200" cy="145" r="0.8" fill="#e6591a" opacity="0.3"/>
+  <circle cx="40" cy="140" r="0.8" fill="#ff8800" opacity="0.3"/>
+</svg>

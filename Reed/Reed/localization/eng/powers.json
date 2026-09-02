@@ -1,0 +1,25 @@
+{
+    "REED_POWER_SCORCH.title": "Scorch",
+    "REED_POWER_SCORCH.description": "At end of turn, deal 1 damage per stack and reduce by 1.",
+
+    "REED_POWER_SCORCH_COUNTER.title": "Scorch",
+    "REED_POWER_SCORCH_COUNTER.description": "Accumulated Scorch stacks. Can be consumed by other cards to trigger effects.",
+
+    "REED_POWER_ASH.title": "Ash",
+    "REED_POWER_ASH.description": "Accumulated ash stacks. Can be consumed by other cards.",
+
+    "REED_POWER_FLAME_SHADOW_FORM.title": "Flame Shadow Form",
+    "REED_POWER_FLAME_SHADOW_FORM.description": "At the end of each turn, deal damage equal to [red]Scorch[/red] stacks to ALL enemies.",
+
+    "REED_POWER_CALAMITY_BREATH.title": "Calamity Breath",
+    "REED_POWER_CALAMITY_BREATH.description": "At the start of each turn, apply {Amount} [red]Vulnerable[/red] to all enemies with [red]Scorch[/red].",
+
+    "REED_POWER_EMBER_SPREAD.title": "Ember Spread",
+    "REED_POWER_EMBER_SPREAD.description": "When an enemy dies, spread its [red]Scorch[/red] stacks to other alive enemies.",
+
+    "REED_POWER_EVERFLAME_POWER.title": "Everflame",
+    "REED_POWER_EVERFLAME_POWER.description": "At the end of each turn, if any enemy has [red]Scorch[/red], gain {Amount} [blue]Ash[/blue].",
+
+    "REED_POWER_UNITED_FRONT_POWER.title": "United Front",
+    "REED_POWER_UNITED_FRONT_POWER.description": "At the start of each turn, apply [red]Scorch[/red] to ALL enemies equal to ally count x {Amount}."
+}

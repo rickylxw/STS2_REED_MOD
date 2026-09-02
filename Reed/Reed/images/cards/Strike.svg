@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgStrike" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="20%" stop-color="#ffe060"/>
+      <stop offset="50%" stop-color="#ff8800"/>
+      <stop offset="80%" stop-color="#e6591a"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
+    </linearGradient>
+    <linearGradient id="trailGrad" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8a2a05" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#c41a05" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#e6591a" stop-opacity="0.6"/>
+      <stop offset="90%" stop-color="#ffaa30" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fff8e0" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="50%" stop-color="#4a2818"/>
+      <stop offset="100%" stop-color="#2a1815"/>
+    </linearGradient>
+    <radialGradient id="impactGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/>
+      <stop offset="20%" stop-color="#ffe060" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowStrike">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgStrike)" rx="8"/>
+
+  <!-- Atmospheric heat haze -->
+  <ellipse cx="125" cy="100" rx="120" ry="40" fill="#e6591a" opacity="0.04"/>
+
+  <!-- Ember particles in background -->
+  <circle cx="30" cy="40" r="1.5" fill="#ff8800" opacity="0.6"/>
+  <circle cx="55" cy="25" r="1" fill="#ffaa30" opacity="0.5"/>
+  <circle cx="80" cy="60" r="2" fill="#e6591a" opacity="0.4"/>
+  <circle cx="200" cy="35" r="1.5" fill="#ff8800" opacity="0.5"/>
+  <circle cx="220" cy="70" r="1" fill="#ffaa30" opacity="0.6"/>
+  <circle cx="180" cy="160" r="1.5" fill="#e6591a" opacity="0.5"/>
+  <circle cx="40" cy="140" r="1" fill="#ff8800" opacity="0.4"/>
+  <circle cx="100" cy="170" r="2" fill="#c41a05" opacity="0.3"/>
+  <circle cx="230" cy="120" r="1.5" fill="#ff8800" opacity="0.5"/>
+  <circle cx="15" cy="90" r="1" fill="#ffaa30" opacity="0.4"/>
+
+  <!-- Motion lines parallel to strike direction -->
+  <line x1="10" y1="170" x2="60" y2="120" stroke="#e6591a" stroke-width="1" opacity="0.2"/>
+  <line x1="20" y1="180" x2="80" y2="120" stroke="#ff8800" stroke-width="1.5" opacity="0.25"/>
+  <line x1="5" y1="155" x2="50" y2="110" stroke="#ffaa30" stroke-width="0.8" opacity="0.15"/>
+  <line x1="190" y1="50" x2="240" y2="10" stroke="#e6591a" stroke-width="1" opacity="0.2"/>
+  <line x1="200" y1="60" x2="245" y2="15" stroke="#ff8800" stroke-width="1.2" opacity="0.2"/>
+  <line x1="195" y1="40" x2="235" y2="5" stroke="#ffaa30" stroke-width="0.8" opacity="0.15"/>
+
+  <!-- Fire trail (behind blade) -->
+  <path d="M 30 175 Q 60 160 90 135 Q 120 110 150 85 Q 170 65 180 55 L 190 45 Q 165 60 140 85 Q 110 110 80 140 Q 50 165 30 175 Z"
+        fill="url(#trailGrad)" filter="url(#glowStrike)"/>
+
+  <!-- Trail flame tongues -->
+  <path d="M 40 170 Q 55 155 65 150 Q 55 160 45 170 Z" fill="#ff8800" opacity="0.5"/>
+  <path d="M 70 140 Q 85 120 95 115 Q 82 128 72 142 Z" fill="#e6591a" opacity="0.4"/>
+  <path d="M 105 105 Q 120 85 130 80 Q 117 95 107 107 Z" fill="#ff8800" opacity="0.4"/>
+  <path d="M 140 75 Q 155 55 162 50 Q 152 62 142 77 Z" fill="#ffaa30" opacity="0.4"/>
+
+  <!-- Impact glow at leading edge -->
+  <circle cx="195" cy="30" r="25" fill="url(#impactGrad)" filter="url(#glowStrike)"/>
+
+  <!-- Sword handle (lower left) -->
+  <rect x="18" y="168" width="20" height="8" fill="url(#handleGrad)" rx="2" transform="rotate(-50 28 172)"/>
+
+  <!-- Sword guard -->
+  <rect x="22" y="162" width="14" height="5" fill="#4a2818" rx="1" transform="rotate(-50 29 164.5)"/>
+
+  <!-- Sword blade (diagonal across card) -->
+  <path d="M 35 158 L 195 18 L 200 22 L 200 28 L 40 165 Z"
+        fill="url(#bladeGrad)" filter="url(#glowStrike)"/>
+
+  <!-- Blade highlight edge (white-hot) -->
+  <path d="M 195 18 L 200 22 L 200 28 L 190 15 Z" fill="#fff8e0" opacity="0.9"/>
+
+  <!-- Blade center groove -->
+  <line x1="45" y1="152" x2="190" y2="22" stroke="#c41a05" stroke-width="1" opacity="0.6"/>
+
+  <!-- Flame w licking the blade -->
+  <path d="M 160 50 Q 168 35 165 25 Q 172 38 170 50 Z" fill="#ff8800" opacity="0.6"/>
+  <path d="M 130 82 Q 140 65 135 55 Q 142 68 140 84 Z" fill="#ffaa30" opacity="0.5"/>
+  <path d="M 100 112 Q 108 95 103 85 Q 112 100 108 114 Z" fill="#ff8800" opacity="0.5"/>
+  <path d="M 70 140 Q 78 122 73 115 Q 82 128 78 142 Z" fill="#e6591a" opacity="0.4"/>
+
+  <!-- Spark burst at impact point -->
+  <line x1="195" y1="30" x2="210" y2="12" stroke="#fff8e0" stroke-width="1.5" opacity="0.8"/>
+  <line x1="195" y1="30" x2="215" y2="25" stroke="#ffe060" stroke-width="1" opacity="0.7"/>
+  <line x1="195" y1="30" x2="200" y2="8" stroke="#ffaa30" stroke-width="1" opacity="0.6"/>
+  <line x1="195" y1="30" x2="220" y2="18" stroke="#ff8800" stroke-width="1.2" opacity="0.6"/>
+  <line x1="195" y1="30" x2="185" y2="8" stroke="#ffe060" stroke-width="0.8" opacity="0.5"/>
+  <line x1="195" y1="30" x2="178" y2="20" stroke="#ff8800" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Floating embers from trail -->
+  <circle cx="60" cy="130" r="2" fill="#ff8800" opacity="0.7" filter="url(#glowStrike)"/>
+  <circle cx="95" cy="95" r="1.5" fill="#ffaa30" opacity="0.6" filter="url(#glowStrike)"/>
+  <circle cx="130" cy="60" r="2" fill="#ff8800" opacity="0.6" filter="url(#glowStrike)"/>
+  <circle cx="165" cy="40" r="1.5" fill="#ffe060" opacity="0.7" filter="url(#glowStrike)"/>
+  <circle cx="50" cy="100" r="1" fill="#e6591a" opacity="0.5"/>
+  <circle cx="115" cy="120" r="1" fill="#c41a05" opacity="0.4"/>
+
+  <!-- Bottom ember glow -->
+  <ellipse cx="30" cy="175" rx="15" ry="5" fill="#8a2a05" opacity="0.3"/>
+  <circle cx="25" cy="173" r="1.5" fill="#ff8800" opacity="0.6"/>
+  <circle cx="35" cy="176" r="1" fill="#ffaa30" opacity="0.5"/>
+
+  <!-- Top right ember glow -->
+  <ellipse cx="200" cy="25" rx="12" ry="4" fill="#8a2a05" opacity="0.2"/>
+  <circle cx="205" cy="22" r="1.5" fill="#ff8800" opacity="0.5"/>
+</svg>

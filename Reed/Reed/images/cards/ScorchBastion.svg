@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgBastion" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#241410"/>
+      <stop offset="40%" stop-color="#16100a"/>
+      <stop offset="100%" stop-color="#070302"/>
+    </radialGradient>
+    <linearGradient id="wallStone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a5a4a"/>
+      <stop offset="30%" stop-color="#4a3a2c"/>
+      <stop offset="60%" stop-color="#2a1e14"/>
+      <stop offset="100%" stop-color="#150c08"/>
+    </linearGradient>
+    <linearGradient id="wallDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a2c22"/>
+      <stop offset="50%" stop-color="#1f1814"/>
+      <stop offset="100%" stop-color="#0a0604"/>
+    </linearGradient>
+    <radialGradient id="flameGlowBastion" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#ffe060" stop-opacity="0.5"/>
+      <stop offset="65%" stop-color="#ff8800" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="emberGlowBastion" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe060" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c41a05" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowBastion">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigGlowBastion">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgBastion)" rx="8"/>
+
+  <!-- Flame aura behind bastion -->
+  <ellipse cx="125" cy="100" rx="70" ry="85" fill="url(#flameGlowBastion)" opacity="0.18" filter="url(#bigGlowBastion)"/>
+
+  <!-- Wall/bastion base shape (fortress wall) -->
+  <!-- Left tower -->
+  <rect x="45" y="60" width="35" height="105" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1.5" rx="2"/>
+  <rect x="45" y="55" width="35" height="10" fill="url(#wallDark)" rx="2"/>
+  <!-- Battlements left -->
+  <rect x="45" y="50" width="8" height="8" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="58" y="50" width="8" height="8" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="71" y="50" width="9" height="8" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+
+  <!-- Right tower -->
+  <rect x="170" y="60" width="35" height="105" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1.5" rx="2"/>
+  <rect x="170" y="55" width="35" height="10" fill="url(#wallDark)" rx="2"/>
+  <!-- Battlements right -->
+  <rect x="170" y="50" width="9" height="8" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="184" y="50" width="8" height="8" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="197" y="50" width="8" height="8" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+
+  <!-- Central wall section -->
+  <rect x="80" y="75" width="90" height="90" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1.5"/>
+  <!-- Central battlements -->
+  <rect x="80" y="68" width="12" height="9" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="96" y="68" width="12" height="9" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="112" y="68" width="12" height="9" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="128" y="68" width="12" height="9" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="144" y="68" width="12" height="9" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+  <rect x="158" y="68" width="12" height="9" fill="url(#wallStone)" stroke="#1a1410" stroke-width="1"/>
+
+  <!-- Wall texture lines -->
+  <line x1="80" y1="95" x2="170" y2="95" stroke="#2a1e14" stroke-width="0.8" opacity="0.6"/>
+  <line x1="80" y1="115" x2="170" y2="115" stroke="#2a1e14" stroke-width="0.8" opacity="0.6"/>
+  <line x1="80" y1="135" x2="170" y2="135" stroke="#2a1e14" stroke-width="0.8" opacity="0.6"/>
+  <line x1="80" y1="155" x2="170" y2="155" stroke="#2a1e14" stroke-width="0.8" opacity="0.6"/>
+  <line x1="105" y1="75" x2="105" y2="165" stroke="#2a1e14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="130" y1="75" x2="130" y2="165" stroke="#2a1e14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="150" y1="75" x2="150" y2="165" stroke="#2a1e14" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Tower vertical lines -->
+  <line x1="62" y1="60" x2="62" y2="165" stroke="#2a1e14" stroke-width="0.8" opacity="0.5"/>
+  <line x1="187" y1="60" x2="187" y2="165" stroke="#2a1e14" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Ember cracks in wall (scorch energy) -->
+  <path d="M 90 90 L 95 110 L 92 130" stroke="#ff8800" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+  <path d="M 160 85 L 155 105 L 158 125" stroke="#ff8800" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+  <path d="M 120 80 L 125 100 L 122 120" stroke="#ffe060" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowBastion)"/>
+  <path d="M 145 85 L 142 105 L 145 125" stroke="#ff8800" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowBastion)"/>
+  <path d="M 55 70 L 58 90 L 55 110" stroke="#ff8800" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowBastion)"/>
+  <path d="M 192 70 L 189 90 L 192 110" stroke="#ff8800" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowBastion)"/>
+
+  <!-- Ember glow nodes on wall -->
+  <circle cx="92" cy="100" r="2" fill="url(#emberGlowBastion)" opacity="0.6" filter="url(#glowBastion)"/>
+  <circle cx="158" cy="100" r="2" fill="url(#emberGlowBastion)" opacity="0.6" filter="url(#glowBastion)"/>
+  <circle cx="125" cy="110" r="2.5" fill="url(#emberGlowBastion)" opacity="0.7" filter="url(#glowBastion)"/>
+  <circle cx="105" cy="130" r="1.5" fill="url(#emberGlowBastion)" opacity="0.5" filter="url(#glowBastion)"/>
+  <circle cx="145" cy="130" r="1.5" fill="url(#emberGlowBastion)" opacity="0.5" filter="url(#glowBastion)"/>
+
+  <!-- Central gate/keystone with ember -->
+  <rect x="110" y="120" width="30" height="40" fill="url(#wallDark)" stroke="#1a1410" stroke-width="1" rx="2"/>
+  <ellipse cx="125" cy="140" rx="8" ry="10" fill="url(#emberGlowBastion)" opacity="0.8" filter="url(#glowBastion)"/>
+  <circle cx="125" cy="140" r="4" fill="#ffe060" opacity="0.7" filter="url(#glowBastion)"/>
+  <circle cx="125" cy="140" r="2" fill="#fff8e0" opacity="0.8" filter="url(#glowBastion)"/>
+
+  <!-- Scorch flames rising from battlements -->
+  <path d="M 50 50 Q 48 40 52 30 Q 50 20 55 15" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+  <path d="M 65 50 Q 63 38 67 28 Q 65 18 70 12" stroke="#ffe060" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+  <path d="M 185 50 Q 187 40 183 30 Q 185 20 180 15" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+  <path d="M 200 50 Q 202 38 198 28 Q 200 18 195 12" stroke="#ffe060" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+  <path d="M 100 68 Q 98 55 102 45 Q 100 35 105 28" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+  <path d="M 125 68 Q 123 50 127 35 Q 125 20 130 10" stroke="#ffe060" stroke-width="2" fill="none" opacity="0.6" filter="url(#glowBastion)"/>
+  <path d="M 150 68 Q 152 55 148 45 Q 150 35 145 28" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glowBastion)"/>
+
+  <!-- Ember sparks above wall -->
+  <circle cx="55" cy="20" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glowBastion)"/>
+  <circle cx="70" cy="15" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowBastion)"/>
+  <circle cx="195" cy="20" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glowBastion)"/>
+  <circle cx="180" cy="15" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowBastion)"/>
+  <circle cx="105" cy="30" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowBastion)"/>
+  <circle cx="130" cy="15" r="2" fill="#ffe060" opacity="0.7" filter="url(#glowBastion)"/>
+  <circle cx="145" cy="30" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowBastion)"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="125" cy="178" rx="80" ry="5" fill="#0a0604" opacity="0.6" filter="url(#glowBastion)"/>
+</svg>

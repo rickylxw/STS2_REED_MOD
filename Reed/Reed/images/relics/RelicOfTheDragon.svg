@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="bg-dragon" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a1005" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0e0500" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="dragon-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffcc50" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#e6591a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6a1a05" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="scale-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffaa30" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="fire-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcc40" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#e6591a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eye-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#ffe060" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#ff6600" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e6591a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="128" height="128" fill="url(#bg-dragon)" rx="8"/>
+
+  <!-- Decorative outer ring -->
+  <circle cx="64" cy="64" r="58" fill="none" stroke="#e6591a" stroke-width="1" stroke-opacity="0.2"/>
+  <circle cx="64" cy="64" r="52" fill="none" stroke="#e6591a" stroke-width="0.5" stroke-opacity="0.15"/>
+
+  <!-- Fire glow behind dragon -->
+  <ellipse cx="64" cy="64" rx="40" ry="35" fill="url(#fire-glow)"/>
+
+  <!-- Dragon head silhouette (stylized, facing left) -->
+  <!-- Main head shape -->
+  <path d="M 92 48 C 96 40 88 32 78 34 C 70 36 64 32 56 36 C 46 40 38 44 34 52 C 30 58 32 64 36 66 C 30 70 28 78 34 84 C 38 88 44 86 48 82 C 50 88 56 92 64 90 C 72 88 80 82 84 74 C 88 68 90 58 92 48 Z" fill="url(#dragon-grad)" stroke="#ffcc40" stroke-width="0.5" stroke-opacity="0.4"/>
+
+  <!-- Dragon snout -->
+  <path d="M 34 52 C 28 54 24 58 26 62 C 28 64 32 63 34 60 L 36 56 Z" fill="url(#dragon-grad)" stroke="#ffcc40" stroke-width="0.3" stroke-opacity="0.3"/>
+
+  <!-- Dragon horn 1 (upper) -->
+  <path d="M 74 34 L 80 18 L 84 22 L 78 36 Z" fill="url(#scale-grad)" stroke="#ffcc40" stroke-width="0.3" stroke-opacity="0.5"/>
+
+  <!-- Dragon horn 2 (lower, smaller) -->
+  <path d="M 66 35 L 70 24 L 73 27 L 68 37 Z" fill="url(#scale-grad)" stroke="#ffcc40" stroke-width="0.3" stroke-opacity="0.4"/>
+
+  <!-- Dragon eye -->
+  <ellipse cx="70" cy="50" rx="4" ry="3" fill="url(#eye-glow)"/>
+  <ellipse cx="70" cy="50" rx="1.5" ry="2.5" fill="#000000" opacity="0.8"/>
+  <ellipse cx="70.5" cy="49" rx="0.6" ry="0.8" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Dragon nostril -->
+  <ellipse cx="30" cy="58" rx="1.5" ry="1" fill="#000000" opacity="0.6"/>
+
+  <!-- Flame from mouth -->
+  <path d="M 26 62 C 18 60 12 62 14 66 C 10 64 8 68 12 72 C 6 70 4 74 8 78 C 12 82 18 80 22 76 C 20 72 24 68 26 62 Z" fill="url(#dragon-grad)" opacity="0.8"/>
+
+  <!-- Dragon scales (decorative pattern) -->
+  <path d="M 56 42 Q 60 44 64 42 Q 62 46 60 44 Q 58 46 56 42 Z" fill="#ffaa30" opacity="0.4"/>
+  <path d="M 64 42 Q 68 44 72 42 Q 70 46 68 44 Q 66 46 64 42 Z" fill="#ffaa30" opacity="0.4"/>
+  <path d="M 60 48 Q 64 50 68 48 Q 66 52 64 50 Q 62 52 60 48 Z" fill="#ffaa30" opacity="0.3"/>
+  <path d="M 68 48 Q 72 50 76 48 Q 74 52 72 50 Q 70 52 68 48 Z" fill="#ffaa30" opacity="0.3"/>
+
+  <!-- Dragon teeth -->
+  <path d="M 36 66 L 38 72 L 40 66 Z" fill="#fff8e0" opacity="0.8"/>
+  <path d="M 42 68 L 44 74 L 46 68 Z" fill="#fff8e0" opacity="0.7"/>
+
+  <!-- Dragon mane/spikes along back -->
+  <path d="M 82 40 L 86 36 L 84 42 Z" fill="#8a2a05" opacity="0.8"/>
+  <path d="M 86 46 L 90 43 L 88 49 Z" fill="#8a2a05" opacity="0.8"/>
+  <path d="M 88 54 L 92 52 L 90 58 Z" fill="#8a2a05" opacity="0.7"/>
+  <path d="M 88 62 L 92 61 L 90 67 Z" fill="#8a2a05" opacity="0.7"/>
+
+  <!-- Embers floating around -->
+  <circle cx="48" cy="22" r="1.2" fill="#ffcc40" opacity="0.5"/>
+  <circle cx="100" cy="36" r="0.8" fill="#ffaa30" opacity="0.4"/>
+  <circle cx="96" cy="80" r="1" fill="#e6591a" opacity="0.4"/>
+  <circle cx="44" cy="96" r="0.8" fill="#ffcc40" opacity="0.3"/>
+  <circle cx="102" cy="64" r="0.6" fill="#ff8800" opacity="0.3"/>
+</svg>

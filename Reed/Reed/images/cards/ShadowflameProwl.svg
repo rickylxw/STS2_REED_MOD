@@ -1,0 +1,98 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+  <defs>
+    <radialGradient id='bgProwl' cx='0.65' cy='0.6' r='0.8'>
+      <stop offset='0' stop-color='#2a1a2a'/>
+      <stop offset='0.5' stop-color='#1a0d12'/>
+      <stop offset='1' stop-color='#0a0508'/>
+    </radialGradient>
+    <linearGradient id='darkFlameBody' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0' stop-color='#2a1a3a'/>
+      <stop offset='0.5' stop-color='#1a0a2a'/>
+      <stop offset='1' stop-color='#0a0518'/>
+    </linearGradient>
+    <linearGradient id='flameEdge' x1='0' y1='1' x2='0' y2='0'>
+      <stop offset='0' stop-color='#c41a05'/>
+      <stop offset='0.5' stop-color='#e6591a'/>
+      <stop offset='1' stop-color='#ff8800' stop-opacity='0'/>
+    </linearGradient>
+    <radialGradient id='eyeGlow' cx='0.5' cy='0.5' r='0.5'>
+      <stop offset='0' stop-color='#fff8e0'/>
+      <stop offset='0.35' stop-color='#ffe060'/>
+      <stop offset='0.7' stop-color='#ff8800'/>
+      <stop offset='1' stop-color='#c41a05' stop-opacity='0'/>
+    </radialGradient>
+    <radialGradient id='emberGlow' cx='0.5' cy='0.5' r='0.5'>
+      <stop offset='0' stop-color='#fff8e0'/>
+      <stop offset='0.4' stop-color='#ffcc40'/>
+      <stop offset='0.8' stop-color='#e6591a'/>
+      <stop offset='1' stop-color='#8a2a05' stop-opacity='0'/>
+    </radialGradient>
+    <filter id='softBlur'><feGaussianBlur stdDeviation='2.5'/></filter>
+    <filter id='bigBlur'><feGaussianBlur stdDeviation='6'/></filter>
+  </defs>
+
+  <!-- background -->
+  <rect width='250' height='190' rx='8' fill='url(#bgProwl)'/>
+
+  <!-- shadowy mist clouds -->
+  <ellipse cx='70' cy='120' rx='80' ry='30' fill='#1a0a2a' filter='url(#bigBlur)' opacity='0.55'/>
+  <ellipse cx='180' cy='130' rx='75' ry='25' fill='#2a1a3a' filter='url(#bigBlur)' opacity='0.4'/>
+
+  <!-- dark flame wolf silhouette (stalking, low, head right) -->
+  <path d='M40,140 C44,128 52,124 60,128 C58,118 62,110 70,112 C76,104 84,104 92,110 C96,100 104,100 112,108 C116,98 126,98 134,108 C142,100 154,102 160,114 C168,108 180,110 184,120 C190,116 198,120 200,128 C206,126 210,132 208,138 C214,140 214,146 208,150 C200,150 188,150 176,150 C168,148 156,148 144,148 C130,148 116,148 102,148 C90,148 78,148 68,148 C58,148 48,148 42,146 C38,144 38,142 40,140 Z' fill='url(#darkFlameBody)' opacity='0.97'/>
+
+  <!-- head & snout (right side, lowered for stalking) -->
+  <path d='M184,120 C190,112 198,112 204,118 C210,116 214,120 212,126 C216,126 218,130 214,134 C208,136 200,136 192,134 C186,132 182,126 184,120 Z' fill='url(#darkFlameBody)' opacity='0.97'/>
+  <!-- ears (pointed up, alert) -->
+  <path d='M112,108 L108,92 L116,100 Z' fill='#1a0a2a'/>
+  <path d='M134,108 L130,90 L140,100 Z' fill='#1a0a2a'/>
+  <path d='M112,108 L110,98 L115,102 Z' fill='#2a1a3a'/>
+  <path d='M134,108 L132,96 L138,100 Z' fill='#2a1a3a'/>
+
+  <!-- tail (trailing left, flame-like) -->
+  <path d='M40,140 C30,138 22,132 18,124 C14,116 16,108 22,104 C20,114 24,120 30,124 C24,128 26,134 32,138 C36,140 38,140 40,140 Z' fill='url(#darkFlameBody)' opacity='0.95'/>
+  <path d='M22,104 C18,110 20,118 26,122 C24,116 26,110 30,108 C26,106 24,105 22,104 Z' fill='url(#flameEdge)' opacity='0.6'/>
+
+  <!-- crouched front legs -->
+  <path d='M150,148 C148,156 152,164 158,168 C156,160 160,154 164,150 Z' fill='#1a0a2a'/>
+  <path d='M168,150 C166,158 170,166 176,170 C174,162 178,156 182,152 Z' fill='#0a0518'/>
+
+  <!-- orange flame edges along the back/spine (flickering dark flame) -->
+  <path d='M48,138 C54,120 60,128 64,118 C70,126 76,116 82,124 C88,114 94,124 100,118 C108,126 114,116 120,122 C128,112 134,122 140,116 C148,124 154,114 160,122 C168,116 174,124 182,120' fill='none' stroke='url(#flameEdge)' stroke-width='2' filter='url(#softBlur)' opacity='0.75'/>
+  <path d='M48,138 C54,120 60,128 64,118 C70,126 76,116 82,124 C88,114 94,124 100,118 C108,126 114,116 120,122 C128,112 134,122 140,116 C148,124 154,114 160,122 C168,116 174,124 182,120' fill='none' stroke='#ff8800' stroke-width='0.6' opacity='0.6'/>
+
+  <!-- flame wisps rising from back -->
+  <path d='M64,118 C62,108 66,100 64,90 C68,98 70,108 68,116 Z' fill='url(#flameEdge)' opacity='0.7'/>
+  <path d='M100,118 C98,106 102,96 100,84 C104,94 106,106 104,116 Z' fill='url(#flameEdge)' opacity='0.7'/>
+  <path d='M140,116 C138,104 142,94 140,82 C144,92 146,104 144,114 Z' fill='url(#flameEdge)' opacity='0.7'/>
+  <path d='M82,124 C80,116 83,110 82,102 C85,110 86,118 85,124 Z' fill='url(#flameEdge)' opacity='0.55'/>
+  <path d='M120,122 C118,114 121,108 120,100 C123,108 124,116 123,122 Z' fill='url(#flameEdge)' opacity='0.55'/>
+
+  <!-- glowing orange eyes (predatory) -->
+  <circle cx='200' cy='124' r='5' fill='url(#eyeGlow)' filter='url(#softBlur)' opacity='0.95'/>
+  <circle cx='200' cy='124' r='2' fill='#fff8e0'/>
+  <circle cx='200' cy='124' r='1.2' fill='#fff8e0'/>
+  <!-- second eye slightly behind -->
+  <circle cx='190' cy='123' r='3.5' fill='url(#eyeGlow)' filter='url(#softBlur)' opacity='0.85'/>
+  <circle cx='190' cy='123' r='1' fill='#ffe060'/>
+
+  <!-- ember sparks drifting from the dark flame body -->
+  <circle cx='55' cy='110' r='1.2' fill='#ffcc40' opacity='0.8'/>
+  <circle cx='75' cy='95' r='1' fill='#ff8800' opacity='0.7'/>
+  <circle cx='95' cy='100' r='1.2' fill='#ffe060' opacity='0.75'/>
+  <circle cx='115' cy='92' r='1' fill='#ffcc40' opacity='0.7'/>
+  <circle cx='135' cy='95' r='1.2' fill='#ff8800' opacity='0.75'/>
+  <circle cx='155' cy='98' r='1' fill='#ffe060' opacity='0.7'/>
+  <circle cx='50' cy='125' r='1' fill='#ffcc40' opacity='0.65'/>
+  <circle cx='170' cy='100' r='1' fill='#ff8800' opacity='0.65'/>
+
+  <!-- ground shadow under stalking beast -->
+  <ellipse cx='120' cy='172' rx='90' ry='8' fill='#0a0508' filter='url(#softBlur)' opacity='0.8'/>
+  <ellipse cx='150' cy='172' rx='40' ry='5' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.3'/>
+
+  <!-- shadowy foreground wisps -->
+  <path d='M0,165 C40,158 90,168 125,162 C160,156 210,168 250,162 L250,190 L0,190 Z' fill='#0a0508' opacity='0.7'/>
+
+  <!-- top vignette -->
+  <rect width='250' height='60' rx='8' fill='#0a0508' opacity='0.4'/>
+</svg>

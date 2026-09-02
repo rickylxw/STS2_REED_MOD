@@ -1,0 +1,28 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>Reed</RootNamespace>
+    <AssemblyName>Reed</AssemblyName>
+    <!-- 自动部署到 mod 文件夹 -->
+    <Sts2DeployDir>$(Sts2Dir)/mods/Reed/</Sts2DeployDir>
+    <RitsuLibDeployDir>$(Sts2Dir)/mods/STS2-RitsuLib/</RitsuLibDeployDir>
+    <!-- 禁用 NuGet 包自带的自动复制，由 build.ps1 统一处理 -->
+    <RitsuLibAutoCopy>false</RitsuLibAutoCopy>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- 游戏程序集 -->
+    <Reference Include="sts2">
+      <HintPath>$(Sts2DataDir)/sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(Sts2DataDir)/0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- RitsuLib 框架（NuGet 获取） -->
+    <PackageReference Include="STS2.RitsuLib" Version="*" />
+  </ItemGroup>
+  <!-- 构建后自动复制由 build.ps1 脚本处理，避免沙箱权限问题 -->
+
+</Project>

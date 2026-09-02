@@ -1,0 +1,16 @@
+{
+    "REED_RELIC_REEDS_SPEARHEAD.title": "Reed's Spearhead",
+    "REED_RELIC_REEDS_SPEARHEAD.description": "At the start of each turn, apply {Cards} [red]Scorch[/red] to ALL enemies.",
+
+    "REED_RELIC_HEART_OF_EMBERS.title": "Heart of Embers",
+    "REED_RELIC_HEART_OF_EMBERS.description": "At the start of each turn, gain {Block:diff()} Block.",
+
+    "REED_RELIC_RELIC_OF_THE_DRAGON.title": "Relic of the Dragon",
+    "REED_RELIC_RELIC_OF_THE_DRAGON.description": "At the start of each turn, gain {Cards} [gold]Strength[/gold].",
+
+    "REED_RELIC_FLAME_OF_VICTORIA.title": "Flame of Victoria",
+    "REED_RELIC_FLAME_OF_VICTORIA.description": "At the end of each turn, deal {Damage:diff()} damage to all enemies with [red]Scorch[/red].",
+
+    "REED_RELIC_ASHEN_CORE.title": "Ashen Core",
+    "REED_RELIC_ASHEN_CORE.description": "Whenever you Exhaust a card, gain 1 [blue]Ash[/blue]."
+}

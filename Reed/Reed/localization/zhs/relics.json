@@ -1,0 +1,16 @@
+{
+    "REED_RELIC_REEDS_SPEARHEAD.title": "苇草之锋",
+    "REED_RELIC_REEDS_SPEARHEAD.description": "每回合开始时，对所有敌人施加 {Cards} 层[red]灼燃[/red]。",
+
+    "REED_RELIC_HEART_OF_EMBERS.title": "余烬之心",
+    "REED_RELIC_HEART_OF_EMBERS.description": "每回合开始时，获得 {Block:diff()} 点格挡。",
+
+    "REED_RELIC_RELIC_OF_THE_DRAGON.title": "龙之遗物",
+    "REED_RELIC_RELIC_OF_THE_DRAGON.description": "每回合开始时，获得 {Cards} 点[gold]力量[/gold]。",
+
+    "REED_RELIC_FLAME_OF_VICTORIA.title": "维多利亚之焰",
+    "REED_RELIC_FLAME_OF_VICTORIA.description": "每回合结束时，对所有带有[red]灼燃[/red]的敌人造成 {Damage:diff()} 点伤害。",
+
+    "REED_RELIC_ASHEN_CORE.title": "灰烬核心",
+    "REED_RELIC_ASHEN_CORE.description": "每次消耗卡牌时，获得 1 层[blue]灰烬[/blue]。"
+}

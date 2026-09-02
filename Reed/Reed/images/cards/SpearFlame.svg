@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <radialGradient id="bgSpearFlame" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="50%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0a0503"/>
+    </radialGradient>
+    <linearGradient id="shaftGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a1f15"/>
+      <stop offset="30%" stop-color="#5a3828"/>
+      <stop offset="50%" stop-color="#6a4838"/>
+      <stop offset="70%" stop-color="#5a3828"/>
+      <stop offset="100%" stop-color="#3a1f15"/>
+    </linearGradient>
+    <linearGradient id="bladeGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="20%" stop-color="#ffe060"/>
+      <stop offset="50%" stop-color="#ff8800"/>
+      <stop offset="80%" stop-color="#e6591a"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
+    </linearGradient>
+    <radialGradient id="bladeFireGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#ffe060" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c41a05" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spiralFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ffaa30" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffe060" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="glowSF">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlowSF">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="250" height="190" fill="url(#bgSpearFlame)" rx="8"/>
+
+  <!-- Heat haze background ripples -->
+  <ellipse cx="125" cy="95" rx="100" ry="80" fill="#e6591a" opacity="0.04" filter="url(#softGlowSF)"/>
+  <ellipse cx="125" cy="80" rx="70" ry="50" fill="#ff8800" opacity="0.04" filter="url(#softGlowSF)"/>
+
+  <!-- Heat distortion waves -->
+  <path d="M 30 40 Q 50 35 70 40 Q 90 35 110 40 Q 130 35 150 40 Q 170 35 190 40 Q 210 35 230 40"
+        stroke="#ff8800" stroke-width="0.5" fill="none" opacity="0.12"/>
+  <path d="M 20 70 Q 45 65 70 70 Q 95 65 120 70 Q 145 65 170 70 Q 195 65 220 70 Q 240 65 250 70"
+        stroke="#ffaa30" stroke-width="0.5" fill="none" opacity="0.1"/>
+  <path d="M 20 120 Q 45 115 70 120 Q 95 115 120 120 Q 145 115 170 120 Q 195 115 220 120 Q 240 115 250 120"
+        stroke="#ff8800" stroke-width="0.5" fill="none" opacity="0.12"/>
+  <path d="M 30 150 Q 50 145 70 150 Q 90 145 110 150 Q 130 145 150 150 Q 170 145 190 150 Q 210 145 230 150"
+        stroke="#ffaa30" stroke-width="0.5" fill="none" opacity="0.1"/>
+
+  <!-- Background embers -->
+  <circle cx="40" cy="30" r="1.5" fill="#ff8800" opacity="0.4" filter="url(#glowSF)"/>
+  <circle cx="210" cy="40" r="1" fill="#ffaa30" opacity="0.4"/>
+  <circle cx="30" cy="160" r="1.5" fill="#e6591a" opacity="0.4"/>
+  <circle cx="220" cy="150" r="1" fill="#ff8800" opacity="0.4"/>
+  <circle cx="15" cy="90" r="1" fill="#ffaa30" opacity="0.3"/>
+  <circle cx="235" cy="100" r="1.2" fill="#ff8800" opacity="0.3"/>
+
+  <!-- Vertical spear (centered, slightly tilted) -->
+  <g transform="rotate(5 125 95)">
+
+    <!-- Fire glow behind blade -->
+    <ellipse cx="125" cy="35" rx="35" ry="40" fill="url(#bladeFireGlow)" filter="url(#glowSF)"/>
+
+    <!-- Spiral flames around upper shaft -->
+    <path d="M 95 90 Q 100 75 110 65 Q 105 80 120 70 Q 115 85 125 75 Q 120 90 130 80"
+          stroke="url(#spiralFlame)" stroke-width="3" fill="none" opacity="0.5" filter="url(#glowSF)"/>
+    <path d="M 155 90 Q 150 75 140 65 Q 145 80 130 70 Q 135 85 125 75 Q 130 90 120 80"
+          stroke="url(#spiralFlame)" stroke-width="3" fill="none" opacity="0.5" filter="url(#glowSF)"/>
+
+    <!-- Shaft body -->
+    <rect x="120" y="50" width="10" height="120" fill="url(#shaftGrad2)" rx="2"/>
+
+    <!-- Shaft wrap/grip details -->
+    <rect x="119" y="120" width="12" height="3" fill="#1a0d08" opacity="0.7"/>
+    <rect x="119" y="130" width="12" height="3" fill="#1a0d08" opacity="0.7"/>
+    <rect x="119" y="140" width="12" height="3" fill="#1a0d08" opacity="0.7"/>
+    <rect x="119" y="150" width="12" height="3" fill="#1a0d08" opacity="0.7"/>
+
+    <!-- Shaft highlight -->
+    <line x1="122" y1="55" x2="122" y2="165" stroke="#8a6848" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Spear butt -->
+    <rect x="117" y="168" width="16" height="8" fill="#3a1f15" rx="2"/>
+    <circle cx="125" cy="172" r="3" fill="#4a2818"/>
+
+    <!-- Spear guard/cross -->
+    <rect x="105" y="46" width="40" height="6" fill="#4a2818" rx="2"/>
+    <rect x="103" y="44" width="44" height="3" fill="#5a3828" rx="1"/>
+
+    <!-- Spear blade (leaf/spear shape, pointing up) -->
+    <path d="M 125 10 L 115 30 Q 112 40 115 50 L 125 48 L 135 50 Q 138 40 135 30 Z"
+          fill="url(#bladeGrad2)" filter="url(#glowSF)"/>
+
+    <!-- Blade mid-rib -->
+    <line x1="125" y1="12" x2="125" y2="48" stroke="#8a2a05" stroke-width="1" opacity="0.6"/>
+
+    <!-- Blade edges highlight -->
+    <path d="M 125 10 L 115 30 Q 112 40 115 50 L 118 48 Q 116 38 118 28 Z" fill="#fff8e0" opacity="0.3"/>
+
+    <!-- White-hot blade tip -->
+    <circle cx="125" cy="12" r="5" fill="#fff8e0" opacity="0.8" filter="url(#glowSF)"/>
+    <circle cx="125" cy="12" r="2" fill="#ffffff" opacity="0.9"/>
+
+    <!-- Flames engulfing the blade -->
+    <path d="M 110 45 Q 100 30 105 15 Q 98 5 100 0 Q 108 10 110 25 Q 105 35 115 42 Z"
+          fill="#ff8800" opacity="0.7" filter="url(#glowSF)"/>
+    <path d="M 140 45 Q 150 30 145 15 Q 152 5 150 0 Q 142 10 140 25 Q 145 35 135 42 Z"
+          fill="#ff8800" opacity="0.7" filter="url(#glowSF)"/>
+
+    <path d="M 112 42 Q 105 28 110 12 Q 105 2 108 0 Q 114 8 116 22 Q 112 32 118 40 Z"
+          fill="#ffaa30" opacity="0.6" filter="url(#glowSF)"/>
+    <path d="M 138 42 Q 145 28 140 12 Q 145 2 142 0 Q 136 8 134 22 Q 138 32 132 40 Z"
+          fill="#ffaa30" opacity="0.6" filter="url(#glowSF)"/>
+
+    <path d="M 118 40 Q 115 25 120 10 Q 118 0 122 0 Q 126 8 124 20 Q 120 30 122 38 Z"
+          fill="#ffe060" opacity="0.5" filter="url(#glowSF)"/>
+    <path d="M 132 40 Q 135 25 130 10 Q 132 0 128 0 Q 124 8 126 20 Q 130 30 128 38 Z"
+          fill="#ffe060" opacity="0.5" filter="url(#glowSF)"/>
+
+    <!-- Central flame column on blade -->
+    <path d="M 120 40 Q 122 20 125 5 Q 128 20 130 40 Z"
+          fill="#fff8e0" opacity="0.4" filter="url(#glowSF)"/>
+
+    <!-- Spiral flames around lower shaft -->
+    <path d="M 95 130 Q 105 120 115 125 Q 105 135 95 130 Z" fill="#ff8800" opacity="0.4" filter="url(#glowSF)"/>
+    <path d="M 155 110 Q 145 100 135 105 Q 145 115 155 110 Z" fill="#ff8800" opacity="0.4" filter="url(#glowSF)"/>
+    <path d="M 100 95 Q 110 85 120 90 Q 110 100 100 95 Z" fill="#ffaa30" opacity="0.35" filter="url(#glowSF)"/>
+    <path d="M 150 145 Q 140 135 130 140 Q 140 150 150 145 Z" fill="#e6591a" opacity="0.3" filter="url(#glowSF)"/>
+
+    <!-- Embers rising along the spear -->
+    <circle cx="100" cy="20" r="1.5" fill="#fff8e0" opacity="0.6" filter="url(#glowSF)"/>
+    <circle cx="150" cy="25" r="1.2" fill="#ffe060" opacity="0.6" filter="url(#glowSF)"/>
+    <circle cx="95" cy="60" r="1" fill="#ff8800" opacity="0.5" filter="url(#glowSF)"/>
+    <circle cx="155" cy="55" r="1.2" fill="#ffaa30" opacity="0.5" filter="url(#glowSF)"/>
+    <circle cx="90" cy="100" r="1" fill="#ff8800" opacity="0.4" filter="url(#glowSF)"/>
+    <circle cx="160" cy="90" r="1" fill="#e6591a" opacity="0.4"/>
+    <circle cx="105" cy="120" r="1.5" fill="#ff8800" opacity="0.4" filter="url(#glowSF)"/>
+    <circle cx="145" cy="130" r="1" fill="#ffaa30" opacity="0.4"/>
+  </g>
+
+  <!-- Rising smoke at top -->
+  <path d="M 120 5 Q 125 0 120 -5" stroke="#3a1f15" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M 130 5 Q 135 0 130 -5" stroke="#2a1815" stroke-width="1" fill="none" opacity="0.25"/>
+</svg>

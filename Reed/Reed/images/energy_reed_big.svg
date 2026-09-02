@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
+  <defs>
+    <radialGradient id="bg-glow" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#2a1005" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0e0500" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="flame-outer" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#cc3300"/>
+      <stop offset="40%" stop-color="#ff6600"/>
+      <stop offset="70%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ffdd44"/>
+    </linearGradient>
+    <linearGradient id="flame-inner" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff5500"/>
+      <stop offset="50%" stop-color="#ff9900"/>
+      <stop offset="100%" stop-color="#ffffaa"/>
+    </linearGradient>
+    <radialGradient id="ember-core" cx="50%" cy="65%" r="35%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#ffeeaa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft-blur">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="37" cy="37" r="36" fill="url(#bg-glow)"/>
+  <circle cx="37" cy="37" r="36" fill="none" stroke="#3a1a08" stroke-width="1.5"/>
+  <circle cx="37" cy="37" r="33" fill="none" stroke="#ff6600" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Outer flame -->
+  <path d="M37,8 C32,14 28,20 26,28 C24,35 25,42 28,48 C30,52 33,56 37,62 C41,56 44,52 46,48 C49,42 50,35 48,28 C46,20 42,14 37,8 Z"
+        fill="url(#flame-outer)" filter="url(#soft-blur)"/>
+
+  <!-- Inner flame -->
+  <path d="M37,16 C34,20 31,25 30,31 C29,36 30,41 32,45 C34,48 35,51 37,55 C39,51 40,48 42,45 C44,41 45,36 44,31 C43,25 40,20 37,16 Z"
+        fill="url(#flame-inner)"/>
+
+  <!-- White-hot core -->
+  <ellipse cx="37" cy="40" rx="4" ry="10" fill="url(#ember-core)"/>
+
+  <!-- Flame tip ember -->
+  <circle cx="37" cy="8" r="2" fill="#ffdd44" opacity="0.6" filter="url(#soft-blur)"/>
+  <circle cx="37" cy="8" r="1" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Scattered embers -->
+  <circle cx="24" cy="20" r="1" fill="#ff7700" opacity="0.7"/>
+  <circle cx="50" cy="22" r="0.8" fill="#ff9900" opacity="0.6"/>
+  <circle cx="22" cy="38" r="0.7" fill="#ff5500" opacity="0.5"/>
+  <circle cx="52" cy="40" r="0.6" fill="#ff7700" opacity="0.5"/>
+  <circle cx="28" cy="52" r="0.8" fill="#ff9900" opacity="0.4"/>
+  <circle cx="46" cy="54" r="0.6" fill="#ff6600" opacity="0.4"/>
+
+  <!-- Base glow -->
+  <ellipse cx="37" cy="62" rx="8" ry="3" fill="#ff4400" opacity="0.3" filter="url(#soft-blur)"/>
+</svg>

@@ -1,0 +1,42 @@
+# Godot engine
+Godot_4.5.1_std/
+Godot_4.5.1_mono/
+Godot_v4.5.1-stable_mono_win64.zip
+Godot_v4.5.1-stable_win64.zip
+
+# Godot cache
+.godot/
+
+# Build artifacts
+**/bin/
+**/obj/
+*.dll
+*.pdb
+*.pck
+*.tmp
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# DllInspector build (keep source only)
+DllInspector/bin/
+DllInspector/obj/
+
+# Tools and temp (not part of the mod)
+prts_tool/
+temp_images/
+download_images.ps1
+download_images2.ps1
+
+# Embedded repos
+Slay the Spire 2 mod/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log

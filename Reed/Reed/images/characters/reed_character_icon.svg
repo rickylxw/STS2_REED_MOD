@@ -1,0 +1,85 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'>
+  <defs>
+    <radialGradient id='ciBg' cx='50%' cy='45%' r='65%'>
+      <stop offset='0%' stop-color='#3a1a0a'/>
+      <stop offset='100%' stop-color='#120800'/>
+    </radialGradient>
+    <linearGradient id='ciHair' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#ffaa30' stop-opacity='0.9'/>
+      <stop offset='50%' stop-color='#e6591a'/>
+      <stop offset='100%' stop-color='#8a2a05'/>
+    </linearGradient>
+    <linearGradient id='ciHorn' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='30%' stop-color='#ffcc50'/>
+      <stop offset='70%' stop-color='#e6591a'/>
+      <stop offset='100%' stop-color='#6a1a05'/>
+    </linearGradient>
+    <linearGradient id='ciFace' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' stop-color='#3a2520'/>
+      <stop offset='60%' stop-color='#2a1815'/>
+      <stop offset='100%' stop-color='#1a0d08'/>
+    </linearGradient>
+    <radialGradient id='ciEye' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#ffffff'/>
+      <stop offset='40%' stop-color='#ffe060'/>
+      <stop offset='100%' stop-color='#ff6600' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='ciFlame' x1='0%' y1='100%' x2='0%' y2='0%'>
+      <stop offset='0%' stop-color='#e6591a' stop-opacity='0.8'/>
+      <stop offset='50%' stop-color='#ff8800' stop-opacity='0.6'/>
+      <stop offset='100%' stop-color='#fff8a0' stop-opacity='0.2'/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width='128' height='128' fill='url(#ciBg)' rx='8'/>
+  <rect width='128' height='128' fill='none' stroke='#e6591a' stroke-width='1' stroke-opacity='0.15' rx='8'/>
+  <!-- Flame aura -->
+  <path d='M64 10 C56 16 54 24 58 32 C52 28 48 20 50 12 C46 22 48 32 56 38 L64 34 L72 38 C80 32 82 22 78 12 C80 20 76 28 70 32 C74 24 72 16 64 10 Z' fill='url(#ciFlame)' opacity='0.5'/>
+  <!-- Hair back -->
+  <path d='M40 44 C30 56 26 76 28 96 C30 106 36 110 40 106 C38 92 38 74 42 60 Z' fill='url(#ciHair)' opacity='0.6'/>
+  <path d='M88 44 C98 56 102 76 100 96 C98 106 92 110 88 106 C90 92 90 74 86 60 Z' fill='url(#ciHair)' opacity='0.6'/>
+  <!-- Left horn -->
+  <path d='M48 34 C42 24 38 14 40 6 C42 4 48 10 52 18 C54 24 54 32 50 34 Z' fill='url(#ciHorn)'/>
+  <path d='M48 32 C44 24 42 16 43 10 L46 10 C46 16 48 22 50 28 Z' fill='#fff8e0' opacity='0.25'/>
+  <!-- Right horn -->
+  <path d='M80 34 C86 24 90 14 88 6 C86 4 80 10 76 18 C74 24 74 32 78 34 Z' fill='url(#ciHorn)'/>
+  <path d='M80 32 C84 24 86 16 85 10 L82 10 C82 16 80 22 78 28 Z' fill='#fff8e0' opacity='0.25'/>
+  <!-- Hair top -->
+  <path d='M46 38 C50 28 58 22 64 22 C70 22 78 28 82 38 C84 44 84 48 82 50 C74 44 68 42 64 44 C60 42 54 44 46 50 C44 48 44 44 46 38 Z' fill='url(#ciHair)'/>
+  <!-- Hair bangs -->
+  <path d='M48 46 C52 42 56 42 58 46 C57 48 55 50 54 52 Z' fill='url(#ciHair)' opacity='0.85'/>
+  <path d='M58 44 C62 40 66 40 68 44 C67 48 65 50 64 52 Z' fill='url(#ciHair)' opacity='0.85'/>
+  <path d='M68 44 C72 40 76 40 78 44 C77 48 75 50 74 52 Z' fill='url(#ciHair)' opacity='0.85'/>
+  <!-- Face -->
+  <ellipse cx='64' cy='62' rx='15' ry='20' fill='url(#ciFace)'/>
+  <!-- Face shading -->
+  <ellipse cx='59' cy='57' rx='4' ry='7' fill='#3a2520' opacity='0.25'/>
+  <ellipse cx='69' cy='57' rx='4' ry='7' fill='#3a2520' opacity='0.25'/>
+  <!-- Eyes -->
+  <ellipse cx='58' cy='60' rx='3.5' ry='2.5' fill='url(#ciEye)'/>
+  <ellipse cx='70' cy='60' rx='3.5' ry='2.5' fill='url(#ciEye)'/>
+  <ellipse cx='58' cy='60' rx='1.2' ry='1.8' fill='#000' opacity='0.7'/>
+  <ellipse cx='70' cy='60' rx='1.2' ry='1.8' fill='#000' opacity='0.7'/>
+  <ellipse cx='58.5' cy='59.5' rx='0.5' ry='0.6' fill='#fff' opacity='0.9'/>
+  <ellipse cx='70.5' cy='59.5' rx='0.5' ry='0.6' fill='#fff' opacity='0.9'/>
+  <!-- Nose -->
+  <path d='M63 64 L62 69 L64 70 L66 69 L65 64 Z' fill='#1a0d08' opacity='0.35'/>
+  <!-- Mouth -->
+  <path d='M59 73 Q64 75 69 73' fill='none' stroke='#1a0d08' stroke-width='1' stroke-opacity='0.4' stroke-linecap='round'/>
+  <!-- Small flame on head -->
+  <path d='M62 22 C60 17 61 12 63 9 C62 14 64 17 63 22 Z' fill='#ff8800' opacity='0.5'/>
+  <path d='M64 20 C63 14 64 10 66 7 C65 12 67 15 66 20 Z' fill='#ffcc40' opacity='0.4'/>
+  <!-- Neck/shoulders -->
+  <path d='M54 80 L50 94 L44 102 L64 104 L84 102 L78 94 L74 80 Z' fill='url(#ciHair)' opacity='0.5'/>
+  <!-- Collar -->
+  <path d='M46 96 L64 100 L82 96 L82 100 L64 104 L46 100 Z' fill='#2a1005' opacity='0.8'/>
+  <path d='M50 96 L64 98 L78 96' fill='none' stroke='#e6591a' stroke-width='1' stroke-opacity='0.4'/>
+  <!-- Embers -->
+  <circle cx='38' cy='38' r='1.5' fill='#ffcc40' opacity='0.5'/>
+  <circle cx='90' cy='40' r='1.2' fill='#ff8800' opacity='0.4'/>
+  <circle cx='34' cy='58' r='1' fill='#ffaa30' opacity='0.35'/>
+  <circle cx='94' cy='60' r='1' fill='#e6591a' opacity='0.35'/>
+  <circle cx='42' cy='18' r='1' fill='#ffcc40' opacity='0.35'/>
+  <circle cx='86' cy='16' r='0.8' fill='#ff8800' opacity='0.3'/>
+</svg>

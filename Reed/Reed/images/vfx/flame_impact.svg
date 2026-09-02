@@ -1,0 +1,49 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='256' height='256' viewBox='0 0 256 256'>
+  <defs>
+    <radialGradient id='coreGlow' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#ffffff' stop-opacity='1'/>
+      <stop offset='20%' stop-color='#fff5cc' stop-opacity='0.95'/>
+      <stop offset='50%' stop-color='#ffaa33' stop-opacity='0.7'/>
+      <stop offset='100%' stop-color='#ff4400' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='flameGrad' x1='50%' y1='100%' x2='50%' y2='0%'>
+      <stop offset='0%' stop-color='#ff6600' stop-opacity='0.9'/>
+      <stop offset='40%' stop-color='#ffaa33' stop-opacity='0.8'/>
+      <stop offset='80%' stop-color='#fff5cc' stop-opacity='0.6'/>
+      <stop offset='100%' stop-color='#ffffff' stop-opacity='0'/>
+    </linearGradient>
+    <radialGradient id='emberGlow' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#ffdd44' stop-opacity='1'/>
+      <stop offset='50%' stop-color='#ff6600' stop-opacity='0.8'/>
+      <stop offset='100%' stop-color='#cc2200' stop-opacity='0'/>
+    </radialGradient>
+  </defs>
+  <circle cx='128' cy='128' r='120' fill='url(#coreGlow)' opacity='0.35'/>
+  <circle cx='128' cy='128' r='100' fill='none' stroke='#ff8800' stroke-width='3' opacity='0.45'/>
+  <circle cx='128' cy='128' r='112' fill='none' stroke='#ffaa33' stroke-width='1.5' opacity='0.25'/>
+  <path d='M128 128 C120 90, 125 50, 128 20 C131 50, 136 90, 128 128 Z' fill='url(#flameGrad)'/>
+  <path d='M128 128 C150 100, 170 70, 185 45 C165 75, 150 105, 128 128 Z' fill='url(#flameGrad)' opacity='0.85'/>
+  <path d='M128 128 C166 120, 206 125, 236 128 C206 131, 166 136, 128 128 Z' fill='url(#flameGrad)' opacity='0.9'/>
+  <path d='M128 128 C150 156, 170 186, 185 211 C165 181, 150 151, 128 128 Z' fill='url(#flameGrad)' opacity='0.8'/>
+  <path d='M128 128 C120 166, 125 206, 128 236 C131 206, 136 166, 128 128 Z' fill='url(#flameGrad)' opacity='0.85'/>
+  <path d='M128 128 C106 156, 86 186, 71 211 C91 181, 106 151, 128 128 Z' fill='url(#flameGrad)' opacity='0.75'/>
+  <path d='M128 128 C90 120, 50 125, 20 128 C50 131, 90 136, 128 128 Z' fill='url(#flameGrad)' opacity='0.85'/>
+  <path d='M128 128 C106 100, 86 70, 71 45 C91 75, 106 105, 128 128 Z' fill='url(#flameGrad)' opacity='0.8'/>
+  <circle cx='128' cy='128' r='40' fill='url(#coreGlow)' opacity='0.9'/>
+  <circle cx='128' cy='128' r='18' fill='#ffffff' opacity='0.85'/>
+  <circle cx='180' cy='60' r='4' fill='url(#emberGlow)'/>
+  <circle cx='200' cy='120' r='3' fill='url(#emberGlow)' opacity='0.8'/>
+  <circle cx='170' cy='190' r='5' fill='url(#emberGlow)' opacity='0.7'/>
+  <circle cx='90' cy='200' r='3.5' fill='url(#emberGlow)' opacity='0.85'/>
+  <circle cx='50' cy='150' r='4' fill='url(#emberGlow)' opacity='0.75'/>
+  <circle cx='60' cy='80' r='3' fill='url(#emberGlow)' opacity='0.8'/>
+  <circle cx='120' cy='40' r='2.5' fill='url(#emberGlow)' opacity='0.9'/>
+  <circle cx='210' cy='170' r='2' fill='#ffdd44' opacity='0.8'/>
+  <circle cx='40' cy='200' r='2' fill='#ffaa33' opacity='0.7'/>
+  <circle cx='220' cy='90' r='2.5' fill='#ffdd44' opacity='0.75'/>
+  <circle cx='80' cy='30' r='1.5' fill='#ff8800' opacity='0.7'/>
+  <circle cx='150' cy='220' r='2' fill='#ff6600' opacity='0.6'/>
+  <circle cx='30' cy='110' r='1.5' fill='#ffaa33' opacity='0.65'/>
+  <circle cx='195' cy='200' r='1.5' fill='#ff8800' opacity='0.6'/>
+  <circle cx='100' cy='170' r='1.2' fill='#ffdd44' opacity='0.5'/>
+</svg>
