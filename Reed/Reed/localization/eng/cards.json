@@ -162,5 +162,8 @@
     "REED_CARD_DRAGONS_LEGACY.description": "Gain {Cards} [blue]Dragon's Legacy[/blue]. At the start of each turn, gain 1 [gold]Strength[/gold] and apply 1 [red]Scorch[/red] to ALL enemies.",
 
     "REED_CARD_ASH_RECOVERY.title": "Ash Recovery",
-    "REED_CARD_ASH_RECOVERY.description": "Gain {Cards} [blue]Ash Recovery[/blue]. Whenever you Exhaust a card, heal 1 HP."
+    "REED_CARD_ASH_RECOVERY.description": "Gain {Cards} [blue]Ash Recovery[/blue]. Whenever you Exhaust a card, heal 1 HP.",
+
+    "REED_CARD_ETERNAL_EMBER.title": "Eternal Ember",
+    "REED_CARD_ETERNAL_EMBER.description": "Gain {Cards} [blue]Eternal Ember[/blue]. At the start of each turn, apply 3 [red]Scorch[/red] to ALL enemies and gain Block equal to total [red]Scorch[/red] on all enemies."
 }

@@ -213,5 +213,262 @@ class Program
                 Console.WriteLine($"  -> interface: {i.FullName}");
             }
         }
+
+        // Inspect ALL virtual methods on ModRelicTemplate and RelicModel
+        Console.WriteLine("\n=== ModRelicTemplate + RelicModel ALL virtual methods ===");
+        foreach (var t in AllTypes().Where(t => t.Name == "ModRelicTemplate" || t.Name == "RelicModel"))
+        {
+            Console.WriteLine($"\nType: {t.FullName}");
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.Name} {p.Name}"));
+                Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.Name} [Virtual={m.IsVirtual}, Abstract={m.IsAbstract}]");
+            }
+            var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var p in props)
+            {
+                Console.WriteLine($"  PROP: {p.Name} : {p.PropertyType} [Virtual={p.GetMethod?.IsVirtual}]");
+            }
+        }
+
+        // Inspect ALL lifecycle event types
+        Console.WriteLine("\n=== ALL Lifecycle Events ===");
+        foreach (var t in AllTypes().Where(t => t.Namespace != null && t.Namespace.Contains("STS2RitsuLib") && (t.Name.Contains("Event") || t.Name.Contains("Lifecycle"))))
+        {
+            Console.WriteLine($"\nType: {t.FullName} (IsClass={t.IsClass}, IsInterface={t.IsInterface}, IsStruct={!t.IsClass && !t.IsInterface && t.IsValueType})");
+            var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var p in props)
+            {
+                Console.WriteLine($"  PROP: {p.Name} : {p.PropertyType}");
+            }
+            var fields = t.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var f in fields)
+            {
+                Console.WriteLine($"  FIELD: {f.Name} : {f.FieldType}");
+            }
+        }
+
+        // Inspect RelicModel events (add_RelicObtained etc.)
+        Console.WriteLine("\n=== Player Relic Events ===");
+        foreach (var t in AllTypes().Where(t => t.Name == "Player"))
+        {
+            Console.WriteLine($"\nType: {t.FullName}");
+            var events = t.GetEvents(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var e in events)
+            {
+                Console.WriteLine($"  EVENT: {e.Name} : {e.EventHandlerType}");
+            }
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                if (m.Name.Contains("Relic") || m.Name.Contains("Obtain"))
+                {
+                    var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.Name} {p.Name}"));
+                    Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.FullName} [Static={m.IsStatic}]");
+                }
+            }
+        }
+
+        // Inspect CharacterModel ALL virtual methods
+        Console.WriteLine("\n=== CharacterModel ALL methods ===");
+        foreach (var t in AllTypes().Where(t => t.Name == "CharacterModel" || t.Name == "ModCharacterTemplate"))
+        {
+            Console.WriteLine($"\nType: {t.FullName}");
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.Name} {p.Name}"));
+                Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.Name} [Virtual={m.IsVirtual}, Abstract={m.IsAbstract}]");
+            }
+            var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var p in props)
+            {
+                Console.WriteLine($"  PROP: {p.Name} : {p.PropertyType.Name} [Virtual={p.GetMethod?.IsVirtual}]");
+            }
+        }
+
+        // Inspect FromChooseARelicScreen full return type
+        Console.WriteLine("\n=== RelicSelectCmd full method details ===");
+        foreach (var t in AllTypes().Where(t => t.Name == "RelicSelectCmd"))
+        {
+            Console.WriteLine($"\nType: {t.FullName}");
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.FullName} {p.Name}"));
+                Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.FullName} [Static={m.IsStatic}]");
+            }
+        }
+
+        // Inspect RelicCmd full method details
+        Console.WriteLine("\n=== RelicCmd full method details ===");
+        foreach (var t in AllTypes().Where(t => t.Name == "RelicCmd"))
+        {
+            Console.WriteLine($"\nType: {t.FullName}");
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.FullName} {p.Name}"));
+                Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.FullName} [Static={m.IsStatic}]");
+            }
+        }
+
+        // Search for ALL events/types containing "Run" in STS2RitsuLib namespace
+        Console.WriteLine("\n=== ALL STS2RitsuLib types (full list) ===");
+        foreach (var t in AllTypes().Where(t => t.Namespace != null && t.Namespace.Contains("STS2RitsuLib")))
+        {
+            Console.WriteLine($"  {t.FullName} (IsClass={t.IsClass}, IsStruct={t.IsValueType && !t.IsEnum}, IsEnum={t.IsEnum})");
+        }
+
+        // Check Player.CreateForNewRun and PopulateStartingRelics
+        Console.WriteLine("\n=== Player creation and starting relic methods ===");
+        foreach (var t in AllTypes().Where(t => t.Name == "Player"))
+        {
+            Console.WriteLine($"\nType: {t.FullName}");
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.FullName} {p.Name}"));
+                Console.WriteLine($"  STATIC METHOD: {m.Name}({parms}) -> {m.ReturnType.FullName}");
+            }
+            methods = t.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                if (m.Name.Contains("Start") || m.Name.Contains("Populate") || m.Name.Contains("Begin") || m.Name.Contains("Init"))
+                {
+                    var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.FullName} {p.Name}"));
+                    Console.WriteLine($"  INSTANCE METHOD: {m.Name}({parms}) -> {m.ReturnType.FullName}");
+                }
+            }
+        }
+
+        // === NEW: CardVisualStyle enum ===
+        Console.WriteLine("\n=== CardVisualStyle enum ===");
+        foreach (var t in AllTypes().Where(t => t.Name == "CardVisualStyle"))
+        {
+            Console.WriteLine($"\nEnum: {t.FullName}");
+            foreach (var v in Enum.GetValues(t))
+            {
+                Console.WriteLine($"  {v} = {(int)v}");
+            }
+        }
+
+        // === NEW: All RitsuLib types containing "Character" ===
+        Console.WriteLine("\n=== All RitsuLib types containing 'Character' ===");
+        foreach (var t in AllTypes().Where(t => t.Namespace != null && t.Namespace.Contains("STS2RitsuLib") && t.Name.Contains("Character")))
+        {
+            Console.WriteLine($"  {t.FullName} (IsClass={t.IsClass}, IsInterface={t.IsInterface}, IsEnum={t.IsEnum})");
+        }
+
+        // === NEW: Full dump of CharacterTemplate types ===
+        Console.WriteLine("\n=== Full dump of CharacterTemplate types ===");
+        foreach (var t in AllTypes().Where(t => t.Name.Contains("CharacterTemplate") || t.Name.Contains("CharacterModel")))
+        {
+            Console.WriteLine($"\nType: {t.FullName} (Base={t.BaseType?.FullName})");
+            // Walk up the hierarchy and dump all props/methods
+            var hierarchyTypes = new List<Type>();
+            var current = t;
+            while (current != null)
+            {
+                hierarchyTypes.Add(current);
+                current = current.BaseType;
+            }
+            foreach (var ht in hierarchyTypes)
+            {
+                var props = ht.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+                foreach (var p in props)
+                {
+                    Console.WriteLine($"  PROP: {p.Name} : {p.PropertyType.FullName} [Virtual={p.GetMethod?.IsVirtual}, DeclaredIn={ht.Name}]");
+                }
+                var methods = ht.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+                foreach (var m in methods)
+                {
+                    if (m.IsSpecialName) continue;
+                    var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.Name} {p.Name}"));
+                    Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.Name} [Virtual={m.IsVirtual}, Abstract={m.IsAbstract}, DeclaredIn={ht.Name}]");
+                }
+            }
+        }
+
+        // === NEW: Types containing "Stained", "Tome", "Ancient" in name ===
+        Console.WriteLine("\n=== Types containing 'Stained', 'Tome', 'AncientCard' in name ===");
+        foreach (var t in AllTypes().Where(t => t.Name.Contains("Stained") || t.Name.Contains("Tome") || t.Name.Contains("AncientCard")))
+        {
+            Console.WriteLine($"\nType: {t.FullName} (IsClass={t.IsClass}, IsEnum={t.IsEnum})");
+            var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var p in props)
+            {
+                Console.WriteLine($"  PROP: {p.Name} : {p.PropertyType.Name}");
+            }
+            var fields = t.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var f in fields)
+            {
+                Console.WriteLine($"  FIELD: {f.Name} : {f.FieldType.Name}");
+            }
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.Name} {p.Name}"));
+                Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.Name}");
+            }
+        }
+
+        // === NEW: Search ALL types for methods/props containing "AncientCard" or "TomeCard" ===
+        Console.WriteLine("\n=== ALL methods/props containing 'AncientCard' or 'TomeCard' ===");
+        foreach (var t in AllTypes())
+        {
+            var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var p in props)
+            {
+                if (p.Name.Contains("AncientCard") || p.Name.Contains("TomeCard"))
+                {
+                    Console.WriteLine($"  {t.FullName}.PROP: {p.Name} : {p.PropertyType.FullName}");
+                }
+            }
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.Name.Contains("AncientCard") || m.Name.Contains("TomeCard"))
+                {
+                    var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.Name} {p.Name}"));
+                    Console.WriteLine($"  {t.FullName}.METHOD: {m.Name}({parms}) -> {m.ReturnType.Name}");
+                }
+            }
+        }
+
+        // === NEW: Search for StainedBook relic model ===
+        Console.WriteLine("\n=== Relic models containing 'Stained' or 'Book' ===");
+        foreach (var t in AllTypes().Where(t => t.Name.Contains("Stained") || (t.Name.Contains("Book") && t.Namespace != null && t.Namespace.Contains("MegaCrit"))))
+        {
+            Console.WriteLine($"\nType: {t.FullName}");
+            var methods = t.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var m in methods)
+            {
+                if (m.IsSpecialName) continue;
+                var parms = string.Join(", ", m.GetParameters().Select(p => $"{p.ParameterType.Name} {p.Name}"));
+                Console.WriteLine($"  METHOD: {m.Name}({parms}) -> {m.ReturnType.Name} [Virtual={m.IsVirtual}]");
+            }
+            var props = t.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.DeclaredOnly);
+            foreach (var p in props)
+            {
+                Console.WriteLine($"  PROP: {p.Name} : {p.PropertyType.Name}");
+            }
+        }
+
+        // === NEW: All RitsuLib types (complete list) ===
+        Console.WriteLine("\n=== All RitsuLib types (complete list) ===");
+        foreach (var t in AllTypes().Where(t => t.Namespace != null && t.Namespace.Contains("STS2RitsuLib")))
+        {
+            Console.WriteLine($"  {t.FullName}");
+        }
     }
 }

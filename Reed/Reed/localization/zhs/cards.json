@@ -162,5 +162,8 @@
     "REED_CARD_DRAGONS_LEGACY.description": "获得 {Cards} 层[blue]龙之传承[/blue]。每回合开始时，获得1层[gold]力量[/gold]，并对所有敌人施加1层[red]灼燃[/red]。",
 
     "REED_CARD_ASH_RECOVERY.title": "灰烬复苏",
-    "REED_CARD_ASH_RECOVERY.description": "获得 {Cards} 层[blue]灰烬复苏[/blue]。每当你消耗一张牌时，恢复1点生命。"
+    "REED_CARD_ASH_RECOVERY.description": "获得 {Cards} 层[blue]灰烬复苏[/blue]。每当你消耗一张牌时，恢复1点生命。",
+
+    "REED_CARD_ETERNAL_EMBER.title": "永恒余烬",
+    "REED_CARD_ETERNAL_EMBER.description": "获得 {Cards} 层[blue]永恒余烬[/blue]。每回合开始时，对所有敌人施加3层[red]灼燃[/red]，并获得等于所有敌人[red]灼燃[/red]总层数的格挡。"
 }

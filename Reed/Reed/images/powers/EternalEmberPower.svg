@@ -1,0 +1,45 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+  <defs>
+    <radialGradient id='eePowerGlow' cx='50%' cy='55%' r='45%'>
+      <stop offset='0%' stop-color='#fff8e0'/>
+      <stop offset='30%' stop-color='#ffe060'/>
+      <stop offset='60%' stop-color='#ff6600'/>
+      <stop offset='100%' stop-color='#c41a05' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='eeFlame' x1='0%' y1='100%' x2='0%' y2='0%'>
+      <stop offset='0%' stop-color='#ff5500'/>
+      <stop offset='50%' stop-color='#ffe060'/>
+      <stop offset='100%' stop-color='#fff8e0'/>
+    </linearGradient>
+    <filter id='eeGlow'>
+      <feGaussianBlur stdDeviation='2' result='blur'/>
+      <feMerge><feMergeNode in='blur'/><feMergeNode in='SourceGraphic'/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width='64' height='64' fill='#1a0d08' rx='8'/>
+
+  <!-- ember glow background -->
+  <ellipse cx='32' cy='36' rx='24' ry='28' fill='url(#eePowerGlow)' opacity='0.5'/>
+
+  <!-- ancient rune ring -->
+  <circle cx='32' cy='32' r='26' fill='none' stroke='#ff6600' stroke-width='1' stroke-dasharray='3 4' opacity='0.45'/>
+
+  <!-- eternal ember flame -->
+  <g filter='url(#eeGlow)'>
+    <path d='M 22 54 Q 18 40 20 26 Q 16 14 22 6 Q 26 2 29 8 Q 27 16 25 22 Q 29 16 30 8 Q 32 4 34 8 Q 35 16 37 22 Q 36 16 35 8 Q 38 4 42 8 Q 46 16 44 26 Q 46 40 42 54 Z'
+          fill='url(#eeFlame)' opacity='0.8'/>
+    <path d='M 27 54 Q 25 42 26 30 Q 24 20 27 12 Q 30 8 32 12 Q 31 20 30 26 Q 32 20 33 12 Q 35 8 37 12 Q 38 20 36 26 Q 37 20 36 12 Q 39 8 41 12 Q 43 20 40 30 Q 41 42 39 54 Z'
+          fill='#ffe060' opacity='0.6'/>
+    <path d='M 30 54 Q 29 44 30 34 Q 29 24 30 16 Q 31 12 32 16 Q 32 24 31 30 Q 32 24 33 16 Q 34 12 35 16 Q 35 24 34 30 Q 35 24 34 16 Q 36 12 37 16 Q 38 24 36 34 Q 37 44 36 54 Z'
+          fill='#fff8e0' opacity='0.5'/>
+  </g>
+
+  <!-- eternal embers -->
+  <circle cx='24' cy='8' r='1' fill='#fff8e0' opacity='0.8' filter='url(#eeGlow)'/>
+  <circle cx='32' cy='4' r='1.2' fill='#ffffff' opacity='0.9'/>
+  <circle cx='40' cy='8' r='1' fill='#fff8e0' opacity='0.8' filter='url(#eeGlow)'/>
+
+  <!-- base -->
+  <ellipse cx='32' cy='56' rx='14' ry='3' fill='#3a1f15' opacity='0.6'/>
+</svg>

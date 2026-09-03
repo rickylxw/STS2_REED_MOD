@@ -30,5 +30,8 @@
     "REED_POWER_ASH_RECOVERY_POWER.description": "Whenever you Exhaust a card, heal {Amount} HP.",
 
     "REED_POWER_SCORCH_IMMUNITY.title": "Scorch Immunity",
-    "REED_POWER_SCORCH_IMMUNITY.description": "No longer takes Scorch damage."
+    "REED_POWER_SCORCH_IMMUNITY.description": "No longer takes Scorch damage.",
+
+    "REED_POWER_ETERNAL_EMBER_POWER.title": "Eternal Ember",
+    "REED_POWER_ETERNAL_EMBER_POWER.description": "At the start of each turn, apply 3 [red]Scorch[/red] to ALL enemies and gain Block equal to total [red]Scorch[/red] on all enemies."
 }

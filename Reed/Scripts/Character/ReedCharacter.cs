@@ -44,7 +44,8 @@ public sealed class ReedCharacter : ModCharacterTemplate<ReedCardPool, ReedRelic
     public override int StartingGold => 99;
 
     // 开局遗物：苇草之锋 + 灰烬核心
-    protected override IEnumerable<Type> StartingRelicTypes => new[] { typeof(ReedsSpearhead), typeof(AshenCore) };
+    protected override IEnumerable<Type> StartingRelicTypes
+        => new[] { typeof(ReedsSpearhead), typeof(AshenCore) };
 
     public override CharacterAssetProfile AssetProfile => new(
         Scenes: new CharacterSceneAssetSet(

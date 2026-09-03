@@ -30,5 +30,8 @@
     "REED_POWER_ASH_RECOVERY_POWER.description": "每当你消耗一张牌时，恢复 {Amount} 点生命。",
 
     "REED_POWER_SCORCH_IMMUNITY.title": "灼燃免疫",
-    "REED_POWER_SCORCH_IMMUNITY.description": "不再受到灼燃伤害。"
+    "REED_POWER_SCORCH_IMMUNITY.description": "不再受到灼燃伤害。",
+
+    "REED_POWER_ETERNAL_EMBER_POWER.title": "永恒余烬",
+    "REED_POWER_ETERNAL_EMBER_POWER.description": "每回合开始时，对所有敌人施加3层[red]灼燃[/red]，并获得等于所有敌人[red]灼燃[/red]总层数的格挡。"
 }
