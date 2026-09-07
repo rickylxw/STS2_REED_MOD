@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://chkhmult048q8"
+path="res://.godot/imported/ScorchingBond.jpg-15bd95b5b42b214a4d3585f8e143a7fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/ScorchingBond.jpg"
+dest_files=["res://.godot/imported/ScorchingBond.jpg-15bd95b5b42b214a4d3585f8e143a7fd.ctex"]
 
 [params]
 

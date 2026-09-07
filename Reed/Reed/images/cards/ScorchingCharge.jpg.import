@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://b0yjie818kp0a"
+path="res://.godot/imported/ScorchingCharge.jpg-3e4bbc70e539ca6a7762021fbc3534ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/ScorchingCharge.jpg"
+dest_files=["res://.godot/imported/ScorchingCharge.jpg-3e4bbc70e539ca6a7762021fbc3534ba.ctex"]
 
 [params]
 

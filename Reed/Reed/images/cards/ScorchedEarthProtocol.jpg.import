@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://g0fkqoor6udx"
+path="res://.godot/imported/ScorchedEarthProtocol.jpg-c2061c6deeb7fb138c67f38d32e865ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/ScorchedEarthProtocol.jpg"
+dest_files=["res://.godot/imported/ScorchedEarthProtocol.jpg-c2061c6deeb7fb138c67f38d32e865ca.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://vy1p2axoxkml"
+path="res://.godot/imported/PassingTheTorch.jpg-a8551e9dc60c7de20e2300bed176bf93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/PassingTheTorch.jpg"
+dest_files=["res://.godot/imported/PassingTheTorch.jpg-a8551e9dc60c7de20e2300bed176bf93.ctex"]
 
 [params]
 

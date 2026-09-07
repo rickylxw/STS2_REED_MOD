@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://c5d7fw8gqubod"
+path="res://.godot/imported/AshGathering.jpg-9f50f5765121fbe39b676e66d7470f67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/AshGathering.jpg"
+dest_files=["res://.godot/imported/AshGathering.jpg-9f50f5765121fbe39b676e66d7470f67.ctex"]
 
 [params]
 

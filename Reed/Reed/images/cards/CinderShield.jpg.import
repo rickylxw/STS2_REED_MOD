@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://dg0tenaxt1qv8"
+path="res://.godot/imported/CinderShield.jpg-34a9e956554f08e4b88b245d35c051b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/CinderShield.jpg"
+dest_files=["res://.godot/imported/CinderShield.jpg-34a9e956554f08e4b88b245d35c051b9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://bb2uj6ps3s7yb"
+path="res://.godot/imported/SpontaneousCombustion.jpg-b0a5d04001ef4877d0e8d2850be3c79d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/SpontaneousCombustion.jpg"
+dest_files=["res://.godot/imported/SpontaneousCombustion.jpg-b0a5d04001ef4877d0e8d2850be3c79d.ctex"]
 
 [params]
 

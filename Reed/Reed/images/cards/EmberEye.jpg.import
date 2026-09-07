@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://bs0q44dgef3rq"
+path="res://.godot/imported/EmberEye.jpg-10fdf5e1a4c0f36b7ecdeb321063e458.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/EmberEye.jpg"
+dest_files=["res://.godot/imported/EmberEye.jpg-10fdf5e1a4c0f36b7ecdeb321063e458.ctex"]
 
 [params]
 

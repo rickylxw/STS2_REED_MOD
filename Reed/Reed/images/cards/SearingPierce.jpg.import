@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://e11grd0l0dvi"
+path="res://.godot/imported/SearingPierce.jpg-ee269eb034baf9e3e9315bafa2ffc860.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/SearingPierce.jpg"
+dest_files=["res://.godot/imported/SearingPierce.jpg-ee269eb034baf9e3e9315bafa2ffc860.ctex"]
 
 [params]
 

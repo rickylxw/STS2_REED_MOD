@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://b7e7mwmteg6ad"
+path="res://.godot/imported/Everflame.jpg-d59d0b7185b8af954435432f66ddd8fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/Everflame.jpg"
+dest_files=["res://.godot/imported/Everflame.jpg-d59d0b7185b8af954435432f66ddd8fe.ctex"]
 
 [params]
 

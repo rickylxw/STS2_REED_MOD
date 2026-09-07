@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://dr1s6dt0ttiq"
+path="res://.godot/imported/BreathOfCalamity.jpg-7cc96d5137eddf1268911d80bbc58a27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/BreathOfCalamity.jpg"
+dest_files=["res://.godot/imported/BreathOfCalamity.jpg-7cc96d5137eddf1268911d80bbc58a27.ctex"]
 
 [params]
 

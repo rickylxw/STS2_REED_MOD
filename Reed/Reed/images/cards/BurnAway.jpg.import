@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7okxdokj6n3a"
-path="res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"
+uid="uid://c1kmexc863mk8"
+path="res://.godot/imported/BurnAway.jpg-5172282d16be5f0f73ad53f65e8119d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Reed/images/cards/AshExtinguish.png"
-dest_files=["res://.godot/imported/AshExtinguish.png-ab46aa027a0e2c8025a5672437049144.ctex"]
+source_file="res://Reed/images/cards/BurnAway.jpg"
+dest_files=["res://.godot/imported/BurnAway.jpg-5172282d16be5f0f73ad53f65e8119d3.ctex"]
 
 [params]
 
