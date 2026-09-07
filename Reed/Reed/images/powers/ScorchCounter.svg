@@ -1,23 +1,43 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
   <defs>
-    <radialGradient id='scorchCounterGlow' cx='50%' cy='65%' r='55%'>
-      <stop offset='0%' stop-color='#ff7a1a' stop-opacity='0.45'/>
-      <stop offset='100%' stop-color='#1a0d08' stop-opacity='0'/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <linearGradient id='scorchCounterOuter' x1='50%' y1='0%' x2='50%' y2='100%'>
-      <stop offset='0%' stop-color='#ffd24d'/>
-      <stop offset='45%' stop-color='#ff6b1a'/>
-      <stop offset='100%' stop-color='#c43d0e'/>
-    </linearGradient>
-    <linearGradient id='scorchCounterInner' x1='50%' y1='0%' x2='50%' y2='100%'>
-      <stop offset='0%' stop-color='#fff5cc'/>
-      <stop offset='60%' stop-color='#ffd24d'/>
-      <stop offset='100%' stop-color='#ff9d1a'/>
-    </linearGradient>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#ff8800" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width='64' height='64' fill='#1a0d08' rx='8'/>
-  <rect width='64' height='64' fill='url(#scorchCounterGlow)' rx='8'/>
-  <path d='M32 8 C40 17 47 25 44 38 C43 46 38 51 32 51 C26 51 21 46 20 38 C17 25 24 17 32 8 Z' fill='url(#scorchCounterOuter)'/>
-  <path d='M32 22 C36 28 40 32 38 40 C37 45 35 47 32 47 C29 47 27 45 26 40 C24 32 28 28 32 22 Z' fill='url(#scorchCounterInner)' opacity='0.9'/>
-  <circle cx='32' cy='44' r='2' fill='#fff5cc' opacity='0.8'/>
+
+  <rect width="64" height="64" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="32.0" cy="32.0" rx="30.7" ry="26.9" fill="#e6591a" opacity="0.06"/>
+  <circle cx="36.1" cy="48.4" r="2.0" fill="#c41a05" opacity="0.66" filter="url(#glow1)"/>
+  <circle cx="48.1" cy="46.6" r="1.9" fill="#ffe060" opacity="0.20"/>
+  <circle cx="50.1" cy="40.0" r="0.7" fill="#ffe060" opacity="0.28" filter="url(#glow1)"/>
+  <circle cx="40.2" cy="37.3" r="2.1" fill="#ff7a1a" opacity="0.56" filter="url(#glow1)"/>
+  <circle cx="32" cy="32" r="18" fill="url(#rad4)" opacity="0.4" filter="url(#soft2)"/>
+  <circle cx="32" cy="32" r="12" fill="none" stroke="#ff8800" stroke-width="1.5" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="32" cy="32" r="6" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="32" cy="32" r="2.5" fill="#fff8e0" opacity="0.8"/>
+  <line x1="32.0" y1="32.0" x2="41.9" y2="41.9" stroke="#ffe060" stroke-width="1" opacity="0.4"/>
+  <line x1="32.0" y1="32.0" x2="22.1" y2="41.9" stroke="#ffe060" stroke-width="1" opacity="0.4"/>
+  <line x1="32.0" y1="32.0" x2="22.1" y2="22.1" stroke="#ffe060" stroke-width="1" opacity="0.4"/>
+  <line x1="32.0" y1="32.0" x2="41.9" y2="22.1" stroke="#ffe060" stroke-width="1" opacity="0.4"/>
 </svg>

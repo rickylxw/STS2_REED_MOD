@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3d0faf35701b"
-path="res://.godot/imported/AshStorm.png-cb97edbb81f5cd99ef3d092c8a89173b.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/AshStorm.png"
-dest_files=["res://.godot/imported/AshStorm.png-cb97edbb81f5cd99ef3d092c8a89173b.ctex"]
 
 [params]
 

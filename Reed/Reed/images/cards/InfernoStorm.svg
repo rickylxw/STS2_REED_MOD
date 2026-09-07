@@ -1,169 +1,94 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
-<defs>
-  <radialGradient id='bgIS' cx='50%' cy='45%' r='70%'>
-    <stop offset='0%' stop-color='#3a1810'/>
-    <stop offset='40%' stop-color='#2a1815'/>
-    <stop offset='100%' stop-color='#1a0d08'/>
-  </radialGradient>
-  <radialGradient id='emberGlowIS' cx='50%' cy='50%' r='50%'>
-    <stop offset='0%' stop-color='#ffe060' stop-opacity='1'/>
-    <stop offset='40%' stop-color='#ff8800' stop-opacity='0.6'/>
-    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
-  </radialGradient>
-  <linearGradient id='funnelIS' x1='0%' y1='0%' x2='0%' y2='100%'>
-    <stop offset='0%' stop-color='#ff8800' stop-opacity='0.3'/>
-    <stop offset='30%' stop-color='#e6591a' stop-opacity='0.5'/>
-    <stop offset='60%' stop-color='#ff8800' stop-opacity='0.7'/>
-    <stop offset='85%' stop-color='#ffaa30' stop-opacity='0.9'/>
-    <stop offset='100%' stop-color='#ffe060' stop-opacity='1'/>
-  </linearGradient>
-  <radialGradient id='flameGIS' cx='50%' cy='40%' r='60%'>
-    <stop offset='0%' stop-color='#fff8e0' stop-opacity='0.9'/>
-    <stop offset='20%' stop-color='#ffe060' stop-opacity='0.8'/>
-    <stop offset='45%' stop-color='#ffaa30' stop-opacity='0.7'/>
-    <stop offset='70%' stop-color='#ff8800' stop-opacity='0.5'/>
-    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
-  </radialGradient>
-  <radialGradient id='glowIS' cx='50%' cy='50%' r='50%'>
-    <stop offset='0%' stop-color='#ff8800' stop-opacity='0.5'/>
-    <stop offset='100%' stop-color='#e6591a' stop-opacity='0'/>
-  </radialGradient>
-  <radialGradient id='bigGlowIS' cx='50%' cy='50%' r='50%'>
-    <stop offset='0%' stop-color='#ffaa30' stop-opacity='0.3'/>
-    <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
-  </radialGradient>
-  <filter id='blurIS' x='-20%' y='-20%' width='140%' height='140%'>
-    <feGaussianBlur stdDeviation='3'/>
-  </filter>
-  <filter id='bigBlurIS' x='-30%' y='-30%' width='160%' height='160%'>
-    <feGaussianBlur stdDeviation='8'/>
-  </filter>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.5"/>
+      <stop offset="20%" stop-color="#ffe060" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lin5" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ffcc40" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fff8e0" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
 
-<!-- Background -->
-<rect width='250' height='190' fill='url(#bgIS)' rx='8'/>
-
-<!-- Outer ambient glow -->
-<ellipse cx='125' cy='100' rx='100' ry='85' fill='url(#bigGlowIS)'/>
-
-<!-- Ground fire glow at base -->
-<ellipse cx='125' cy='175' rx='90' ry='25' fill='url(#glowIS)' opacity='0.8'/>
-
-<!-- Top fire cloud -->
-<ellipse cx='125' cy='25' rx='70' ry='30' fill='url(#flameGIS)' opacity='0.5' filter='url(#blurIS)'/>
-<ellipse cx='100' cy='28' rx='35' ry='20' fill='#c41a05' opacity='0.3' filter='url(#blurIS)'/>
-<ellipse cx='150' cy='30' rx='30' ry='18' fill='#8a2a05' opacity='0.35' filter='url(#blurIS)'/>
-
-<!-- Funnel column - outer widest layer -->
-<path d='M 60 35 Q 65 80 55 110 Q 48 140 70 170 Q 100 180 125 178 Q 150 180 180 170 Q 202 140 195 110 Q 185 80 190 35 Q 160 50 125 45 Q 90 50 60 35 Z' fill='url(#funnelIS)' opacity='0.5' filter='url(#blurIS)'/>
-
-<!-- Funnel column - mid layer -->
-<path d='M 75 40 Q 78 75 70 105 Q 65 135 85 165 Q 105 173 125 170 Q 145 173 165 165 Q 185 135 180 105 Q 172 75 175 40 Q 150 52 125 48 Q 100 52 75 40 Z' fill='url(#funnelIS)' opacity='0.6'/>
-
-<!-- Funnel column - inner layer -->
-<path d='M 90 45 Q 92 70 85 100 Q 82 130 100 155 Q 110 162 125 160 Q 140 162 150 155 Q 168 130 165 100 Q 158 70 160 45 Q 140 54 125 50 Q 110 54 90 45 Z' fill='url(#funnelIS)' opacity='0.75'/>
-
-<!-- Spiral curves - showing rotation -->
-<path d='M 80 40 Q 120 55 170 45 Q 140 75 190 90 Q 140 105 175 130 Q 110 120 80 150 Q 130 155 100 170' fill='none' stroke='#ff8800' stroke-width='2' opacity='0.4' filter='url(#blurIS)'/>
-<path d='M 95 45 Q 135 60 165 50 Q 150 80 175 95 Q 145 110 160 130 Q 115 125 95 150 Q 125 153 110 168' fill='none' stroke='#ffaa30' stroke-width='1.5' opacity='0.3'/>
-<path d='M 70 50 Q 110 65 180 55 Q 130 85 180 100 Q 130 115 190 140 Q 100 130 70 165' fill='none' stroke='#e6591a' stroke-width='2.5' opacity='0.25' filter='url(#blurIS)'/>
-
-<!-- Central fire column - bright layers -->
-<path d='M 105 45 Q 108 70 102 100 Q 100 130 110 155 Q 115 162 125 160 Q 135 162 140 155 Q 150 130 148 100 Q 142 70 145 45 Q 135 55 125 52 Q 115 55 105 45 Z' fill='#ff8800' opacity='0.6'/>
-<path d='M 115 48 Q 117 72 113 100 Q 111 128 118 150 Q 122 156 125 155 Q 128 156 132 150 Q 139 128 137 100 Q 133 72 135 48 Q 130 56 125 54 Q 120 56 115 48 Z' fill='#ffaa30' opacity='0.7'/>
-<path d='M 120 50 Q 121 72 119 100 Q 118 125 122 145 Q 124 150 125 149 Q 126 150 128 145 Q 132 125 131 100 Q 129 72 130 50 Q 128 57 125 55 Q 122 57 120 50 Z' fill='#ffe060' opacity='0.8'/>
-<path d='M 123 52 Q 124 72 122 100 Q 122 120 124 140 Q 125 144 125 143 Q 126 144 127 140 Q 129 120 128 100 Q 127 72 127 52 Q 126 58 125 56 Q 124 58 123 52 Z' fill='#fff8e0' opacity='0.7'/>
-
-<!-- Horizontal swirl bands across the funnel -->
-<ellipse cx='125' cy='55' rx='52' ry='6' fill='none' stroke='#ff8800' stroke-width='1.5' opacity='0.35' filter='url(#blurIS)'/>
-<ellipse cx='120' cy='75' rx='48' ry='5' fill='none' stroke='#ffaa30' stroke-width='1' opacity='0.3'/>
-<ellipse cx='128' cy='95' rx='45' ry='5' fill='none' stroke='#ff8800' stroke-width='1.5' opacity='0.35' filter='url(#blurIS)'/>
-<ellipse cx='122' cy='115' rx='42' ry='4' fill='none' stroke='#e6591a' stroke-width='1' opacity='0.3'/>
-<ellipse cx='127' cy='135' rx='38' ry='4' fill='none' stroke='#ffaa30' stroke-width='1' opacity='0.25'/>
-<ellipse cx='123' cy='152' rx='30' ry='3' fill='none' stroke='#ff8800' stroke-width='1' opacity='0.3'/>
-
-<!-- Flame tongues licking outward from the column -->
-<!-- Top-left flames -->
-<path d='M 70 40 Q 55 25 45 35 Q 48 45 60 48 Q 65 50 70 40 Z' fill='#c41a05' opacity='0.5'/>
-<path d='M 75 38 Q 62 20 50 28 Q 52 40 65 44 Q 70 46 75 38 Z' fill='#e6591a' opacity='0.4'/>
-<path d='M 80 40 Q 70 22 58 25 Q 60 38 70 42 Q 75 44 80 40 Z' fill='#ff8800' opacity='0.35'/>
-
-<!-- Top-right flames -->
-<path d='M 180 40 Q 195 25 205 35 Q 202 45 190 48 Q 185 50 180 40 Z' fill='#c41a05' opacity='0.5'/>
-<path d='M 175 38 Q 188 20 200 28 Q 198 40 185 44 Q 180 46 175 38 Z' fill='#e6591a' opacity='0.4'/>
-<path d='M 170 40 Q 180 22 192 25 Q 190 38 180 42 Q 175 44 170 40 Z' fill='#ff8800' opacity='0.35'/>
-
-<!-- Mid-left flames -->
-<path d='M 58 95 Q 40 85 30 100 Q 35 112 50 108 Q 55 105 58 95 Z' fill='#c41a05' opacity='0.4'/>
-<path d='M 55 100 Q 38 92 28 105 Q 32 115 48 110 Q 53 107 55 100 Z' fill='#e6591a' opacity='0.35'/>
-
-<!-- Mid-right flames -->
-<path d='M 192 95 Q 210 85 220 100 Q 215 112 200 108 Q 195 105 192 95 Z' fill='#c41a05' opacity='0.4'/>
-<path d='M 195 100 Q 212 92 222 105 Q 218 115 202 110 Q 197 107 195 100 Z' fill='#e6591a' opacity='0.35'/>
-
-<!-- Base flames spreading outward -->
-<path d='M 80 165 Q 60 160 45 170 Q 50 180 70 175 Q 78 173 80 165 Z' fill='#c41a05' opacity='0.5'/>
-<path d='M 75 168 Q 55 165 40 173 Q 45 182 68 178 Q 74 176 75 168 Z' fill='#e6591a' opacity='0.4'/>
-<path d='M 70 170 Q 55 168 42 175 Q 48 180 65 177 Q 70 175 70 170 Z' fill='#ff8800' opacity='0.3'/>
-
-<path d='M 170 165 Q 190 160 205 170 Q 200 180 180 175 Q 172 173 170 165 Z' fill='#c41a05' opacity='0.5'/>
-<path d='M 175 168 Q 195 165 210 173 Q 205 182 182 178 Q 176 176 175 168 Z' fill='#e6591a' opacity='0.4'/>
-<path d='M 180 170 Q 195 168 208 175 Q 202 180 185 177 Q 180 175 180 170 Z' fill='#ff8800' opacity='0.3'/>
-
-<!-- Central base flame burst -->
-<path d='M 100 158 Q 95 170 105 178 Q 115 175 110 160 Q 105 155 100 158 Z' fill='#ff8800' opacity='0.6'/>
-<path d='M 140 158 Q 145 170 135 178 Q 125 175 130 160 Q 135 155 140 158 Z' fill='#ff8800' opacity='0.6'/>
-<path d='M 115 160 Q 112 172 118 178 Q 122 176 120 162 Q 118 157 115 160 Z' fill='#ffaa30' opacity='0.5'/>
-<path d='M 125 160 Q 128 172 122 178 Q 128 176 130 162 Q 128 157 125 160 Z' fill='#ffaa30' opacity='0.5'/>
-
-<!-- Flying embers everywhere -->
-<circle cx='40' cy='55' r='2' fill='#ff8800' opacity='0.7'/>
-<circle cx='40' cy='55' r='4' fill='url(#emberGlowIS)' opacity='0.4'/>
-<circle cx='210' cy='50' r='1.5' fill='#ffaa30' opacity='0.8'/>
-<circle cx='210' cy='50' r='3.5' fill='url(#emberGlowIS)' opacity='0.4'/>
-<circle cx='35' cy='120' r='1.8' fill='#ff8800' opacity='0.6'/>
-<circle cx='35' cy='120' r='4' fill='url(#emberGlowIS)' opacity='0.35'/>
-<circle cx='215' cy='115' r='2' fill='#ffaa30' opacity='0.7'/>
-<circle cx='215' cy='115' r='4' fill='url(#emberGlowIS)' opacity='0.4'/>
-<circle cx='25' cy='80' r='1' fill='#ffe060' opacity='0.6'/>
-<circle cx='225' cy='85' r='1.2' fill='#ffe060' opacity='0.6'/>
-<circle cx='50' cy='30' r='1.5' fill='#ff8800' opacity='0.7'/>
-<circle cx='50' cy='30' r='3' fill='url(#emberGlowIS)' opacity='0.3'/>
-<circle cx='200' cy='28' r='1' fill='#ffaa30' opacity='0.6'/>
-<circle cx='55' cy='145' r='1.2' fill='#ff8800' opacity='0.5'/>
-<circle cx='195' cy='148' r='1' fill='#ffaa30' opacity='0.5'/>
-<circle cx='30' cy='150' r='1.5' fill='#e6591a' opacity='0.4'/>
-<circle cx='220' cy='145' r='1.3' fill='#e6591a' opacity='0.4'/>
-<circle cx='70' cy='65' r='0.8' fill='#ffe060' opacity='0.5'/>
-<circle cx='185' cy='70' r='0.8' fill='#ffe060' opacity='0.5'/>
-<circle cx='65' cy='130' r='1' fill='#ff8800' opacity='0.4'/>
-<circle cx='190' cy='132' r='1' fill='#ff8800' opacity='0.4'/>
-<circle cx='20' cy='100' r='0.8' fill='#ffaa30' opacity='0.4'/>
-<circle cx='230' cy='100' r='0.8' fill='#ffaa30' opacity='0.4'/>
-<circle cx='90' cy='25' r='1' fill='#ff8800' opacity='0.5'/>
-<circle cx='160' cy='22' r='1.2' fill='#ffaa30' opacity='0.5'/>
-<circle cx='110' cy='20' r='0.8' fill='#ffe060' opacity='0.4'/>
-<circle cx='140' cy='18' r='1' fill='#ffe060' opacity='0.4'/>
-<circle cx='15' cy='65' r='0.7' fill='#e6591a' opacity='0.3'/>
-<circle cx='235' cy='65' r='0.7' fill='#e6591a' opacity='0.3'/>
-<circle cx='15' cy='135' r='0.8' fill='#c41a05' opacity='0.3'/>
-<circle cx='235' cy='135' r='0.8' fill='#c41a05' opacity='0.3'/>
-
-<!-- Ember streaks (flying motion) -->
-<line x1='45' y1='50' x2='38' y2='58' stroke='#ff8800' stroke-width='0.8' opacity='0.3'/>
-<line x1='205' y1='48' x2='213' y2='54' stroke='#ffaa30' stroke-width='0.8' opacity='0.3'/>
-<line x1='40' y1='115' x2='33' y2='122' stroke='#ff8800' stroke-width='0.7' opacity='0.25'/>
-<line x1='210' y1='110' x2='218' y2='118' stroke='#ffaa30' stroke-width='0.7' opacity='0.25'/>
-<line x1='55' y1='35' x2='48' y2='28' stroke='#ff8800' stroke-width='0.6' opacity='0.2'/>
-<line x1='195' y1='32' x2='202' y2='25' stroke='#ffaa30' stroke-width='0.6' opacity='0.2'/>
-
-<!-- Dark ash particles in swirl -->
-<circle cx='55' cy='70' r='1.2' fill='#3a2818' opacity='0.6'/>
-<circle cx='195' cy='75' r='1' fill='#3a2818' opacity='0.5'/>
-<circle cx='45' cy='140' r='1.5' fill='#3a2818' opacity='0.5'/>
-<circle cx='205' cy='138' r='1.3' fill='#3a2818' opacity='0.5'/>
-<circle cx='75' cy='55' r='0.8' fill='#2a1815' opacity='0.4'/>
-<circle cx='175' cy='58' r='0.8' fill='#2a1815' opacity='0.4'/>
-<circle cx='62' cy='155' r='1' fill='#3a2818' opacity='0.4'/>
-<circle cx='188' cy='155' r='1' fill='#3a2818' opacity='0.4'/>
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#8a2a05" opacity="0.08"/>
+  <circle cx="141.4" cy="117.3" r="2.0" fill="#ffcc40" opacity="0.23" filter="url(#glow1)"/>
+  <circle cx="58.3" cy="74.4" r="1.4" fill="#c41a05" opacity="0.39" filter="url(#glow1)"/>
+  <circle cx="99.8" cy="147.1" r="1.6" fill="#ff6600" opacity="0.48"/>
+  <circle cx="41.2" cy="98.6" r="2.5" fill="#ff6600" opacity="0.63"/>
+  <circle cx="192.8" cy="22.8" r="1.0" fill="#e6591a" opacity="0.58" filter="url(#glow1)"/>
+  <circle cx="168.4" cy="171.1" r="1.7" fill="#fff8e0" opacity="0.63" filter="url(#glow1)"/>
+  <circle cx="193.4" cy="74.4" r="1.2" fill="#e6591a" opacity="0.21"/>
+  <circle cx="94.7" cy="82.8" r="1.5" fill="#ff6600" opacity="0.38"/>
+  <circle cx="107.2" cy="108.9" r="2.3" fill="#fff8e0" opacity="0.66" filter="url(#glow1)"/>
+  <circle cx="68.3" cy="53.8" r="2.0" fill="#fff8e0" opacity="0.30"/>
+  <circle cx="223.2" cy="67.4" r="2.4" fill="#ffe060" opacity="0.31" filter="url(#glow1)"/>
+  <circle cx="198.9" cy="66.6" r="1.9" fill="#ff8800" opacity="0.59"/>
+  <circle cx="100.2" cy="180.7" r="1.7" fill="#ffe060" opacity="0.67" filter="url(#glow1)"/>
+  <circle cx="58.5" cy="155.9" r="1.9" fill="#c41a05" opacity="0.28" filter="url(#glow1)"/>
+  <circle cx="104.6" cy="10.6" r="2.3" fill="#ff8800" opacity="0.30" filter="url(#glow1)"/>
+  <circle cx="74.0" cy="93.4" r="2.2" fill="#ff7a1a" opacity="0.30" filter="url(#glow1)"/>
+  <circle cx="170.6" cy="167.2" r="1.8" fill="#ff7a1a" opacity="0.38"/>
+  <circle cx="237.2" cy="44.3" r="1.5" fill="#c41a05" opacity="0.63"/>
+  <circle cx="47.5" cy="47.4" r="1.9" fill="#c41a05" opacity="0.41"/>
+  <circle cx="136.8" cy="51.1" r="1.1" fill="#ff8800" opacity="0.56" filter="url(#glow1)"/>
+  <ellipse cx="125" cy="95" rx="85" ry="75" fill="url(#rad4)" filter="url(#soft2)"/>
+  <path d="M 200.0 95.0 L 193.3 117.2 L 180.5 135.3 L 163.4 147.9 L 144.2 154.2 L 125.0 154.0 L 107.8 148.1 L 94.1 137.6 L 85.0 124.0 L 81.1 109.3 L 82.0 95.0 L 87.1 82.7 L 95.4 73.5 L 105.4 68.0 L 115.7 66.3 L 125.0 68.0 L 132.4 72.4 L 137.1 78.3 L 139.1 84.8 L 138.5 90.6" fill="none" stroke="url(#lin5)" stroke-width="3" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 148.2 166.3 L 125.0 166.8 L 103.8 160.2 L 86.6 147.9 L 74.7 131.6 L 68.9 113.2 L 69.2 95.0 L 75.0 78.7 L 85.0 66.0 L 97.8 57.6 L 111.7 54.1 L 125.0 55.2 L 136.3 60.2 L 144.6 68.0 L 149.4 77.2 L 150.7 86.7 L 148.8 95.0 L 144.6 101.4 L 139.1 105.2 L 133.3 106.5" fill="none" stroke="url(#lin5)" stroke-width="3" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 64.3 139.1 L 56.7 117.2 L 56.4 95.0 L 62.8 74.8 L 74.7 58.4 L 90.3 47.3 L 107.8 41.9 L 125.0 42.4 L 140.3 48.0 L 152.2 57.6 L 159.8 69.7 L 162.9 82.7 L 161.6 95.0 L 156.8 105.3 L 149.4 112.8 L 140.9 116.8 L 132.4 117.6 L 125.0 115.6 L 119.6 111.5 L 116.7 106.5" fill="none" stroke="url(#lin5)" stroke-width="3" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 64.3 50.9 L 82.8 36.9 L 103.8 29.8 L 125.0 29.6 L 144.2 35.8 L 159.7 47.3 L 170.1 62.2 L 175.0 78.7 L 174.4 95.0 L 168.9 109.3 L 159.8 120.3 L 148.4 127.2 L 136.3 129.8 L 125.0 128.4 L 115.7 123.7 L 109.1 116.8 L 105.7 109.0 L 105.4 101.4 L 107.6 95.0 L 111.5 90.6" fill="none" stroke="url(#lin5)" stroke-width="3" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 148.2 23.7 L 167.2 36.9 L 180.5 54.7 L 187.2 74.8 L 187.2 95.0 L 181.1 113.2 L 170.1 127.8 L 155.9 137.6 L 140.3 142.0 L 125.0 141.2 L 111.7 135.9 L 101.6 127.2 L 95.4 116.5 L 93.2 105.3 L 94.8 95.0 L 99.3 86.7 L 105.7 81.0 L 112.9 78.3 L 119.6 78.5 L 125.0 80.8" fill="none" stroke="url(#lin5)" stroke-width="3" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="125" cy="95" r="15" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="125" cy="95" r="6" fill="#ffffff" opacity="0.9"/>
+  <line x1="156.7" y1="15.3" x2="156.7" y2="47.4" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="185.2" y1="43.0" x2="185.2" y2="67.0" stroke="#ffe060" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="34.4" y1="11.3" x2="34.4" y2="29.4" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="73.9" y1="42.0" x2="73.9" y2="64.4" stroke="#e6591a" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="134.4" y1="50.4" x2="134.4" y2="83.0" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="138.2" y1="51.1" x2="138.2" y2="66.3" stroke="#ffe060" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="21.7" y1="3.5" x2="21.7" y2="28.4" stroke="#e6591a" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="45.6" y1="10.5" x2="45.6" y2="35.6" stroke="#ffe060" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="140.7" y1="43.5" x2="140.7" y2="64.1" stroke="#ffe060" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="154.4" y1="20.0" x2="154.4" y2="52.3" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="134.1" y1="32.9" x2="134.1" y2="53.5" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="42.9" y1="15.0" x2="42.9" y2="32.1" stroke="#e6591a" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="27.9" y1="55.9" x2="27.9" y2="84.0" stroke="#ffe060" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="25.8" y1="51.2" x2="25.8" y2="70.5" stroke="#e6591a" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="57.1" y1="11.8" x2="57.1" y2="37.7" stroke="#ffe060" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <line x1="125.0" y1="95.0" x2="143.3" y2="123.6" stroke="#ffcc40" stroke-width="0.9" opacity="0.59" filter="url(#glow1)"/>
+  <line x1="125.0" y1="95.0" x2="146.3" y2="80.7" stroke="#ff8800" stroke-width="0.9" opacity="0.77" filter="url(#glow1)"/>
+  <line x1="125.0" y1="95.0" x2="103.5" y2="99.2" stroke="#ff8800" stroke-width="1.5" opacity="0.43"/>
+  <line x1="125.0" y1="95.0" x2="147.2" y2="126.6" stroke="#ffe060" stroke-width="0.6" opacity="0.52" filter="url(#glow1)"/>
+  <line x1="125.0" y1="95.0" x2="129.4" y2="131.5" stroke="#fff8e0" stroke-width="1.4" opacity="0.64"/>
+  <line x1="125.0" y1="95.0" x2="144.5" y2="98.2" stroke="#fff8e0" stroke-width="1.7" opacity="0.40"/>
+  <line x1="125.0" y1="95.0" x2="128.2" y2="70.7" stroke="#ffe060" stroke-width="0.8" opacity="0.58"/>
+  <line x1="125.0" y1="95.0" x2="125.8" y2="77.8" stroke="#ffcc40" stroke-width="1.4" opacity="0.41"/>
+  <line x1="125.0" y1="95.0" x2="139.4" y2="122.6" stroke="#ff8800" stroke-width="1.8" opacity="0.74" filter="url(#glow1)"/>
+  <line x1="125.0" y1="95.0" x2="157.4" y2="83.7" stroke="#ffe060" stroke-width="1.4" opacity="0.65"/>
+  <line x1="125.0" y1="95.0" x2="157.4" y2="83.9" stroke="#ffcc40" stroke-width="0.7" opacity="0.82" filter="url(#glow1)"/>
+  <line x1="125.0" y1="95.0" x2="129.2" y2="118.0" stroke="#ff8800" stroke-width="1.6" opacity="0.80"/>
+  <line x1="125.0" y1="95.0" x2="99.2" y2="121.8" stroke="#fff8e0" stroke-width="1.1" opacity="0.41" filter="url(#glow1)"/>
+  <line x1="125.0" y1="95.0" x2="143.8" y2="89.3" stroke="#ffe060" stroke-width="1.4" opacity="0.74"/>
 </svg>

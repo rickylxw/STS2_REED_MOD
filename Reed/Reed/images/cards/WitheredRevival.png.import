@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6fa342360d10"
-path="res://.godot/imported/WitheredRevival.png-7264cef22609bb7cc529d6a9da59ca33.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/WitheredRevival.png"
-dest_files=["res://.godot/imported/WitheredRevival.png-7264cef22609bb7cc529d6a9da59ca33.ctex"]
 
 [params]
 

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f83175ba7fae"
-path="res://.godot/imported/AshenBulwark.png-ae46ae833672c2b670852cf7e827ed08.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/AshenBulwark.png"
-dest_files=["res://.godot/imported/AshenBulwark.png-ae46ae833672c2b670852cf7e827ed08.ctex"]
 
 [params]
 

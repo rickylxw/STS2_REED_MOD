@@ -1,131 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
   <defs>
-    <radialGradient id="bgDefend" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#2a1815"/>
-      <stop offset="60%" stop-color="#1a0d08"/>
-      <stop offset="100%" stop-color="#0d0604"/>
-    </radialGradient>
-    <radialGradient id="shieldFace" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#4a2818"/>
-      <stop offset="40%" stop-color="#3a1f15"/>
-      <stop offset="80%" stop-color="#2a1815"/>
-      <stop offset="100%" stop-color="#1a0d08"/>
-    </radialGradient>
-    <radialGradient id="shieldGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="80%" stop-color="#e6591a" stop-opacity="0"/>
-      <stop offset="92%" stop-color="#ff8800" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#ffaa30" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff8e0"/>
-      <stop offset="15%" stop-color="#ffe060"/>
-      <stop offset="40%" stop-color="#ff8800"/>
-      <stop offset="70%" stop-color="#e6591a"/>
-      <stop offset="100%" stop-color="#8a2a05"/>
-    </linearGradient>
-    <radialGradient id="emberCenter" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
-      <stop offset="30%" stop-color="#ffe060" stop-opacity="0.6"/>
-      <stop offset="70%" stop-color="#ff8800" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="glowDefend">
+    <filter id="glow1">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <radialGradient id="bg2" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <radialGradient id="rad3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4a2818"/>
+      <stop offset="40%" stop-color="#3a1f15"/>
+      <stop offset="80%" stop-color="#2a1815"/>
+      <stop offset="100%" stop-color="#1a0d08"/>
+    </radialGradient>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#e6591a" stop-opacity="0"/>
+      <stop offset="92%" stop-color="#ff8800" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffaa30" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lin5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="15%" stop-color="#ffe060"/>
+      <stop offset="40%" stop-color="#ff8800"/>
+      <stop offset="70%" stop-color="#e6591a"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
+    </linearGradient>
+    <radialGradient id="rad6" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#ffe060" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="250" height="190" fill="url(#bgDefend)" rx="8"/>
-
-  <!-- Ambient warmth -->
-  <ellipse cx="125" cy="95" rx="100" ry="80" fill="#e6591a" opacity="0.04"/>
-
-  <!-- Falling ash particles -->
-  <circle cx="40" cy="30" r="1.5" fill="#4a2818" opacity="0.6"/>
-  <circle cx="70" cy="50" r="1" fill="#3a1f15" opacity="0.5"/>
-  <circle cx="200" cy="35" r="1.5" fill="#4a2818" opacity="0.6"/>
-  <circle cx="175" cy="20" r="1" fill="#3a1f15" opacity="0.5"/>
-  <circle cx="30" cy="70" r="1" fill="#5a3828" opacity="0.4"/>
-  <circle cx="215" cy="80" r="1.5" fill="#4a2818" opacity="0.5"/>
-  <circle cx="20" cy="120" r="1" fill="#3a1f15" opacity="0.4"/>
-  <circle cx="230" cy="130" r="1" fill="#4a2818" opacity="0.4"/>
-  <circle cx="60" cy="170" r="1.5" fill="#5a3828" opacity="0.3"/>
-  <circle cx="190" cy="165" r="1" fill="#3a1f15" opacity="0.4"/>
-
-  <!-- Glowing ash (warm) -->
-  <circle cx="45" cy="25" r="1" fill="#ff8800" opacity="0.3"/>
-  <circle cx="210" cy="45" r="0.8" fill="#ffaa30" opacity="0.3"/>
-  <circle cx="35" cy="110" r="1" fill="#e6591a" opacity="0.25"/>
-
-  <!-- Shield outer glow -->
-  <ellipse cx="125" cy="95" rx="72" ry="78" fill="url(#shieldGlow)" filter="url(#glowDefend)"/>
-
-  <!-- Shield body (kite/heater shield shape) -->
-  <path d="M 125 18 L 190 35 L 190 95 Q 190 135 125 170 Q 60 135 60 95 L 60 35 Z"
-        fill="url(#shieldFace)"/>
-
-  <!-- Shield texture - ash cracks -->
+  <rect width="250" height="190" fill="url(#bg2)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.04"/>
+  <circle cx="42.7" cy="115.2" r="0.8" fill="#999999" opacity="0.46"/>
+  <circle cx="50.7" cy="58.9" r="1.1" fill="#888888" opacity="0.22"/>
+  <circle cx="132.0" cy="115.8" r="1.3" fill="#6a6a6a" opacity="0.49"/>
+  <circle cx="96.2" cy="47.5" r="0.7" fill="#555555" opacity="0.22"/>
+  <circle cx="51.0" cy="108.1" r="1.8" fill="#555555" opacity="0.29"/>
+  <circle cx="132.1" cy="33.3" r="1.4" fill="#999999" opacity="0.39"/>
+  <circle cx="24.0" cy="114.4" r="1.7" fill="#4a4a4a" opacity="0.48"/>
+  <circle cx="127.3" cy="138.1" r="1.1" fill="#4a4a4a" opacity="0.25"/>
+  <circle cx="196.3" cy="71.2" r="0.6" fill="#6a6a6a" opacity="0.45"/>
+  <circle cx="109.3" cy="105.1" r="1.2" fill="#999999" opacity="0.51"/>
+  <ellipse cx="125" cy="95" rx="72" ry="78" fill="url(#rad4)" filter="url(#glow1)"/>
+  <!-- Shield body -->
+  <path d="M 125 18 L 190 35 L 190 95 Q 190 135 125 170 Q 60 135 60 95 L 60 35 Z" fill="url(#rad3)"/>
   <path d="M 80 50 Q 95 55 88 65 Q 80 72 90 80" stroke="#1a0d08" stroke-width="1" fill="none" opacity="0.6"/>
   <path d="M 170 55 Q 155 60 162 70 Q 170 78 160 85" stroke="#1a0d08" stroke-width="1" fill="none" opacity="0.6"/>
-  <path d="M 95 110 Q 110 115 105 125" stroke="#1a0d08" stroke-width="0.8" fill="none" opacity="0.5"/>
-  <path d="M 150 100 Q 140 108 145 118" stroke="#1a0d08" stroke-width="0.8" fill="none" opacity="0.5"/>
-  <path d="M 75 90 L 85 85" stroke="#1a0d08" stroke-width="0.8" opacity="0.4"/>
-  <path d="M 165 90 L 175 85" stroke="#1a0d08" stroke-width="0.8" opacity="0.4"/>
-
-  <!-- Glowing cracks (ember veins) -->
-  <path d="M 85 60 Q 90 70 87 80 Q 84 90 88 100" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.6" filter="url(#glowDefend)"/>
-  <path d="M 165 60 Q 160 70 163 80 Q 166 90 162 100" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.6" filter="url(#glowDefend)"/>
-  <path d="M 100 130 Q 110 140 105 150" stroke="#e6591a" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowDefend)"/>
-  <path d="M 150 130 Q 140 140 145 150" stroke="#e6591a" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowDefend)"/>
-
-  <!-- Center emblem - flame motif -->
-  <circle cx="125" cy="90" r="28" fill="url(#emberCenter)" filter="url(#glowDefend)"/>
-
-  <!-- Flame motif on shield face -->
-  <path d="M 125 70 Q 132 82 128 92 Q 135 85 133 75 Q 140 88 136 100 Q 130 95 128 88 Q 125 96 122 88 Q 120 95 114 100 Q 110 88 117 75 Q 115 85 122 92 Q 118 82 125 70 Z"
-        fill="#ff8800" opacity="0.7" filter="url(#glowDefend)"/>
-  <path d="M 125 78 Q 130 88 127 96 Q 130 90 132 82 Q 136 92 134 100 Q 130 96 128 92 Q 126 98 124 92 Q 122 96 120 100 Q 116 92 119 82 Q 121 90 123 96 Q 120 88 125 78 Z"
-        fill="#ffe060" opacity="0.8" filter="url(#glowDefend)"/>
-  <path d="M 125 84 Q 128 90 126 96 Q 128 92 130 88 Q 132 94 130 100 Q 128 96 127 93 Q 125 97 123 93 Q 121 96 120 100 Q 118 94 120 88 Q 122 92 123 96 Q 121 90 125 84 Z"
-        fill="#fff8e0" opacity="0.7"/>
-
-  <!-- Side flame motifs (smaller) -->
-  <path d="M 80 100 Q 84 108 82 115 Q 86 110 87 105 Q 89 113 87 118 Q 84 114 82 110 Q 80 114 78 118 Q 76 110 79 105 Q 81 108 80 100 Z"
-        fill="#e6591a" opacity="0.4" filter="url(#glowDefend)"/>
-  <path d="M 170 100 Q 166 108 168 115 Q 164 110 163 105 Q 161 113 163 118 Q 166 114 168 110 Q 170 114 172 118 Q 174 110 171 105 Q 169 108 170 100 Z"
-        fill="#e6591a" opacity="0.4" filter="url(#glowDefend)"/>
-
-  <!-- Shield rim (glowing orange) -->
-  <path d="M 125 18 L 190 35 L 190 95 Q 190 135 125 170 Q 60 135 60 95 L 60 35 Z"
-        fill="none" stroke="url(#rimGrad)" stroke-width="3.5" filter="url(#glowDefend)"/>
-
-  <!-- Shield rim inner highlight -->
-  <path d="M 125 22 L 186 37 L 186 95 Q 186 132 125 165 Q 64 132 64 95 L 64 37 Z"
-        fill="none" stroke="#fff8e0" stroke-width="0.8" opacity="0.4"/>
-
-  <!-- Shield rim outer dark border -->
-  <path d="M 125 14 L 194 33 L 194 95 Q 194 138 125 174 Q 56 138 56 95 L 56 33 Z"
-        fill="none" stroke="#1a0d08" stroke-width="2" opacity="0.8"/>
-
-  <!-- Boss rivets at corners -->
+  <path d="M 95 110 Q 110 115 105 125" stroke="#1a0d08" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M 150 100 Q 140 108 145 118" stroke="#1a0d08" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M 85 60 Q 90 70 87 80 Q 84 90 88 100" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 165 60 Q 160 70 163 80 Q 166 90 162 100" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 100 130 Q 110 140 105 150" stroke="#ff8800" stroke-width="1" fill="none" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 150 130 Q 140 140 145 150" stroke="#ff8800" stroke-width="1" fill="none" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="125" cy="90" r="28" fill="url(#rad6)" filter="url(#glow1)"/>
+  <!-- Flame motif -->
+  <path d="M 125 70 Q 132 82 128 92 Q 135 85 133 75 Q 140 88 136 100 Q 130 95 128 88 Q 125 96 122 88 Q 120 95 114 100 Q 110 88 117 75 Q 115 85 122 92 Q 118 82 125 70 Z" fill="#ff8800" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 125 78 Q 130 88 127 96 Q 130 90 132 82 Q 136 92 134 100 Q 130 96 128 92 Q 126 98 124 92 Q 122 96 120 100 Q 116 92 119 82 Q 121 90 123 96 Q 120 88 125 78 Z" fill="#ffe060" opacity="0.8" filter="url(#glow1)"/>
+  <path d="M 125 84 Q 128 90 126 96 Q 128 92 130 88 Q 132 94 130 100 Q 128 96 127 93 Q 125 97 123 93 Q 121 96 120 100 Q 118 94 120 88 Q 122 92 123 96 Q 121 90 125 84 Z" fill="#fff8e0" opacity="0.7"/>
+  <!-- Rim -->
+  <path d="M 125 18 L 190 35 L 190 95 Q 190 135 125 170 Q 60 135 60 95 L 60 35 Z" fill="none" stroke="url(#lin5)" stroke-width="3.5" filter="url(#glow1)"/>
+  <path d="M 125 22 L 186 37 L 186 95 Q 186 132 125 165 Q 64 132 64 95 L 64 37 Z" fill="none" stroke="#fff8e0" stroke-width="0.8" opacity="0.4"/>
+  <path d="M 125 14 L 194 33 L 194 95 Q 194 138 125 174 Q 56 138 56 95 L 56 33 Z" fill="none" stroke="#1a0d08" stroke-width="2" opacity="0.8"/>
   <circle cx="68" cy="42" r="3" fill="#4a2818"/>
-  <circle cx="68" cy="42" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowDefend)"/>
+  <circle cx="68" cy="42" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
   <circle cx="182" cy="42" r="3" fill="#4a2818"/>
-  <circle cx="182" cy="42" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowDefend)"/>
-
-  <!-- Bottom point boss -->
+  <circle cx="182" cy="42" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
   <circle cx="125" cy="165" r="3" fill="#4a2818"/>
-  <circle cx="125" cy="165" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowDefend)"/>
-
-  <!-- Floating embers around shield -->
-  <circle cx="50" cy="60" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowDefend)"/>
-  <circle cx="200" cy="60" r="1.5" fill="#ffaa30" opacity="0.5" filter="url(#glowDefend)"/>
-  <circle cx="55" cy="130" r="1" fill="#e6591a" opacity="0.4"/>
-  <circle cx="195" cy="120" r="1.5" fill="#ff8800" opacity="0.4" filter="url(#glowDefend)"/>
-  <circle cx="90" cy="180" r="1" fill="#ffaa30" opacity="0.4"/>
-  <circle cx="160" cy="178" r="1" fill="#ff8800" opacity="0.4"/>
+  <circle cx="125" cy="165" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="237.1" cy="87.4" r="1.9" fill="#c41a05" opacity="0.54" filter="url(#glow1)"/>
+  <circle cx="181.0" cy="121.9" r="1.4" fill="#fff8e0" opacity="0.64"/>
+  <circle cx="27.2" cy="46.7" r="2.2" fill="#ff8800" opacity="0.22" filter="url(#glow1)"/>
+  <circle cx="169.8" cy="113.7" r="1.1" fill="#ff6600" opacity="0.63" filter="url(#glow1)"/>
+  <circle cx="165.4" cy="47.4" r="1.8" fill="#c41a05" opacity="0.24"/>
+  <circle cx="59.1" cy="128.6" r="1.5" fill="#ffe060" opacity="0.56" filter="url(#glow1)"/>
 </svg>

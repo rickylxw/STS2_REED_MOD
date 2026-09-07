@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://58a6a1gaa600"
-path="res://.godot/imported/InfernoStorm.png-cf6b789ffc5ebffd6212fb1d6d837a45.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/InfernoStorm.png"
-dest_files=["res://.godot/imported/InfernoStorm.png-cf6b789ffc5ebffd6212fb1d6d837a45.ctex"]
 
 [params]
 

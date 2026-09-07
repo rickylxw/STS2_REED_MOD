@@ -1,141 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
   <defs>
-    <radialGradient id="bgHeart" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#2a1010"/>
-      <stop offset="40%" stop-color="#180806"/>
-      <stop offset="100%" stop-color="#070202"/>
-    </radialGradient>
-    <radialGradient id="heartCore" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/>
-      <stop offset="15%" stop-color="#ffe060" stop-opacity="0.95"/>
-      <stop offset="35%" stop-color="#ff8800" stop-opacity="0.8"/>
-      <stop offset="60%" stop-color="#e6591a" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="goldenHalo" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffe060" stop-opacity="0.6"/>
-      <stop offset="40%" stop-color="#ffaa30" stop-opacity="0.25"/>
-      <stop offset="80%" stop-color="#e6591a" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="heartShape" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff8e0"/>
-      <stop offset="25%" stop-color="#ffe060"/>
-      <stop offset="55%" stop-color="#ff8800"/>
-      <stop offset="85%" stop-color="#e6591a"/>
-      <stop offset="100%" stop-color="#8a2a05"/>
-    </linearGradient>
-    <radialGradient id="emberGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="glowHeart">
+    <filter id="glow1">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="bigGlowHeart">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="20%" stop-color="#ffe060"/>
+      <stop offset="50%" stop-color="#ff8800"/>
+      <stop offset="80%" stop-color="#e6591a"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
+    </radialGradient>
+    <radialGradient id="rad5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#e6591a" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="250" height="190" fill="url(#bgHeart)" rx="8"/>
-
-  <!-- Large golden halo (warm aura) -->
-  <ellipse cx="125" cy="95" rx="110" ry="90" fill="url(#goldenHalo)" opacity="0.5" filter="url(#bigGlowHeart)"/>
-
-  <!-- Mid halo glow -->
-  <ellipse cx="125" cy="95" rx="70" ry="65" fill="url(#heartCore)" opacity="0.35" filter="url(#glowHeart)"/>
-
-  <!-- Warm light rays radiating from heart -->
-  <path d="M 125 95 L 55 25" stroke="#ff8800" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 25 55" stroke="#ffe060" stroke-width="2.5" opacity="0.22" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 15 95" stroke="#ff8800" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 25 135" stroke="#ffaa30" stroke-width="2.5" opacity="0.22" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 55 170" stroke="#ff8800" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 125 175" stroke="#ffe060" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 195 170" stroke="#ff8800" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 225 135" stroke="#ffaa30" stroke-width="2.5" opacity="0.22" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 235 95" stroke="#ff8800" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 225 55" stroke="#ffe060" stroke-width="2.5" opacity="0.22" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 195 25" stroke="#ff8800" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-  <path d="M 125 95 L 125 15" stroke="#ffaa30" stroke-width="2" opacity="0.18" filter="url(#glowHeart)"/>
-
-  <!-- Flame wisps around heart (outer flicker) -->
-  <path d="M 80 95 Q 65 80 70 60 Q 75 45 85 55 Q 78 70 88 80 Z"
-        fill="url(#heartCore)" opacity="0.4" filter="url(#glowHeart)"/>
-  <path d="M 170 95 Q 185 80 180 60 Q 175 45 165 55 Q 172 70 162 80 Z"
-        fill="url(#heartCore)" opacity="0.4" filter="url(#glowHeart)"/>
-  <path d="M 125 50 Q 120 35 125 25 Q 130 35 125 50 Z"
-        fill="url(#heartCore)" opacity="0.45" filter="url(#glowHeart)"/>
-  <path d="M 95 140 Q 100 155 110 162 Q 115 150 108 140 Z"
-        fill="url(#heartCore)" opacity="0.35" filter="url(#glowHeart)"/>
-  <path d="M 155 140 Q 150 155 140 162 Q 135 150 142 140 Z"
-        fill="url(#heartCore)" opacity="0.35" filter="url(#glowHeart)"/>
-
-  <!-- Heart shape (glowing ember core) -->
-  <path d="M 125 145 Q 80 120 80 90 Q 80 65 100 65 Q 115 65 125 80 Q 135 65 150 65 Q 170 65 170 90 Q 170 120 125 145 Z"
-        fill="url(#heartShape)" filter="url(#glowHeart)"/>
-
-  <!-- Heart inner highlight (bright core) -->
-  <path d="M 125 130 Q 98 110 98 92 Q 98 75 108 75 Q 118 75 125 88 Q 132 75 142 75 Q 152 75 152 92 Q 152 110 125 130 Z"
-        fill="url(#heartCore)" opacity="0.7" filter="url(#glowHeart)"/>
-
-  <!-- Bright center of heart -->
-  <ellipse cx="125" cy="100" rx="14" ry="16" fill="#fff8e0" opacity="0.85" filter="url(#glowHeart)"/>
-  <ellipse cx="125" cy="100" rx="6" ry="7" fill="#ffffff" opacity="0.95" filter="url(#glowHeart)"/>
-
-  <!-- Fire cracks on heart surface -->
-  <path d="M 100 95 Q 110 100 108 110" stroke="#fff8e0" stroke-width="1" fill="none" opacity="0.6" filter="url(#glowHeart)"/>
-  <path d="M 150 95 Q 140 100 142 110" stroke="#fff8e0" stroke-width="1" fill="none" opacity="0.6" filter="url(#glowHeart)"/>
-  <path d="M 125 80 L 125 115" stroke="#ffe060" stroke-width="1.2" fill="none" opacity="0.7" filter="url(#glowHeart)"/>
-  <path d="M 110 88 Q 115 95 113 105" stroke="#ffe060" stroke-width="0.8" fill="none" opacity="0.5" filter="url(#glowHeart)"/>
-  <path d="M 140 88 Q 135 95 137 105" stroke="#ffe060" stroke-width="0.8" fill="none" opacity="0.5" filter="url(#glowHeart)"/>
-
-  <!-- Bright crack nodes -->
-  <circle cx="108" cy="100" r="2.5" fill="url(#emberGlow)" filter="url(#glowHeart)"/>
-  <circle cx="142" cy="100" r="2.5" fill="url(#emberGlow)" filter="url(#glowHeart)"/>
-  <circle cx="125" cy="88" r="2" fill="url(#emberGlow)" filter="url(#glowHeart)"/>
-  <circle cx="125" cy="115" r="2" fill="url(#emberGlow)" filter="url(#glowHeart)"/>
-
-  <!-- Embers floating outward -->
-  <circle cx="60" cy="40" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glowHeart)"/>
-  <circle cx="40" cy="70" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glowHeart)"/>
-  <circle cx="30" cy="100" r="1.2" fill="#ffaa30" opacity="0.5" filter="url(#glowHeart)"/>
-  <circle cx="40" cy="130" r="1.5" fill="#ff8800" opacity="0.55" filter="url(#glowHeart)"/>
-  <circle cx="60" cy="160" r="2" fill="#ffe060" opacity="0.6" filter="url(#glowHeart)"/>
-  <circle cx="190" cy="40" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glowHeart)"/>
-  <circle cx="210" cy="70" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glowHeart)"/>
-  <circle cx="220" cy="100" r="1.2" fill="#ffaa30" opacity="0.5" filter="url(#glowHeart)"/>
-  <circle cx="210" cy="130" r="1.5" fill="#ff8800" opacity="0.55" filter="url(#glowHeart)"/>
-  <circle cx="190" cy="160" r="2" fill="#ffe060" opacity="0.6" filter="url(#glowHeart)"/>
-  <circle cx="125" cy="20" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowHeart)"/>
-  <circle cx="125" cy="170" r="1.5" fill="#ff8800" opacity="0.5" filter="url(#glowHeart)"/>
-
-  <!-- Ember trails (streaks) -->
-  <line x1="125" y1="95" x2="65" y2="35" stroke="#ff8800" stroke-width="0.8" opacity="0.3"/>
-  <line x1="125" y1="95" x2="35" y2="65" stroke="#ffaa30" stroke-width="0.8" opacity="0.25"/>
-  <line x1="125" y1="95" x2="65" y2="160" stroke="#ff8800" stroke-width="0.8" opacity="0.3"/>
-  <line x1="125" y1="95" x2="185" y2="160" stroke="#ffaa30" stroke-width="0.8" opacity="0.3"/>
-  <line x1="125" y1="95" x2="215" y2="65" stroke="#ff8800" stroke-width="0.8" opacity="0.25"/>
-  <line x1="125" y1="95" x2="125" y2="20" stroke="#ffe060" stroke-width="0.8" opacity="0.25"/>
-
-  <!-- Small scattered embers -->
-  <circle cx="75" cy="50" r="1" fill="#ff8800" opacity="0.4"/>
-  <circle cx="50" cy="115" r="0.8" fill="#e6591a" opacity="0.3"/>
-  <circle cx="80" cy="145" r="1" fill="#ffaa30" opacity="0.4"/>
-  <circle cx="170" cy="145" r="1" fill="#ff8800" opacity="0.4"/>
-  <circle cx="200" cy="115" r="0.8" fill="#e6591a" opacity="0.3"/>
-  <circle cx="175" cy="50" r="1" fill="#ffaa30" opacity="0.4"/>
-
-  <!-- Ground shadow/glow -->
-  <ellipse cx="125" cy="175" rx="55" ry="6" fill="#8a2a05" opacity="0.3" filter="url(#glowHeart)"/>
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#8a2a05" opacity="0.06"/>
+  <circle cx="201.9" cy="174.3" r="2.5" fill="#ff8800" opacity="0.47" filter="url(#glow1)"/>
+  <circle cx="190.9" cy="11.4" r="0.8" fill="#ff6600" opacity="0.62"/>
+  <circle cx="204.3" cy="75.7" r="2.0" fill="#ff7a1a" opacity="0.65" filter="url(#glow1)"/>
+  <circle cx="149.0" cy="177.6" r="1.4" fill="#ff7a1a" opacity="0.48" filter="url(#glow1)"/>
+  <circle cx="46.0" cy="142.0" r="2.5" fill="#ffcc40" opacity="0.24" filter="url(#glow1)"/>
+  <circle cx="100.3" cy="172.7" r="2.3" fill="#ffe060" opacity="0.53" filter="url(#glow1)"/>
+  <circle cx="119.9" cy="72.3" r="1.2" fill="#fff8e0" opacity="0.28"/>
+  <circle cx="222.8" cy="12.2" r="1.8" fill="#ff8800" opacity="0.35" filter="url(#glow1)"/>
+  <circle cx="180.9" cy="38.2" r="2.4" fill="#ffcc40" opacity="0.21" filter="url(#glow1)"/>
+  <circle cx="112.2" cy="63.6" r="1.7" fill="#ff8800" opacity="0.30" filter="url(#glow1)"/>
+  <circle cx="101.6" cy="47.5" r="2.2" fill="#c41a05" opacity="0.47" filter="url(#glow1)"/>
+  <circle cx="222.7" cy="126.5" r="1.8" fill="#ffe060" opacity="0.48" filter="url(#glow1)"/>
+  <ellipse cx="125" cy="95" rx="70" ry="65" fill="url(#rad5)" filter="url(#soft2)"/>
+  <path d="M 125 140 C 90 110 70 90 70 70 C 70 50 90 45 100 55 C 110 65 120 70 125 80 C 130 70 140 65 150 55 C 160 45 180 50 180 70 C 180 90 160 110 125 140 Z" fill="url(#rad4)" filter="url(#glow1)"/>
+  <path d="M 100 60 C 95 65 90 70 92 78 C 95 72 100 68 105 65 Z" fill="#fff8e0" opacity="0.5"/>
+  <path d="M 125 80 Q 120 100 115 120" stroke="#c41a05" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 125 80 Q 130 100 135 120" stroke="#c41a05" stroke-width="1" fill="none" opacity="0.4"/>
+  <path d="M 125 80 Q 125 110 125 130" stroke="#c41a05" stroke-width="1" fill="none" opacity="0.4"/>
+  <circle cx="125" cy="85" r="12" fill="#fff8e0" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="125" cy="85" r="5" fill="#ffffff" opacity="0.9"/>
+  <line x1="125.0" y1="85.0" x2="91.2" y2="88.5" stroke="#fff8e0" stroke-width="1.6" opacity="0.53"/>
+  <line x1="125.0" y1="85.0" x2="125.0" y2="107.1" stroke="#ffcc40" stroke-width="1.6" opacity="0.48" filter="url(#glow1)"/>
+  <line x1="125.0" y1="85.0" x2="146.8" y2="58.7" stroke="#ffe060" stroke-width="0.7" opacity="0.42" filter="url(#glow1)"/>
+  <line x1="125.0" y1="85.0" x2="143.9" y2="102.0" stroke="#ffe060" stroke-width="0.6" opacity="0.78"/>
+  <line x1="125.0" y1="85.0" x2="135.3" y2="65.7" stroke="#ffcc40" stroke-width="1.1" opacity="0.90"/>
+  <line x1="125.0" y1="85.0" x2="152.3" y2="86.2" stroke="#ffcc40" stroke-width="1.1" opacity="0.60" filter="url(#glow1)"/>
+  <line x1="125.0" y1="85.0" x2="118.0" y2="51.2" stroke="#ffe060" stroke-width="1.6" opacity="0.67"/>
+  <line x1="125.0" y1="85.0" x2="133.1" y2="61.2" stroke="#ffcc40" stroke-width="0.7" opacity="0.53" filter="url(#glow1)"/>
+  <line x1="125.0" y1="85.0" x2="115.1" y2="109.5" stroke="#ffcc40" stroke-width="1.6" opacity="0.49"/>
+  <line x1="125.0" y1="85.0" x2="107.0" y2="69.4" stroke="#ffe060" stroke-width="1.5" opacity="0.51"/>
+  <circle cx="90" cy="60" r="2" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="160" cy="60" r="2" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="80" cy="100" r="1.5" fill="#ffe060" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="170" cy="100" r="1.5" fill="#ffe060" opacity="0.4" filter="url(#glow1)"/>
 </svg>

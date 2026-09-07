@@ -1,95 +1,117 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
   <defs>
-    <radialGradient id='bgDFP' cx='50%' cy='50%' r='60%'>
-      <stop offset='0%' stop-color='#2a1505'/>
-      <stop offset='60%' stop-color='#1a0d08'/>
-      <stop offset='100%' stop-color='#0a0503'/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="65%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <linearGradient id='glassDFP' x1='0%' y1='0%' x2='0%' y2='100%'>
-      <stop offset='0%' stop-color='#5a4838' stop-opacity='0.6'/>
-      <stop offset='40%' stop-color='#3a2c20' stop-opacity='0.5'/>
-      <stop offset='100%' stop-color='#1a1410' stop-opacity='0.7'/>
+    <linearGradient id="lin4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a4838" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#3a2c20" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1a1410" stop-opacity="0.7"/>
     </linearGradient>
-    <linearGradient id='liquidDFP' x1='0%' y1='0%' x2='0%' y2='100%'>
-      <stop offset='0%' stop-color='#ffe060'/>
-      <stop offset='30%' stop-color='#ff8800'/>
-      <stop offset='70%' stop-color='#e6591a'/>
-      <stop offset='100%' stop-color='#c41a05'/>
+    <linearGradient id="lin5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe060"/>
+      <stop offset="30%" stop-color="#ff8800"/>
+      <stop offset="70%" stop-color="#e6591a"/>
+      <stop offset="100%" stop-color="#c41a05"/>
     </linearGradient>
-    <linearGradient id='flameDFP' x1='0%' y1='100%' x2='0%' y2='0%'>
-      <stop offset='0%' stop-color='#fff8e0'/>
-      <stop offset='20%' stop-color='#ffe060'/>
-      <stop offset='50%' stop-color='#ff8800'/>
-      <stop offset='80%' stop-color='#c41a05'/>
-      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    <linearGradient id="lin6" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="20%" stop-color="#ffe060"/>
+      <stop offset="50%" stop-color="#ff8800"/>
+      <stop offset="80%" stop-color="#c41a05"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id='glowDFP' cx='50%' cy='55%' r='50%'>
-      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.4'/>
-      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.15'/>
-      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    <radialGradient id="rad7" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#e6591a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id='emberDFP' cx='50%' cy='50%' r='50%'>
-      <stop offset='0%' stop-color='#fff8e0'/>
-      <stop offset='40%' stop-color='#ffcc40'/>
-      <stop offset='80%' stop-color='#e6591a'/>
-      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    <radialGradient id="rad8" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffcc40" stop-opacity="0.7"/>
+      <stop offset="80%" stop-color="#e6591a" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
     </radialGradient>
-    <filter id='glowDFPf'><feGaussianBlur stdDeviation='1.5' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>
-    <filter id='softDFP'><feGaussianBlur stdDeviation='2'/></filter>
   </defs>
 
-  <rect width='64' height='64' fill='url(#bgDFP)' rx='8'/>
-  <ellipse cx='32' cy='34' rx='24' ry='28' fill='url(#glowDFP)' filter='url(#glowDFPf)'/>
-
-  <!-- cork/stopper -->
-  <rect x='27' y='8' width='10' height='6' fill='#3a2c20' stroke='#1a0d08' stroke-width='0.5' rx='1'/>
-  <rect x='28' y='9' width='8' height='2' fill='#5a4838' opacity='0.5' rx='1'/>
-
-  <!-- neck -->
-  <rect x='29' y='13' width='6' height='6' fill='url(#glassDFP)' stroke='#1a0d08' stroke-width='0.5'/>
-  <!-- neck rim -->
-  <rect x='27' y='13' width='10' height='2' fill='#3a2c20' rx='1'/>
-
-  <!-- bottle body (flask shape) -->
-  <path d='M 20,19 Q 16,22 16,30 L 16,48 Q 16,56 24,57 L 40,57 Q 48,56 48,48 L 48,30 Q 48,22 44,19 Z' fill='url(#glassDFP)' stroke='#1a0d08' stroke-width='0.8'/>
-
-  <!-- glass highlight -->
-  <path d='M 20,22 Q 18,26 18,32 L 18,46 Q 18,50 20,52' fill='none' stroke='#7a6a5a' stroke-width='1.5' opacity='0.3'/>
-
-  <!-- liquid inside (orange flame potion) -->
-  <path d='M 18,30 Q 17,35 18,42 L 18,47 Q 18,54 24,55 L 40,55 Q 46,54 46,47 L 46,42 Q 47,35 46,30 Z' fill='url(#liquidDFP)' opacity='0.9'/>
-
-  <!-- liquid surface (meniscus) -->
-  <ellipse cx='32' cy='31' rx='13' ry='2.5' fill='#ffe060' opacity='0.6'/>
-  <ellipse cx='32' cy='30' rx='10' ry='1.5' fill='#fff8e0' opacity='0.3'/>
-
-  <!-- dragon flame inside liquid (swirling) -->
-  <path d='M 32,50 C 28,45 34,42 30,38 C 28,35 33,33 31,30' fill='none' stroke='#ffe060' stroke-width='1.2' opacity='0.7' filter='url(#glowDFPf)'/>
-  <path d='M 28,48 C 26,43 30,40 27,36 C 25,33 29,31 27,28' fill='none' stroke='#ff8800' stroke-width='0.8' opacity='0.5'/>
-  <path d='M 36,48 C 38,43 34,40 37,36 C 39,33 35,31 37,28' fill='none' stroke='#ffaa00' stroke-width='0.8' opacity='0.5'/>
-
-  <!-- flame bursting from bottle neck -->
-  <path d='M 29,14 Q 27,8 30,4 Q 31,8 30,13 Z' fill='url(#flameDFP)' opacity='0.8' filter='url(#glowDFPf)'/>
-  <path d='M 32,14 Q 30,6 33,2 Q 34,6 33,13 Z' fill='url(#flameDFP)' opacity='0.85' filter='url(#glowDFPf)'/>
-  <path d='M 35,14 Q 37,8 34,4 Q 33,8 34,13 Z' fill='url(#flameDFP)' opacity='0.75' filter='url(#glowDFPf)'/>
-
-  <!-- bright flame core from neck -->
-  <ellipse cx='32' cy='14' rx='4' ry='3' fill='url(#emberDFP)' opacity='0.8' filter='url(#glowDFPf)'/>
-  <circle cx='32' cy='13' r='1.5' fill='#fff8e0' opacity='0.9'/>
-
-  <!-- embers inside liquid -->
-  <circle cx='28' cy='45' r='1' fill='#ffe060' opacity='0.6' filter='url(#glowDFPf)'/>
-  <circle cx='36' cy='43' r='0.8' fill='#ffaa00' opacity='0.55'/>
-  <circle cx='24' cy='40' r='0.6' fill='#ff8800' opacity='0.4'/>
-  <circle cx='40' cy='38' r='0.6' fill='#ff8800' opacity='0.4'/>
-  <circle cx='32' cy='42' r='1' fill='#ffe060' opacity='0.5' filter='url(#glowDFPf)'/>
-
-  <!-- floating embers escaping -->
-  <circle cx='24' cy='6' r='0.8' fill='#ff8800' opacity='0.4'/>
-  <circle cx='40' cy='5' r='0.8' fill='#ffaa00' opacity='0.4'/>
-  <circle cx='28' cy='2' r='0.6' fill='#ffe060' opacity='0.35'/>
-  <circle cx='36' cy='3' r='0.6' fill='#ff8800' opacity='0.3'/>
-
-  <!-- bottom glow -->
-  <ellipse cx='32' cy='57' rx='12' ry='3' fill='#8a2a05' opacity='0.3' filter='url(#glowDFPf)'/>
+  <rect width="128" height="128" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="64.0" cy="64.0" rx="61.4" ry="53.8" fill="#e6591a" opacity="0.06"/>
+  <circle cx="116.2" cy="10.3" r="2.1" fill="#e6591a" opacity="0.66"/>
+  <circle cx="84.2" cy="116.4" r="1.1" fill="#e6591a" opacity="0.30" filter="url(#glow1)"/>
+  <circle cx="64.0" cy="34.1" r="2.3" fill="#c41a05" opacity="0.65" filter="url(#glow1)"/>
+  <circle cx="11.3" cy="54.8" r="1.9" fill="#fff8e0" opacity="0.68"/>
+  <circle cx="9.2" cy="17.1" r="2.1" fill="#ff7a1a" opacity="0.40"/>
+  <circle cx="19.0" cy="71.9" r="2.2" fill="#ffcc40" opacity="0.63" filter="url(#glow1)"/>
+  <circle cx="73.1" cy="82.7" r="1.9" fill="#ffe060" opacity="0.50" filter="url(#glow1)"/>
+  <circle cx="86.0" cy="79.4" r="0.7" fill="#e6591a" opacity="0.46" filter="url(#glow1)"/>
+  <circle cx="53.9" cy="117.7" r="2.5" fill="#ff6600" opacity="0.29" filter="url(#glow1)"/>
+  <circle cx="75.4" cy="91.4" r="1.9" fill="#c41a05" opacity="0.31"/>
+  <circle cx="105.3" cy="90.3" r="1.3" fill="#ff7a1a" opacity="0.26" filter="url(#glow1)"/>
+  <circle cx="52.8" cy="15.7" r="2.1" fill="#ff8800" opacity="0.25" filter="url(#glow1)"/>
+  <!-- Aura -->
+  <ellipse cx="64" cy="68" rx="48" ry="56" fill="url(#rad7)" filter="url(#soft2)"/>
+  <!-- Cork / stopper -->
+  <rect x="54" y="16" width="20" height="12" fill="#3a2c20" stroke="#1a0d08" stroke-width="0.5" rx="2"/>
+  <rect x="56" y="18" width="16" height="4" fill="#5a4838" opacity="0.5" rx="2"/>
+  <!-- Neck -->
+  <rect x="58" y="26" width="12" height="12" fill="url(#lin4)" stroke="#1a0d08" stroke-width="0.5"/>
+  <rect x="54" y="26" width="20" height="4" fill="#3a2c20" rx="2"/>
+  <!-- Bottle body (flask shape) -->
+  <path d="M 40,38 Q 32,44 32,60 L 32,96 Q 32,112 48,114 L 80,114 Q 96,112 96,96 L 96,60 Q 96,44 88,38 Z" fill="url(#lin4)" stroke="#1a0d08" stroke-width="1"/>
+  <!-- Glass highlight -->
+  <path d="M 40,44 Q 36,52 36,64 L 36,92 Q 36,100 40,104" fill="none" stroke="#7a6a5a" stroke-width="2" opacity="0.3"/>
+  <!-- Liquid inside (orange flame potion) -->
+  <path d="M 36,60 Q 34,70 36,84 L 36,94 Q 36,108 48,110 L 80,110 Q 92,108 92,94 L 92,84 Q 94,70 92,60 Z" fill="url(#lin5)" opacity="0.9"/>
+  <!-- Liquid surface (meniscus) -->
+  <ellipse cx="64" cy="62" rx="26" ry="5" fill="#ffe060" opacity="0.6"/>
+  <ellipse cx="64" cy="60" rx="20" ry="3" fill="#fff8e0" opacity="0.3"/>
+  <!-- Dragon flame inside liquid (swirling) -->
+  <path d="M 64,100 C 56,90 68,84 60,76 C 56,70 66,66 62,60" fill="none" stroke="#ffe060" stroke-width="2" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 56,96 C 52,86 60,80 54,72 C 50,66 58,62 54,56" fill="none" stroke="#ff8800" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 72,96 C 76,86 68,80 74,72 C 78,66 70,62 74,56" fill="none" stroke="#ffaa00" stroke-width="1.5" opacity="0.5"/>
+  <!-- Flame bursting from bottle neck -->
+  <path d="M 58,28 Q 54,16 60,8 Q 62,16 60,26 Z" fill="url(#lin6)" opacity="0.8" filter="url(#glow1)"/>
+  <path d="M 64,28 Q 60,12 66,4 Q 68,12 66,26 Z" fill="url(#lin6)" opacity="0.85" filter="url(#glow1)"/>
+  <path d="M 70,28 Q 74,16 68,8 Q 66,16 68,26 Z" fill="url(#lin6)" opacity="0.75" filter="url(#glow1)"/>
+  <!-- Bright flame core from neck -->
+  <ellipse cx="64" cy="28" rx="8" ry="6" fill="url(#rad8)" opacity="0.8" filter="url(#glow1)"/>
+  <circle cx="64" cy="26" r="3" fill="#fff8e0" opacity="0.9"/>
+  <!-- Embers inside liquid -->
+  <circle cx="56" cy="90" r="2" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="72" cy="86" r="1.6" fill="#ffaa00" opacity="0.55" filter="url(#glow1)"/>
+  <circle cx="48" cy="80" r="1.2" fill="#ff8800" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="80" cy="76" r="1.2" fill="#ff8800" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="64" cy="84" r="2" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <line x1="64.0" y1="26.0" x2="72.9" y2="24.1" stroke="#ff8800" stroke-width="1.3" opacity="0.45"/>
+  <line x1="64.0" y1="26.0" x2="76.2" y2="33.1" stroke="#ff8800" stroke-width="1.3" opacity="0.49"/>
+  <line x1="64.0" y1="26.0" x2="67.3" y2="35.5" stroke="#fff8e0" stroke-width="1.4" opacity="0.48"/>
+  <line x1="64.0" y1="26.0" x2="72.8" y2="17.9" stroke="#ffe060" stroke-width="1.1" opacity="0.79"/>
+  <line x1="64.0" y1="26.0" x2="53.6" y2="32.2" stroke="#fff8e0" stroke-width="1.8" opacity="0.67" filter="url(#glow1)"/>
+  <line x1="64.0" y1="26.0" x2="78.1" y2="25.6" stroke="#ff8800" stroke-width="1.6" opacity="0.68" filter="url(#glow1)"/>
+  <line x1="64.0" y1="26.0" x2="73.3" y2="23.7" stroke="#ff8800" stroke-width="1.7" opacity="0.51" filter="url(#glow1)"/>
+  <line x1="64.0" y1="26.0" x2="72.9" y2="11.2" stroke="#ff8800" stroke-width="0.7" opacity="0.66" filter="url(#glow1)"/>
+  <!-- Floating embers escaping -->
+  <circle cx="48" cy="12" r="1.6" fill="#ff8800" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="80" cy="10" r="1.6" fill="#ffaa00" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="56" cy="4" r="1.2" fill="#ffe060" opacity="0.35" filter="url(#glow1)"/>
+  <circle cx="72" cy="6" r="1.2" fill="#ff8800" opacity="0.3" filter="url(#glow1)"/>
+  <circle cx="44" cy="20" r="1" fill="#e6591a" opacity="0.3" filter="url(#glow1)"/>
+  <circle cx="84" cy="18" r="1" fill="#ffe060" opacity="0.3" filter="url(#glow1)"/>
+  <ellipse cx="64.0" cy="114.0" rx="24.0" ry="6.0" fill="#8a2a05" opacity="0.3" filter="url(#soft2)"/>
 </svg>

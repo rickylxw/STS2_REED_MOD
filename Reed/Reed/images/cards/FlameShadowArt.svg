@@ -1,98 +1,68 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
   <defs>
-    <radialGradient id='bgFSA' cx='0.5' cy='0.5' r='0.7'>
-      <stop offset='0' stop-color='#2a1a3a'/>
-      <stop offset='0.5' stop-color='#1a0d18'/>
-      <stop offset='1' stop-color='#0a0508'/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <radialGradient id='shadowCore' cx='0.5' cy='0.5' r='0.5'>
-      <stop offset='0' stop-color='#ff8800'/>
-      <stop offset='0.25' stop-color='#c41a05'/>
-      <stop offset='0.6' stop-color='#2a1a3a'/>
-      <stop offset='1' stop-color='#0a0518' stop-opacity='0'/>
-    </radialGradient>
-    <linearGradient id='shadowFlame' x1='0' y1='1' x2='0' y2='0'>
-      <stop offset='0' stop-color='#c41a05'/>
-      <stop offset='0.2' stop-color='#8a2a05'/>
-      <stop offset='0.5' stop-color='#2a1a3a'/>
-      <stop offset='0.85' stop-color='#1a0a2a'/>
-      <stop offset='1' stop-color='#0a0518' stop-opacity='0'/>
+    <linearGradient id="lin4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#331100" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#8a2a05" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#3a1010" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1a0d08" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id='shadowFlameAlt' x1='0' y1='1' x2='0' y2='0'>
-      <stop offset='0' stop-color='#e6591a'/>
-      <stop offset='0.25' stop-color='#8a2a05'/>
-      <stop offset='0.55' stop-color='#1a0a2a'/>
-      <stop offset='1' stop-color='#0a0518' stop-opacity='0'/>
+    <linearGradient id="lin5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c41a05" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#8a2a05" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1a0d08" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id='emberGlow' cx='0.5' cy='0.5' r='0.5'>
-      <stop offset='0' stop-color='#fff8e0'/>
-      <stop offset='0.4' stop-color='#ffcc40'/>
-      <stop offset='0.8' stop-color='#e6591a'/>
-      <stop offset='1' stop-color='#8a2a05' stop-opacity='0'/>
-    </radialGradient>
-    <filter id='softBlur'><feGaussianBlur stdDeviation='2'/></filter>
-    <filter id='bigBlur'><feGaussianBlur stdDeviation='5'/></filter>
   </defs>
 
-  <!-- background -->
-  <rect width='250' height='190' rx='8' fill='url(#bgFSA)'/>
-
-  <!-- central glow halo -->
-  <circle cx='125' cy='95' r='80' fill='url(#shadowCore)' filter='url(#bigBlur)' opacity='0.55'/>
-
-  <!-- elegant technique diagram: faint circular guides -->
-  <circle cx='125' cy='95' r='70' fill='none' stroke='#e6591a' stroke-width='0.5' stroke-dasharray='2 4' opacity='0.35'/>
-  <circle cx='125' cy='95' r='45' fill='none' stroke='#c41a05' stroke-width='0.5' stroke-dasharray='1.5 3.5' opacity='0.3'/>
-  <circle cx='125' cy='95' r='22' fill='none' stroke='#8a2a05' stroke-width='0.5' stroke-dasharray='1 3' opacity='0.3'/>
-
-  <!-- central shadow flame (upright) -->
-  <path d='M125,150 C118,135 122,118 120,100 C124,108 122,88 126,75 C122,82 124,62 128,50 C130,62 132,82 130,98 C134,92 132,112 136,125 C140,138 134,148 125,150 Z' fill='url(#shadowFlame)' opacity='0.95'/>
-  <!-- orange edge on central flame -->
-  <path d='M125,150 C120,138 122,120 120,102 C123,110 122,90 124,76 C123,84 124,64 126,52 C128,64 130,82 128,98 C131,94 130,112 132,124 C136,136 132,146 125,150 Z' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.7'/>
-
-  <!-- left curving shadow flame (elegant arc) -->
-  <path d='M125,95 C95,92 70,100 50,118 C40,128 35,142 40,158 C50,148 62,142 78,140 C68,150 60,162 58,176 C72,168 88,160 105,150 C112,144 120,135 125,128 C120,118 122,106 125,95 Z' fill='url(#shadowFlameAlt)' opacity='0.92'/>
-  <path d='M125,98 C98,96 74,104 56,120 C48,128 44,140 48,152 C58,144 70,140 86,138 C76,148 70,160 68,172 C80,164 94,156 110,148 C116,142 122,134 125,128' fill='none' stroke='#ff8800' stroke-width='0.7' opacity='0.55'/>
-
-  <!-- right curving shadow flame (mirror elegant arc) -->
-  <path d='M125,95 C155,92 180,100 200,118 C210,128 215,142 210,158 C200,148 188,142 172,140 C182,150 190,162 192,176 C178,168 162,160 145,150 C138,144 130,135 125,128 C130,118 128,106 125,95 Z' fill='url(#shadowFlameAlt)' opacity='0.92'/>
-  <path d='M125,98 C152,96 176,104 194,120 C202,128 206,140 202,152 C192,144 180,140 164,138 C174,148 180,160 182,172 C170,164 156,156 140,148 C134,142 128,134 125,128' fill='none' stroke='#ff8800' stroke-width='0.7' opacity='0.55'/>
-
-  <!-- upper left small shadow flame -->
-  <path d='M125,75 C105,70 88,58 78,42 C74,32 78,22 88,20 C92,32 100,42 110,50 C116,54 122,60 125,68 Z' fill='url(#shadowFlame)' opacity='0.9'/>
-  <!-- upper right small shadow flame (mirror) -->
-  <path d='M125,75 C145,70 162,58 172,42 C176,32 172,22 162,20 C158,32 150,42 140,50 C134,54 128,60 125,68 Z' fill='url(#shadowFlame)' opacity='0.9'/>
-
-  <!-- small top flame -->
-  <path d='M125,50 C120,40 124,28 125,18 C126,28 130,40 125,50 Z' fill='url(#shadowFlame)' opacity='0.9'/>
-
-  <!-- thin elegant swirl tendrils (technique flow lines) -->
-  <path d='M125,95 C100,80 80,70 60,75 C70,85 85,92 100,90 C90,100 75,108 80,120' fill='none' stroke='#e6591a' stroke-width='0.6' opacity='0.4'/>
-  <path d='M125,95 C150,80 170,70 190,75 C180,85 165,92 150,90 C160,100 175,108 170,120' fill='none' stroke='#e6591a' stroke-width='0.6' opacity='0.4'/>
-
-  <!-- orange edge glows at flame bases -->
-  <ellipse cx='125' cy='148' rx='14' ry='4' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.8'/>
-  <ellipse cx='48' cy='155' rx='8' ry='3' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.7'/>
-  <ellipse cx='202' cy='155' rx='8' ry='3' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.7'/>
-  <ellipse cx='85' cy='40' rx='6' ry='3' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.65'/>
-  <ellipse cx='165' cy='40' rx='6' ry='3' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.65'/>
-  <ellipse cx='125' cy='48' rx='5' ry='3' fill='url(#emberGlow)' filter='url(#softBlur)' opacity='0.7'/>
-
-  <!-- glowing ember specks along orange edges -->
-  <circle cx='60' cy='118' r='1' fill='#ff8800' opacity='0.8'/>
-  <circle cx='50' cy='120' r='1.2' fill='#ffcc40' opacity='0.75'/>
-  <circle cx='190' cy='118' r='1' fill='#ff8800' opacity='0.8'/>
-  <circle cx='200' cy='120' r='1.2' fill='#ffcc40' opacity='0.75'/>
-  <circle cx='88' cy='40' r='1' fill='#ffe060' opacity='0.75'/>
-  <circle cx='162' cy='40' r='1' fill='#ffe060' opacity='0.75'/>
-  <circle cx='125' cy='20' r='1.2' fill='#fff8e0' opacity='0.8'/>
-
-  <!-- dark purple speckles -->
-  <circle cx='95' cy='125' r='1.4' fill='#1a0a2a' opacity='0.8'/>
-  <circle cx='155' cy='125' r='1.4' fill='#1a0a2a' opacity='0.8'/>
-  <circle cx='70' cy='100' r='1.2' fill='#2a1a3a' opacity='0.7'/>
-  <circle cx='180' cy='100' r='1.2' fill='#2a1a3a' opacity='0.7'/>
-
-  <!-- vignette -->
-  <rect width='250' height='190' rx='8' fill='#0a0508' opacity='0.2'/>
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#331100" opacity="0.08"/>
+  <circle cx="191.4" cy="81.4" r="2.3" fill="#8a2a05" opacity="0.28"/>
+  <circle cx="241.0" cy="110.4" r="0.9" fill="#c41a05" opacity="0.34"/>
+  <circle cx="93.4" cy="11.4" r="2.3" fill="#8a2a05" opacity="0.58"/>
+  <circle cx="24.2" cy="155.2" r="1.6" fill="#8a2a05" opacity="0.56" filter="url(#glow1)"/>
+  <circle cx="104.7" cy="146.4" r="2.0" fill="#c41a05" opacity="0.38" filter="url(#glow1)"/>
+  <circle cx="44.9" cy="74.9" r="1.9" fill="#c41a05" opacity="0.56"/>
+  <!-- Shadowy flame silhouettes -->
+  <path d="M 60.0 170.0 Q 45.8 140.0 50.6 116.0 Q 56.4 92.0 59.6 50.0 Q 63.6 86.0 71.8 104.0 Q 73.3 134.0 60.0 170.0 Z" fill="url(#lin4)" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 95.0 170.0 Q 78.2 135.0 84.6 107.0 Q 91.0 79.0 97.9 30.0 Q 99.0 72.0 98.0 93.0 Q 114.9 128.0 95.0 170.0 Z" fill="url(#lin4)" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 125.0 170.0 Q 105.5 132.5 119.9 102.5 Q 120.6 72.5 125.5 20.0 Q 129.4 65.0 131.7 87.5 Q 149.5 125.0 125.0 170.0 Z" fill="url(#lin4)" opacity="0.8" filter="url(#glow1)"/>
+  <path d="M 155.0 170.0 Q 135.9 135.0 147.1 107.0 Q 151.0 79.0 150.4 30.0 Q 159.0 72.0 167.8 93.0 Q 170.2 128.0 155.0 170.0 Z" fill="url(#lin4)" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 190.0 170.0 Q 169.9 140.0 184.3 116.0 Q 186.4 92.0 190.4 50.0 Q 193.6 86.0 194.3 104.0 Q 203.3 134.0 190.0 170.0 Z" fill="url(#lin4)" opacity="0.7" filter="url(#glow1)"/>
+  <!-- Dark flame edges -->
+  <path d="M 60.0 170.0 Q 44.0 140.0 57.2 116.0 Q 56.4 92.0 56.1 50.0 Q 63.6 86.0 64.9 104.0 Q 79.5 134.0 60.0 170.0 Z" fill="none" stroke="url(#lin5)" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 125.0 170.0 Q 100.7 132.5 113.6 102.5 Q 120.6 72.5 125.0 20.0 Q 129.4 65.0 133.5 87.5 Q 148.4 125.0 125.0 170.0 Z" fill="none" stroke="url(#lin5)" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 190.0 170.0 Q 167.3 140.0 181.0 116.0 Q 186.4 92.0 192.9 50.0 Q 193.6 86.0 192.3 104.0 Q 211.4 134.0 190.0 170.0 Z" fill="none" stroke="url(#lin5)" stroke-width="1.5" opacity="0.5"/>
+  <!-- Dark ember wisps -->
+  <circle cx="116.2" cy="99.8" r="1.3" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="174.4" cy="124.5" r="2.1" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="162.7" cy="25.3" r="1.7" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="136.9" cy="154.7" r="1.7" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="201.3" cy="85.9" r="1.7" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="75.9" cy="40.0" r="1.9" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="65.1" cy="116.4" r="2.2" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="118.8" cy="34.0" r="1.5" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="129.7" cy="85.4" r="1.5" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="196.7" cy="138.9" r="1.0" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="91.6" cy="62.7" r="1.9" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="138.0" cy="58.2" r="1.8" fill="#8a2a05" opacity="0.4" filter="url(#glow1)"/>
+  <!-- Glowing core -->
+  <circle cx="125" cy="100" r="8" fill="#c41a05" opacity="0.4" filter="url(#glow1)"/>
 </svg>

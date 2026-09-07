@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7aab5baa8816"
-path="res://.godot/imported/ScorchedEarth.png-5a1e60a3d1d28ed37710791585aadee3.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/ScorchedEarth.png"
-dest_files=["res://.godot/imported/ScorchedEarth.png-5a1e60a3d1d28ed37710791585aadee3.ctex"]
 
 [params]
 

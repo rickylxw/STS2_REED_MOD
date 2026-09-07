@@ -1,119 +1,51 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
   <defs>
-    <radialGradient id='bgFI' cx='50%' cy='40%' r='80%'>
-      <stop offset='0%' stop-color='#2a1815'/>
-      <stop offset='50%' stop-color='#1a0d08'/>
-      <stop offset='100%' stop-color='#0a0503'/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg2" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <radialGradient id='flameGFI' cx='50%' cy='70%' r='55%'>
-      <stop offset='0%' stop-color='#fff8e0'/>
-      <stop offset='12%' stop-color='#ffe060'/>
-      <stop offset='35%' stop-color='#ff8800'/>
-      <stop offset='70%' stop-color='#e6591a'/>
-      <stop offset='100%' stop-color='#c41a05' stop-opacity='0'/>
-    </radialGradient>
-    <linearGradient id='trailGFI' x1='0%' y1='0%' x2='0%' y2='100%'>
-      <stop offset='0%' stop-color='#ffe060' stop-opacity='0.8'/>
-      <stop offset='50%' stop-color='#ff8800' stop-opacity='0.5'/>
-      <stop offset='100%' stop-color='#e6591a' stop-opacity='0.2'/>
+    <linearGradient id="lin3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8a2a05" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#e6591a" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#ff8800" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffe060" stop-opacity="0.5"/>
     </linearGradient>
-    <filter id='glowFI' x='-50%' y='-50%' width='200%' height='200%'>
-      <feGaussianBlur stdDeviation='3' result='b'/>
-      <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>
-    </filter>
-    <filter id='bigGlowFI' x='-100%' y='-100%' width='300%' height='300%'>
-      <feGaussianBlur stdDeviation='10'/>
-    </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width='250' height='190' fill='url(#bgFI)' rx='8'/>
-
-  <!-- Ambient glow zones -->
-  <ellipse cx='125' cy='45' rx='50' ry='45' fill='#e6591a' opacity='0.12' filter='url(#bigGlowFI)'/>
-  <ellipse cx='75' cy='110' rx='35' ry='32' fill='#e6591a' opacity='0.1' filter='url(#bigGlowFI)'/>
-  <ellipse cx='175' cy='110' rx='35' ry='32' fill='#e6591a' opacity='0.1' filter='url(#bigGlowFI)'/>
-
-  <!-- Connecting flame trails -->
-  <path d='M 115,72 Q 100,75 88,82 Q 82,86 76,89 L 78,92 Q 84,88 90,84 Q 102,79 116,75 Z' fill='url(#trailGFI)' opacity='0.5'/>
-  <path d='M 120,70 Q 108,74 96,80 Q 88,84 80,88' fill='none' stroke='#ff8800' stroke-width='1.5' opacity='0.3'/>
-  <path d='M 135,72 Q 150,75 162,82 Q 168,86 174,89 L 172,92 Q 166,88 160,84 Q 148,79 134,75 Z' fill='url(#trailGFI)' opacity='0.5'/>
-  <path d='M 130,70 Q 142,74 154,80 Q 162,84 170,88' fill='none' stroke='#ff8800' stroke-width='1.5' opacity='0.3'/>
-  <path d='M 68,128 Q 58,134 50,140 Q 46,143 42,145 L 44,148 Q 48,145 52,142 Q 60,136 70,130 Z' fill='url(#trailGFI)' opacity='0.4'/>
-  <path d='M 80,128 Q 90,134 100,140 Q 105,143 108,145 L 106,148 Q 102,145 98,142 Q 90,136 82,130 Z' fill='url(#trailGFI)' opacity='0.4'/>
-  <path d='M 170,128 Q 160,134 150,140 Q 145,143 142,145 L 144,148 Q 148,145 152,142 Q 160,136 168,130 Z' fill='url(#trailGFI)' opacity='0.4'/>
-  <path d='M 182,128 Q 192,134 202,140 Q 206,143 210,145 L 208,148 Q 204,145 200,142 Q 192,136 184,130 Z' fill='url(#trailGFI)' opacity='0.4'/>
-
-  <!-- Ember dots along trails -->
-  <circle cx='100' cy='80' r='1' fill='#ffe060' opacity='0.6' filter='url(#glowFI)'/>
-  <circle cx='88' cy='85' r='0.8' fill='#ff8800' opacity='0.5'/>
-  <circle cx='150' cy='80' r='1' fill='#ffe060' opacity='0.6' filter='url(#glowFI)'/>
-  <circle cx='162' cy='85' r='0.8' fill='#ff8800' opacity='0.5'/>
-  <circle cx='55' cy='138' r='0.8' fill='#ffaa30' opacity='0.5'/>
-  <circle cx='95' cy='138' r='0.8' fill='#ffaa30' opacity='0.5'/>
-  <circle cx='155' cy='138' r='0.8' fill='#ffaa30' opacity='0.5'/>
-  <circle cx='195' cy='138' r='0.8' fill='#ffaa30' opacity='0.5'/>
-
-  <!-- Large flame at top -->
-  <ellipse cx='125' cy='45' rx='22' ry='28' fill='url(#flameGFI)' opacity='0.3' filter='url(#bigGlowFI)'/>
-  <path d='M 107,75 Q 96,58 102,42 Q 106,32 114,34 Q 110,20 118,12 Q 125,5 132,12 Q 140,20 136,34 Q 144,32 148,42 Q 154,58 143,75 Z' fill='#c41a05' opacity='0.85'/>
-  <path d='M 111,73 Q 103,58 107,44 Q 111,35 117,37 Q 114,25 120,18 Q 125,13 130,18 Q 136,25 133,37 Q 139,35 143,44 Q 147,58 139,73 Z' fill='#e6591a' opacity='0.85'/>
-  <path d='M 115,70 Q 110,58 113,47 Q 117,39 121,41 Q 119,30 123,24 Q 125,20 127,24 Q 131,30 129,41 Q 133,39 137,47 Q 141,58 135,70 Z' fill='#ff8800' opacity='0.9'/>
-  <path d='M 119,67 Q 116,58 118,49 Q 121,42 124,44 Q 122,35 124,30 Q 125,27 126,30 Q 128,35 126,44 Q 129,42 132,49 Q 134,58 131,67 Z' fill='#ffaa30'/>
-  <ellipse cx='125' cy='48' rx='5' ry='14' fill='#ffe060' opacity='0.85'/>
-  <ellipse cx='125' cy='45' rx='3' ry='8' fill='#fff8e0' opacity='0.9'/>
-
-  <!-- Left medium flame -->
-  <ellipse cx='75' cy='108' rx='16' ry='20' fill='url(#flameGFI)' opacity='0.25' filter='url(#bigGlowFI)'/>
-  <path d='M 62,130 Q 54,116 58,104 Q 61,96 67,97 Q 65,88 70,83 Q 75,78 80,83 Q 85,88 83,97 Q 89,96 92,104 Q 96,116 88,130 Z' fill='#c41a05' opacity='0.85'/>
-  <path d='M 65,128 Q 59,116 62,106 Q 65,99 70,100 Q 68,92 72,87 Q 75,83 78,87 Q 82,92 80,100 Q 85,99 88,106 Q 91,116 85,128 Z' fill='#e6591a' opacity='0.85'/>
-  <path d='M 68,126 Q 64,116 66,108 Q 69,102 72,103 Q 70,96 73,92 Q 75,89 77,92 Q 80,96 78,103 Q 81,102 84,108 Q 87,116 82,126 Z' fill='#ff8800' opacity='0.9'/>
-  <ellipse cx='75' cy='110' rx='3.5' ry='10' fill='#ffe060' opacity='0.8'/>
-  <ellipse cx='75' cy='108' rx='2' ry='5' fill='#fff8e0' opacity='0.9'/>
-
-  <!-- Right medium flame -->
-  <ellipse cx='175' cy='108' rx='16' ry='20' fill='url(#flameGFI)' opacity='0.25' filter='url(#bigGlowFI)'/>
-  <path d='M 162,130 Q 154,116 158,104 Q 161,96 167,97 Q 165,88 170,83 Q 175,78 180,83 Q 185,88 183,97 Q 189,96 192,104 Q 196,116 188,130 Z' fill='#c41a05' opacity='0.85'/>
-  <path d='M 165,128 Q 159,116 162,106 Q 165,99 170,100 Q 168,92 172,87 Q 175,83 178,87 Q 182,92 180,100 Q 185,99 188,106 Q 191,116 185,128 Z' fill='#e6591a' opacity='0.85'/>
-  <path d='M 168,126 Q 164,116 166,108 Q 169,102 172,103 Q 170,96 173,92 Q 175,89 177,92 Q 180,96 178,103 Q 181,102 184,108 Q 187,116 182,126 Z' fill='#ff8800' opacity='0.9'/>
-  <ellipse cx='175' cy='110' rx='3.5' ry='10' fill='#ffe060' opacity='0.8'/>
-  <ellipse cx='175' cy='108' rx='2' ry='5' fill='#fff8e0' opacity='0.9'/>
-
-  <!-- Small flame 1 (bottom left) -->
-  <ellipse cx='45' cy='153' rx='11' ry='14' fill='url(#flameGFI)' opacity='0.2' filter='url(#glowFI)'/>
-  <path d='M 36,165 Q 31,156 34,148 Q 37,142 41,143 Q 39,137 42,133 Q 45,130 48,133 Q 51,137 49,143 Q 53,142 56,148 Q 59,156 54,165 Z' fill='#c41a05' opacity='0.8'/>
-  <path d='M 38,164 Q 35,156 37,150 Q 39,145 42,146 Q 40,141 43,138 Q 45,135 47,138 Q 49,141 47,146 Q 50,145 52,150 Q 54,156 50,164 Z' fill='#e6591a' opacity='0.8'/>
-  <path d='M 40,163 Q 38,156 40,151 Q 42,147 44,148 Q 43,143 45,140 Q 46,138 47,140 Q 48,143 46,148 Q 48,147 50,151 Q 52,156 49,163 Z' fill='#ff8800' opacity='0.85'/>
-  <ellipse cx='45' cy='155' rx='2' ry='6' fill='#ffe060' opacity='0.75'/>
-  <ellipse cx='45' cy='153' rx='1.2' ry='3' fill='#fff8e0' opacity='0.8'/>
-
-  <!-- Small flame 2 (bottom center-left) -->
-  <ellipse cx='108' cy='156' rx='11' ry='14' fill='url(#flameGFI)' opacity='0.2' filter='url(#glowFI)'/>
-  <path d='M 99,168 Q 94,159 97,151 Q 100,145 104,146 Q 102,140 105,136 Q 108,133 111,136 Q 114,140 112,146 Q 116,145 119,151 Q 122,159 117,168 Z' fill='#c41a05' opacity='0.8'/>
-  <path d='M 101,167 Q 98,159 100,153 Q 102,148 105,149 Q 103,144 106,141 Q 108,138 110,141 Q 112,144 110,149 Q 113,148 115,153 Q 117,159 113,167 Z' fill='#e6591a' opacity='0.8'/>
-  <path d='M 103,166 Q 101,159 103,154 Q 105,150 107,151 Q 106,146 108,143 Q 109,141 110,143 Q 111,146 109,151 Q 111,150 113,154 Q 115,159 112,166 Z' fill='#ff8800' opacity='0.85'/>
-  <ellipse cx='108' cy='158' rx='2' ry='6' fill='#ffe060' opacity='0.75'/>
-  <ellipse cx='108' cy='156' rx='1.2' ry='3' fill='#fff8e0' opacity='0.8'/>
-
-  <!-- Small flame 3 (bottom center-right) -->
-  <ellipse cx='145' cy='156' rx='11' ry='14' fill='url(#flameGFI)' opacity='0.2' filter='url(#glowFI)'/>
-  <path d='M 136,168 Q 131,159 134,151 Q 137,145 141,146 Q 139,140 142,136 Q 145,133 148,136 Q 151,140 149,146 Q 153,145 156,151 Q 159,159 154,168 Z' fill='#c41a05' opacity='0.8'/>
-  <path d='M 138,167 Q 135,159 137,153 Q 139,148 142,149 Q 140,144 143,141 Q 145,138 147,141 Q 149,144 147,149 Q 150,148 152,153 Q 154,159 150,167 Z' fill='#e6591a' opacity='0.8'/>
-  <path d='M 140,166 Q 138,159 140,154 Q 142,150 144,151 Q 143,146 145,143 Q 146,141 147,143 Q 148,146 146,151 Q 148,150 150,154 Q 152,159 149,166 Z' fill='#ff8800' opacity='0.85'/>
-  <ellipse cx='145' cy='158' rx='2' ry='6' fill='#ffe060' opacity='0.75'/>
-  <ellipse cx='145' cy='156' rx='1.2' ry='3' fill='#fff8e0' opacity='0.8'/>
-
-  <!-- Small flame 4 (bottom right) -->
-  <ellipse cx='208' cy='153' rx='11' ry='14' fill='url(#flameGFI)' opacity='0.2' filter='url(#glowFI)'/>
-  <path d='M 199,165 Q 194,156 197,148 Q 200,142 204,143 Q 202,137 205,133 Q 208,130 211,133 Q 214,137 212,143 Q 216,142 219,148 Q 222,156 217,165 Z' fill='#c41a05' opacity='0.8'/>
-  <path d='M 201,164 Q 198,156 200,150 Q 202,145 205,146 Q 203,141 206,138 Q 208,135 210,138 Q 212,141 210,146 Q 213,145 215,150 Q 217,156 213,164 Z' fill='#e6591a' opacity='0.8'/>
-  <path d='M 203,163 Q 201,156 203,151 Q 205,147 207,148 Q 206,143 208,140 Q 209,138 210,140 Q 211,143 209,148 Q 211,147 213,151 Q 215,156 212,163 Z' fill='#ff8800' opacity='0.85'/>
-  <ellipse cx='208' cy='155' rx='2' ry='6' fill='#ffe060' opacity='0.75'/>
-  <ellipse cx='208' cy='153' rx='1.2' ry='3' fill='#fff8e0' opacity='0.8'/>
-
-  <!-- Floating sparks -->
-  <circle cx='120' cy='90' r='0.6' fill='#ffe060' opacity='0.4'/>
-  <circle cx='130' cy='88' r='0.5' fill='#ff8800' opacity='0.3'/>
-  <circle cx='70' cy='145' r='0.5' fill='#ffaa30' opacity='0.3'/>
-  <circle cx='180' cy='145' r='0.5' fill='#ffaa30' opacity='0.3'/>
+  <rect width="250" height="190" fill="url(#bg2)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.05"/>
+  <circle cx="76.2" cy="85.3" r="1.2" fill="#c41a05" opacity="0.69"/>
+  <circle cx="221.2" cy="65.8" r="1.1" fill="#ff6600" opacity="0.66" filter="url(#glow1)"/>
+  <circle cx="94.3" cy="158.0" r="2.4" fill="#ff8800" opacity="0.59" filter="url(#glow1)"/>
+  <circle cx="110.6" cy="157.7" r="2.0" fill="#e6591a" opacity="0.33" filter="url(#glow1)"/>
+  <circle cx="194.1" cy="82.0" r="1.2" fill="#ff7a1a" opacity="0.30" filter="url(#glow1)"/>
+  <circle cx="69.1" cy="70.4" r="2.0" fill="#fff8e0" opacity="0.41"/>
+  <circle cx="27.9" cy="59.3" r="2.0" fill="#e6591a" opacity="0.58"/>
+  <circle cx="234.3" cy="54.7" r="1.7" fill="#e6591a" opacity="0.51"/>
+  <!-- Chain of spreading flames -->
+  <path d="M 50.0 150.0 Q 34.8 137.5 46.0 127.5 Q 47.6 117.5 51.5 100.0 Q 52.4 115.0 53.4 122.5 Q 59.3 135.0 50.0 150.0 Z" fill="url(#lin3)" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 90.0 120.0 Q 77.0 106.2 83.6 95.2 Q 87.4 84.2 93.3 65.0 Q 92.6 81.5 92.1 89.8 Q 103.5 103.5 90.0 120.0 Z" fill="url(#lin3)" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 130.0 90.0 Q 114.8 77.5 127.0 67.5 Q 127.6 57.5 132.5 40.0 Q 132.4 55.0 132.9 62.5 Q 145.4 75.0 130.0 90.0 Z" fill="url(#lin3)" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 170.0 60.0 Q 161.5 48.8 169.2 39.8 Q 168.0 30.8 173.2 15.0 Q 172.0 28.5 172.1 35.2 Q 182.1 46.5 170.0 60.0 Z" fill="url(#lin3)" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 200.0 30.0 Q 188.8 21.2 198.6 14.2 Q 198.4 7.2 202.5 -5.0 Q 201.6 5.5 201.3 10.8 Q 211.4 19.5 200.0 30.0 Z" fill="url(#lin3)" opacity="0.7" filter="url(#glow1)"/>
+  <!-- Connecting ember trails -->
+  <path d="M 50 100 Q 70.0 50 90 65" fill="none" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 90 65 Q 110.0 25 130 40" fill="none" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 130 40 Q 150.0 0 170 15" fill="none" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 170 15 Q 185.0 -20 200 -5" fill="none" stroke="#ff8800" stroke-width="1.5" opacity="0.4" filter="url(#glow1)"/>
+  <!-- Spreading embers -->
+  <circle cx="30" cy="160" r="1.5" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="65" cy="130" r="1" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="105" cy="100" r="1.5" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="145" cy="70" r="1" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="185" cy="40" r="1.5" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="215" cy="20" r="1" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
 </svg>

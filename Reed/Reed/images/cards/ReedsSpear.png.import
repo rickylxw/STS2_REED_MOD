@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3cbd61024705"
-path="res://.godot/imported/ReedsSpear.png-85b3d77ab3eab0d62ac0d6b43078292a.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/ReedsSpear.png"
-dest_files=["res://.godot/imported/ReedsSpear.png-85b3d77ab3eab0d62ac0d6b43078292a.ctex"]
 
 [params]
 

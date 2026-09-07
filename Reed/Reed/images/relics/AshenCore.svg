@@ -1,36 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
   <defs>
-    <radialGradient id="coreGlow" cx="50%" cy="55%" r="50%">
-      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.95"/>
-      <stop offset="40%" stop-color="#cc4400" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#331100" stop-opacity="1"/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <linearGradient id="ashGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#aaa" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#555" stop-opacity="0.3"/>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.8"/>
+      <stop offset="20%" stop-color="#ffe060" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="80%" stop-color="#e6591a" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#1a0d08" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lin5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a3a30"/>
+      <stop offset="50%" stop-color="#3a2a20"/>
+      <stop offset="100%" stop-color="#1a120a"/>
     </linearGradient>
   </defs>
-  <!-- 灰烬底座 -->
-  <ellipse cx="125" cy="165" rx="70" ry="14" fill="url(#ashGrad)" opacity="0.7"/>
-  <!-- 核心晶体 -->
-  <polygon points="125,55 160,100 145,150 105,150 90,100" fill="url(#coreGlow)" stroke="#ff6600" stroke-width="2"/>
-  <!-- 内部裂纹 -->
-  <line x1="125" y1="70" x2="125" y2="140" stroke="#ffaa00" stroke-width="1.5" opacity="0.6"/>
-  <line x1="100" y1="105" x2="150" y2="105" stroke="#ffaa00" stroke-width="1" opacity="0.4"/>
-  <!-- 灰烬粒子 -->
-  <circle cx="95" cy="80" r="3" fill="#888" opacity="0.5"/>
-  <circle cx="160" cy="90" r="2.5" fill="#777" opacity="0.4"/>
-  <circle cx="80" cy="120" r="2" fill="#999" opacity="0.3"/>
-  <circle cx="170" cy="130" r="3" fill="#777" opacity="0.4"/>
-  <circle cx="110" cy="75" r="2" fill="#aaa" opacity="0.3"/>
-  <circle cx="145" cy="80" r="2.5" fill="#888" opacity="0.4"/>
-  <circle cx="75" cy="140" r="2" fill="#999" opacity="0.3"/>
-  <circle cx="180" cy="110" r="2.5" fill="#888" opacity="0.3"/>
-  <!-- 上升火星 -->
-  <circle cx="125" cy="40" r="2" fill="#ff6600" opacity="0.8"/>
-  <circle cx="105" cy="30" r="1.5" fill="#ff8800" opacity="0.6"/>
-  <circle cx="145" cy="35" r="1.5" fill="#ff6600" opacity="0.5"/>
-  <circle cx="125" cy="20" r="1" fill="#ffaa00" opacity="0.4"/>
-  <!-- 光晕 -->
-  <circle cx="125" cy="100" r="50" fill="none" stroke="#ff6600" stroke-width="1" opacity="0.2"/>
+
+  <rect width="128" height="128" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="64.0" cy="64.0" rx="61.4" ry="53.8" fill="#e6591a" opacity="0.06"/>
+  <circle cx="37.2" cy="49.3" r="1.0" fill="#6a6a6a" opacity="0.57"/>
+  <circle cx="78.3" cy="80.9" r="1.2" fill="#6a6a6a" opacity="0.27"/>
+  <circle cx="62.3" cy="99.7" r="1.9" fill="#6a6a6a" opacity="0.49"/>
+  <circle cx="102.9" cy="51.7" r="1.9" fill="#5a5a5a" opacity="0.23"/>
+  <circle cx="48.6" cy="9.9" r="1.3" fill="#7a7a7a" opacity="0.23"/>
+  <circle cx="100.9" cy="53.4" r="0.7" fill="#999999" opacity="0.41"/>
+  <circle cx="14.1" cy="54.4" r="1.4" fill="#999999" opacity="0.24"/>
+  <circle cx="28.0" cy="99.3" r="1.3" fill="#4a4a4a" opacity="0.60"/>
+  <circle cx="80.6" cy="49.0" r="1.6" fill="#4a4a4a" opacity="0.34"/>
+  <circle cx="40.1" cy="118.0" r="1.1" fill="#6a6a6a" opacity="0.35"/>
+  <circle cx="68.0" cy="118.9" r="1.9" fill="#999999" opacity="0.41"/>
+  <circle cx="45.9" cy="49.6" r="1.1" fill="#555555" opacity="0.53"/>
+  <circle cx="57.1" cy="103.6" r="2.1" fill="#ffe060" opacity="0.28" filter="url(#glow1)"/>
+  <circle cx="28.3" cy="57.5" r="1.6" fill="#ff7a1a" opacity="0.35" filter="url(#glow1)"/>
+  <circle cx="28.0" cy="62.2" r="2.1" fill="#ff6600" opacity="0.44"/>
+  <circle cx="53.6" cy="24.6" r="0.5" fill="#ff7a1a" opacity="0.60" filter="url(#glow1)"/>
+  <circle cx="47.4" cy="114.4" r="1.0" fill="#fff8e0" opacity="0.51"/>
+  <circle cx="17.6" cy="99.2" r="0.7" fill="#e6591a" opacity="0.24" filter="url(#glow1)"/>
+  <!-- Outer shell -->
+  <path d="M 64 20 Q 30 25 25 55 Q 22 85 40 100 Q 55 110 64 108 Q 73 110 88 100 Q 106 85 103 55 Q 98 25 64 20 Z" fill="url(#lin5)" opacity="0.7" filter="url(#soft2)"/>
+  <!-- Cracks revealing core -->
+  <path d="M 40 40 Q 45 50 42 65" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 88 40 Q 83 50 86 65" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 64 25 Q 60 40 62 60" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 35 70 Q 45 80 40 95" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 93 70 Q 83 80 88 95" stroke="#ff8800" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glow1)"/>
+  <!-- Glowing core -->
+  <circle cx="64" cy="64" r="18" fill="url(#rad4)" filter="url(#glow1)"/>
+  <circle cx="64" cy="64" r="8" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="64" cy="64" r="3" fill="#fff8e0" opacity="0.9"/>
+  <line x1="64.0" y1="64.0" x2="73.7" y2="61.9" stroke="#ffcc40" stroke-width="1.4" opacity="0.73" filter="url(#glow1)"/>
+  <line x1="64.0" y1="64.0" x2="59.5" y2="77.6" stroke="#ffcc40" stroke-width="0.6" opacity="0.53"/>
+  <line x1="64.0" y1="64.0" x2="68.1" y2="71.1" stroke="#fff8e0" stroke-width="1.2" opacity="0.83"/>
+  <line x1="64.0" y1="64.0" x2="57.3" y2="57.6" stroke="#ff8800" stroke-width="0.6" opacity="0.44" filter="url(#glow1)"/>
+  <line x1="64.0" y1="64.0" x2="51.0" y2="64.5" stroke="#ffe060" stroke-width="1.7" opacity="0.56"/>
+  <line x1="64.0" y1="64.0" x2="66.0" y2="52.8" stroke="#fff8e0" stroke-width="0.8" opacity="0.82"/>
+  <line x1="64.0" y1="64.0" x2="69.0" y2="71.3" stroke="#ff8800" stroke-width="1.3" opacity="0.78"/>
+  <line x1="64.0" y1="64.0" x2="52.0" y2="60.7" stroke="#fff8e0" stroke-width="1.0" opacity="0.49" filter="url(#glow1)"/>
 </svg>

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bae368315f4a8"
-path="res://.godot/imported/Defend.png-2d3b689844c1253a6ddb94cebe1ce8c5.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/Defend.png"
-dest_files=["res://.godot/imported/Defend.png-2d3b689844c1253a6ddb94cebe1ce8c5.ctex"]
 
 [params]
 

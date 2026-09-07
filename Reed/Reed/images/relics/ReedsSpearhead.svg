@@ -1,68 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
   <defs>
-    <radialGradient id="bg-glow" cx="50%" cy="55%" r="60%">
-      <stop offset="0%" stop-color="#3a1a0a" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#120800" stop-opacity="1"/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <linearGradient id="blade-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/>
-      <stop offset="25%" stop-color="#ffc060" stop-opacity="1"/>
-      <stop offset="60%" stop-color="#e6591a" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#8a2a05" stop-opacity="1"/>
+    <linearGradient id="lin4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="30%" stop-color="#ffe060"/>
+      <stop offset="60%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
     </linearGradient>
-    <linearGradient id="flame-grad" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#e6591a" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#ffaa30" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#fff8a0" stop-opacity="0.3"/>
-    </linearGradient>
-    <radialGradient id="ember-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffcc40" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#e6591a" stop-opacity="0"/>
+    <radialGradient id="rad5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#e6591a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="128" height="128" fill="url(#bg-glow)" rx="8"/>
-
-  <!-- Outer decorative ring -->
-  <circle cx="64" cy="64" r="58" fill="none" stroke="#e6591a" stroke-width="1" stroke-opacity="0.25"/>
-
-  <!-- Background ember glow -->
-  <ellipse cx="64" cy="70" rx="30" ry="40" fill="url(#ember-glow)"/>
-
-  <!-- Flame aura behind spear -->
-  <path d="M 64 15 C 58 25 56 35 60 48 C 54 42 50 35 52 28 C 48 38 46 48 52 58 L 64 55 L 76 58 C 82 48 80 38 76 28 C 78 35 74 42 68 48 C 72 35 70 25 64 15 Z" fill="url(#flame-grad)" opacity="0.5"/>
-
-  <!-- Spearhead main blade -->
-  <path d="M 64 18 L 74 55 L 71 60 L 68 56 L 64 62 L 60 56 L 57 60 L 54 55 Z" fill="url(#blade-grad)" stroke="#fff8e0" stroke-width="0.5" stroke-opacity="0.6"/>
-
-  <!-- Spearhead inner highlight -->
-  <path d="M 64 24 L 69 50 L 64 55 L 59 50 Z" fill="#fff8e0" opacity="0.15"/>
-
-  <!-- Spearhead edge shine -->
-  <path d="M 64 18 L 66 40 L 64 45 L 62 40 Z" fill="#ffffff" opacity="0.2"/>
-
-  <!-- Socket/collar -->
-  <rect x="58" y="60" width="12" height="5" rx="1" fill="#3a1a0a" stroke="#e6591a" stroke-width="0.8"/>
-
-  <!-- Shaft -->
-  <rect x="61.5" y="65" width="5" height="35" fill="#4a2008" rx="0.5"/>
-  <rect x="62.5" y="65" width="1.5" height="35" fill="#6a3010" opacity="0.6"/>
-
-  <!-- Grip wrapping -->
-  <rect x="60" y="72" width="8" height="2" fill="#8a2a05"/>
-  <rect x="60" y="78" width="8" height="2" fill="#8a2a05"/>
-  <rect x="60" y="84" width="8" height="2" fill="#8a2a05"/>
-
-  <!-- Pommel -->
-  <circle cx="64" cy="102" r="5" fill="#3a1a0a" stroke="#e6591a" stroke-width="1.2"/>
-  <circle cx="64" cy="102" r="2" fill="#e6591a" opacity="0.7"/>
-
-  <!-- Small embers floating -->
-  <circle cx="45" cy="35" r="1.5" fill="#ffaa30" opacity="0.6"/>
-  <circle cx="83" cy="40" r="1" fill="#ffcc40" opacity="0.5"/>
-  <circle cx="40" cy="55" r="1.2" fill="#e6591a" opacity="0.4"/>
-  <circle cx="88" cy="58" r="0.8" fill="#ff8800" opacity="0.5"/>
-  <circle cx="50" cy="22" r="0.8" fill="#ffcc40" opacity="0.4"/>
-  <circle cx="78" cy="20" r="1" fill="#ffaa30" opacity="0.3"/>
+  <rect width="128" height="128" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="64.0" cy="64.0" rx="61.4" ry="53.8" fill="#e6591a" opacity="0.06"/>
+  <circle cx="92.5" cy="92.6" r="1.0" fill="#e6591a" opacity="0.46" filter="url(#glow1)"/>
+  <circle cx="27.4" cy="116.5" r="1.5" fill="#ffe060" opacity="0.27" filter="url(#glow1)"/>
+  <circle cx="39.4" cy="79.3" r="1.0" fill="#ffcc40" opacity="0.25"/>
+  <circle cx="67.8" cy="30.4" r="1.3" fill="#ff8800" opacity="0.24" filter="url(#glow1)"/>
+  <circle cx="104.1" cy="54.1" r="1.0" fill="#ffcc40" opacity="0.68"/>
+  <circle cx="110.1" cy="109.4" r="1.8" fill="#ff8800" opacity="0.64"/>
+  <circle cx="99.7" cy="83.3" r="1.2" fill="#ff7a1a" opacity="0.38"/>
+  <circle cx="13.5" cy="109.7" r="0.9" fill="#ffe060" opacity="0.21"/>
+  <ellipse cx="64" cy="64" rx="40" ry="40" fill="url(#rad5)" filter="url(#soft2)"/>
+  <!-- Spearhead -->
+  <path d="M 64 20 L 50 50 Q 48 70 52 85 L 64 100 L 76 85 Q 80 70 78 50 Z" fill="url(#lin4)" filter="url(#glow1)"/>
+  <!-- Spear midrib -->
+  <line x1="64" y1="24" x2="64" y2="96" stroke="#c41a05" stroke-width="1" opacity="0.5"/>
+  <!-- Spear highlight -->
+  <path d="M 64 20 L 57 50 Q 55 70 58 85 L 64 100 L 61 85 Q 58 70 60 50 Z" fill="#fff8e0" opacity="0.3"/>
+  <!-- Socket -->
+  <rect x="56" y="95" width="16" height="10" fill="#3a2010" rx="2"/>
+  <rect x="54" y="103" width="20" height="4" fill="#4a3020" rx="1"/>
+  <!-- Glowing tip -->
+  <circle cx="64" cy="22" r="5" fill="#fff8e0" opacity="0.8" filter="url(#glow1)"/>
+  <circle cx="64" cy="22" r="2" fill="#ffffff" opacity="0.9"/>
+  <line x1="64.0" y1="22.0" x2="68.2" y2="26.7" stroke="#ffcc40" stroke-width="1.5" opacity="0.42"/>
+  <line x1="64.0" y1="22.0" x2="62.1" y2="14.2" stroke="#fff8e0" stroke-width="0.7" opacity="0.69"/>
+  <line x1="64.0" y1="22.0" x2="55.9" y2="24.4" stroke="#ffe060" stroke-width="1.4" opacity="0.57"/>
+  <line x1="64.0" y1="22.0" x2="65.3" y2="16.7" stroke="#ffcc40" stroke-width="1.1" opacity="0.88" filter="url(#glow1)"/>
+  <line x1="64.0" y1="22.0" x2="72.9" y2="25.9" stroke="#ffcc40" stroke-width="1.7" opacity="0.82" filter="url(#glow1)"/>
+  <line x1="64.0" y1="22.0" x2="74.1" y2="24.1" stroke="#ffe060" stroke-width="1.4" opacity="0.48" filter="url(#glow1)"/>
 </svg>

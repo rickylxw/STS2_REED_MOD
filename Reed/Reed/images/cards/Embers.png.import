@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://524c3e84f8e8"
-path="res://.godot/imported/Embers.png-bab3ca31e9948c005bfc9cd326a6d783.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/Embers.png"
-dest_files=["res://.godot/imported/Embers.png-bab3ca31e9948c005bfc9cd326a6d783.ctex"]
 
 [params]
 

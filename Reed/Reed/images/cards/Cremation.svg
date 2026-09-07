@@ -1,151 +1,65 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='250' height='190' viewBox='0 0 250 190'>
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
   <defs>
-    <radialGradient id='bgCR' cx='50%' cy='50%' r='70%'>
-      <stop offset='0%' stop-color='#2a1815'/>
-      <stop offset='50%' stop-color='#1a0d08'/>
-      <stop offset='100%' stop-color='#0a0503'/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <linearGradient id='burnGrad' x1='0%' y1='100%' x2='0%' y2='0%'>
-      <stop offset='0%' stop-color='#8a8a8a'/>
-      <stop offset='20%' stop-color='#c4a060'/>
-      <stop offset='40%' stop-color='#ff8800'/>
-      <stop offset='65%' stop-color='#ffe060'/>
-      <stop offset='100%' stop-color='#fff8e0'/>
+    <linearGradient id="lin4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a2a1a"/>
+      <stop offset="50%" stop-color="#5a3a2a"/>
+      <stop offset="100%" stop-color="#3a2a1a"/>
     </linearGradient>
-    <radialGradient id='burnGlow' cx='50%' cy='50%' r='50%'>
-      <stop offset='0%' stop-color='#fff8e0' stop-opacity='0.9'/>
-      <stop offset='30%' stop-color='#ffe060' stop-opacity='0.5'/>
-      <stop offset='70%' stop-color='#ff8800' stop-opacity='0.2'/>
-      <stop offset='100%' stop-color='#c41a05' stop-opacity='0'/>
-    </radialGradient>
-    <radialGradient id='impactCR' cx='50%' cy='50%' r='50%'>
-      <stop offset='0%' stop-color='#fff8e0' stop-opacity='1'/>
-      <stop offset='20%' stop-color='#ffe060' stop-opacity='0.7'/>
-      <stop offset='50%' stop-color='#ff8800' stop-opacity='0.4'/>
-      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
-    </radialGradient>
-    <filter id='glowCR'>
-      <feGaussianBlur stdDeviation='3' result='blur'/>
-      <feMerge><feMergeNode in='blur'/><feMergeNode in='SourceGraphic'/></feMerge>
-    </filter>
-    <filter id='softCR'>
-      <feGaussianBlur stdDeviation='6' result='blur'/>
-      <feMerge><feMergeNode in='blur'/><feMergeNode in='SourceGraphic'/></feMerge>
-    </filter>
+    <linearGradient id="lin5" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8a2a05" stop-opacity="0.3"/>
+      <stop offset="30%" stop-color="#e6591a" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#ff8800" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffe060" stop-opacity="0.6"/>
+    </linearGradient>
   </defs>
 
-  <rect width='250' height='190' fill='url(#bgCR)' rx='8'/>
-
-  <!-- Atmospheric heat haze layers -->
-  <ellipse cx='125' cy='95' rx='120' ry='80' fill='#e6591a' opacity='0.05' filter='url(#softCR)'/>
-  <ellipse cx='125' cy='30' rx='80' ry='20' fill='#ff8800' opacity='0.04'/>
-  <ellipse cx='125' cy='160' rx='80' ry='20' fill='#c41a05' opacity='0.04'/>
-
-  <!-- central burning glow -->
-  <ellipse cx='125' cy='95' rx='70' ry='90' fill='url(#burnGlow)' filter='url(#softCR)' opacity='0.6'/>
-
-  <!-- Background ember particles -->
-  <circle cx='30' cy='35' r='1.5' fill='#ff8800' opacity='0.5' filter='url(#glowCR)'/>
-  <circle cx='55' cy='20' r='1' fill='#ffaa30' opacity='0.4'/>
-  <circle cx='200' cy='30' r='1.5' fill='#ff8800' opacity='0.5'/>
-  <circle cx='220' cy='60' r='1' fill='#ffaa30' opacity='0.4'/>
-  <circle cx='20' cy='90' r='1.2' fill='#e6591a' opacity='0.4'/>
-  <circle cx='235' cy='95' r='1' fill='#ff8800' opacity='0.4'/>
-  <circle cx='15' cy='130' r='0.8' fill='#c41a05' opacity='0.3'/>
-  <circle cx='225' cy='140' r='0.8' fill='#e6591a' opacity='0.3'/>
-  <circle cx='170' cy='15' r='0.8' fill='#ffe060' opacity='0.4'/>
-  <circle cx='80' cy='15' r='0.8' fill='#ffe060' opacity='0.4'/>
-
-  <!-- Motion lines (energy rising) -->
-  <line x1='85' y1='170' x2='80' y2='120' stroke='#e6591a' stroke-width='1' opacity='0.2'/>
-  <line x1='165' y1='170' x2='170' y2='120' stroke='#e6591a' stroke-width='1' opacity='0.2'/>
-  <line x1='70' y1='150' x2='65' y2='100' stroke='#ff8800' stroke-width='0.8' opacity='0.15'/>
-  <line x1='180' y1='150' x2='185' y2='100' stroke='#ff8800' stroke-width='0.8' opacity='0.15'/>
-  <line x1='50' y1='100' x2='45' y2='60' stroke='#ffaa30' stroke-width='0.8' opacity='0.15'/>
-  <line x1='200' y1='100' x2='205' y2='60' stroke='#ffaa30' stroke-width='0.8' opacity='0.15'/>
-
-  <!-- burning figure: a humanoid silhouette being consumed by flame -->
-  <g filter='url(#glowCR)'>
-    <!-- main flame column -->
-    <path d='M 100 170 Q 95 140 100 110 Q 95 80 105 50 Q 100 30 110 10 Q 115 5 120 15 Q 118 35 115 55 Q 120 35 122 15 Q 125 5 128 15 Q 130 35 135 55 Q 132 35 130 15 Q 135 5 140 15 Q 145 35 140 55 Q 150 80 145 110 Q 150 140 145 170 Z'
-          fill='url(#burnGrad)' opacity='0.8'/>
-
-    <!-- inner bright flame -->
-    <path d='M 115 170 Q 113 140 115 110 Q 113 80 118 50 Q 120 30 122 15 Q 125 10 128 15 Q 130 30 132 50 Q 137 80 135 110 Q 137 140 135 170 Z'
-          fill='#ffe060' opacity='0.6'/>
-
-    <!-- white-hot core -->
-    <path d='M 122 170 Q 121 140 122 110 Q 121 80 123 50 Q 124 30 125 15 Q 126 30 127 50 Q 129 80 128 110 Q 129 140 128 170 Z'
-          fill='#fff8e0' opacity='0.5'/>
-  </g>
-
-  <!-- flame tongues licking upward -->
-  <g filter='url(#glowCR)'>
-    <path d='M 100 60 Q 85 45 80 25 Q 75 10 80 0 Q 90 15 95 35 Q 90 50 100 55 Z' fill='#ff8800' opacity='0.6'/>
-    <path d='M 150 60 Q 165 45 170 25 Q 175 10 170 0 Q 160 15 155 35 Q 160 50 150 55 Z' fill='#ff8800' opacity='0.6'/>
-    <path d='M 108 40 Q 95 25 92 10 Q 90 0 95 0 Q 102 10 105 25 Q 100 35 108 38 Z' fill='#ffe060' opacity='0.5'/>
-    <path d='M 142 40 Q 155 25 158 10 Q 160 0 155 0 Q 148 10 145 25 Q 150 35 142 38 Z' fill='#ffe060' opacity='0.5'/>
-    <!-- additional small flame tongues -->
-    <path d='M 88 80 Q 75 65 72 50 Q 70 40 75 35 Q 82 50 85 65 Q 80 75 88 78 Z' fill='#e6591a' opacity='0.4'/>
-    <path d='M 162 80 Q 175 65 178 50 Q 180 40 175 35 Q 168 50 165 65 Q 170 75 162 78 Z' fill='#e6591a' opacity='0.4'/>
-  </g>
-
-  <!-- Spark burst at top of flame -->
-  <g filter='url(#glowCR)'>
-    <line x1='125' y1='8' x2='110' y2='-5' stroke='#fff8e0' stroke-width='1.2' opacity='0.7'/>
-    <line x1='125' y1='8' x2='125' y2='-8' stroke='#ffe060' stroke-width='1' opacity='0.6'/>
-    <line x1='125' y1='8' x2='140' y2='-5' stroke='#ffaa30' stroke-width='1' opacity='0.6'/>
-    <line x1='125' y1='8' x2='115' y2='0' stroke='#ff8800' stroke-width='0.8' opacity='0.5'/>
-    <line x1='125' y1='8' x2='135' y2='0' stroke='#ff8800' stroke-width='0.8' opacity='0.5'/>
-  </g>
-
-  <!-- impact glow at flame top -->
-  <circle cx='125' cy='10' r='20' fill='url(#impactCR)' filter='url(#glowCR)'/>
-
-  <!-- ash falling from the burning figure -->
-  <g>
-    <circle cx='80' cy='175' r='1.5' fill='#888888' opacity='0.5'/>
-    <circle cx='170' cy='173' r='1.5' fill='#888888' opacity='0.5'/>
-    <circle cx='65' cy='178' r='1' fill='#7a7a7a' opacity='0.4'/>
-    <circle cx='185' cy='176' r='1' fill='#7a7a7a' opacity='0.4'/>
-    <circle cx='90' cy='165' r='0.8' fill='#9a9a9a' opacity='0.3'/>
-    <circle cx='160' cy='165' r='0.8' fill='#9a9a9a' opacity='0.3'/>
-    <circle cx='55' cy='170' r='0.8' fill='#888888' opacity='0.25'/>
-    <circle cx='195' cy='168' r='0.8' fill='#888888' opacity='0.25'/>
-    <circle cx='100' cy='180' r='0.6' fill='#9a9a9a' opacity='0.2'/>
-    <circle cx='150' cy='178' r='0.6' fill='#9a9a9a' opacity='0.2'/>
-  </g>
-
-  <!-- rising embers (enriched) -->
-  <g filter='url(#glowCR)'>
-    <circle cx='115' cy='5' r='1.5' fill='#fff8e0' opacity='0.8'/>
-    <circle cx='125' cy='0' r='2' fill='#ffffff' opacity='0.9'/>
-    <circle cx='135' cy='5' r='1.5' fill='#fff8e0' opacity='0.8'/>
-    <circle cx='100' cy='15' r='1' fill='#ffe060' opacity='0.6'/>
-    <circle cx='150' cy='15' r='1' fill='#ffe060' opacity='0.6'/>
-    <circle cx='90' cy='35' r='0.8' fill='#ffaa30' opacity='0.5'/>
-    <circle cx='160' cy='35' r='0.8' fill='#ffaa30' opacity='0.5'/>
-    <circle cx='75' cy='55' r='0.8' fill='#ff8800' opacity='0.4'/>
-    <circle cx='175' cy='55' r='0.8' fill='#ff8800' opacity='0.4'/>
-  </g>
-
-  <!-- side embers -->
-  <circle cx='40' cy='90' r='1.2' fill='#ff8800' opacity='0.4' filter='url(#glowCR)'/>
-  <circle cx='210' cy='95' r='1.2' fill='#ff8800' opacity='0.4' filter='url(#glowCR)'/>
-  <circle cx='30' cy='130' r='1' fill='#e6591a' opacity='0.3'/>
-  <circle cx='220' cy='135' r='1' fill='#e6591a' opacity='0.3'/>
-  <circle cx='45' cy='160' r='0.8' fill='#c41a05' opacity='0.25'/>
-  <circle cx='205' cy='155' r='0.8' fill='#c41a05' opacity='0.25'/>
-
-  <!-- scorch marks at base -->
-  <ellipse cx='125' cy='178' rx='50' ry='8' fill='#1a0d08' opacity='0.5'/>
-  <ellipse cx='120' cy='176' rx='30' ry='5' fill='#0a0503' opacity='0.4'/>
-
-  <!-- Bottom ember glow -->
-  <ellipse cx='125' cy='185' rx='50' ry='5' fill='#8a2a05' opacity='0.2'/>
-  <circle cx='115' cy='183' r='1.2' fill='#ff8800' opacity='0.4'/>
-  <circle cx='135' cy='184' r='1' fill='#ffaa30' opacity='0.3'/>
-
-  <!-- Top ember glow -->
-  <ellipse cx='125' cy='5' rx='35' ry='4' fill='#8a2a05' opacity='0.15'/>
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.06"/>
+  <circle cx="49.8" cy="28.7" r="0.5" fill="#ff8800" opacity="0.26" filter="url(#glow1)"/>
+  <circle cx="58.6" cy="103.9" r="1.9" fill="#ff7a1a" opacity="0.48" filter="url(#glow1)"/>
+  <circle cx="121.9" cy="42.2" r="1.9" fill="#ff6600" opacity="0.24"/>
+  <circle cx="75.1" cy="42.3" r="2.4" fill="#e6591a" opacity="0.67" filter="url(#glow1)"/>
+  <circle cx="124.9" cy="163.8" r="1.2" fill="#ff8800" opacity="0.36"/>
+  <circle cx="185.8" cy="28.6" r="0.7" fill="#ff8800" opacity="0.65" filter="url(#glow1)"/>
+  <circle cx="107.8" cy="13.5" r="2.3" fill="#fff8e0" opacity="0.28"/>
+  <circle cx="180.6" cy="14.5" r="0.9" fill="#fff8e0" opacity="0.31" filter="url(#glow1)"/>
+  <circle cx="98.7" cy="99.3" r="1.4" fill="#c41a05" opacity="0.45" filter="url(#glow1)"/>
+  <circle cx="154.6" cy="77.1" r="0.7" fill="#ffe060" opacity="0.44" filter="url(#glow1)"/>
+  <!-- Pyre logs -->
+  <rect x="60" y="140" width="130" height="12" fill="url(#lin4)" rx="3" transform="rotate(-15 125 145)"/>
+  <rect x="60" y="140" width="130" height="12" fill="url(#lin4)" rx="3" transform="rotate(0 125 145)"/>
+  <rect x="60" y="140" width="130" height="12" fill="url(#lin4)" rx="3" transform="rotate(15 125 145)"/>
+  <!-- Flames rising from pyre -->
+  <path d="M 80.0 145.0 Q 65.8 125.0 72.8 109.0 Q 77.0 93.0 76.6 65.0 Q 83.0 89.0 86.4 101.0 Q 98.9 121.0 80.0 145.0 Z" fill="#ff8800" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 100.0 145.0 Q 82.0 120.0 91.6 100.0 Q 96.4 80.0 103.3 45.0 Q 103.6 75.0 104.1 90.0 Q 118.5 115.0 100.0 145.0 Z" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 125.0 145.0 Q 105.0 115.0 119.1 91.0 Q 120.6 67.0 125.4 25.0 Q 129.4 61.0 132.1 79.0 Q 149.0 109.0 125.0 145.0 Z" fill="#ff8800" opacity="0.8" filter="url(#glow1)"/>
+  <path d="M 150.0 145.0 Q 129.7 120.0 146.0 100.0 Q 146.4 80.0 146.6 45.0 Q 153.6 75.0 157.2 90.0 Q 166.4 115.0 150.0 145.0 Z" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 170.0 145.0 Q 156.5 125.0 167.2 109.0 Q 167.0 93.0 173.2 65.0 Q 173.0 89.0 174.1 101.0 Q 187.1 121.0 170.0 145.0 Z" fill="#ff8800" opacity="0.7" filter="url(#glow1)"/>
+  <!-- White-hot core -->
+  <path d="M 125.0 145.0 Q 113.8 125.0 120.0 109.0 Q 123.0 93.0 124.6 65.0 Q 127.0 89.0 130.0 101.0 Q 133.7 121.0 125.0 145.0 Z" fill="#fff8e0" opacity="0.5" filter="url(#glow1)"/>
+  <!-- Smoke rising -->
+  <path d="M 90 60 Q 98 40 90 20 Q 82 10 90 0" stroke="#3a1f15" stroke-width="2" fill="none" opacity="0.2" filter="url(#soft2)"/>
+  <path d="M 125 60 Q 133 40 125 20 Q 117 10 125 0" stroke="#3a1f15" stroke-width="2" fill="none" opacity="0.2" filter="url(#soft2)"/>
+  <path d="M 160 60 Q 168 40 160 20 Q 152 10 160 0" stroke="#3a1f15" stroke-width="2" fill="none" opacity="0.2" filter="url(#soft2)"/>
+  <!-- Ground scorch -->
+  <ellipse cx="125" cy="155" rx="80" ry="6" fill="#8a2a05" opacity="0.4"/>
 </svg>

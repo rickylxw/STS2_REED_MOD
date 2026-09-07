@@ -1,51 +1,45 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
   <defs>
-    <radialGradient id='esGlow' cx='50%' cy='50%' r='60%'>
-      <stop offset='0%' stop-color='#ff7a1a' stop-opacity='0.3'/>
-      <stop offset='100%' stop-color='#1a0d08' stop-opacity='0'/>
-    </radialGradient>
-    <radialGradient id='esCore' cx='50%' cy='50%' r='50%'>
-      <stop offset='0%' stop-color='#fff5cc'/>
-      <stop offset='30%' stop-color='#ffd24d'/>
-      <stop offset='70%' stop-color='#ff6b1a'/>
-      <stop offset='100%' stop-color='#c43d0e' stop-opacity='0'/>
-    </radialGradient>
-    <radialGradient id='esEmber' cx='50%' cy='50%' r='50%'>
-      <stop offset='0%' stop-color='#ffd24d'/>
-      <stop offset='60%' stop-color='#ff6b1a' stop-opacity='0.6'/>
-      <stop offset='100%' stop-color='#c43d0e' stop-opacity='0'/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
   </defs>
-  <rect width='64' height='64' fill='#1a0d08' rx='8'/>
-  <rect width='64' height='64' fill='url(#esGlow)' rx='8'/>
-  <!-- Spreading arrows/trails from center -->
-  <path d='M32 32 L14 14' stroke='#ff8a2a' stroke-width='1.5' stroke-opacity='0.35' stroke-linecap='round'/>
-  <path d='M32 32 L50 14' stroke='#ff8a2a' stroke-width='1.5' stroke-opacity='0.35' stroke-linecap='round'/>
-  <path d='M32 32 L14 50' stroke='#ff8a2a' stroke-width='1.5' stroke-opacity='0.35' stroke-linecap='round'/>
-  <path d='M32 32 L50 50' stroke='#ff8a2a' stroke-width='1.5' stroke-opacity='0.35' stroke-linecap='round'/>
-  <path d='M32 32 L8 32' stroke='#ff8a2a' stroke-width='1' stroke-opacity='0.25' stroke-linecap='round'/>
-  <path d='M32 32 L56 32' stroke='#ff8a2a' stroke-width='1' stroke-opacity='0.25' stroke-linecap='round'/>
-  <path d='M32 32 L32 8' stroke='#ff8a2a' stroke-width='1' stroke-opacity='0.25' stroke-linecap='round'/>
-  <path d='M32 32 L32 56' stroke='#ff8a2a' stroke-width='1' stroke-opacity='0.25' stroke-linecap='round'/>
-  <!-- Spreading ember particles -->
-  <circle cx='16' cy='16' r='3' fill='url(#esEmber)'/>
-  <circle cx='16' cy='16' r='1' fill='#ffd24d' opacity='0.8'/>
-  <circle cx='48' cy='16' r='2.5' fill='url(#esEmber)'/>
-  <circle cx='48' cy='16' r='0.8' fill='#ffd24d' opacity='0.8'/>
-  <circle cx='16' cy='48' r='2.5' fill='url(#esEmber)'/>
-  <circle cx='16' cy='48' r='0.8' fill='#ffd24d' opacity='0.8'/>
-  <circle cx='48' cy='48' r='3' fill='url(#esEmber)'/>
-  <circle cx='48' cy='48' r='1' fill='#ffd24d' opacity='0.8'/>
-  <circle cx='10' cy='32' r='2' fill='url(#esEmber)' opacity='0.7'/>
-  <circle cx='54' cy='32' r='2' fill='url(#esEmber)' opacity='0.7'/>
-  <circle cx='32' cy='10' r='1.5' fill='url(#esEmber)' opacity='0.6'/>
-  <circle cx='32' cy='54' r='1.5' fill='url(#esEmber)' opacity='0.6'/>
-  <!-- Central core ember -->
-  <circle cx='32' cy='32' r='6' fill='url(#esCore)'/>
-  <circle cx='32' cy='32' r='2.5' fill='#fff5cc' opacity='0.9'/>
-  <!-- Connecting curve trails -->
-  <path d='M20 20 Q26 24 30 30' fill='none' stroke='#ff9d3a' stroke-width='0.8' stroke-opacity='0.3'/>
-  <path d='M44 20 Q38 24 34 30' fill='none' stroke='#ff9d3a' stroke-width='0.8' stroke-opacity='0.3'/>
-  <path d='M20 44 Q26 40 30 34' fill='none' stroke='#ff9d3a' stroke-width='0.8' stroke-opacity='0.3'/>
-  <path d='M44 44 Q38 40 34 34' fill='none' stroke='#ff9d3a' stroke-width='0.8' stroke-opacity='0.3'/>
+
+  <rect width="64" height="64" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="32.0" cy="32.0" rx="30.7" ry="26.9" fill="#e6591a" opacity="0.06"/>
+  <circle cx="17.7" cy="43.8" r="0.6" fill="#ff6600" opacity="0.66"/>
+  <circle cx="20.0" cy="11.9" r="2.5" fill="#ff7a1a" opacity="0.46"/>
+  <circle cx="29.3" cy="47.2" r="2.2" fill="#c41a05" opacity="0.58" filter="url(#glow1)"/>
+  <circle cx="9.5" cy="38.2" r="2.3" fill="#ffcc40" opacity="0.56" filter="url(#glow1)"/>
+  <circle cx="22.3" cy="33.6" r="2.5" fill="#ffcc40" opacity="0.60" filter="url(#glow1)"/>
+  <circle cx="19.0" cy="47.4" r="0.9" fill="#c41a05" opacity="0.43"/>
+  <circle cx="26.1" cy="30.3" r="1.7" fill="#fff8e0" opacity="0.42" filter="url(#glow1)"/>
+  <circle cx="40.8" cy="53.5" r="0.6" fill="#ff7a1a" opacity="0.49"/>
+  <circle cx="32" cy="32" r="15" fill="#ff8800" opacity="0.3" filter="url(#soft2)"/>
+  <circle cx="20" cy="20" r="3" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="44" cy="20" r="3" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="20" cy="44" r="3" fill="#e6591a" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="44" cy="44" r="3" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="32" cy="18" r="2.5" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="32" cy="46" r="2.5" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <circle cx="18" cy="32" r="2.5" fill="#ffe060" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="46" cy="32" r="2.5" fill="#ffe060" opacity="0.4" filter="url(#glow1)"/>
+  <circle cx="32" cy="32" r="4" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="32" cy="32" r="1.5" fill="#ffffff" opacity="0.9"/>
 </svg>

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4aa152f8a8fb"
-path="res://.godot/imported/BreathOfCalamity.png-fbfb86fc790c42a879e6289f5c193cbe.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/BreathOfCalamity.png"
-dest_files=["res://.godot/imported/BreathOfCalamity.png-fbfb86fc790c42a879e6289f5c193cbe.ctex"]
 
 [params]
 

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbb450430c03"
-path="res://.godot/imported/SearingPierce.png-9b243db0508e038e0a2343a4cb8f59fc.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/SearingPierce.png"
-dest_files=["res://.godot/imported/SearingPierce.png-9b243db0508e038e0a2343a4cb8f59fc.ctex"]
 
 [params]
 

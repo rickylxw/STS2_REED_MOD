@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://be2be5021ad"
-path="res://.godot/imported/FlameInheritance.png-290564c1811382db9b9b4960e3482598.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/FlameInheritance.png"
-dest_files=["res://.godot/imported/FlameInheritance.png-290564c1811382db9b9b4960e3482598.ctex"]
 
 [params]
 

@@ -1,61 +1,44 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
   <defs>
-    <radialGradient id='bgDLP' cx='50%' cy='50%' r='60%'>
-      <stop offset='0%' stop-color='#2a1505'/>
-      <stop offset='60%' stop-color='#1a0d08'/>
-      <stop offset='100%' stop-color='#0a0503'/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <linearGradient id='dragonDLP' x1='0%' y1='0%' x2='0%' y2='100%'>
-      <stop offset='0%' stop-color='#ffaa00'/>
-      <stop offset='50%' stop-color='#ff8800'/>
-      <stop offset='100%' stop-color='#8a2a05'/>
-    </linearGradient>
-    <radialGradient id='glowDLP' cx='50%' cy='50%' r='50%'>
-      <stop offset='0%' stop-color='#ff8800' stop-opacity='0.5'/>
-      <stop offset='50%' stop-color='#e6591a' stop-opacity='0.2'/>
-      <stop offset='100%' stop-color='#8a2a05' stop-opacity='0'/>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe060" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id='eyeDLP' cx='50%' cy='50%' r='50%'>
-      <stop offset='0%' stop-color='#fff8e0'/>
-      <stop offset='40%' stop-color='#ffe060'/>
-      <stop offset='80%' stop-color='#ff8800'/>
-      <stop offset='100%' stop-color='#c41a05' stop-opacity='0'/>
-    </radialGradient>
-    <filter id='glowDLPf'><feGaussianBlur stdDeviation='2' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter>
   </defs>
 
-  <rect width='64' height='64' fill='url(#bgDLP)' rx='8'/>
-  <ellipse cx='32' cy='30' rx='28' ry='28' fill='url(#glowDLP)' filter='url(#glowDLPf)'/>
-
-  <!-- decorative ring -->
-  <circle cx='32' cy='30' r='26' fill='none' stroke='#e6591a' stroke-width='0.8' opacity='0.2'/>
-  <circle cx='32' cy='30' r='23' fill='none' stroke='#8a2a05' stroke-width='0.5' opacity='0.15'/>
-
-  <!-- dragon head silhouette (stylized, facing left) -->
-  <path d='M 44 20 C 46 15 42 11 37 12 C 33 13 30 11 26 13 C 21 15 17 17 15 22 C 13 26 14 29 16 30 C 12 32 11 37 14 40 C 16 42 20 41 22 38 C 23 42 27 44 31 43 C 35 42 39 39 41 35 C 43 31 44 25 44 20 Z' fill='url(#dragonDLP)' stroke='#c41a05' stroke-width='0.4' opacity='0.9'/>
-
-  <!-- snout -->
-  <path d='M 15 22 C 11 23 9 26 10 28 C 11 29 13 28 15 26 L 17 24 Z' fill='url(#dragonDLP)' stroke='#8a2a05' stroke-width='0.3' opacity='0.85'/>
-
-  <!-- horns -->
-  <path d='M 38 12 L 41 5 L 43 7 L 39 14 Z' fill='url(#dragonDLP)' stroke='#8a2a05' stroke-width='0.3' opacity='0.85'/>
-  <path d='M 33 13 L 35 7 L 37 8 L 34 15 Z' fill='url(#dragonDLP)' stroke='#8a2a05' stroke-width='0.3' opacity='0.8'/>
-
-  <!-- eye -->
-  <ellipse cx='34' cy='23' rx='2.5' ry='1.8' fill='url(#eyeDLP)' filter='url(#glowDLPf)'/>
-  <ellipse cx='34' cy='23' rx='1' ry='1.5' fill='#000000' opacity='0.7'/>
-
-  <!-- scale detail -->
-  <path d='M 28 20 Q 30 22 32 20 Q 31 23 30 21 Q 29 23 28 20 Z' fill='#ffaa00' opacity='0.4'/>
-  <path d='M 33 20 Q 35 22 37 20 Q 36 23 35 21 Q 34 23 33 20 Z' fill='#ffaa00' opacity='0.4'/>
-
-  <!-- strength symbol (flexed arm / muscle below dragon) -->
-  <path d='M 22 48 Q 20 52 24 56 Q 28 58 32 56 Q 36 58 40 56 Q 44 52 42 48 Q 40 50 38 49 Q 36 48 34 49 Q 32 48 30 49 Q 28 48 26 49 Q 24 50 22 48 Z' fill='#ff8800' opacity='0.7' filter='url(#glowDLPf)'/>
-  <path d='M 25 50 L 27 54 M 32 50 L 32 55 M 39 50 L 37 54' fill='none' stroke='#ffe060' stroke-width='0.6' opacity='0.5'/>
-
-  <!-- embers -->
-  <circle cx='10' cy='15' r='1' fill='#ffe060' opacity='0.5' filter='url(#glowDLPf)'/>
-  <circle cx='52' cy='18' r='0.8' fill='#ff8800' opacity='0.4'/>
-  <circle cx='50' cy='40' r='1' fill='#ffaa00' opacity='0.35'/>
-  <circle cx='12' cy='45' r='0.8' fill='#c41a05' opacity='0.3'/>
+  <rect width="64" height="64" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="32.0" cy="32.0" rx="30.7" ry="26.9" fill="#e6591a" opacity="0.06"/>
+  <circle cx="22.4" cy="22.0" r="2.2" fill="#fff8e0" opacity="0.27" filter="url(#glow1)"/>
+  <circle cx="32.5" cy="48.1" r="1.7" fill="#c41a05" opacity="0.68" filter="url(#glow1)"/>
+  <circle cx="50.5" cy="34.6" r="2.2" fill="#fff8e0" opacity="0.64"/>
+  <circle cx="24.8" cy="50.4" r="0.9" fill="#c41a05" opacity="0.42" filter="url(#glow1)"/>
+  <circle cx="33.6" cy="20.6" r="1.3" fill="#c41a05" opacity="0.21" filter="url(#glow1)"/>
+  <circle cx="13.7" cy="12.9" r="2.4" fill="#ff6600" opacity="0.59"/>
+  <ellipse cx="32" cy="32" rx="25" ry="22" fill="url(#rad4)" filter="url(#soft2)"/>
+  <path d="M 16 40 Q 14 28 20 22 Q 26 18 32 16 Q 38 18 44 22 Q 50 28 48 40 Q 40 42 32 40 Q 24 42 16 40 Z" fill="#0d0604" opacity="0.5" filter="url(#soft2)"/>
+  <circle cx="22" cy="28" r="2" fill="#ffe060" opacity="0.8" filter="url(#glow1)"/>
+  <circle cx="22" cy="28" r="1" fill="#fff8e0" opacity="0.9"/>
+  <path d="M 21 36 Q 24 34 27 36 Q 24 38 21 36 Z" fill="#ff8800" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 29 34 Q 32 32 35 34 Q 32 36 29 34 Z" fill="#ff8800" opacity="0.4" filter="url(#glow1)"/>
+  <path d="M 37 36 Q 40 34 43 36 Q 40 38 37 36 Z" fill="#ff8800" opacity="0.4" filter="url(#glow1)"/>
 </svg>

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6f26fea0c4a5"
-path="res://.godot/imported/DragonbloodBoiling.png-a7ba00b506c0d0d81febac620e978ebe.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/DragonbloodBoiling.png"
-dest_files=["res://.godot/imported/DragonbloodBoiling.png-a7ba00b506c0d0d81febac620e978ebe.ctex"]
 
 [params]
 

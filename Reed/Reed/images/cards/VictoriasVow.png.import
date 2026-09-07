@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hgj2ka2g13o"
-path="res://.godot/imported/VictoriasVow.png-a7b344e969bf43c3bc526d652d919675.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/VictoriasVow.png"
-dest_files=["res://.godot/imported/VictoriasVow.png-a7b344e969bf43c3bc526d652d919675.ctex"]
 
 [params]
 

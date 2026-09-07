@@ -1,115 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
   <defs>
-    <radialGradient id="bgShield" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#241c1a"/>
-      <stop offset="40%" stop-color="#16100e"/>
-      <stop offset="100%" stop-color="#070504"/>
-    </radialGradient>
-    <linearGradient id="cinderShield" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7a6a5a"/>
-      <stop offset="30%" stop-color="#5a4a3a"/>
-      <stop offset="60%" stop-color="#3a2c22"/>
-      <stop offset="100%" stop-color="#1f1814"/>
-    </linearGradient>
-    <linearGradient id="cinderDark" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4a3a2c"/>
-      <stop offset="50%" stop-color="#2a1e14"/>
-      <stop offset="100%" stop-color="#15100d"/>
-    </linearGradient>
-    <radialGradient id="emberCoreShield" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
-      <stop offset="35%" stop-color="#ff8800" stop-opacity="0.4"/>
-      <stop offset="75%" stop-color="#c41a05" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#5a1a05" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="ashParticleShield" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8a807a" stop-opacity="0.8"/>
-      <stop offset="60%" stop-color="#4a423c" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#251e1a" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="emberCrackShield" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffe060" stop-opacity="0.7"/>
-      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#c41a05" stop-opacity="0.2"/>
-    </linearGradient>
-    <filter id="glowShield">
+    <filter id="glow1">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="bigGlowShield">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <radialGradient id="bg2" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <linearGradient id="lin3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a3a2a"/>
+      <stop offset="30%" stop-color="#3a2a20"/>
+      <stop offset="60%" stop-color="#2a1a10"/>
+      <stop offset="100%" stop-color="#1a0d08"/>
+    </linearGradient>
+    <linearGradient id="lin4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#e6591a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="lin5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="50%" stop-color="#ffcc40"/>
+      <stop offset="100%" stop-color="#ff6600"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="250" height="190" fill="url(#bgShield)" rx="8"/>
-
-  <!-- Ember glow behind shield -->
-  <ellipse cx="125" cy="100" rx="65" ry="80" fill="url(#emberCoreShield)" opacity="0.18" filter="url(#bigGlowShield)"/>
-
-  <!-- Shield aura rings -->
-  <ellipse cx="125" cy="95" rx="72" ry="78" fill="none" stroke="#4a423c" stroke-width="1" opacity="0.25" filter="url(#glowShield)"/>
-  <ellipse cx="125" cy="95" rx="60" ry="66" fill="none" stroke="#5a504a" stroke-width="0.8" opacity="0.2" filter="url(#glowShield)"/>
-
-  <!-- Main shield shape (cinder/ash formed) -->
-  <path d="M 125 35 L 175 55 L 175 100 Q 175 130 155 150 Q 140 162 125 168 Q 110 162 95 150 Q 75 130 75 100 L 75 55 Z"
-        fill="url(#cinderShield)" stroke="#2a221c" stroke-width="1.5"/>
-
-  <!-- Shield inner border -->
-  <path d="M 125 45 L 165 60 L 165 100 Q 165 125 150 142 Q 138 152 125 158 Q 112 152 100 142 Q 85 125 85 100 L 85 60 Z"
-        fill="none" stroke="#3a302a" stroke-width="1" opacity="0.6"/>
-
-  <!-- Shield center boss (ember gem) -->
-  <ellipse cx="125" cy="100" rx="18" ry="22" fill="url(#cinderDark)" stroke="#4a423c" stroke-width="1"/>
-  <ellipse cx="125" cy="100" rx="12" ry="15" fill="url(#emberCoreShield)" opacity="0.7" filter="url(#glowShield)"/>
-  <circle cx="125" cy="100" r="5" fill="#ffe060" opacity="0.7" filter="url(#glowShield)"/>
-  <circle cx="125" cy="100" r="2" fill="#fff8e0" opacity="0.85" filter="url(#glowShield)"/>
-
-  <!-- Vertical ridge line -->
-  <path d="M 125 45 L 125 158" stroke="#3a302a" stroke-width="1" opacity="0.5"/>
-
-  <!-- Horizontal band lines -->
-  <path d="M 85 75 Q 125 70 165 75" stroke="#3a302a" stroke-width="1" fill="none" opacity="0.5"/>
-  <path d="M 82 100 Q 125 96 168 100" stroke="#3a302a" stroke-width="1" fill="none" opacity="0.5"/>
-  <path d="M 85 125 Q 125 130 165 125" stroke="#3a302a" stroke-width="1" fill="none" opacity="0.5"/>
-
-  <!-- Ember cracks in shield surface -->
-  <path d="M 100 65 Q 105 80 102 95" stroke="url(#emberCrackShield)" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowShield)"/>
-  <path d="M 150 65 Q 145 80 148 95" stroke="url(#emberCrackShield)" stroke-width="1" fill="none" opacity="0.5" filter="url(#glowShield)"/>
-  <path d="M 95 120 Q 105 135 110 145" stroke="url(#emberCrackShield)" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowShield)"/>
-  <path d="M 155 120 Q 145 135 140 145" stroke="url(#emberCrackShield)" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowShield)"/>
-  <path d="M 110 55 L 115 70" stroke="url(#emberCrackShield)" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowShield)"/>
-  <path d="M 140 55 L 135 70" stroke="url(#emberCrackShield)" stroke-width="0.8" fill="none" opacity="0.4" filter="url(#glowShield)"/>
-
-  <!-- Ember glow nodes on shield -->
-  <circle cx="102" cy="90" r="2.5" fill="url(#emberCoreShield)" opacity="0.6" filter="url(#glowShield)"/>
-  <circle cx="148" cy="90" r="2.5" fill="url(#emberCoreShield)" opacity="0.6" filter="url(#glowShield)"/>
-  <circle cx="105" cy="125" r="2" fill="url(#emberCoreShield)" opacity="0.5" filter="url(#glowShield)"/>
-  <circle cx="145" cy="125" r="2" fill="url(#emberCoreShield)" opacity="0.5" filter="url(#glowShield)"/>
-
-  <!-- Ash particles around shield -->
-  <circle cx="50" cy="50" r="2.5" fill="url(#ashParticleShield)" opacity="0.55"/>
-  <circle cx="200" cy="50" r="2.5" fill="url(#ashParticleShield)" opacity="0.55"/>
-  <circle cx="40" cy="95" r="2" fill="url(#ashParticleShield)" opacity="0.5"/>
-  <circle cx="210" cy="95" r="2" fill="url(#ashParticleShield)" opacity="0.5"/>
-  <circle cx="50" cy="140" r="2.5" fill="url(#ashParticleShield)" opacity="0.55"/>
-  <circle cx="200" cy="140" r="2.5" fill="url(#ashParticleShield)" opacity="0.55"/>
-
-  <!-- Fine ash dust -->
-  <circle cx="65" cy="35" r="1" fill="#6a605a" opacity="0.4"/>
-  <circle cx="185" cy="35" r="1" fill="#6a605a" opacity="0.4"/>
-  <circle cx="60" cy="165" r="1" fill="#6a605a" opacity="0.4"/>
-  <circle cx="190" cy="165" r="1" fill="#6a605a" opacity="0.4"/>
-  <circle cx="30" cy="70" r="0.8" fill="#4a423c" opacity="0.35"/>
-  <circle cx="220" cy="70" r="0.8" fill="#4a423c" opacity="0.35"/>
-
-  <!-- Ground ash shadow -->
-  <ellipse cx="125" cy="175" rx="45" ry="4" fill="#1a1410" opacity="0.45" filter="url(#glowShield)"/>
+  <rect width="250" height="190" fill="url(#bg2)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.05"/>
+  <circle cx="33.3" cy="56.9" r="1.1" fill="#ffcc40" opacity="0.51" filter="url(#glow1)"/>
+  <circle cx="55.2" cy="161.2" r="1.6" fill="#ff8800" opacity="0.29"/>
+  <circle cx="106.4" cy="92.3" r="2.2" fill="#ff8800" opacity="0.53" filter="url(#glow1)"/>
+  <circle cx="186.1" cy="19.9" r="1.1" fill="#ff7a1a" opacity="0.57" filter="url(#glow1)"/>
+  <circle cx="239.2" cy="13.2" r="1.0" fill="#ff8800" opacity="0.47"/>
+  <circle cx="47.5" cy="28.6" r="1.6" fill="#e6591a" opacity="0.41"/>
+  <circle cx="52.2" cy="32.3" r="1.5" fill="#ff6600" opacity="0.31" filter="url(#glow1)"/>
+  <circle cx="62.4" cy="97.0" r="0.8" fill="#e6591a" opacity="0.33"/>
+  <!-- Dome base -->
+  <path d="M 40 160 Q 125 40 210 160 Z" fill="url(#lin3)" stroke="#1a0d08" stroke-width="1"/>
+  <!-- Crystal facets -->
+  <path d="M 85 85.0 L 125 -45 L 165 85.0 Z" fill="url(#lin4)" opacity="0.3" filter="url(#glow1)"/>
+  <path d="M 50 111.0 L 80 20 L 110 111.0 Z" fill="url(#lin4)" opacity="0.3" filter="url(#glow1)"/>
+  <path d="M 140 111.0 L 170 20 L 200 111.0 Z" fill="url(#lin4)" opacity="0.3" filter="url(#glow1)"/>
+  <path d="M 35 139.0 L 60 100 L 85 139.0 Z" fill="url(#lin4)" opacity="0.3" filter="url(#glow1)"/>
+  <path d="M 165 139.0 L 190 100 L 215 139.0 Z" fill="url(#lin4)" opacity="0.3" filter="url(#glow1)"/>
+  <!-- Glowing cracks between facets -->
+  <path d="M 40 160 L 80 100 L 125 55 L 170 100 L 210 160" fill="none" stroke="url(#lin5)" stroke-width="1.5" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 80 100 L 80 160 M 125 55 L 125 160 M 170 100 L 170 160" fill="none" stroke="url(#lin5)" stroke-width="1" opacity="0.5" filter="url(#glow1)"/>
+  <!-- Central core -->
+  <circle cx="125" cy="110" r="10" fill="#ff8800" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="125" cy="110" r="3" fill="#fff8e0" opacity="0.9"/>
 </svg>

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2b3cc03eea2b"
-path="res://.godot/imported/Wildfire.png-d1d8619dd05fc594c567d40a25f465bf.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/Wildfire.png"
-dest_files=["res://.godot/imported/Wildfire.png-d1d8619dd05fc594c567d40a25f465bf.ctex"]
 
 [params]
 

@@ -1,99 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
   <defs>
-    <radialGradient id="bg-victoria" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#2a1208" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#0e0500" stop-opacity="1"/>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
     </radialGradient>
-    <linearGradient id="torch-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#5a3020" stop-opacity="1"/>
-      <stop offset="50%" stop-color="#3a1808" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#1a0800" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="flame-outer" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#e6591a" stop-opacity="0.95"/>
-      <stop offset="40%" stop-color="#ff8800" stop-opacity="0.9"/>
-      <stop offset="70%" stop-color="#ffcc40" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#fff8a0" stop-opacity="0.3"/>
-    </linearGradient>
-    <linearGradient id="flame-inner" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#ffe060" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
-    </linearGradient>
-    <radialGradient id="flame-core" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="40%" stop-color="#ffe060" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#ffe060" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#ff8800" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="metal-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3a2010" stop-opacity="1"/>
-      <stop offset="50%" stop-color="#6a3a18" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#2a1005" stop-opacity="1"/>
+    <linearGradient id="lin5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe060"/>
+      <stop offset="50%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#e6591a"/>
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="128" height="128" fill="url(#bg-victoria)" rx="8"/>
-
-  <!-- Decorative ring -->
-  <circle cx="64" cy="64" r="58" fill="none" stroke="#e6591a" stroke-width="1" stroke-opacity="0.2"/>
-  <circle cx="64" cy="64" r="52" fill="none" stroke="#e6591a" stroke-width="0.5" stroke-opacity="0.1"/>
-
-  <!-- Heraldic shield behind torch -->
-  <path d="M 64 18 L 96 28 L 96 64 C 96 80 82 92 64 96 C 46 92 32 80 32 64 L 32 28 Z" fill="#1a0d08" stroke="#e6591a" stroke-width="1.5" stroke-opacity="0.4"/>
-
-  <!-- Shield inner border -->
-  <path d="M 64 22 L 92 30 L 92 62 C 92 77 80 88 64 92 C 48 88 36 77 36 62 L 36 30 Z" fill="none" stroke="#e6591a" stroke-width="0.5" stroke-opacity="0.3"/>
-
-  <!-- Torch handle -->
-  <rect x="60" y="70" width="8" height="28" rx="1" fill="url(#torch-grad)"/>
-  <rect x="61" y="70" width="2" height="28" fill="#5a2810" opacity="0.5"/>
-
-  <!-- Torch handle wrapping -->
-  <rect x="59" y="76" width="10" height="2" fill="#3a1005" opacity="0.8"/>
-  <rect x="59" y="82" width="10" height="2" fill="#3a1005" opacity="0.8"/>
-  <rect x="59" y="88" width="10" height="2" fill="#3a1005" opacity="0.8"/>
-
-  <!-- Torch cup/bowl -->
-  <path d="M 52 64 L 52 72 L 76 72 L 76 64 L 72 60 L 56 60 Z" fill="url(#metal-grad)" stroke="#e6591a" stroke-width="0.8" stroke-opacity="0.5"/>
-
-  <!-- Torch cup highlight -->
-  <path d="M 54 62 L 54 68 L 74 68 L 74 62 Z" fill="#4a2810" opacity="0.3"/>
-
-  <!-- Torch cup rim -->
-  <rect x="52" y="63" width="24" height="2" fill="#6a3818" opacity="0.6"/>
-
-  <!-- Outer flame -->
-  <path d="M 64 12 C 55 20 48 30 50 42 C 45 38 43 30 46 24 C 40 34 38 46 44 56 C 40 52 36 44 38 36 C 32 48 32 62 42 68 L 64 62 L 86 68 C 96 62 96 48 90 36 C 92 44 88 52 84 56 C 90 46 88 34 82 24 C 85 30 83 38 78 42 C 80 30 73 20 64 12 Z" fill="url(#flame-outer)" opacity="0.85"/>
-
-  <!-- Inner flame -->
-  <path d="M 64 20 C 58 28 54 36 56 46 C 52 42 50 36 52 30 C 48 38 48 50 54 58 C 50 54 48 48 50 42 C 46 52 48 62 56 66 L 64 62 L 72 66 C 80 62 82 52 78 42 C 80 48 78 54 74 58 C 80 50 80 38 76 30 C 78 36 76 42 72 46 C 74 36 70 28 64 20 Z" fill="url(#flame-inner)" opacity="0.8"/>
-
-  <!-- Flame core (brightest) -->
-  <ellipse cx="64" cy="50" rx="8" ry="14" fill="url(#flame-core)" opacity="0.7"/>
-  <ellipse cx="64" cy="52" rx="3" ry="6" fill="#ffffff" opacity="0.5"/>
-
-  <!-- Victoria emblem (crown above flame) -->
-  <path d="M 56 14 L 58 8 L 60 12 L 64 6 L 68 12 L 70 8 L 72 14 L 70 18 L 58 18 Z" fill="#e6591a" opacity="0.6" stroke="#ffcc40" stroke-width="0.3" stroke-opacity="0.4"/>
-
-  <!-- Crown gems -->
-  <circle cx="60" cy="14" r="0.8" fill="#ffcc40" opacity="0.7"/>
-  <circle cx="64" cy="11" r="1" fill="#ffe060" opacity="0.8"/>
-  <circle cx="68" cy="14" r="0.8" fill="#ffcc40" opacity="0.7"/>
-
-  <!-- Embers rising -->
-  <circle cx="50" cy="8" r="0.8" fill="#ffcc40" opacity="0.5"/>
-  <circle cx="78" cy="6" r="0.6" fill="#ffaa30" opacity="0.4"/>
-  <circle cx="44" cy="12" r="0.5" fill="#ff8800" opacity="0.3"/>
-  <circle cx="84" cy="14" r="0.7" fill="#ffcc40" opacity="0.4"/>
-
-  <!-- Base decorative element -->
-  <ellipse cx="64" cy="98" rx="16" ry="3" fill="#3a1808" opacity="0.6"/>
-  <ellipse cx="64" cy="98" rx="10" ry="2" fill="#5a2810" opacity="0.4"/>
-
-  <!-- Light rays from flame -->
-  <path d="M 64 50 L 40 30" stroke="#ffcc40" stroke-width="0.5" stroke-opacity="0.15" stroke-linecap="round"/>
-  <path d="M 64 50 L 88 30" stroke="#ffcc40" stroke-width="0.5" stroke-opacity="0.15" stroke-linecap="round"/>
-  <path d="M 64 50 L 30 50" stroke="#ffcc40" stroke-width="0.5" stroke-opacity="0.1" stroke-linecap="round"/>
-  <path d="M 64 50 L 98 50" stroke="#ffcc40" stroke-width="0.5" stroke-opacity="0.1" stroke-linecap="round"/>
+  <rect width="128" height="128" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="64.0" cy="64.0" rx="61.4" ry="53.8" fill="#e6591a" opacity="0.06"/>
+  <circle cx="86.5" cy="40.0" r="0.8" fill="#c41a05" opacity="0.61"/>
+  <circle cx="54.1" cy="39.0" r="1.7" fill="#ff6600" opacity="0.70" filter="url(#glow1)"/>
+  <circle cx="102.8" cy="22.0" r="0.7" fill="#c41a05" opacity="0.67" filter="url(#glow1)"/>
+  <circle cx="81.4" cy="93.2" r="1.7" fill="#ffe060" opacity="0.53" filter="url(#glow1)"/>
+  <circle cx="118.3" cy="81.0" r="2.5" fill="#ffe060" opacity="0.35" filter="url(#glow1)"/>
+  <circle cx="106.9" cy="15.3" r="0.8" fill="#ffe060" opacity="0.33" filter="url(#glow1)"/>
+  <circle cx="118.7" cy="118.9" r="1.8" fill="#ff7a1a" opacity="0.34" filter="url(#glow1)"/>
+  <circle cx="20.5" cy="19.7" r="2.3" fill="#e6591a" opacity="0.62" filter="url(#glow1)"/>
+  <!-- Flame body -->
+  <ellipse cx="64" cy="65" rx="22" ry="35" fill="url(#rad4)" filter="url(#soft2)"/>
+  <path d="M 64.0 95.0 Q 50.2 82.5 60.2 72.5 Q 61.2 62.5 63.5 45.0 Q 66.8 60.0 68.9 67.5 Q 78.6 80.0 64.0 95.0 Z" fill="#ff8800" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 64.0 95.0 Q 52.1 86.2 58.1 79.2 Q 62.0 72.2 62.7 60.0 Q 66.0 70.5 68.5 75.8 Q 72.8 84.5 64.0 95.0 Z" fill="#ffe060" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 64.0 95.0 Q 56.1 90.0 62.9 86.0 Q 62.6 82.0 63.7 75.0 Q 65.4 81.0 65.2 84.0 Q 69.6 89.0 64.0 95.0 Z" fill="#fff8e0" opacity="0.4" filter="url(#glow1)"/>
+  <!-- Protective ring -->
+  <circle cx="64" cy="64" r="35" fill="none" stroke="url(#lin5)" stroke-width="1.5" opacity="0.3" filter="url(#soft2)"/>
+  <!-- Ring marks -->
+  <circle cx="99.0" cy="64.0" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="81.5" cy="94.3" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="46.5" cy="94.3" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="29.0" cy="64.0" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="46.5" cy="33.7" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="81.5" cy="33.7" r="1.5" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <!-- Core -->
+  <circle cx="64" cy="55" r="8" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="64" cy="55" r="3" fill="#ffffff" opacity="0.95"/>
+  <line x1="64.0" y1="55.0" x2="68.6" y2="61.6" stroke="#fff8e0" stroke-width="0.8" opacity="0.73"/>
+  <line x1="64.0" y1="55.0" x2="66.7" y2="45.7" stroke="#ff8800" stroke-width="1.8" opacity="0.58"/>
+  <line x1="64.0" y1="55.0" x2="53.0" y2="53.9" stroke="#ffcc40" stroke-width="1.2" opacity="0.54" filter="url(#glow1)"/>
+  <line x1="64.0" y1="55.0" x2="70.4" y2="55.3" stroke="#ff8800" stroke-width="1.3" opacity="0.59" filter="url(#glow1)"/>
+  <line x1="64.0" y1="55.0" x2="64.4" y2="62.0" stroke="#fff8e0" stroke-width="1.1" opacity="0.70"/>
+  <line x1="64.0" y1="55.0" x2="66.2" y2="60.8" stroke="#ffe060" stroke-width="1.5" opacity="0.76"/>
 </svg>

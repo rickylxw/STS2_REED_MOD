@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5d64d0ca138"
-path="res://.godot/imported/SpearFlame.png-952c1076f8379aecff64a25d0ce59f17.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://Reed/images/cards/SpearFlame.png"
-dest_files=["res://.godot/imported/SpearFlame.png-952c1076f8379aecff64a25d0ce59f17.ctex"]
 
 [params]
 
