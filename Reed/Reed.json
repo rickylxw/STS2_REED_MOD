@@ -3,7 +3,7 @@
     "name": "苇草与焰影苇草",
     "author": "Reed Modder",
     "description": "添加苇草（焰影苇草）角色：一名以枪与火焰为武器的龙裔战士。核心机制为灼燃——一种持续灼烧敌人的减益效果。",
-    "version": "v1.1.1",
+    "version": "v1.1.2",
     "has_pck": true,
     "has_dll": true,
     "min_game_version": "0.111.0",
