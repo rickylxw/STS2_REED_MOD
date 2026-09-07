@@ -33,27 +33,18 @@ func _ready():
 	var first = "Idle" if sprite_frames.has_animation("Idle") else sprite_frames.get_animation_names()[0]
 	play(first)
 	print("[ReedChibiSprite] Playing '", first, "'")
+	# 设置一次 DefaultScale，不每帧覆盖，让游戏的缩放效果系统正常工作
+	var parent_node = get_parent()
+	if parent_node != null:
+		parent_node.set("DefaultScale", 1.0)
 
 const CHILD_SCALE = 1.3
 
 func _process(_delta):
-	# call_deferred 在所有 _process 之后、渲染之前执行，
-	# 确保游戏的 SetScaleAndHue / DoScaleTween 覆盖之后再恢复。
-	call_deferred("_enforce_visuals")
-
-func _enforce_visuals():
-	# 覆盖父节点 (NCreatureVisuals) 的 scale
-	# 游戏的 SetScaleAndHue 设置 base.Scale，DoScaleTween 设置 Visuals.Scale，
-	# 都在父节点上。锁定父节点 scale=1.0，子节点 scale=1.3 → 总大小=1.3。
-	var parent_node = get_parent()
-	if parent_node != null:
-		parent_node.scale = Vector2.ONE
-		# DefaultScale 影响 ScaleTo tween 目标，也锁定为 1.0
-		parent_node.set("DefaultScale", 1.0)
-	# 保持子节点 scale
+	# 只保持子节点缩放和皮肤颜色，不覆盖父节点 scale
+	# 让游戏的 SetScaleAndHue / DoScaleTween / 缩小效果正常生效
 	if scale.x != CHILD_SCALE or scale.y != CHILD_SCALE:
 		scale = Vector2(CHILD_SCALE, CHILD_SCALE)
-	# 皮肤颜色（self_modulate 只影响自身，不干扰父节点的 modulate）
 	var skin_idx = int(Engine.get_meta("reed_selected_skin", 0))
 	if skin_idx >= 0 and skin_idx < SKIN_MODULATES.size():
 		self_modulate = SKIN_MODULATES[skin_idx]
