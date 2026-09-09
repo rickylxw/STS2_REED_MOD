@@ -33,7 +33,15 @@ public sealed class Scorch : ModPowerTemplate
         // 灼燃免疫：不造成伤害，但层数仍衰减
         if (!ReedCombatHelper.HasPower<ScorchImmunity>(Owner))
         {
-            var damage = new DamageVar(Amount, ValueProp.Unpowered | ValueProp.Unblockable);
+            int scorchDamage = Amount;
+
+            // 法术脆弱：受到的灼燃伤害 +50%
+            if (ReedCombatHelper.HasPower<SpellVulnerable>(Owner))
+            {
+                scorchDamage = (int)Math.Ceiling(Amount * 1.5m);
+            }
+
+            var damage = new DamageVar(scorchDamage, ValueProp.Unpowered | ValueProp.Unblockable);
             await CreatureCmd.Damage(choiceContext, Owner, damage, null, null);
         }
 

@@ -38,7 +38,15 @@ public sealed class FlameShadowForm : ModPowerTemplate
             int scorchStacks = ReedCombatHelper.GetPowerAmount<Scorch>(enemy);
             if (scorchStacks > 0)
             {
-                var damage = new DamageVar(scorchStacks, ValueProp.Unpowered);
+                int damageAmount = scorchStacks;
+
+                // 法术脆弱：受到的灼燃相关伤害 +50%
+                if (ReedCombatHelper.HasPower<SpellVulnerable>(enemy))
+                {
+                    damageAmount = (int)Math.Ceiling(scorchStacks * 1.5m);
+                }
+
+                var damage = new DamageVar(damageAmount, ValueProp.Unpowered);
                 await CreatureCmd.Damage(choiceContext, enemy, damage, null, null);
             }
         }
