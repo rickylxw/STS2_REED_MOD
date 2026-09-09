@@ -10,7 +10,9 @@ using Reed.Scripts.Powers;
 namespace Reed.Scripts.Relics;
 
 /// <summary>
-/// 缁村鍒╀簹涔嬬劙锛團lameOfVictoria锛夆€斺€?绋€鏈夐仐鐗┿€?/// 姣忓洖鍚堢粨鏉熸椂锛屽鎵€鏈夊甫鏈夌伡鐕冪殑鏁屼汉閫犳垚2鐐逛激瀹炽€?/// </summary>
+/// 维多利亚之焰（FlameOfVictoria）—— 稀有遗物。
+/// 每回合结束时，对所有带有灼燃的敌人造成2点伤害。
+/// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
 public sealed class FlameOfVictoria : ModRelicTemplate
 {

@@ -11,7 +11,9 @@ using Reed.Scripts.Powers;
 namespace Reed.Scripts.Relics;
 
 /// <summary>
-/// 鑻囪崏涔嬮攱锛圧eedsSpearhead锛夆€斺€?鍒濆閬楃墿銆?/// 姣忓洖鍚堝紑濮嬫椂锛屽鎵€鏈夋晫浜烘柦鍔?灞傜伡鐕冦€?/// </summary>
+/// 苇草之矛（ReedsSpearhead）—— 初始遗物。
+/// 每回合开始时，对所有敌人施加2层灼燃。
+/// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
 [RegisterCharacterStarterRelic(typeof(ReedCharacter))]
 public sealed class ReedsSpearhead : ModRelicTemplate

@@ -1,19 +1,20 @@
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using STS2RitsuLib.Interop.AutoRegistration;
 using STS2RitsuLib.Scaffolding.Content;
+using Reed.Scripts.Powers;
 
 namespace Reed.Scripts.Relics;
 
 /// <summary>
-/// 余烬之心（HeartOfEmbers）—— 不常见遗物。
-/// 每回合开始时，获得3点格挡。
+/// 独属自己的一隅（OnesOwnCorner）—— 不常见遗物。
+/// 受到未被格挡的伤害时，对自己施加等量层数的灼燃计数器。
 /// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
-public sealed class HeartOfEmbers : ModRelicTemplate
+public sealed class OnesOwnCorner : ModRelicTemplate
 {
     public override RelicRarity Rarity => RelicRarity.Uncommon;
 
@@ -24,14 +25,12 @@ public sealed class HeartOfEmbers : ModRelicTemplate
 
     public override bool ShouldReceiveCombatHooks => true;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars =>
-    [
-        new BlockVar(3m, ValueProp.Move) // 格挡值
-    ];
-
-    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    public override async Task AfterDamageReceived(PlayerChoiceContext choiceContext, Creature target, DamageResult result, ValueProp props, Creature dealer, CardModel cardSource)
     {
-        // TODO: 楠岃瘉閬楃墿涓幏寰楁牸鎸＄殑 API锛坈ardPlay 鍙傛暟鍙兘闇€瑕?null锛?        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, null);
+        if (target != Owner.Creature) return;
+        if (result.UnblockedDamage <= 0) return;
+
+        int scorchCounter = result.UnblockedDamage;
+        await PowerCmd.Apply<ScorchCounter>(choiceContext, Owner.Creature, scorchCounter, Owner.Creature, null);
     }
 }
-

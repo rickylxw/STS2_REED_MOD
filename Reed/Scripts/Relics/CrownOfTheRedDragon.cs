@@ -1,20 +1,19 @@
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
-using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
 using STS2RitsuLib.Interop.AutoRegistration;
 using STS2RitsuLib.Scaffolding.Content;
+using Reed.Scripts.Powers;
 
 namespace Reed.Scripts.Relics;
 
 /// <summary>
-/// 龙之遗物（RelicOfTheDragon）—— 稀有遗物。
-/// 每回合开始时，获得1点力量。
+/// 赠予红龙的花冠（CrownOfTheRedDragon）—— 罕见遗物。
+/// 你对敌人施加灼燃时，额外施加1层法术脆弱。
 /// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
-public sealed class RelicOfTheDragon : ModRelicTemplate
+public sealed class CrownOfTheRedDragon : ModRelicTemplate
 {
     public override RelicRarity Rarity => RelicRarity.Rare;
 
@@ -25,14 +24,13 @@ public sealed class RelicOfTheDragon : ModRelicTemplate
 
     public override bool ShouldReceiveCombatHooks => true;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars =>
-    [
-        new CardsVar(1) // 鍔涢噺灞傛暟
-    ];
-
-    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    public override async Task AfterPowerApplied(PlayerChoiceContext choiceContext, Creature target, PowerTemplate power, Creature source)
     {
-        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, DynamicVars.Cards.IntValue, Owner.Creature, null);
+        // 仅当我（玩家）给敌人施加灼燃时触发
+        if (source != Owner.Creature) return;
+        if (target == Owner.Creature) return;
+        if (power is not Scorch) return;
+
+        await PowerCmd.Apply<SpellVulnerable>(choiceContext, target, 1, Owner.Creature, null);
     }
 }
-
