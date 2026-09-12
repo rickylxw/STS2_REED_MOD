@@ -9,7 +9,8 @@ using STS2RitsuLib.Scaffolding.Content;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 杩呭埡锛圫wiftThrust锛夆€斺�?鏅€氭敾鍑荤墝�?/// 0璐癸紝閫犳垚4鐐逛激瀹筹紙鍗囩骇�?鐐癸級锛屾娊1寮犵墝锛堝崌绾у悗2寮狅級銆?/// </summary>
+/// 迅刺（SwiftThrust）——普通攻击牌。0费，造成4点伤害（升级后+2点），抽1张牌（升级后2张）。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class SwiftThrust : ModCardTemplate
 {
@@ -47,4 +48,3 @@ public sealed class SwiftThrust : ModCardTemplate
         DynamicVars.Cards.UpgradeValueBy(1);
     }
 }
-

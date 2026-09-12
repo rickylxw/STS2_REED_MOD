@@ -10,7 +10,8 @@ using Reed.Scripts.Powers;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 鐑堢劙椋庢毚锛圛nfernoStorm锛夆€斺�?绋€鏈夋敾鍑荤墝�?/// 2璐癸紝瀵规墍鏈夋晫浜洪€犳�?0鐐逛激瀹筹紙鍗囩骇�?4鐐癸級锛屽苟鏂藉�?灞傜伡鐕冿紙鍗囩骇鍚?灞傦級銆?/// </summary>
+/// 烈焰风暴（InfernoStorm）——稀有攻击牌。2费，对所有敌人造成10点伤害（升级后+4点），并施加2层灼燃（升级后+1层）。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class InfernoStorm : ModCardTemplate
 {
@@ -26,7 +27,7 @@ public sealed class InfernoStorm : ModCardTemplate
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(10, ValueProp.Move),
-        new CardsVar(2) // 鐏肩噧灞傛暟
+        new CardsVar(2) // 灼燃层数
     ];
 
     public InfernoStorm() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
@@ -48,4 +49,3 @@ public sealed class InfernoStorm : ModCardTemplate
         DynamicVars.Cards.UpgradeValueBy(1);
     }
 }
-

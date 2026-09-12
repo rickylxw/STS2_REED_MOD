@@ -10,7 +10,8 @@ using Reed.Scripts.Character;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 鎵撳嚮锛圫trike锛夆€斺�?鍩虹鏀诲嚮鐗屻�?/// 1璐癸紝閫犳垚6鐐逛激瀹筹紙鍗囩骇�?鐐癸級銆?/// </summary>
+/// 打击（Strike）——基础攻击牌。1费，造成6点伤害（升级后+3点）。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 [RegisterCharacterStarterCard(typeof(ReedCharacter), 4)]
 public sealed class Strike : ModCardTemplate
@@ -44,4 +45,3 @@ public sealed class Strike : ModCardTemplate
 
     protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(3);
 }
-

@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <!-- 游戏安装目录（Steam 默认路径，如不匹配请修改） -->
-    <Sts2Dir>E:/SteamLibrary/steamapps/common/Slay the Spire 2</Sts2Dir>
+    <Sts2Dir>E:/Program Files/Steam/steamapps/common/Slay the Spire 2</Sts2Dir>
     <Sts2DataDir>$(Sts2Dir)/data_sts2_windows_x86_64</Sts2DataDir>
     <!-- Godot / MegaDot 可执行文件路径（导出 PCK 时需要） -->
     <GodotExe>d:/Backup/Documents/Trae project/Slay the spire 2 mod/Godot_4.5.1_std/Godot_v4.5.1-stable_win64.exe</GodotExe>

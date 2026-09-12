@@ -18,19 +18,19 @@ public sealed class CrownOfTheRedDragon : ModRelicTemplate
     public override RelicRarity Rarity => RelicRarity.Rare;
 
     public override RelicAssetProfile AssetProfile => new(
-        IconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.svg",
-        IconOutlinePath: $"{Entry.ResPath}/images/relics/{GetType().Name}.svg",
-        BigIconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.svg");
+        IconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.png",
+        IconOutlinePath: $"{Entry.ResPath}/images/relics/{GetType().Name}.png",
+        BigIconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.png");
 
     public override bool ShouldReceiveCombatHooks => true;
 
-    public override async Task AfterPowerApplied(PlayerChoiceContext choiceContext, Creature target, PowerTemplate power, Creature source)
+    public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature applier, CardModel cardSource)
     {
         // 仅当我（玩家）给敌人施加灼燃时触发
-        if (source != Owner.Creature) return;
-        if (target == Owner.Creature) return;
+        if (applier != Owner.Creature) return;
+        if (power.Target == Owner.Creature) return;
         if (power is not Scorch) return;
 
-        await PowerCmd.Apply<SpellVulnerable>(choiceContext, target, 1, Owner.Creature, null);
+        await PowerCmd.Apply<SpellVulnerable>(choiceContext, power.Target, 1, Owner.Creature, null);
     }
 }

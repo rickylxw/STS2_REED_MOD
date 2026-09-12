@@ -15,5 +15,11 @@
     "REED_RELIC_ASHEN_CORE.description": "Whenever you Exhaust a card, gain 1 [blue]Ash[/blue].",
 
     "REED_RELIC_SCALE_FLAME_CHARM.title": "Scale Flame Charm",
-    "REED_RELIC_SCALE_FLAME_CHARM.description": "The first time you take damage in each combat, apply 3 [red]Scorch[/red] to the attacker."
+    "REED_RELIC_SCALE_FLAME_CHARM.description": "The first time you take damage in each combat, apply 3 [red]Scorch[/red] to the attacker.",
+
+    "REED_RELIC_CROWN_OF_THE_RED_DRAGON.title": "A Floral Garland to the Red Dragon",
+    "REED_RELIC_CROWN_OF_THE_RED_DRAGON.description": "Whenever you apply [red]Scorch[/red] to an enemy, also apply 1 [red]Spell Vulnerable[/red].",
+
+    "REED_RELIC_ONES_OWN_CORNER.title": "A Private Corner of One's Own",
+    "REED_RELIC_ONES_OWN_CORNER.description": "When you take unblocked damage, apply that much [blue]Scorch Counter[/blue] to yourself."
 }

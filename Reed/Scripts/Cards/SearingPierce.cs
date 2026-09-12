@@ -10,7 +10,8 @@ using Reed.Scripts.Powers;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 鐏肩┛锛圫earingPierce锛夆€斺�?涓嶅父瑙佹敾鍑荤墝銆?/// 1璐癸紝閫犳垚6鐐逛激瀹筹紙鍗囩骇�?鐐癸級锛岀洰鏍囨瘡�?灞傜伡鐕冮澶栭€犳�?鐐逛激瀹筹紙鍗囩骇�?鐐癸級銆?/// </summary>
+/// 灼穿（SearingPierce）——不常见攻击牌。1费，造成6点伤害（升级后+2点），目标每有1层灼燃额外造成3点伤害（升级后+2点）。目标获得灼燃免疫（不再受到灼燃伤害）。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class SearingPierce : ModCardTemplate
 {
@@ -26,7 +27,7 @@ public sealed class SearingPierce : ModCardTemplate
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(6, ValueProp.Move),
-        new CardsVar(3) // 姣忓眰鐏肩噧棰濆浼ゅ
+        new CardsVar(3) // 每层灼燃额外伤害
     ];
 
     public SearingPierce() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
@@ -55,4 +56,3 @@ public sealed class SearingPierce : ModCardTemplate
         DynamicVars.Cards.UpgradeValueBy(2);
     }
 }
-

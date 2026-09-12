@@ -10,7 +10,8 @@ using Reed.Scripts.Powers;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 鑻囪崏涔嬫灙锛圧eedsSpear锛夆€斺�?涓嶅父瑙佹敾鍑荤墝銆?/// 2璐癸紝閫犳垚14鐐逛激瀹筹紙鍗囩骇�?8鐐癸級銆傝嫢鐩爣鏈夌伡鐕冿紝閫犳垚鍙屽€嶄激瀹炽�?/// </summary>
+/// 苇草之枪（ReedsSpear）——不常见攻击牌。2费，造成14点伤害（升级后+4点）。若目标有灼燃，造成双倍伤害。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class ReedsSpear : ModCardTemplate
 {
@@ -49,4 +50,3 @@ public sealed class ReedsSpear : ModCardTemplate
 
     protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(4);
 }
-

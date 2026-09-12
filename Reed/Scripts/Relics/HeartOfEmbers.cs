@@ -31,7 +31,8 @@ public sealed class HeartOfEmbers : ModRelicTemplate
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        // TODO: 楠岃瘉閬楃墿涓幏寰楁牸鎸＄殑 API锛坈ardPlay 鍙傛暟鍙兘闇€瑕?null锛?        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, null);
+        // TODO: 验证遗物中获得格挡的 API（cardPlay 参数可能需要 null）
+        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, null);
     }
 }
 

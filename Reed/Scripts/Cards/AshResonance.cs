@@ -10,7 +10,9 @@ using Reed.Scripts.Powers;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 灰烬共鸣（AshResonance）——罕见技能牌�?/// 1费，获得格挡，数值等于自身灼燃层�?× 2（升级后 × 3）�?/// </summary>
+/// 灰烬共鸣（AshResonance）——罕见技能牌。
+/// 1费，获得格挡，数值等于自身灼燃计数器层数 × 2（升级后 × 3）。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class AshResonance : ModCardTemplate
 {

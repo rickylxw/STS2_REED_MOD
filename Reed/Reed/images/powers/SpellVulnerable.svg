@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8a4a2a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2a1815" stop-opacity="0.5"/>
+    </radialGradient>
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#ffe060" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="64" height="64" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="32.0" cy="32.0" rx="30.7" ry="26.9" fill="#e6591a" opacity="0.06"/>
+
+  <!-- 背景粒子 -->
+  <circle cx="10.2" cy="18.5" r="1.4" fill="#ff8800" opacity="0.50" filter="url(#glow1)"/>
+  <circle cx="53.8" cy="14.2" r="1.8" fill="#c41a05" opacity="0.50"/>
+  <circle cx="14.5" cy="48.6" r="0.9" fill="#ff6600" opacity="0.38"/>
+  <circle cx="50.1" cy="50.3" r="1.5" fill="#ffcc40" opacity="0.42" filter="url(#glow1)"/>
+  <circle cx="22.0" cy="12.0" r="0.7" fill="#ffe060" opacity="0.35"/>
+  <circle cx="45.5" cy="40.8" r="1.1" fill="#ff7a1a" opacity="0.45"/>
+
+  <!-- 核心球体（有裂纹的石头感） -->
+  <circle cx="32" cy="32" r="16" fill="url(#coreGrad)" opacity="0.9"/>
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#8a4a2a" stroke-width="1" opacity="0.5"/>
+
+  <!-- 主裂纹 —— 从左下到右上 -->
+  <path d="M 20 44 L 26 36 L 22 28 L 30 22 L 38 28 L 34 36 L 44 30" fill="none" stroke="#0d0604" stroke-width="2.5" opacity="0.7" stroke-linecap="round"/>
+  <!-- 裂纹中透出的火焰光晕 -->
+  <path d="M 20 44 L 26 36 L 22 28 L 30 22 L 38 28 L 34 36 L 44 30" fill="none" stroke="url(#flameGlow)" stroke-width="4" opacity="0.6" stroke-linecap="round" filter="url(#glow1)"/>
+
+  <!-- 分支裂纹1 -->
+  <path d="M 26 36 L 18 34" fill="none" stroke="#0d0604" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 26 36 L 18 34" fill="none" stroke="#ff8800" stroke-width="2.5" opacity="0.5" stroke-linecap="round" filter="url(#glow1)"/>
+
+  <!-- 分支裂纹2 -->
+  <path d="M 30 22 L 32 14" fill="none" stroke="#0d0604" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 30 22 L 32 14" fill="none" stroke="#ffe060" stroke-width="2.5" opacity="0.5" stroke-linecap="round" filter="url(#glow1)"/>
+
+  <!-- 分支裂纹3 -->
+  <path d="M 38 28 L 46 22" fill="none" stroke="#0d0604" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 38 28 L 46 22" fill="none" stroke="#ff8800" stroke-width="2.5" opacity="0.5" stroke-linecap="round" filter="url(#glow1)"/>
+
+  <!-- 分支裂纹4 -->
+  <path d="M 34 36 L 42 44" fill="none" stroke="#0d0604" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 34 36 L 42 44" fill="none" stroke="#ffe060" stroke-width="2.5" opacity="0.5" stroke-linecap="round" filter="url(#glow1)"/>
+
+  <!-- 裂纹交汇处的火焰亮点 -->
+  <circle cx="26" cy="36" r="3" fill="#fff8e0" opacity="0.8" filter="url(#glow1)"/>
+  <circle cx="30" cy="22" r="2.5" fill="#ffe060" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="34" cy="36" r="3" fill="#fff8e0" opacity="0.8" filter="url(#glow1)"/>
+  <circle cx="38" cy="28" r="2.5" fill="#ff8800" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="22" cy="28" r="2" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+
+  <!-- 裂纹中跳出的小火苗 -->
+  <path d="M 32 10 Q 30 5 32 1 Q 34 5 32 10 Z" fill="#ff8800" opacity="0.7" filter="url(#glow1)"/>
+  <path d="M 48 18 Q 46 13 48 9 Q 50 13 48 18 Z" fill="#ffe060" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 16 50 Q 14 45 16 41 Q 18 45 16 50 Z" fill="#ff8800" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 52 52 Q 50 47 52 43 Q 54 47 52 52 Z" fill="#e6591a" opacity="0.7" filter="url(#glow1)"/>
+
+  <!-- 核心最亮点（裂纹交汇中心） -->
+  <circle cx="32" cy="32" r="2.5" fill="#ffffff" opacity="0.95"/>
+  <circle cx="32" cy="32" r="5" fill="url(#flameGlow)" opacity="0.8" filter="url(#soft2)"/>
+
+</svg>

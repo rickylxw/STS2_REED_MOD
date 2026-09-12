@@ -19,9 +19,9 @@ public sealed class OnesOwnCorner : ModRelicTemplate
     public override RelicRarity Rarity => RelicRarity.Uncommon;
 
     public override RelicAssetProfile AssetProfile => new(
-        IconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.svg",
-        IconOutlinePath: $"{Entry.ResPath}/images/relics/{GetType().Name}.svg",
-        BigIconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.svg");
+        IconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.png",
+        IconOutlinePath: $"{Entry.ResPath}/images/relics/{GetType().Name}.png",
+        BigIconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.png");
 
     public override bool ShouldReceiveCombatHooks => true;
 

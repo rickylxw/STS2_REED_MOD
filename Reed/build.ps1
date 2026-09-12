@@ -15,13 +15,13 @@ $ErrorActionPreference = "Stop"
 
 # -- Path Configuration --
 $ScriptDir   = Split-Path -Parent $MyInvocation.MyCommand.Path
-$Sts2Dir     = "E:/SteamLibrary/steamapps/common/Slay the Spire 2"
+$Sts2Dir     = "E:/Program Files/Steam/steamapps/common/Slay the Spire 2"
 $ModsDir     = Join-Path $Sts2Dir "mods"
 $ReedModDir  = Join-Path $ModsDir "Reed"
 $RitsuModDir = Join-Path $ModsDir "STS2-RitsuLib"
 
 # RitsuLib from NuGet cache
-$RitsuNupkg    = "C:/Users/Administrator/.nuget/packages/sts2.ritsulib/0.5.18"
+$RitsuNupkg    = "C:/Users/LXW/.nuget/packages/sts2.ritsulib/0.5.20"
 $RitsuDll       = Join-Path $RitsuNupkg "lib/net9.0/STS2-RitsuLib.dll"
 $RitsuManifest = Join-Path $RitsuNupkg "contentFiles/any/any/mod_manifest.json"
 

@@ -10,7 +10,9 @@ using Reed.Scripts.Character;
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 闃插尽锛圖efend锛夆€斺�?鍩虹鎶€鑳界墝�?/// 1璐癸紝鑾峰緱5鐐规牸鎸★紙鍗囩骇鍚?鐐癸級銆?/// </summary>
+/// 防御（Defend）——基础技能牌。
+/// 1费，获得5点格挡（升级后+3点）。
+/// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 [RegisterCharacterStarterCard(typeof(ReedCharacter), 4)]
 public sealed class Defend : ModCardTemplate

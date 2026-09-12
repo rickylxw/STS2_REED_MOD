@@ -43,3 +43,7 @@ Thumbs.db
 
 # Release artifacts
 release/
+
+# Python cache & temp diffs
+__pycache__/
+diff_*.txt

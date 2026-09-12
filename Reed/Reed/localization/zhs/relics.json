@@ -15,5 +15,11 @@
     "REED_RELIC_ASHEN_CORE.description": "每次消耗卡牌时，获得 1 层[blue]灰烬[/blue]。",
 
     "REED_RELIC_SCALE_FLAME_CHARM.title": "鳞火护符",
-    "REED_RELIC_SCALE_FLAME_CHARM.description": "每场战斗中第一次受到伤害时，对攻击者施加3层[red]灼燃[/red]。"
+    "REED_RELIC_SCALE_FLAME_CHARM.description": "每场战斗中第一次受到伤害时，对攻击者施加3层[red]灼燃[/red]。",
+
+    "REED_RELIC_CROWN_OF_THE_RED_DRAGON.title": "赠予红龙的花冠",
+    "REED_RELIC_CROWN_OF_THE_RED_DRAGON.description": "你对敌人施加[red]灼燃[/red]时，额外施加 1 层[red]法术脆弱[/red]。",
+
+    "REED_RELIC_ONES_OWN_CORNER.title": "独属自己的一隅",
+    "REED_RELIC_ONES_OWN_CORNER.description": "受到未被格挡的伤害时，对自己施加等量层数的[blue]灼燃计数器[/blue]。"
 }

@@ -27,7 +27,7 @@ public sealed class AshenArmor : ModCardTemplate
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new CardsVar(5) // 基础格挡
+        new BlockVar(5m, ValueProp.Move) // 基础格挡
     ];
 
     public override bool GainsBlock => true;
@@ -37,7 +37,7 @@ public sealed class AshenArmor : ModCardTemplate
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         int ashStacks = ReedCombatHelper.GetPowerAmount<Ash>(Owner.Creature);
-        int blockAmount = ashStacks + DynamicVars.Cards.IntValue;
+        int blockAmount = ashStacks + (int)DynamicVars.Block.BaseValue;
 
         if (blockAmount > 0)
         {
@@ -46,5 +46,5 @@ public sealed class AshenArmor : ModCardTemplate
         }
     }
 
-    protected override void OnUpgrade() => DynamicVars.Cards.UpgradeValueBy(3);
+    protected override void OnUpgrade() => DynamicVars.Block.UpgradeValueBy(3);
 }

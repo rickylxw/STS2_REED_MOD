@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <linearGradient id="lin4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="0.9"/>
+      <stop offset="20%" stop-color="#ffe060" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#ff8800" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#e6591a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="runeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe060" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.06"/>
+
+  <!-- 背景余烬粒子 -->
+  <circle cx="222.4" cy="18.6" r="1.8" fill="#ff6600" opacity="0.55"/>
+  <circle cx="198.7" cy="142.3" r="0.7" fill="#c41a05" opacity="0.30" filter="url(#glow1)"/>
+  <circle cx="45.6" cy="168.1" r="2.2" fill="#ffcc40" opacity="0.26" filter="url(#glow1)"/>
+  <circle cx="31.3" cy="25.4" r="0.6" fill="#c41a05" opacity="0.40" filter="url(#glow1)"/>
+  <circle cx="55.2" cy="88.7" r="1.6" fill="#ff6600" opacity="0.58"/>
+  <circle cx="210.9" cy="102.5" r="1.4" fill="#ffe060" opacity="0.65" filter="url(#glow1)"/>
+
+  <!-- 主吐息锥形 —— 从左上向右下喷射 -->
+  <path d="M 20 70 L 70 45 L 255 20 L 255 170 L 70 145 Z" fill="url(#lin4)" filter="url(#glow1)"/>
+
+  <!-- 锥形内层 —— 更亮的核心 -->
+  <path d="M 20 70 L 85 60 L 250 50 L 250 140 L 85 130 Z" fill="#ff8800" opacity="0.25" filter="url(#glow1)"/>
+  <path d="M 20 70 L 100 75 L 245 75 L 245 115 L 100 110 Z" fill="#ffe060" opacity="0.2" filter="url(#glow1)"/>
+
+  <!-- 吐息源头 —— 光亮核心 -->
+  <circle cx="20" cy="70" r="16" fill="#fff8e0" opacity="0.85" filter="url(#glow1)"/>
+  <circle cx="20" cy="70" r="7" fill="#ffffff" opacity="0.9" filter="url(#glow1)"/>
+
+  <!-- 火焰舌 —— 锥形边缘 -->
+  <path d="M 250.0 25.0 Q 238.2 15.0 244.5 8.0 Q 249.0 0.0 250.2 -15.0 Q 255.0 5.0 254.2 10.5 Q 263.5 19.0 250.0 25.0 Z" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 250.0 60.0 Q 236.5 48.8 243.8 40.0 Q 248.8 31.2 249.5 18.0 Q 255.5 32.5 258.8 38.8 Q 270.5 48.0 250.0 60.0 Z" fill="#ffe060" opacity="0.45" filter="url(#glow1)"/>
+  <path d="M 250.0 100.0 Q 237.2 89.5 241.5 80.5 Q 247.2 71.5 250.8 58.0 Q 255.0 72.0 260.5 78.5 Q 272.2 88.5 250.0 100.0 Z" fill="#ff8800" opacity="0.45" filter="url(#glow1)"/>
+  <path d="M 250.0 140.0 Q 237.0 132.5 246.2 124.5 Q 248.0 115.5 249.0 100.0 Q 254.5 115.0 257.0 121.0 Q 262.5 132.0 250.0 140.0 Z" fill="#e6591a" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 250.0 165.0 Q 240.0 158.0 248.0 150.0 Q 249.5 142.0 250.5 130.0 Q 255.0 142.0 256.5 146.0 Q 260.5 156.0 250.0 165.0 Z" fill="#ff8800" opacity="0.5" filter="url(#glow1)"/>
+
+  <!-- 魔法符文 —— 融入吐息中 -->
+  <!-- 符文1：简单三角 -->
+  <path d="M 95 55 L 105 40 L 115 55 Z" fill="none" stroke="url(#runeGlow)" stroke-width="2" opacity="0.8" filter="url(#glow1)"/>
+  <path d="M 95 55 L 105 45 L 115 55" fill="none" stroke="#ffe060" stroke-width="1" opacity="0.6"/>
+
+  <!-- 符文2：圆形 -->
+  <circle cx="140" cy="75" r="8" fill="none" stroke="url(#runeGlow)" stroke-width="2" opacity="0.75" filter="url(#glow1)"/>
+  <line x1="134" y1="75" x2="146" y2="75" stroke="#ffe060" stroke-width="1.2" opacity="0.6"/>
+  <line x1="140" y1="69" x2="140" y2="81" stroke="#ffe060" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- 符文3：菱形 -->
+  <path d="M 175 95 L 185 85 L 195 95 L 185 105 Z" fill="none" stroke="url(#runeGlow)" stroke-width="2" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="185" cy="95" r="1.5" fill="#fff8e0" opacity="0.9"/>
+
+  <!-- 符文4：星形 -->
+  <path d="M 210 60 L 213 68 L 221 68 L 215 73 L 217 81 L 210 76 L 203 81 L 205 73 L 199 68 L 207 68 Z" fill="url(#runeGlow)" opacity="0.7" filter="url(#glow1)"/>
+
+  <!-- 符文5：螺旋 -->
+  <path d="M 55 100 Q 60 95 62 100 Q 64 105 60 108 Q 55 110 52 106 Q 50 100 55 97" fill="none" stroke="url(#runeGlow)" stroke-width="2" opacity="0.65" filter="url(#glow1)"/>
+
+  <!-- 符文6：十字 -->
+  <line x1="120" y1="115" x2="128" y2="115" stroke="url(#runeGlow)" stroke-width="2.5" opacity="0.7" filter="url(#glow1)"/>
+  <line x1="124" y1="111" x2="124" y2="119" stroke="url(#runeGlow)" stroke-width="2.5" opacity="0.7" filter="url(#glow1)"/>
+
+  <!-- 魔法光点粒子 -->
+  <circle cx="80" cy="65" r="1.2" fill="#ffe060" opacity="0.75" filter="url(#glow1)"/>
+  <circle cx="110" cy="90" r="1.5" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="155" cy="60" r="1.0" fill="#ffcc40" opacity="0.65" filter="url(#glow1)"/>
+  <circle cx="195" cy="115" r="1.8" fill="#ffe060" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="225" cy="45" r="1.4" fill="#fff8e0" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="70" cy="120" r="0.8" fill="#ff8800" opacity="0.55"/>
+  <circle cx="130" cy="50" r="0.6" fill="#ffcc40" opacity="0.5"/>
+  <circle cx="170" cy="125" r="0.9" fill="#ffe060" opacity="0.5"/>
+  <circle cx="215" cy="95" r="1.1" fill="#ff8800" opacity="0.45"/>
+
+  <!-- 能量线条 —— 从源头射出 -->
+  <line x1="20" y1="70" x2="255" y2="35" stroke="#ffe060" stroke-width="0.8" opacity="0.5" filter="url(#glow1)"/>
+  <line x1="20" y1="70" x2="255" y2="70" stroke="#fff8e0" stroke-width="1.2" opacity="0.6" filter="url(#glow1)"/>
+  <line x1="20" y1="70" x2="255" y2="110" stroke="#ff8800" stroke-width="0.9" opacity="0.5" filter="url(#glow1)"/>
+  <line x1="20" y1="70" x2="255" y2="150" stroke="#e6591a" stroke-width="0.7" opacity="0.4"/>
+
+</svg>
