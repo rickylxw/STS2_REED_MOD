@@ -1,148 +1,120 @@
 {
     "REED_CARD_STRIKE.title": "Strike",
     "REED_CARD_STRIKE.description": "Deal {Damage:diff()} damage.",
-
     "REED_CARD_DEFEND.title": "Defend",
     "REED_CARD_DEFEND.description": "Gain {Block:diff()} Block.",
-
     "REED_CARD_SPEAR_FLAME.title": "Spear Flame",
     "REED_CARD_SPEAR_FLAME.description": "Deal {Damage:diff()} damage. Apply {Cards:diff()} [red]Scorch[/red].",
-
     "REED_CARD_SWIFT_THRUST.title": "Swift Thrust",
     "REED_CARD_SWIFT_THRUST.description": "Deal {Damage:diff()} damage. Draw {Cards:diff()} card(s).",
-
     "REED_CARD_ASHEN_BULWARK.title": "Ashen Bulwark",
     "REED_CARD_ASHEN_BULWARK.description": "Gain {Block:diff()} Block. Apply 1 [red]Scorch[/red] to ALL enemies.",
-
     "REED_CARD_DRAGONBLOOD_BOILING.title": "Dragonblood Boiling",
     "REED_CARD_DRAGONBLOOD_BOILING.description": "Gain {Cards:diff()} [gold]Strength[/gold].",
-
     "REED_CARD_FLAME_SHADOW_ART.title": "Flame Shadow Art",
     "REED_CARD_FLAME_SHADOW_ART.description": "Apply {Cards:diff()} [red]Scorch[/red] to ALL enemies. Draw 1 card.",
-
     "REED_CARD_REEDS_SPEAR.title": "Reed's Spear",
     "REED_CARD_REEDS_SPEAR.description": "Deal {Damage:diff()} damage. If the target has [red]Scorch[/red], deal double damage.",
-
     "REED_CARD_SEARING_PIERCE.title": "Searing Pierce",
     "REED_CARD_SEARING_PIERCE.description": "Deal {Damage:diff()} damage. Deal {Cards:diff()} additional damage for each [red]Scorch[/red] stack on the target. Target gains [red]Scorch Immunity[/red] (no longer takes Scorch damage).",
-
     "REED_CARD_FLAME_SHADOW_REED.title": "Flame Shadow Reed",
     "REED_CARD_FLAME_SHADOW_REED.description": "Gain {Cards} [blue]Flame Shadow Form[/blue]. At the end of each turn, deal damage equal to [red]Scorch[/red] stacks to ALL enemies.",
-
     "REED_CARD_INFERNO_STORM.title": "Inferno Storm",
     "REED_CARD_INFERNO_STORM.description": "Deal {Damage:diff()} damage to ALL enemies and apply {Cards:diff()} [red]Scorch[/red].",
-
     "REED_CARD_BREATH_OF_CALAMITY.title": "Breath of Calamity",
     "REED_CARD_BREATH_OF_CALAMITY.description": "Gain {Cards} [blue]Calamity Breath[/blue]. At the start of each turn, apply 1 [red]Vulnerable[/red] to all enemies with [red]Scorch[/red].",
-
     "REED_CARD_EMBER_IGNITION.title": "Ember Ignition",
     "REED_CARD_EMBER_IGNITION.description": "Deal {Damage:diff()} damage. If you have [blue]Ash[/blue], deal double damage and lose 1 [blue]Ash[/blue].",
-
     "REED_CARD_SCORCHED_EARTH.title": "Scorched Earth",
     "REED_CARD_SCORCHED_EARTH.description": "Apply [red]Scorch[/red] to ALL enemies equal to the total [red]Scorch[/red] on all enemies.",
-
     "REED_CARD_FLAME_INHERITANCE.title": "Flame Inheritance",
     "REED_CARD_FLAME_INHERITANCE.description": "Transfer all [red]Scorch[/red] from the target to all other enemies.",
-
     "REED_CARD_WILDFIRE.title": "Wildfire",
     "REED_CARD_WILDFIRE.description": "Gain {Cards} [blue]Ember Spread[/blue]. When an enemy dies, spread its [red]Scorch[/red] to other enemies.",
-
     "REED_CARD_VICTORIAS_VOW.title": "Victoria's Vow",
     "REED_CARD_VICTORIAS_VOW.description": "Gain {Cards:diff()} [gold]Strength[/gold] for each enemy with [red]Scorch[/red].",
-
     "REED_CARD_WITHERED_REVIVAL.title": "Withered Revival",
     "REED_CARD_WITHERED_REVIVAL.description": "Exhaust a card in hand. Gain 1 [blue]Ash[/blue]. Draw {Cards:diff()} card(s).",
-
     "REED_CARD_SPONTANEOUS_COMBUSTION.title": "Spontaneous Combustion",
     "REED_CARD_SPONTANEOUS_COMBUSTION.description": "Apply {Cards:diff()} [red]Scorch[/red] to yourself. Draw 2 cards.",
-
     "REED_CARD_BURN_AWAY.title": "Burn Away",
     "REED_CARD_BURN_AWAY.description": "Remove all your [red]Scorch[/red]. Heal {Cards:diff()} HP per stack. Gain 1 [gold]Strength[/gold] per stack.",
-
     "REED_CARD_ASH_RESONANCE.title": "Ash Resonance",
     "REED_CARD_ASH_RESONANCE.description": "Gain Block equal to your [red]Scorch[/red] stacks x {Cards:diff()}.",
-
     "REED_CARD_SPARK.title": "Spark",
     "REED_CARD_SPARK.description": "Deal {Damage:diff()} damage. Apply {Cards:diff()} [red]Scorch[/red].",
-
     "REED_CARD_ASH_STORM.title": "Ash Storm",
     "REED_CARD_ASH_STORM.description": "Apply {Cards:diff()} [red]Scorch[/red] to ALL enemies.",
-
     "REED_CARD_EMBER_SHIELD.title": "Ember Shield",
     "REED_CARD_EMBER_SHIELD.description": "Gain Block equal to the highest [red]Scorch[/red] stacks among all enemies + {Cards:diff()}.",
-
     "REED_CARD_FLAME_BURST.title": "Flame Burst",
     "REED_CARD_FLAME_BURST.description": "Add {Cards:diff()} Spark to your hand.",
-
     "REED_CARD_FLAME_WHIRL.title": "Flame Whirl",
     "REED_CARD_FLAME_WHIRL.description": "Deal {Damage:diff()} damage to ALL enemies. Deal {Cards:diff()} additional damage to enemies with [red]Scorch[/red].",
-
     "REED_CARD_CREMATION.title": "Cremation",
     "REED_CARD_CREMATION.description": "Deal {Damage:diff()} damage. Consume all [red]Scorch[/red] on the target. Deal {Cards:diff()} additional damage per stack.",
-
     "REED_CARD_EVERFLAME.title": "Everflame",
     "REED_CARD_EVERFLAME.description": "Gain {Cards} [blue]Everflame[/blue].",
-
     "REED_CARD_EMBER_PACT.title": "Ember Pact",
     "REED_CARD_EMBER_PACT.description": "Give all allies {Cards:diff()} [blue]Ash[/blue]. Draw 1 card.",
-
     "REED_CARD_SCORCHING_BOND.title": "Scorching Bond",
     "REED_CARD_SCORCHING_BOND.description": "Apply {Cards:diff()} [red]Scorch[/red] to ALL enemies. Each ally gains {Cards:diff()} [gold]Strength[/gold].",
-
     "REED_CARD_UNITED_FRONT.title": "United Front",
     "REED_CARD_UNITED_FRONT.description": "Gain {Cards} [blue]United Front[/blue]. At the start of each turn, apply [red]Scorch[/red] to ALL enemies equal to ally count x power stacks.",
-
     "REED_CARD_SCORCHING_CHARGE.title": "Scorching Charge",
     "REED_CARD_SCORCHING_CHARGE.description": "Deal {Damage:diff()} damage. Gain {Cards:diff()} [red]Scorch[/red].",
-
     "REED_CARD_SCORCH_BURST.title": "Scorch Burst",
     "REED_CARD_SCORCH_BURST.description": "Deal {Damage:diff()} damage. Remove all your [red]Scorch[/red]. Deal {Cards:diff()} additional damage per stack.",
-
     "REED_CARD_ASHEN_ARMOR.title": "Ashen Armor",
-    "REED_CARD_ASHEN_ARMOR.description": "Gain {Cards:diff()} Block. If you have [blue]Ash[/blue], gain additional Block equal to [blue]Ash[/blue] stacks.",
-
+    "REED_CARD_ASHEN_ARMOR.description": "Gain {Block:diff()} Block. If you have [blue]Ash[/blue], gain additional Block equal to [blue]Ash[/blue] stacks.",
     "REED_CARD_SCORCHING_HEART.title": "Scorching Heart",
     "REED_CARD_SCORCHING_HEART.description": "Gain {Cards:diff()} [red]Scorch[/red]. Recover 1 energy.",
-
     "REED_CARD_ASH_GATHERING.title": "Ash Gathering",
     "REED_CARD_ASH_GATHERING.description": "Gain {Cards:diff()} [blue]Ash[/blue].",
-
     "REED_CARD_CINDER_SHIELD.title": "Cinder Shield",
     "REED_CARD_CINDER_SHIELD.description": "Gain {Block:diff()} Block.",
-
     "REED_CARD_ASH_IGNITION.title": "Ash Ignition",
     "REED_CARD_ASH_IGNITION.description": "Convert all [blue]Ash[/blue] into Scorch. Gain {Cards:diff()} [red]Scorch[/red] per [blue]Ash[/blue].",
-
     "REED_CARD_SCORCH_BASTION.title": "Scorch Bastion",
     "REED_CARD_SCORCH_BASTION.description": "Gain {Block:diff()} Block. Gain additional Block equal to your [red]Scorch[/red] stacks x {Cards:diff()}.",
-
     "REED_CARD_DRAGON_BREATH.title": "Dragon Breath",
     "REED_CARD_DRAGON_BREATH.description": "Deal {Damage:diff()} damage. Consume all [blue]Ash[/blue]. Deal {Cards:diff()} additional damage per [blue]Ash[/blue].",
-
     "REED_CARD_CINDER_SPEAR_COMBO.title": "Cinder Spear Combo",
     "REED_CARD_CINDER_SPEAR_COMBO.description": "Deal {Damage:diff()} damage 3 times. Apply {Cards:diff()} [red]Scorch[/red] each hit.",
-
     "REED_CARD_BURN_OUT.title": "Burn Out",
     "REED_CARD_BURN_OUT.description": "Deal {Damage:diff()} damage. If target has {Cards:diff()} or more [red]Scorch[/red], deal 12 additional damage and remove all [red]Scorch[/red].",
-
     "REED_CARD_EMBER_EYE.title": "Ember Eye",
     "REED_CARD_EMBER_EYE.description": "Draw {Cards:diff()} cards. If any drawn card is Scorch-related, lose 1 HP.",
-
     "REED_CARD_ASH_BATH.title": "Ash Bath",
     "REED_CARD_ASH_BATH.description": "Remove all your [red]Scorch[/red]. Heal {Cards:diff()} HP per stack. Gain [blue]Ash[/blue] equal to the removed stacks.",
-
     "REED_CARD_EMBER_CONDUIT.title": "Ember Conduit",
     "REED_CARD_EMBER_CONDUIT.description": "Gain {Cards:diff()} [blue]Ash[/blue]. Draw {Cards:diff()} card(s).",
-
     "REED_CARD_SCORCHED_EARTH_PROTOCOL.title": "Scorched Earth Protocol",
     "REED_CARD_SCORCHED_EARTH_PROTOCOL.description": "Exhaust all non-Attack, non-Skill cards in hand. Gain {Cards:diff()} energy per card.",
-
     "REED_CARD_DRAGONS_LEGACY.title": "Dragon's Legacy",
     "REED_CARD_DRAGONS_LEGACY.description": "Gain {Cards} [blue]Dragon's Legacy[/blue]. At the start of each turn, gain 1 [gold]Strength[/gold] and apply 1 [red]Scorch[/red] to ALL enemies.",
-
     "REED_CARD_ASH_RECOVERY.title": "Ash Recovery",
     "REED_CARD_ASH_RECOVERY.description": "Gain {Cards} [blue]Ash Recovery[/blue]. Whenever you Exhaust a card, heal 1 HP.",
-
     "REED_CARD_ETERNAL_EMBER.title": "Eternal Ember",
-    "REED_CARD_ETERNAL_EMBER.description": "Gain {Cards} [blue]Eternal Ember[/blue]. At the start of each turn, apply 3 [red]Scorch[/red] to ALL enemies and gain Block equal to total [red]Scorch[/red] on all enemies."
+    "REED_CARD_ETERNAL_EMBER.description": "Gain {Cards} [blue]Eternal Ember[/blue]. At the start of each turn, apply 3 [red]Scorch[/red] to ALL enemies and gain Block equal to total [red]Scorch[/red] on all enemies.",
+    "REED_CARD_FLAME_TORRENT.title": "Flame Torrent",
+    "REED_CARD_FLAME_TORRENT.description": "Apply [red]Spell Vulnerable[/red] to ALL enemies equal to their current [red]Scorch[/red] stacks. Then apply [red]Scorch[/red] to ALL enemies equal to their current [red]Spell Vulnerable[/red] stacks.",
+    "REED_CARD_SPELL_BREATH.title": "Spell Breath",
+    "REED_CARD_SPELL_BREATH.description": "Apply {Cards:diff()} [red]Spell Vulnerable[/red] to ALL enemies.",
+    "REED_CARD_EMBER_SCALES.title": "Ember Scales",
+    "REED_CARD_EMBER_SCALES.description": "Gain {Block:diff()} Block. Gain an additional {Cards:diff()} Block for each enemy with [red]Scorch[/red].",
+    "REED_CARD_ASH_EMBRACE.title": "Ashen Embrace",
+    "REED_CARD_ASH_EMBRACE.description": "Gain {Cards} [blue]Ashen Embrace[/blue]. At the start of each turn, gain Block equal to [blue]Ash[/blue] stacks x stacks.",
+    "REED_CARD_SCORCH_DETONATION.title": "Detonation",
+    "REED_CARD_SCORCH_DETONATION.description": "Deal {Damage:diff()} damage. Deal an additional {Cards:diff()} damage for each stack of [red]Scorch[/red] on the target, then remove all its [red]Scorch[/red].",
+    "REED_CARD_BACKDRAFT.title": "Backdraft",
+    "REED_CARD_BACKDRAFT.description": "Deal {Damage:diff()} damage to ALL enemies, plus {Cards:diff()} for each stack of your [red]Scorch Counter[/red], then Exhaust all your [red]Scorch Counters[/red].",
+    "REED_CARD_EMBER_AFTERGLOW.title": "Ember Afterglow",
+    "REED_CARD_EMBER_AFTERGLOW.description": "Gain {Cards} [blue]Ember Afterglow[/blue]. Whenever a card is Exhausted, draw 1 card (max {Cards} per turn).",
+    "REED_CARD_RESIDUAL_WARMTH.title": "Residual Warmth",
+    "REED_CARD_RESIDUAL_WARMTH.description": "Draw {Cards:diff()} card(s). Draw 1 additional card if you have any [red]Scorch Counters[/red].",
+    "REED_CARD_MARTYR_FLAME.title": "Martyr's Flame",
+    "REED_CARD_MARTYR_FLAME.description": "Deal {Damage:diff()} damage. Apply 1 [blue]Ember Spread[/blue] to the target (when it dies, its [red]Scorch[/red] is spread to other enemies).",
+    "REED_CARD_DRAGONS_MAJESTY.title": "Dragonborn Majesty",
+    "REED_CARD_DRAGONS_MAJESTY.description": "Gain {Cards} [blue]Dragonborn Majesty[/blue]. At the start of each turn, apply the same number of stacks of [red]Weak[/red] to every enemy with [red]Scorch[/red]."
 }

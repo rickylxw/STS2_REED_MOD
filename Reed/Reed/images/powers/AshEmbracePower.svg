@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="40%" stop-color="#ffe060"/>
+      <stop offset="100%" stop-color="#ff8800"/>
+    </radialGradient>
+    <linearGradient id="lin5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a7a7a"/>
+      <stop offset="100%" stop-color="#5a5a5a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" fill="url(#bg3)" rx="8"/>
+  <circle cx="44.2" cy="43.9" r="1.2" fill="#5a5a5a" opacity="0.53"/>
+  <circle cx="9.6" cy="17.9" r="0.7" fill="#6a6a6a" opacity="0.32"/>
+  <circle cx="36.9" cy="14.8" r="1.2" fill="#4a4a4a" opacity="0.46"/>
+  <circle cx="21.8" cy="32.6" r="1.9" fill="#5a5a5a" opacity="0.59"/>
+  <circle cx="38.4" cy="37.1" r="1.6" fill="#888888" opacity="0.56"/>
+  <circle cx="49.6" cy="29.0" r="0.8" fill="#888888" opacity="0.59"/>
+  <circle cx="47.2" cy="51.1" r="0.6" fill="#4a4a4a" opacity="0.33"/>
+  <circle cx="34.0" cy="42.5" r="1.2" fill="#5a5a5a" opacity="0.29"/>
+  <circle cx="17.3" cy="54.0" r="2.1" fill="#fff8e0" opacity="0.63" filter="url(#glow1)"/>
+  <circle cx="16.3" cy="8.1" r="1.0" fill="#fff8e0" opacity="0.22" filter="url(#glow1)"/>
+  <circle cx="46.5" cy="22.3" r="1.2" fill="#ff8800" opacity="0.32"/>
+  <circle cx="32" cy="32" r="13" fill="url(#rad4)" filter="url(#glow1)"/>
+  <path d="M 10 20 Q 2 32 10 46" stroke="url(#lin5)" stroke-width="6" fill="none" opacity="0.75" stroke-linecap="round" filter="url(#soft2)"/>
+  <path d="M 54 20 Q 62 32 54 46" stroke="url(#lin5)" stroke-width="6" fill="none" opacity="0.75" stroke-linecap="round" filter="url(#soft2)"/>
+  <circle cx="32" cy="32" r="4" fill="#fff8e0" opacity="0.9"/>
+</svg>

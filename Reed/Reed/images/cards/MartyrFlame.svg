@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <linearGradient id="lin4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e0" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#ffe060" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#ff8800" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#c41a05" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.06"/>
+  <circle cx="31.1" cy="78.0" r="1.1" fill="#c41a05" opacity="0.22"/>
+  <circle cx="74.0" cy="165.7" r="1.6" fill="#c41a05" opacity="0.70" filter="url(#glow1)"/>
+  <circle cx="140.6" cy="57.6" r="1.0" fill="#ff8800" opacity="0.67" filter="url(#glow1)"/>
+  <circle cx="207.1" cy="169.8" r="2.3" fill="#c41a05" opacity="0.59"/>
+  <circle cx="17.8" cy="168.4" r="1.5" fill="#c41a05" opacity="0.32"/>
+  <circle cx="144.6" cy="8.2" r="1.2" fill="#ffe060" opacity="0.67" filter="url(#glow1)"/>
+  <circle cx="169.1" cy="108.6" r="0.8" fill="#ff8800" opacity="0.46" filter="url(#glow1)"/>
+  <!-- Pyre base -->
+  <path d="M 75,160 L 95,138 L 155,138 L 175,160 Z" fill="#331100" opacity="0.9"/>
+  <path d="M 85,160 L 100,145 L 150,145 L 165,160" fill="none" stroke="#8a2a05" stroke-width="2" opacity="0.7"/>
+  <!-- Tall self-consuming flame -->
+  <path d="M 125,138 C 100,120 108,92 125,58 C 142,92 150,120 125,138 Z" fill="url(#lin4)" opacity="0.9" filter="url(#glow1)"/>
+  <path d="M 125,132 C 112,118 116,100 125,80 C 134,100 138,118 125,132 Z" fill="#fff8e0" opacity="0.75"/>
+  <!-- Side flame tongues leaning outward (spreading) -->
+  <path d="M 111,134 Q 87,120 73,98 Q 91,116 115,126 Z" fill="url(#lin4)" opacity="0.5" filter="url(#glow1)"/>
+  <path d="M 139,134 Q 163,120 177,98 Q 159,116 135,126 Z" fill="url(#lin4)" opacity="0.5" filter="url(#glow1)"/>
+  <!-- Rising sparks transferring away -->
+  <circle cx="91.1" cy="52.8" r="1.9" fill="#ffcc40" opacity="0.49" filter="url(#glow1)"/>
+  <circle cx="127.3" cy="26.9" r="1.6" fill="#ffcc40" opacity="0.68" filter="url(#glow1)"/>
+  <circle cx="163.1" cy="68.2" r="1.9" fill="#ffcc40" opacity="0.64" filter="url(#glow1)"/>
+  <circle cx="187.3" cy="80.2" r="2.0" fill="#ffcc40" opacity="0.50" filter="url(#glow1)"/>
+  <circle cx="79.5" cy="56.0" r="1.8" fill="#ffcc40" opacity="0.55" filter="url(#glow1)"/>
+  <circle cx="171.5" cy="59.9" r="1.8" fill="#ffcc40" opacity="0.51" filter="url(#glow1)"/>
+  <circle cx="123.2" cy="33.2" r="2.2" fill="#ffcc40" opacity="0.56" filter="url(#glow1)"/>
+  <circle cx="146.1" cy="72.0" r="1.7" fill="#ffcc40" opacity="0.58" filter="url(#glow1)"/>
+  <circle cx="158.3" cy="29.5" r="1.5" fill="#ffcc40" opacity="0.43" filter="url(#glow1)"/>
+  <ellipse cx="125.0" cy="172.0" rx="60.0" ry="8.0" fill="#8a2a05" opacity="0.3" filter="url(#soft2)"/>
+</svg>

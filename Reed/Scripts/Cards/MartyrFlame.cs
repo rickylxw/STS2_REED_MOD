@@ -5,38 +5,32 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using STS2RitsuLib.Interop.AutoRegistration;
 using STS2RitsuLib.Scaffolding.Content;
-using Reed.Scripts.Character;
 using Reed.Scripts.Powers;
 
 namespace Reed.Scripts.Cards;
 
 /// <summary>
-/// 火星（Spark）——衍生攻击牌。
-/// 0费，造成3点伤害，施加1层灼燃。消耗。
-/// 不可在卡牌库中显示。
+/// 殉焰（MartyrFlame）——不常见攻击牌。
+/// 2费，造成8点伤害，对目标施加1层余烬蔓延（目标死亡时，其灼燃转移给其他敌人）。升级后基础+3。
 /// </summary>
 [RegisterCard(typeof(ReedCardPool))]
-[RegisterCharacterStarterCard(typeof(ReedCharacter), 1)]
-public sealed class Spark : ModCardTemplate
+public sealed class MartyrFlame : ModCardTemplate
 {
-    private const int BaseEnergyCost = 0;
+    private const int BaseEnergyCost = 2;
     private const CardType CardKind = CardType.Attack;
-    private const CardRarity CardRarityValue = CardRarity.Basic;
+    private const CardRarity CardRarityValue = CardRarity.Uncommon;
     private const TargetType CardTarget = TargetType.AnyEnemy;
-    private const bool ShowInCardLibrary = false;
+    private const bool ShowInCardLibrary = true;
 
     public override CardAssetProfile AssetProfile => new(
         PortraitPath: $"{Entry.ResPath}/images/cards/{GetType().Name}.svg");
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(3, ValueProp.Move),
-        new CardsVar(1) // 灼燃层数
+        new DamageVar(8, ValueProp.Move)
     ];
 
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
-
-    public Spark() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
+    public MartyrFlame() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -47,12 +41,11 @@ public sealed class Spark : ModCardTemplate
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
 
-        await PowerCmd.Apply<Scorch>(choiceContext, cardPlay.Target, DynamicVars.Cards.IntValue, Owner.Creature, this);
+        if (cardPlay.Target.IsAlive)
+        {
+            await PowerCmd.Apply<EmberSpread>(choiceContext, cardPlay.Target, 1, Owner.Creature, this);
+        }
     }
 
-    protected override void OnUpgrade()
-    {
-        DynamicVars.Damage.UpgradeValueBy(2);
-        DynamicVars.Cards.UpgradeValueBy(1);
-    }
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(3);
 }

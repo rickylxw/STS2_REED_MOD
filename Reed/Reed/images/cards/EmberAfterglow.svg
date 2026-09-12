@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe060" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#ff8800" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8a2a05" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.05"/>
+  <circle cx="58.6" cy="45.8" r="1.2" fill="#4a4a4a" opacity="0.52"/>
+  <circle cx="104.1" cy="176.4" r="1.9" fill="#5a5a5a" opacity="0.36"/>
+  <circle cx="151.6" cy="135.8" r="1.3" fill="#4a4a4a" opacity="0.50"/>
+  <circle cx="221.7" cy="28.5" r="1.9" fill="#555555" opacity="0.58"/>
+  <circle cx="104.8" cy="128.0" r="1.8" fill="#555555" opacity="0.37"/>
+  <circle cx="188.4" cy="40.6" r="0.9" fill="#6a6a6a" opacity="0.45"/>
+  <circle cx="232.3" cy="28.7" r="1.6" fill="#4a4a4a" opacity="0.47"/>
+  <circle cx="186.0" cy="148.2" r="1.0" fill="#5a5a5a" opacity="0.50"/>
+  <!-- Rising ember trails fading upward -->
+  <path d="M 186.8,137.0 Q 185.0,107.5 183.2,78.0" fill="none" stroke="#ff8800" stroke-width="1.8" opacity="0.47" filter="url(#soft2)"/>
+  <circle cx="183.2" cy="78.0" r="2.1" fill="#ffcc40" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="186.8" cy="137.0" r="1.5" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 74.7,127.1 Q 67.7,102.9 60.7,78.7" fill="none" stroke="#ff8800" stroke-width="1.1" opacity="0.30" filter="url(#soft2)"/>
+  <circle cx="60.7" cy="78.7" r="2.8" fill="#ffcc40" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="74.7" cy="127.1" r="2.4" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 150.2,146.1 Q 148.3,107.8 146.4,69.6" fill="none" stroke="#ff8800" stroke-width="1.7" opacity="0.39" filter="url(#soft2)"/>
+  <circle cx="146.4" cy="69.6" r="3.5" fill="#ffcc40" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="150.2" cy="146.1" r="2.2" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 138.3,150.6 Q 143.0,122.8 147.7,95.0" fill="none" stroke="#ff8800" stroke-width="1.6" opacity="0.31" filter="url(#soft2)"/>
+  <circle cx="147.7" cy="95.0" r="2.3" fill="#ffcc40" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="138.3" cy="150.6" r="1.8" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 63.0,139.0 Q 62.2,110.3 61.4,81.5" fill="none" stroke="#ff8800" stroke-width="2.0" opacity="0.27" filter="url(#soft2)"/>
+  <circle cx="61.4" cy="81.5" r="2.9" fill="#ffcc40" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="63.0" cy="139.0" r="1.6" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 101.5,125.6 Q 101.1,84.0 100.6,42.4" fill="none" stroke="#ff8800" stroke-width="1.8" opacity="0.29" filter="url(#soft2)"/>
+  <circle cx="100.6" cy="42.4" r="2.6" fill="#ffcc40" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="101.5" cy="125.6" r="2.5" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 191.9,162.5 Q 187.6,129.2 183.2,95.9" fill="none" stroke="#ff8800" stroke-width="1.8" opacity="0.40" filter="url(#soft2)"/>
+  <circle cx="183.2" cy="95.9" r="2.7" fill="#ffcc40" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="191.9" cy="162.5" r="2.5" fill="#e6591a" opacity="0.6" filter="url(#glow1)"/>
+  <!-- Dying ember bed at the bottom -->
+  <ellipse cx="125" cy="172" rx="85" ry="12" fill="#4a4a4a" opacity="0.5"/>
+  <ellipse cx="125" cy="168" rx="60" ry="8" fill="url(#rad4)" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="85" cy="168" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="110" cy="168" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="140" cy="168" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <circle cx="165" cy="168" r="2" fill="#fff8e0" opacity="0.7" filter="url(#glow1)"/>
+  <!-- Faint card-like wisps (drawn power) -->
+  <path d="M 77,96 Q 85,88 93,96 Q 85,104 77,96 Z" fill="none" stroke="#ffcc40" stroke-width="1" opacity="0.35" filter="url(#glow1)"/>
+  <path d="M 117,96 Q 125,88 133,96 Q 125,104 117,96 Z" fill="none" stroke="#ffcc40" stroke-width="1" opacity="0.35" filter="url(#glow1)"/>
+  <path d="M 157,96 Q 165,88 173,96 Q 165,104 157,96 Z" fill="none" stroke="#ffcc40" stroke-width="1" opacity="0.35" filter="url(#glow1)"/>
+  <ellipse cx="125.0" cy="182.0" rx="55.0" ry="6.0" fill="#8a2a05" opacity="0.2" filter="url(#soft2)"/>
+</svg>

@@ -1,37 +1,34 @@
 {
     "REED_POWER_SCORCH.title": "Scorch",
     "REED_POWER_SCORCH.description": "At end of turn, deal 1 damage per stack and reduce by 1.",
-
     "REED_POWER_SCORCH_COUNTER.title": "Scorch",
     "REED_POWER_SCORCH_COUNTER.description": "Accumulated Scorch stacks. Can be consumed by other cards to trigger effects.",
-
     "REED_POWER_ASH.title": "Ash",
     "REED_POWER_ASH.description": "Accumulated ash stacks. Can be consumed by other cards.",
-
     "REED_POWER_FLAME_SHADOW_FORM.title": "Flame Shadow Form",
     "REED_POWER_FLAME_SHADOW_FORM.description": "At the end of each turn, deal damage equal to [red]Scorch[/red] stacks to ALL enemies.",
-
     "REED_POWER_CALAMITY_BREATH.title": "Calamity Breath",
     "REED_POWER_CALAMITY_BREATH.description": "At the start of each turn, apply {Amount} [red]Vulnerable[/red] to all enemies with [red]Scorch[/red].",
-
     "REED_POWER_EMBER_SPREAD.title": "Ember Spread",
     "REED_POWER_EMBER_SPREAD.description": "When an enemy dies, spread its [red]Scorch[/red] stacks to other alive enemies.",
-
     "REED_POWER_EVERFLAME_POWER.title": "Everflame",
     "REED_POWER_EVERFLAME_POWER.description": "At the end of each turn, if any enemy has [red]Scorch[/red], gain {Amount} [blue]Ash[/blue].",
-
     "REED_POWER_UNITED_FRONT_POWER.title": "United Front",
     "REED_POWER_UNITED_FRONT_POWER.description": "At the start of each turn, apply [red]Scorch[/red] to ALL enemies equal to ally count x {Amount}.",
-
     "REED_POWER_DRAGONS_LEGACY_POWER.title": "Dragon's Legacy",
     "REED_POWER_DRAGONS_LEGACY_POWER.description": "At the start of each turn, gain {Amount} [gold]Strength[/gold] and apply {Amount} [red]Scorch[/red] to ALL enemies.",
-
     "REED_POWER_ASH_RECOVERY_POWER.title": "Ash Recovery",
     "REED_POWER_ASH_RECOVERY_POWER.description": "Whenever you Exhaust a card, heal {Amount} HP.",
-
     "REED_POWER_SCORCH_IMMUNITY.title": "Scorch Immunity",
     "REED_POWER_SCORCH_IMMUNITY.description": "No longer takes Scorch damage.",
-
     "REED_POWER_ETERNAL_EMBER_POWER.title": "Eternal Ember",
-    "REED_POWER_ETERNAL_EMBER_POWER.description": "At the start of each turn, apply 3 [red]Scorch[/red] to ALL enemies and gain Block equal to total [red]Scorch[/red] on all enemies."
+    "REED_POWER_ETERNAL_EMBER_POWER.description": "At the start of each turn, apply 3 [red]Scorch[/red] to ALL enemies and gain Block equal to total [red]Scorch[/red] on all enemies.",
+    "REED_POWER_SPELL_VULNERABLE.title": "Spell Vulnerable",
+    "REED_POWER_SPELL_VULNERABLE.description": "Takes 50% more [red]Scorch[/red] damage.",
+    "REED_POWER_ASH_EMBRACE_POWER.title": "Ashen Embrace",
+    "REED_POWER_ASH_EMBRACE_POWER.description": "At the start of each turn, gain Block equal to [blue]Ash[/blue] stacks x {Amount}.",
+    "REED_POWER_EMBER_AFTERGLOW_POWER.title": "Ember Afterglow",
+    "REED_POWER_EMBER_AFTERGLOW_POWER.description": "Whenever a card is Exhausted, draw 1 card (max {Amount} per turn).",
+    "REED_POWER_DRAGONS_MAJESTY_POWER.title": "Dragonborn Majesty",
+    "REED_POWER_DRAGONS_MAJESTY_POWER.description": "At the start of each turn, apply {Amount} [red]Weak[/red] to every enemy with [red]Scorch[/red]."
 }
