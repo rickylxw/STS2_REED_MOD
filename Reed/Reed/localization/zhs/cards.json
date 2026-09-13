@@ -116,5 +116,15 @@
     "REED_CARD_MARTYR_FLAME.title": "殉焰",
     "REED_CARD_MARTYR_FLAME.description": "造成 {Damage:diff()} 点伤害，对目标施加 1 层[blue]余烬蔓延[/blue]（目标死亡时，其[red]灼燃[/red]转移给其他敌人）。",
     "REED_CARD_DRAGONS_MAJESTY.title": "龙裔威压",
-    "REED_CARD_DRAGONS_MAJESTY.description": "获得 {Cards} 层[blue]龙裔威压[/blue]。每回合开始时，对所有带[red]灼燃[/red]的敌人施加等量层数[red]虚弱[/red]。"
+    "REED_CARD_DRAGONS_MAJESTY.description": "获得 {Cards} 层[blue]龙裔威压[/blue]。每回合开始时，对所有带[red]灼燃[/red]的敌人施加等量层数[red]虚弱[/red]。",
+    "REED_CARD_STOKE_FLAME.title": "煽焰",
+    "REED_CARD_STOKE_FLAME.description": "获得 {Cards:diff()} 层[red]灼燃计数器[/red]，抽 1 张牌。消耗。",
+    "REED_CARD_DRAGONLANCE.title": "龙枪贯日",
+    "REED_CARD_DRAGONLANCE.description": "造成 {Damage:diff()} 点伤害，你的每 1 点[gold]力量[/gold]额外造成 {Cards:diff()} 点伤害。",
+    "REED_CARD_FLAME_PARITY.title": "焰衡",
+    "REED_CARD_FLAME_PARITY.description": "造成 {Damage:diff()} 点伤害。若目标的[red]灼燃[/red]层数为偶数，伤害翻倍。",
+    "REED_CARD_EVERBURNING.title": "烬火长燃",
+    "REED_CARD_EVERBURNING.description": "对所有敌人施加[blue]烬火长燃[/blue]：其身上的[red]灼燃[/red]不再随回合减少。",
+    "REED_CARD_DRACONIC_CRUSH.title": "巨龙重压",
+    "REED_CARD_DRACONIC_CRUSH.description": "造成 {Damage:diff()} 点伤害，你每有 1 层[red]灼燃计数器[/red]额外造成 {Cards:diff()} 点伤害，然后消耗自身所有[red]灼燃计数器[/red]。"
 }

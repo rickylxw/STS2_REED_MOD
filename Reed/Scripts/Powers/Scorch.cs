@@ -45,7 +45,10 @@ public sealed class Scorch : ModPowerTemplate
             await CreatureCmd.Damage(choiceContext, Owner, damage, null, null);
         }
 
-        // 层数减少1
-        SetAmount(Amount - 1, false);
+        // 层数减少1（烬火长燃：不再衰减）
+        if (!ReedCombatHelper.HasPower<EverburningPower>(Owner))
+        {
+            SetAmount(Amount - 1, false);
+        }
     }
 }

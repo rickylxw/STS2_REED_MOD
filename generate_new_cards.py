@@ -241,12 +241,115 @@ def render_dragonsmajestypower(s):
 
 
 # =====================================================================
+#  GAP-FILL BATCH (2026-09): 5 cards + 1 power
+# =====================================================================
+
+def render_stokeflame(s):
+    """Fan fanning a small flame into counters."""
+    glow = add_glow(s, 2.5)
+    add_bg(s)
+    g_fan = lin_grad(s, [("0%", C_ORANGE), ("100%", C_DARK_RED)])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.06)
+    add_embers(s, 7, 9301, glow)
+    s.draw(f'  <path d="M 150 30 L 175 130 L 135 118 Z" fill="url(#{g_fan})" opacity="0.85" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="M 165 34 L 205 118 L 162 112 Z" fill="url(#{g_fan})" opacity="0.6" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(115, 150, 80, 26, 4, 9302)}" fill="{C_ORANGE}" opacity="0.9" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(115, 148, 52, 15, 3, 9303)}" fill="{C_YELLOW3}" opacity="0.9"/>')
+    s.draw(f'  <path d="{flame_path(115, 146, 28, 8, 2, 9304)}" fill="{C_WHITE_HOT}" opacity="0.9"/>')
+    add_bottom_glow(s, 120, 172, 55, 9, glow=glow)
+
+
+def render_dragonlance(s):
+    """A lance piercing through a blazing sun."""
+    glow = add_glow(s, 3)
+    add_bg(s)
+    g_sun = rad_grad(s, [("0%", C_WHITE_HOT), ("40%", C_YELLOW), ("100%", C_DEEP_ORANGE2, 0.0)])
+    g_lance = lin_grad(s, [("0%", C_YELLOW3), ("100%", C_DEEP_ORANGE)])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.07)
+    add_embers(s, 8, 9311, glow)
+    s.draw(f'  <circle cx="150" cy="80" r="52" fill="url(#{g_sun})" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="M 20 165 L 185 60 L 215 42 L 196 76 L 178 74 Z" fill="url(#{g_lance})" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="M 20 165 L 40 158 L 52 170 Z" fill="{C_DARK_RED}" opacity="0.9"/>')
+    add_spark_burst(s, 150, 80, 10, 9312, 30, glow=glow)
+
+
+def render_flameparity(s):
+    """Two mirrored flames in perfect balance."""
+    glow = add_glow(s, 2.5)
+    soft = add_soft_glow(s, 4)
+    add_bg(s)
+    g_l = lin_grad(s, [("0%", C_YELLOW3), ("100%", C_ORANGE)])
+    g_r = lin_grad(s, [("0%", C_ORANGE), ("100%", C_DEEP_ORANGE2)])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.06)
+    add_embers(s, 6, 9321, glow)
+    for dx, grad in [(-42, g_l), (42, g_r)]:
+        s.draw(f'  <path d="{flame_path(125+dx, 150, 95, 24, 3, 9322+dx)}" fill="url(#{grad})" '
+               f'opacity="0.85" filter="url(#{soft})"/>')
+        s.draw(f'  <path d="{flame_path(125+dx, 148, 60, 13, 2, 9323+dx)}" fill="{C_WHITE_HOT}" opacity="0.75"/>')
+    s.draw(f'  <line x1="125" y1="35" x2="125" y2="165" stroke="{C_ORANGE3}" '
+           f'stroke-width="2" opacity="0.5" filter="url(#{glow})"/>')
+    add_bottom_glow(s, 125, 172, 70, 10, glow=glow)
+
+
+def render_everburning(s):
+    """An eternal flame ring that never fades."""
+    glow = add_glow(s, 3)
+    soft = add_soft_glow(s, 5)
+    add_bg(s)
+    g_ring = lin_grad(s, [("0%", C_YELLOW), ("50%", C_ORANGE), ("100%", C_DEEP_ORANGE2)])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.08)
+    add_embers(s, 10, 9331, glow)
+    cx, cy = 125, 95
+    s.draw(f'  <circle cx="{cx}" cy="{cy}" r="52" fill="none" stroke="url(#{g_ring})" '
+           f'stroke-width="9" opacity="0.85" filter="url(#{glow})"/>')
+    s.draw(f'  <circle cx="{cx}" cy="{cy}" r="66" fill="none" stroke="url(#{g_ring})" '
+           f'stroke-width="3" opacity="0.5" filter="url(#{soft})"/>')
+    s.draw(f'  <path d="{flame_path(cx, cy+30, 70, 20, 4, 9332)}" fill="{C_ORANGE}" opacity="0.9" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(cx, cy+28, 45, 11, 3, 9333)}" fill="{C_WHITE_HOT}" opacity="0.9"/>')
+    add_spark_burst(s, cx, cy, 8, 9334, 26, glow=glow)
+
+
+def render_draconiccrush(s):
+    """A massive dragon fist slamming down."""
+    glow = add_glow(s, 3)
+    add_bg(s)
+    g_fist = lin_grad(s, [("0%", C_DEEP_ORANGE), ("60%", C_DARK_RED), ("100%", C_DARK_BG)])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.07)
+    add_embers(s, 9, 9341, glow)
+    cx, cy = 125, 70
+    s.draw(f'  <path d="M {cx-55} {cy} Q {cx-60} {cy-42} {cx-10} {cy-46} '
+           f'Q {cx+45} {cy-50} {cx+58} {cy-8} Q {cx+62} {cy+28} {cx+20} {cy+40} '
+           f'Q {cx-30} {cy+52} {cx-55} {cy} Z" fill="url(#{g_fist})" opacity="0.92" filter="url(#{glow})"/>')
+    for kx in (cx-34, cx-10, cx+14, cx+38):
+        s.draw(f'  <path d="M {kx} {cy-40} Q {kx+4} {cy-58} {kx+16} {cy-44} Q {kx+10} {cy-34} {kx} {cy-40} Z" '
+               f'fill="{C_ORANGE4}" opacity="0.85" filter="url(#{glow})"/>')
+    for i, (bx, br) in enumerate([(60, 14), (105, 18), (150, 16), (190, 12)]):
+        s.draw(f'  <path d="M {bx-20} 190 Q {bx} {150-bx%30} {bx+20} 190 Z" fill="{C_ORANGE3}" '
+               f'opacity="0.4" filter="url(#{glow})"/>')
+    add_bottom_glow(s, cx, 182, 90, 12, color=C_DEEP_ORANGE2, opacity=0.45, glow=glow)
+
+
+def render_everburningpower(s):
+    """Everburning marker — unbroken flame ring."""
+    glow = add_glow(s, 1.5)
+    add_bg(s, cx="50%", cy="50%", r="60%")
+    g_ring = lin_grad(s, [("0%", C_YELLOW), ("100%", C_DEEP_ORANGE2)])
+    add_embers(s, 3, 9351, glow)
+    s.draw(f'  <circle cx="32" cy="32" r="20" fill="none" stroke="url(#{g_ring})" '
+           f'stroke-width="4" opacity="0.9" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(32, 42, 24, 8, 2, 9352)}" fill="{C_ORANGE}" opacity="0.9" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(32, 41, 14, 4, 1, 9353)}" fill="{C_WHITE_HOT}" opacity="0.9"/>')
+
+
+# =====================================================================
 #  Register + generate
 # =====================================================================
 
 NEW_CARDS = ["EmberScales", "AshEmbrace", "ScorchDetonation", "Backdraft",
-             "EmberAfterglow", "ResidualWarmth", "MartyrFlame", "DragonsMajesty"]
-NEW_POWERS = ["AshEmbracePower", "EmberAfterglowPower", "DragonsMajestyPower"]
+             "EmberAfterglow", "ResidualWarmth", "MartyrFlame", "DragonsMajesty",
+             "StokeFlame", "Dragonlance", "FlameParity", "Everburning", "DraconicCrush"]
+NEW_POWERS = ["AshEmbracePower", "EmberAfterglowPower", "DragonsMajestyPower",
+              "EverburningPower"]
 
 CARD_FNS = {
     "EmberScales": render_emberscales,
@@ -257,12 +360,18 @@ CARD_FNS = {
     "ResidualWarmth": render_residualwarmth,
     "MartyrFlame": render_martyrflame,
     "DragonsMajesty": render_dragonsmajesty,
+    "StokeFlame": render_stokeflame,
+    "Dragonlance": render_dragonlance,
+    "FlameParity": render_flameparity,
+    "Everburning": render_everburning,
+    "DraconicCrush": render_draconiccrush,
     "AshStorm": render_ashstorm,
 }
 POWER_FNS = {
     "AshEmbracePower": render_ashembracepower,
     "EmberAfterglowPower": render_emberafterglowpower,
     "DragonsMajestyPower": render_dragonsmajestypower,
+    "EverburningPower": render_everburningpower,
 }
 
 

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg2" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <linearGradient id="lin3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe060"/>
+      <stop offset="100%" stop-color="#c41a05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" fill="url(#bg2)" rx="8"/>
+  <circle cx="29.8" cy="41.7" r="0.7" fill="#ff7a1a" opacity="0.65"/>
+  <circle cx="21.3" cy="34.3" r="0.5" fill="#ff8800" opacity="0.34" filter="url(#glow1)"/>
+  <circle cx="31.9" cy="15.6" r="2.0" fill="#ff6600" opacity="0.28" filter="url(#glow1)"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="url(#lin3)" stroke-width="4" opacity="0.9" filter="url(#glow1)"/>
+  <path d="M 32.0 42.0 Q 25.0 36.0 27.0 31.2 Q 30.4 26.4 33.6 18.0 Q 33.6 25.2 33.9 28.8 Q 41.4 34.8 32.0 42.0 Z" fill="#ff8800" opacity="0.9" filter="url(#glow1)"/>
+  <path d="M 32.0 41.0 Q 27.7 37.5 30.4 34.7 Q 31.2 31.9 31.7 27.0 Q 32.8 31.2 33.9 33.3 Q 36.3 36.8 32.0 41.0 Z" fill="#fff8e0" opacity="0.9"/>
+</svg>

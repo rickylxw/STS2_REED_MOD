@@ -30,5 +30,7 @@
     "REED_POWER_EMBER_AFTERGLOW_POWER.title": "烬火余韵",
     "REED_POWER_EMBER_AFTERGLOW_POWER.description": "每当一张牌被消耗时，抽 1 张牌（每回合最多 {Amount} 次）。",
     "REED_POWER_DRAGONS_MAJESTY_POWER.title": "龙裔威压",
-    "REED_POWER_DRAGONS_MAJESTY_POWER.description": "每回合开始时，对所有带[red]灼燃[/red]的敌人施加 {Amount} 层[red]虚弱[/red]。"
+    "REED_POWER_DRAGONS_MAJESTY_POWER.description": "每回合开始时，对所有带[red]灼燃[/red]的敌人施加 {Amount} 层[red]虚弱[/red]。",
+    "REED_POWER_EVERBURNING_POWER.title": "烬火长燃",
+    "REED_POWER_EVERBURNING_POWER.description": "此敌人身上的[red]灼燃[/red]不再随回合减少（伤害照常结算）。"
 }

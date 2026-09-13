@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg2" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <linearGradient id="lin3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="250" height="190" fill="url(#bg2)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.06"/>
+  <circle cx="83.0" cy="173.6" r="2.2" fill="#e6591a" opacity="0.43"/>
+  <circle cx="19.3" cy="171.6" r="0.6" fill="#ff6600" opacity="0.42"/>
+  <circle cx="149.5" cy="155.7" r="2.3" fill="#ff8800" opacity="0.41"/>
+  <circle cx="157.8" cy="107.3" r="1.1" fill="#ffcc40" opacity="0.59"/>
+  <circle cx="141.3" cy="96.0" r="2.5" fill="#c41a05" opacity="0.35" filter="url(#glow1)"/>
+  <circle cx="173.9" cy="181.9" r="2.5" fill="#ff8800" opacity="0.20"/>
+  <circle cx="39.9" cy="87.0" r="2.5" fill="#c41a05" opacity="0.21"/>
+  <path d="M 150 30 L 175 130 L 135 118 Z" fill="url(#lin3)" opacity="0.85" filter="url(#glow1)"/>
+  <path d="M 165 34 L 205 118 L 162 112 Z" fill="url(#lin3)" opacity="0.6" filter="url(#glow1)"/>
+  <path d="M 115.0 150.0 Q 85.8 130.0 104.4 114.0 Q 109.8 98.0 113.9 70.0 Q 120.2 94.0 125.7 106.0 Q 138.6 126.0 115.0 150.0 Z" fill="#ff8800" opacity="0.9" filter="url(#glow1)"/>
+  <path d="M 115.0 148.0 Q 102.7 135.0 111.7 124.6 Q 112.0 114.2 116.7 96.0 Q 118.0 111.6 122.7 119.4 Q 129.8 132.4 115.0 148.0 Z" fill="#ffcc40" opacity="0.9"/>
+  <path d="M 115.0 146.0 Q 107.1 139.0 109.8 133.4 Q 113.4 127.8 114.4 118.0 Q 116.6 126.4 117.1 130.6 Q 122.7 137.6 115.0 146.0 Z" fill="#fff8e0" opacity="0.9"/>
+  <ellipse cx="120.0" cy="172.0" rx="55.0" ry="9.0" fill="#8a2a05" opacity="0.3" filter="url(#glow1)"/>
+</svg>

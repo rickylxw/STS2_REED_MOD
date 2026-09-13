@@ -116,5 +116,15 @@
     "REED_CARD_MARTYR_FLAME.title": "Martyr's Flame",
     "REED_CARD_MARTYR_FLAME.description": "Deal {Damage:diff()} damage. Apply 1 [blue]Ember Spread[/blue] to the target (when it dies, its [red]Scorch[/red] is spread to other enemies).",
     "REED_CARD_DRAGONS_MAJESTY.title": "Dragonborn Majesty",
-    "REED_CARD_DRAGONS_MAJESTY.description": "Gain {Cards} [blue]Dragonborn Majesty[/blue]. At the start of each turn, apply the same number of stacks of [red]Weak[/red] to every enemy with [red]Scorch[/red]."
+    "REED_CARD_DRAGONS_MAJESTY.description": "Gain {Cards} [blue]Dragonborn Majesty[/blue]. At the start of each turn, apply the same number of stacks of [red]Weak[/red] to every enemy with [red]Scorch[/red].",
+    "REED_CARD_STOKE_FLAME.title": "Stoke Flame",
+    "REED_CARD_STOKE_FLAME.description": "Gain {Cards:diff()} [red]Scorch Counters[/red]. Draw 1 card. Exhaust.",
+    "REED_CARD_DRAGONLANCE.title": "Dragonlance",
+    "REED_CARD_DRAGONLANCE.description": "Deal {Damage:diff()} damage. Deal an additional {Cards:diff()} damage per point of your [gold]Strength[/gold].",
+    "REED_CARD_FLAME_PARITY.title": "Flame Parity",
+    "REED_CARD_FLAME_PARITY.description": "Deal {Damage:diff()} damage. Double it if the target's [red]Scorch[/red] stacks are even.",
+    "REED_CARD_EVERBURNING.title": "Everburning",
+    "REED_CARD_EVERBURNING.description": "Apply [blue]Everburning[/blue] to ALL enemies: their [red]Scorch[/red] no longer decays each turn.",
+    "REED_CARD_DRACONIC_CRUSH.title": "Draconic Crush",
+    "REED_CARD_DRACONIC_CRUSH.description": "Deal {Damage:diff()} damage, plus {Cards:diff()} per stack of your [red]Scorch Counters[/red], then Exhaust all your [red]Scorch Counters[/red]."
 }
