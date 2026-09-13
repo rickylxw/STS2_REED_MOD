@@ -4,7 +4,7 @@
     "REED_POWER_SCORCH_COUNTER.title": "灼燃",
     "REED_POWER_SCORCH_COUNTER.description": "累积的灼燃层数，可被其他卡牌消耗以触发效果。",
     "REED_POWER_ASH.title": "灰烬",
-    "REED_POWER_ASH.description": "累积的灰烬层数，可被其他卡牌消耗。",
+    "REED_POWER_ASH.description": "累积的灰烬层数，可被其他卡牌消耗。每回合开始时，每层获得 1 点格挡。",
     "REED_POWER_FLAME_SHADOW_FORM.title": "焰影形态",
     "REED_POWER_FLAME_SHADOW_FORM.description": "每回合结束时，对所有敌人造成等于其[red]灼燃[/red]层数的伤害。",
     "REED_POWER_CALAMITY_BREATH.title": "灾厄之息",

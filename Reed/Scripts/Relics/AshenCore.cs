@@ -11,7 +11,7 @@ namespace Reed.Scripts.Relics;
 
 /// <summary>
 /// 灰烬核心（AshenCore）——初始遗物。
-/// 每次消耗任何卡牌时，获得1层灰烬。
+/// 战斗开始时获得3层灰烬；每次消耗任何卡牌时，获得1层灰烬。
 /// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
 [RegisterCharacterStarterRelic(typeof(ReedCharacter))]
@@ -25,6 +25,21 @@ public sealed class AshenCore : ModRelicTemplate
         BigIconPath: $"{Entry.ResPath}/images/relics/{GetType().Name}.svg");
 
     public override bool ShouldReceiveCombatHooks => true;
+
+    private bool _gaveStartAshThisCombat;
+
+    public override Task BeforeCombatStart()
+    {
+        _gaveStartAshThisCombat = false;
+        return Task.CompletedTask;
+    }
+
+    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    {
+        if (_gaveStartAshThisCombat) return;
+        _gaveStartAshThisCombat = true;
+        await PowerCmd.Apply<Ash>(choiceContext, Owner.Creature, 3, Owner.Creature, null);
+    }
 
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {

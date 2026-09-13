@@ -38,7 +38,7 @@ public sealed class ReedCharacter : ModCharacterTemplate<ReedCardPool, ReedRelic
     // 人物性别
     public override CharacterGender Gender => CharacterGender.Feminine;
     // 初始血量和金币
-    public override int StartingHp => 72;
+    public override int StartingHp => 78;
     public override int StartingGold => 99;
 
     // StartingRelicTypes removed in favor of [RegisterCharacterStarterRelic]

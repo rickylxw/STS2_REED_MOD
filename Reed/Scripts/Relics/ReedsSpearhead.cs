@@ -12,7 +12,7 @@ namespace Reed.Scripts.Relics;
 
 /// <summary>
 /// 苇草之矛（ReedsSpearhead）—— 初始遗物。
-/// 每回合开始时，对所有敌人施加2层灼燃。
+/// 每回合开始时，对所有敌人施加3层灼燃。
 /// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
 [RegisterCharacterStarterRelic(typeof(ReedCharacter))]
@@ -29,7 +29,7 @@ public sealed class ReedsSpearhead : ModRelicTemplate
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new CardsVar(2) // 鐏肩噧灞傛暟
+        new CardsVar(3) // 灼燃层数
     ];
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)

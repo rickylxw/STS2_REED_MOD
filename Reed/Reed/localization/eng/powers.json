@@ -4,7 +4,7 @@
     "REED_POWER_SCORCH_COUNTER.title": "Scorch",
     "REED_POWER_SCORCH_COUNTER.description": "Accumulated Scorch stacks. Can be consumed by other cards to trigger effects.",
     "REED_POWER_ASH.title": "Ash",
-    "REED_POWER_ASH.description": "Accumulated ash stacks. Can be consumed by other cards.",
+    "REED_POWER_ASH.description": "Accumulated Ash stacks, can be consumed by cards. At the start of each turn, gain 1 Block per stack.",
     "REED_POWER_FLAME_SHADOW_FORM.title": "Flame Shadow Form",
     "REED_POWER_FLAME_SHADOW_FORM.description": "At the end of each turn, deal damage equal to [red]Scorch[/red] stacks to ALL enemies.",
     "REED_POWER_CALAMITY_BREATH.title": "Calamity Breath",

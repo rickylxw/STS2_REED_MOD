@@ -27,13 +27,13 @@ public sealed class Ash : ModPowerTemplate
     public override bool ShouldReceiveCombatHooks => true;
 
     /// <summary>
-    /// 每回合开始时，每2层灰烬提供1点格挡。
+    /// 每回合开始时，每层灰烬提供1点格挡。
     /// </summary>
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
         if (Amount <= 0) return;
 
-        int blockAmount = Amount / 2;
+        int blockAmount = Amount;
         if (blockAmount > 0)
         {
             await CreatureCmd.GainBlock(Owner, new BlockVar((decimal)blockAmount, ValueProp.Move), null);
