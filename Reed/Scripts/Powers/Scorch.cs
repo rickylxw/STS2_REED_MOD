@@ -41,6 +41,12 @@ public sealed class Scorch : ModPowerTemplate
                 scorchDamage = (int)Math.Ceiling(Amount * 1.5m);
             }
 
+            // 炼狱契约：受到的灼燃伤害翻倍
+            if (ReedCombatHelper.HasPower<InfernalPactPower>(Owner))
+            {
+                scorchDamage *= 2;
+            }
+
             var damage = new DamageVar(scorchDamage, ValueProp.Unpowered | ValueProp.Unblockable);
             await CreatureCmd.Damage(choiceContext, Owner, damage, null, null);
         }

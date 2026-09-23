@@ -342,14 +342,159 @@ def render_everburningpower(s):
 
 
 # =====================================================================
+#  DEATH/STRENGTH/RULES BATCH (2026-09): 6 cards + 3 powers
+# =====================================================================
+
+def render_heatwave(s):
+    """Rolling heat waves sweeping across the field."""
+    glow = add_glow(s, 2.5)
+    soft = add_soft_glow(s, 5)
+    add_bg(s)
+    g_wave = lin_grad(s, [("0%", C_YELLOW3), ("100%", C_DEEP_ORANGE2, 0.0)])
+    add_atmosphere(s, color=C_ORANGE, opacity=0.08)
+    add_embers(s, 12, 9401, glow)
+    for i, (y, sw, op) in enumerate([(140, 12, 0.6), (105, 10, 0.5), (70, 8, 0.4), (38, 6, 0.3)]):
+        s.draw(f'  <path d="M 10 {y+18} Q 65 {y-14} 125 {y} Q 185 {y+14} 240 {y-10}" '
+               f'stroke="url(#{g_wave})" stroke-width="{sw}" fill="none" opacity="{op}" '
+               f'stroke-linecap="round" filter="url(#{soft})"/>')
+    add_spark_burst(s, 125, 95, 8, 9402, 30, glow=glow)
+
+
+def render_dragondominance(s):
+    """A dragon claw gripping a burning crown."""
+    glow = add_glow(s, 2.5)
+    add_bg(s)
+    g_claw = lin_grad(s, [("0%", C_DEEP_ORANGE), ("100%", C_DARK_RED)])
+    g_crown = rad_grad(s, [("0%", C_WHITE_HOT), ("50%", C_YELLOW), ("100%", C_ORANGE)])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.07)
+    add_embers(s, 7, 9411, glow)
+    cx, cy = 125, 105
+    s.draw(f'  <circle cx="{cx}" cy="62" r="24" fill="url(#{g_crown})" filter="url(#{glow})"/>')
+    for hx in (-18, 0, 18):
+        s.draw(f'  <path d="M {cx+hx-6} 48 L {cx+hx} 26 L {cx+hx+6} 48 Z" fill="{C_YELLOW3}" filter="url(#{glow})"/>')
+    for ang in [(-30, -60), (-10, -40), (10, -40), (30, -60)]:
+        s.draw(f'  <path d="M {cx+ang[0]*0.4} {cy-10} Q {cx+ang[0]} {cy+30} {cx+ang[0]*1.5} {cy+55}" '
+               f'stroke="url(#{g_claw})" stroke-width="11" stroke-linecap="round" opacity="0.9" filter="url(#{glow})"/>')
+    add_bottom_glow(s, cx, 178, 65, 10, glow=glow)
+
+
+def render_pyre(s):
+    """A funeral pyre with rising smoke and flame."""
+    glow = add_glow(s, 2.5)
+    soft = add_soft_glow(s, 5)
+    add_bg(s)
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.07)
+    add_ash_particles(s, 10, 9421)
+    add_embers(s, 9, 9422, glow)
+    for x, y in [(70, 130), (95, 140), (120, 128), (145, 140), (170, 130), (82, 148), (110, 148), (138, 148), (160, 148)]:
+        s.draw(f'  <line x1="{x-16}" y1="{y+10}" x2="{x+16}" y2="{y-6}" stroke="#4a2c18" '
+               f'stroke-width="6" stroke-linecap="round" opacity="0.85"/>')
+    s.draw(f'  <path d="{flame_path(120, 132, 95, 30, 5, 9423)}" fill="{C_ORANGE}" opacity="0.85" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(120, 130, 62, 18, 4, 9424)}" fill="{C_YELLOW3}" opacity="0.9"/>')
+    s.draw(f'  <path d="{flame_path(120, 128, 32, 9, 2, 9425)}" fill="{C_WHITE_HOT}" opacity="0.9"/>')
+    add_bottom_glow(s, 120, 170, 70, 11, color=C_DEEP_ORANGE2, opacity=0.4, glow=glow)
+
+
+def render_emberreaper(s):
+    """A scythe harvesting embers."""
+    glow = add_glow(s, 2.5)
+    add_bg(s)
+    g_blade = lin_grad(s, [("0%", C_WHITE_HOT), ("50%", C_YELLOW3), ("100%", C_ORANGE)])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.06)
+    add_embers(s, 10, 9431, glow)
+    s.draw(f'  <line x1="80" y1="165" x2="160" y2="35" stroke="#3a2418" stroke-width="7" stroke-linecap="round"/>')
+    s.draw(f'  <path d="M 160 35 Q 215 45 205 95 Q 200 60 155 52 Z" fill="url(#{g_blade})" filter="url(#{glow})"/>')
+    for cx, cy, r in [(90, 130, 5), (110, 100, 4), (130, 72, 3.5), (150, 50, 3)]:
+        s.draw(f'  <circle cx="{cx}" cy="{cy}" r="{r}" fill="{C_ORANGE}" opacity="0.85" filter="url(#{glow})"/>')
+        s.draw(f'  <circle cx="{cx}" cy="{cy}" r="{r*0.4:.1f}" fill="{C_WHITE_HOT}"/>')
+    add_spark_burst(s, 180, 80, 7, 9432, 22, glow=glow)
+
+
+def render_windblaze(s):
+    """Wind streaks fanning flames sideways."""
+    glow = add_glow(s, 2.5)
+    soft = add_soft_glow(s, 4)
+    add_bg(s)
+    g_wind = lin_grad(s, [("0%", C_WHITE_HOT, 0.0), ("100%", C_YELLOW3)])
+    add_atmosphere(s, color=C_ORANGE, opacity=0.07)
+    add_embers(s, 11, 9441, glow)
+    for i, (y, op) in enumerate([(55, 0.5), (95, 0.65), (135, 0.5)]):
+        s.draw(f'  <path d="M 15 {y+14} Q 80 {y-10} 150 {y+4} Q 200 {y+12} 238 {y-6}" '
+               f'stroke="url(#{g_wind})" stroke-width="3" fill="none" opacity="{op}" stroke-linecap="round" filter="url(#{soft})"/>')
+    for fx, fy, fh, fw in [(95, 150, 75, 20), (160, 150, 55, 15), (45, 150, 48, 13)]:
+        s.draw(f'  <path d="{flame_path(fx, fy, fh, fw, 4, 9442+fx)}" fill="{C_ORANGE}" '
+               f'opacity="0.85" filter="url(#{glow})"/>')
+        s.draw(f'  <path d="{flame_path(fx+6, fy-2, fh*0.6, fw*0.5, 3, 9443+fx)}" fill="{C_YELLOW3}" opacity="0.9"/>')
+    add_bottom_glow(s, 120, 172, 75, 10, glow=glow)
+
+
+def render_infernalpact(s):
+    """A burning contract scroll sealed with a sigil."""
+    glow = add_glow(s, 2.5)
+    soft = add_soft_glow(s, 4)
+    add_bg(s)
+    g_scroll = lin_grad(s, [("0%", "#e8d5b0"), ("100%", "#b09468")])
+    add_atmosphere(s, color=C_DEEP_ORANGE, opacity=0.06)
+    add_embers(s, 7, 9451, glow)
+    s.draw(f'  <path d="M 55 55 L 185 45 L 195 140 L 65 150 Z" fill="url(#{g_scroll})" '
+           f'stroke="#5a3a20" stroke-width="2" opacity="0.92" filter="url(#{soft})"/>')
+    for y in (72, 90, 108):
+        s.draw(f'  <line x1="80" y1="{y}" x2="172" y2="{y-6}" stroke="#5a3a20" stroke-width="2.5" opacity="0.55"/>')
+    s.draw(f'  <circle cx="150" cy="122" r="14" fill="none" stroke="{C_DEEP_ORANGE2}" stroke-width="3" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="M 143 122 L 157 122 M 150 115 L 150 129" stroke="{C_DEEP_ORANGE2}" '
+           f'stroke-width="2.5" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(88, 140, 55, 14, 3, 9452)}" fill="{C_ORANGE}" opacity="0.8" filter="url(#{glow})"/>')
+    add_bottom_glow(s, 125, 172, 65, 10, glow=glow)
+
+
+def render_dragondominancepower(s):
+    """Dragon Dominance — claw gripping crown, mini."""
+    glow = add_glow(s, 1.5)
+    add_bg(s, cx="50%", cy="50%", r="60%")
+    g_crown = rad_grad(s, [("0%", C_WHITE_HOT), ("60%", C_YELLOW), ("100%", C_ORANGE)])
+    add_embers(s, 3, 9461, glow)
+    s.draw(f'  <circle cx="32" cy="22" r="10" fill="url(#{g_crown})" filter="url(#{glow})"/>')
+    for hx in (-7, 0, 7):
+        s.draw(f'  <path d="M {32+hx-2.5} 16 L {32+hx} 6 L {32+hx+2.5} 16 Z" fill="{C_YELLOW3}"/>')
+    for ang in (-10, 6, 22):
+        s.draw(f'  <path d="M {32+ang*0.5} 30 Q {32+ang} 40 {32+ang*1.3} 54" '
+               f'stroke="{C_DEEP_ORANGE}" stroke-width="5" stroke-linecap="round" opacity="0.9" filter="url(#{glow})"/>')
+
+
+def render_windblazepower(s):
+    """Windblaze — wind lines fanning a flame."""
+    glow = add_glow(s, 1.5)
+    add_bg(s, cx="50%", cy="50%", r="60%")
+    add_embers(s, 4, 9471, glow)
+    for y, op in [(20, 0.5), (30, 0.6), (40, 0.5)]:
+        s.draw(f'  <path d="M 6 {y+5} Q 18 {y-4} 30 {y} Q 42 {y+4} 58 {y-4}" '
+               f'stroke="{C_YELLOW3}" stroke-width="2" fill="none" opacity="{op}" stroke-linecap="round" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(36, 54, 26, 9, 2, 9472)}" fill="{C_ORANGE}" opacity="0.9" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="{flame_path(38, 52, 15, 5, 1, 9473)}" fill="{C_WHITE_HOT}" opacity="0.9"/>')
+
+
+def render_infernalpactpower(s):
+    """Infernal Pact — burning sigil ring."""
+    glow = add_glow(s, 1.5)
+    add_bg(s, cx="50%", cy="50%", r="60%")
+    g_ring = lin_grad(s, [("0%", C_DEEP_ORANGE2), ("100%", C_ORANGE)])
+    add_embers(s, 3, 9481, glow)
+    s.draw(f'  <circle cx="32" cy="32" r="17" fill="none" stroke="url(#{g_ring})" '
+           f'stroke-width="4" filter="url(#{glow})"/>')
+    s.draw(f'  <path d="M 32 22 L 32 42 M 24 27 L 40 37 M 40 27 L 24 37" '
+           f'stroke="{C_YELLOW3}" stroke-width="2.5" filter="url(#{glow})"/>')
+
+
+# =====================================================================
 #  Register + generate
 # =====================================================================
 
 NEW_CARDS = ["EmberScales", "AshEmbrace", "ScorchDetonation", "Backdraft",
              "EmberAfterglow", "ResidualWarmth", "MartyrFlame", "DragonsMajesty",
-             "StokeFlame", "Dragonlance", "FlameParity", "Everburning", "DraconicCrush"]
+             "StokeFlame", "Dragonlance", "FlameParity", "Everburning", "DraconicCrush",
+             "Heatwave", "DragonDominance", "Pyre", "EmberReaper", "Windblaze", "InfernalPact"]
 NEW_POWERS = ["AshEmbracePower", "EmberAfterglowPower", "DragonsMajestyPower",
-              "EverburningPower"]
+              "EverburningPower", "DragonDominancePower", "WindblazePower", "InfernalPactPower"]
 
 CARD_FNS = {
     "EmberScales": render_emberscales,
@@ -365,6 +510,12 @@ CARD_FNS = {
     "FlameParity": render_flameparity,
     "Everburning": render_everburning,
     "DraconicCrush": render_draconiccrush,
+    "Heatwave": render_heatwave,
+    "DragonDominance": render_dragondominance,
+    "Pyre": render_pyre,
+    "EmberReaper": render_emberreaper,
+    "Windblaze": render_windblaze,
+    "InfernalPact": render_infernalpact,
     "AshStorm": render_ashstorm,
 }
 POWER_FNS = {
@@ -372,6 +523,9 @@ POWER_FNS = {
     "EmberAfterglowPower": render_emberafterglowpower,
     "DragonsMajestyPower": render_dragonsmajestypower,
     "EverburningPower": render_everburningpower,
+    "DragonDominancePower": render_dragondominancepower,
+    "WindblazePower": render_windblazepower,
+    "InfernalPactPower": render_infernalpactpower,
 }
 
 

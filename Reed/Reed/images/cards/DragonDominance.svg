@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg2" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+    <linearGradient id="lin3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6591a"/>
+      <stop offset="100%" stop-color="#8a2a05"/>
+    </linearGradient>
+    <radialGradient id="rad4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff8e0"/>
+      <stop offset="50%" stop-color="#ffe060"/>
+      <stop offset="100%" stop-color="#ff8800"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="250" height="190" fill="url(#bg2)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.07"/>
+  <circle cx="28.6" cy="126.1" r="1.9" fill="#fff8e0" opacity="0.30"/>
+  <circle cx="85.0" cy="32.0" r="0.6" fill="#ff7a1a" opacity="0.63"/>
+  <circle cx="92.5" cy="171.6" r="1.4" fill="#ffcc40" opacity="0.22"/>
+  <circle cx="74.9" cy="36.2" r="1.2" fill="#ff7a1a" opacity="0.30" filter="url(#glow1)"/>
+  <circle cx="153.4" cy="10.3" r="2.3" fill="#ffe060" opacity="0.36" filter="url(#glow1)"/>
+  <circle cx="194.7" cy="97.4" r="1.7" fill="#ffe060" opacity="0.68" filter="url(#glow1)"/>
+  <circle cx="137.2" cy="42.0" r="2.5" fill="#ffcc40" opacity="0.60" filter="url(#glow1)"/>
+  <circle cx="125" cy="62" r="24" fill="url(#rad4)" filter="url(#glow1)"/>
+  <path d="M 101 48 L 107 26 L 113 48 Z" fill="#ffcc40" filter="url(#glow1)"/>
+  <path d="M 119 48 L 125 26 L 131 48 Z" fill="#ffcc40" filter="url(#glow1)"/>
+  <path d="M 137 48 L 143 26 L 149 48 Z" fill="#ffcc40" filter="url(#glow1)"/>
+  <path d="M 113.0 95 Q 95 135 80.0 160" stroke="url(#lin3)" stroke-width="11" stroke-linecap="round" opacity="0.9" filter="url(#glow1)"/>
+  <path d="M 121.0 95 Q 115 135 110.0 160" stroke="url(#lin3)" stroke-width="11" stroke-linecap="round" opacity="0.9" filter="url(#glow1)"/>
+  <path d="M 129.0 95 Q 135 135 140.0 160" stroke="url(#lin3)" stroke-width="11" stroke-linecap="round" opacity="0.9" filter="url(#glow1)"/>
+  <path d="M 137.0 95 Q 155 135 170.0 160" stroke="url(#lin3)" stroke-width="11" stroke-linecap="round" opacity="0.9" filter="url(#glow1)"/>
+  <ellipse cx="125.0" cy="178.0" rx="65.0" ry="10.0" fill="#8a2a05" opacity="0.3" filter="url(#glow1)"/>
+</svg>

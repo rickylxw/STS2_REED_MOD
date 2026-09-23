@@ -126,5 +126,17 @@
     "REED_CARD_EVERBURNING.title": "Everburning",
     "REED_CARD_EVERBURNING.description": "Apply [blue]Everburning[/blue] to ALL enemies: their [red]Scorch[/red] no longer decays each turn.",
     "REED_CARD_DRACONIC_CRUSH.title": "Draconic Crush",
-    "REED_CARD_DRACONIC_CRUSH.description": "Deal {Damage:diff()} damage, plus {Cards:diff()} per stack of your [red]Scorch Counters[/red], then Exhaust all your [red]Scorch Counters[/red]."
+    "REED_CARD_DRACONIC_CRUSH.description": "Deal {Damage:diff()} damage, plus {Cards:diff()} per stack of your [red]Scorch Counters[/red], then Exhaust all your [red]Scorch Counters[/red].",
+    "REED_CARD_HEATWAVE.title": "Heatwave",
+    "REED_CARD_HEATWAVE.description": "Deal {Damage:diff()} damage to ALL enemies, plus 1 per point of your [gold]Strength[/gold].",
+    "REED_CARD_DRAGON_DOMINANCE.title": "Dragon Dominance",
+    "REED_CARD_DRAGON_DOMINANCE.description": "Gain {Cards} [blue]Dragon Dominance[/blue]. At the start of each turn, if ALL enemies have [red]Scorch[/red], gain that much [gold]Strength[/gold].",
+    "REED_CARD_PYRE.title": "Pyre",
+    "REED_CARD_PYRE.description": "Deal {Damage:diff()} damage. If the target dies, gain [blue]Ash[/blue] equal to twice its [red]Scorch[/red] stacks.",
+    "REED_CARD_EMBER_REAPER.title": "Ember Reaper",
+    "REED_CARD_EMBER_REAPER.description": "Deal {Damage:diff()} damage. If the target dies, draw 2 cards and gain 1 Energy.",
+    "REED_CARD_WINDBLAZE.title": "Windblaze",
+    "REED_CARD_WINDBLAZE.description": "Gain {Cards} [blue]Windblaze[/blue]. At the end of each of your turns, ALL enemies gain that many stacks of [red]Scorch[/red].",
+    "REED_CARD_INFERNAL_PACT.title": "Infernal Pact",
+    "REED_CARD_INFERNAL_PACT.description": "Apply [blue]Infernal Pact[/blue] to ALL enemies: Scorch damage they take is doubled."
 }

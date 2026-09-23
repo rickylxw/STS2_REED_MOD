@@ -32,5 +32,11 @@
     "REED_POWER_DRAGONS_MAJESTY_POWER.title": "龙裔威压",
     "REED_POWER_DRAGONS_MAJESTY_POWER.description": "每回合开始时，对所有带[red]灼燃[/red]的敌人施加 {Amount} 层[red]虚弱[/red]。",
     "REED_POWER_EVERBURNING_POWER.title": "烬火长燃",
-    "REED_POWER_EVERBURNING_POWER.description": "此敌人身上的[red]灼燃[/red]不再随回合减少（伤害照常结算）。"
+    "REED_POWER_EVERBURNING_POWER.description": "此敌人身上的[red]灼燃[/red]不再随回合减少（伤害照常结算）。",
+    "REED_POWER_DRAGON_DOMINANCE_POWER.title": "龙威",
+    "REED_POWER_DRAGON_DOMINANCE_POWER.description": "每回合开始时，若所有敌人都带有[red]灼燃[/red]，获得 {Amount} 层[gold]力量[/gold]。",
+    "REED_POWER_WINDBLAZE_POWER.title": "风助火势",
+    "REED_POWER_WINDBLAZE_POWER.description": "每个玩家回合结束时，所有敌人获得 {Amount} 层[red]灼燃[/red]。",
+    "REED_POWER_INFERNAL_PACT_POWER.title": "炼狱契约",
+    "REED_POWER_INFERNAL_PACT_POWER.description": "受到的[red]灼燃[/red]伤害翻倍。"
 }

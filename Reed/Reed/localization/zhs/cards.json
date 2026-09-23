@@ -126,5 +126,17 @@
     "REED_CARD_EVERBURNING.title": "烬火长燃",
     "REED_CARD_EVERBURNING.description": "对所有敌人施加[blue]烬火长燃[/blue]：其身上的[red]灼燃[/red]不再随回合减少。",
     "REED_CARD_DRACONIC_CRUSH.title": "巨龙重压",
-    "REED_CARD_DRACONIC_CRUSH.description": "造成 {Damage:diff()} 点伤害，你每有 1 层[red]灼燃计数器[/red]额外造成 {Cards:diff()} 点伤害，然后消耗自身所有[red]灼燃计数器[/red]。"
+    "REED_CARD_DRACONIC_CRUSH.description": "造成 {Damage:diff()} 点伤害，你每有 1 层[red]灼燃计数器[/red]额外造成 {Cards:diff()} 点伤害，然后消耗自身所有[red]灼燃计数器[/red]。",
+    "REED_CARD_HEATWAVE.title": "热浪",
+    "REED_CARD_HEATWAVE.description": "对所有敌人造成 {Damage:diff()} 点伤害，你的每 1 点[gold]力量[/gold]额外造成 1 点伤害。",
+    "REED_CARD_DRAGON_DOMINANCE.title": "龙威",
+    "REED_CARD_DRAGON_DOMINANCE.description": "获得 {Cards} 层[blue]龙威[/blue]。每回合开始时，若所有敌人都带有[red]灼燃[/red]，获得等量层数[gold]力量[/gold]。",
+    "REED_CARD_PYRE.title": "火葬",
+    "REED_CARD_PYRE.description": "造成 {Damage:diff()} 点伤害。若目标因此死亡，获得其[red]灼燃[/red]层数 ×2 的[blue]灰烬[/blue]。",
+    "REED_CARD_EMBER_REAPER.title": "余烬收割",
+    "REED_CARD_EMBER_REAPER.description": "造成 {Damage:diff()} 点伤害。若目标因此死亡，抽 2 张牌并获得 1 点能量。",
+    "REED_CARD_WINDBLAZE.title": "风助火势",
+    "REED_CARD_WINDBLAZE.description": "获得 {Cards} 层[blue]风助火势[/blue]。每个玩家回合结束时，所有敌人获得等量层数[red]灼燃[/red]。",
+    "REED_CARD_INFERNAL_PACT.title": "炼狱契约",
+    "REED_CARD_INFERNAL_PACT.description": "对所有敌人施加[blue]炼狱契约[/blue]：其受到的[red]灼燃[/red]伤害翻倍。"
 }

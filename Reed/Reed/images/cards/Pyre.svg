@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="190" viewBox="0 0 250 190">
+  <defs>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="bg3" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#2a1815"/>
+      <stop offset="60%" stop-color="#1a0d08"/>
+      <stop offset="100%" stop-color="#0d0604"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="250" height="190" fill="url(#bg3)" rx="8"/>
+  <ellipse cx="125.0" cy="95.0" rx="120.0" ry="79.8" fill="#e6591a" opacity="0.07"/>
+  <circle cx="32.8" cy="75.1" r="0.8" fill="#4a4a4a" opacity="0.58"/>
+  <circle cx="180.8" cy="9.0" r="1.4" fill="#6a6a6a" opacity="0.28"/>
+  <circle cx="135.8" cy="165.3" r="1.3" fill="#7a7a7a" opacity="0.26"/>
+  <circle cx="40.6" cy="50.6" r="1.8" fill="#555555" opacity="0.23"/>
+  <circle cx="26.7" cy="153.5" r="1.5" fill="#4a4a4a" opacity="0.59"/>
+  <circle cx="158.2" cy="173.9" r="0.6" fill="#999999" opacity="0.24"/>
+  <circle cx="13.3" cy="18.8" r="1.8" fill="#555555" opacity="0.50"/>
+  <circle cx="12.5" cy="175.6" r="0.6" fill="#6a6a6a" opacity="0.32"/>
+  <circle cx="205.3" cy="107.4" r="1.8" fill="#6a6a6a" opacity="0.48"/>
+  <circle cx="8.3" cy="147.8" r="1.2" fill="#999999" opacity="0.43"/>
+  <circle cx="26.3" cy="149.6" r="1.5" fill="#c41a05" opacity="0.26"/>
+  <circle cx="82.8" cy="145.8" r="1.3" fill="#c41a05" opacity="0.41" filter="url(#glow1)"/>
+  <circle cx="69.1" cy="40.0" r="2.0" fill="#ff6600" opacity="0.27" filter="url(#glow1)"/>
+  <circle cx="65.7" cy="154.1" r="2.2" fill="#ff7a1a" opacity="0.63" filter="url(#glow1)"/>
+  <circle cx="164.7" cy="121.3" r="1.6" fill="#fff8e0" opacity="0.42"/>
+  <circle cx="209.2" cy="143.7" r="2.2" fill="#ff8800" opacity="0.45" filter="url(#glow1)"/>
+  <circle cx="98.9" cy="153.8" r="1.5" fill="#ff6600" opacity="0.41" filter="url(#glow1)"/>
+  <circle cx="225.6" cy="129.0" r="0.9" fill="#ff6600" opacity="0.20" filter="url(#glow1)"/>
+  <circle cx="164.3" cy="121.3" r="1.4" fill="#ffcc40" opacity="0.46" filter="url(#glow1)"/>
+  <line x1="54" y1="140" x2="86" y2="124" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="79" y1="150" x2="111" y2="134" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="104" y1="138" x2="136" y2="122" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="129" y1="150" x2="161" y2="134" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="154" y1="140" x2="186" y2="124" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="66" y1="158" x2="98" y2="142" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="94" y1="158" x2="126" y2="142" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="122" y1="158" x2="154" y2="142" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="144" y1="158" x2="176" y2="142" stroke="#4a2c18" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 120.0 132.0 Q 86.7 108.2 105.0 89.2 Q 114.0 70.2 118.1 37.0 Q 126.0 65.5 136.0 79.8 Q 152.6 103.5 120.0 132.0 Z" fill="#ff8800" opacity="0.85" filter="url(#glow1)"/>
+  <path d="M 120.0 130.0 Q 100.6 114.5 112.7 102.1 Q 116.4 89.7 118.5 68.0 Q 123.6 86.6 130.5 95.9 Q 138.3 111.4 120.0 130.0 Z" fill="#ffcc40" opacity="0.9"/>
+  <path d="M 120.0 128.0 Q 110.4 120.0 115.9 113.6 Q 118.2 107.2 119.8 96.0 Q 121.8 105.6 122.4 110.4 Q 130.6 118.4 120.0 128.0 Z" fill="#fff8e0" opacity="0.9"/>
+  <ellipse cx="120.0" cy="170.0" rx="70.0" ry="11.0" fill="#c41a05" opacity="0.4" filter="url(#glow1)"/>
+</svg>

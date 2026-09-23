@@ -32,5 +32,11 @@
     "REED_POWER_DRAGONS_MAJESTY_POWER.title": "Dragonborn Majesty",
     "REED_POWER_DRAGONS_MAJESTY_POWER.description": "At the start of each turn, apply {Amount} [red]Weak[/red] to every enemy with [red]Scorch[/red].",
     "REED_POWER_EVERBURNING_POWER.title": "Everburning",
-    "REED_POWER_EVERBURNING_POWER.description": "Scorch on this enemy no longer decays each turn (damage still applies)."
+    "REED_POWER_EVERBURNING_POWER.description": "Scorch on this enemy no longer decays each turn (damage still applies).",
+    "REED_POWER_DRAGON_DOMINANCE_POWER.title": "Dragon Dominance",
+    "REED_POWER_DRAGON_DOMINANCE_POWER.description": "At the start of each turn, if ALL enemies have [red]Scorch[/red], gain {Amount} [gold]Strength[/gold].",
+    "REED_POWER_WINDBLAZE_POWER.title": "Windblaze",
+    "REED_POWER_WINDBLAZE_POWER.description": "At the end of each of your turns, ALL enemies gain {Amount} [red]Scorch[/red].",
+    "REED_POWER_INFERNAL_PACT_POWER.title": "Infernal Pact",
+    "REED_POWER_INFERNAL_PACT_POWER.description": "Scorch damage taken is doubled."
 }
