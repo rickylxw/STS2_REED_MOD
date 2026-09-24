@@ -10,7 +10,7 @@ namespace Reed.Scripts.Cards;
 
 /// <summary>
 /// 余烬收割（EmberReaper）——不常见攻击牌。
-/// 1费，造成7点伤害；若目标因此死亡，抽2张牌并获得1点能量。
+/// 1费，造成7点伤害；若目标因此死亡，抽2张牌并获得1点能量；未死亡则抽1张牌。
 /// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class EmberReaper : ModCardTemplate
@@ -26,7 +26,8 @@ public sealed class EmberReaper : ModCardTemplate
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(7, ValueProp.Move)
+        new DamageVar(7, ValueProp.Move),
+        new CardsVar(1) // 未死亡时抽的牌数
     ];
 
     public EmberReaper() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
@@ -44,6 +45,10 @@ public sealed class EmberReaper : ModCardTemplate
         {
             await CardPileCmd.Draw(choiceContext, 2, Owner);
             await PlayerCmd.GainEnergy(1m, Owner);
+        }
+        else
+        {
+            await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.IntValue, Owner);
         }
     }
 

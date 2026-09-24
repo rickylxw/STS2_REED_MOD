@@ -11,7 +11,7 @@ namespace Reed.Scripts.Cards;
 
 /// <summary>
 /// 火葬（Pyre）——稀有攻击牌。
-/// 2费，造成8点伤害；若目标因此死亡，获得其灼燃层数×2的灰烬。
+/// 2费，造成8点伤害；若目标因此死亡，获得其灼燃层数×2的灰烬；未死亡则施加3层灼燃。
 /// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class Pyre : ModCardTemplate
@@ -27,7 +27,8 @@ public sealed class Pyre : ModCardTemplate
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(8, ValueProp.Move)
+        new DamageVar(8, ValueProp.Move),
+        new CardsVar(3) // 未死亡时施加的灼燃层数
     ];
 
     public Pyre() : base(BaseEnergyCost, CardKind, CardRarityValue, CardTarget, ShowInCardLibrary) { }
@@ -44,9 +45,16 @@ public sealed class Pyre : ModCardTemplate
             .Targeting(cardPlay.Target)
             .Execute(choiceContext);
 
-        if (!cardPlay.Target.IsAlive && scorchStacks > 0)
+        if (!cardPlay.Target.IsAlive)
         {
-            await PowerCmd.Apply<Ash>(choiceContext, Owner.Creature, scorchStacks * 2, Owner.Creature, this);
+            if (scorchStacks > 0)
+            {
+                await PowerCmd.Apply<Ash>(choiceContext, Owner.Creature, scorchStacks * 2, Owner.Creature, this);
+            }
+        }
+        else
+        {
+            await PowerCmd.Apply<Scorch>(choiceContext, cardPlay.Target, DynamicVars.Cards.IntValue, Owner.Creature, this);
         }
     }
 
