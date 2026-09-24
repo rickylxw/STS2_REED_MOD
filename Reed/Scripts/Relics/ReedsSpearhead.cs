@@ -15,7 +15,6 @@ namespace Reed.Scripts.Relics;
 /// 每回合开始时，对所有敌人施加2层灼燃。
 /// </summary>
 [RegisterRelic(typeof(ReedRelicPool))]
-[RegisterCharacterStarterRelic(typeof(ReedCharacter))]
 public sealed class ReedsSpearhead : ModRelicTemplate
 {
     public override RelicRarity Rarity => RelicRarity.Common;

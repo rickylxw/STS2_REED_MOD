@@ -18,7 +18,7 @@
     "REED_CARD_SEARING_PIERCE.title": "Searing Pierce",
     "REED_CARD_SEARING_PIERCE.description": "Deal {Damage:diff()} damage. Deal {Cards:diff()} additional damage for each [red]Scorch[/red] stack on the target. Target gains [red]Scorch Immunity[/red] (no longer takes Scorch damage).",
     "REED_CARD_FLAME_SHADOW_REED.title": "Flame Shadow Reed",
-    "REED_CARD_FLAME_SHADOW_REED.description": "Gain {Cards} [blue]Flame Shadow Form[/blue]. At the end of each turn, deal damage equal to [red]Scorch[/red] stacks to ALL enemies.",
+    "REED_CARD_FLAME_SHADOW_REED.description": "Gain {Cards} [blue]Flame Shadow Form[/blue]: at the end of each turn, deal damage to ALL enemies equal to their [red]Scorch[/red] stacks. [blue]Ash[/blue] grants no Block while this form lasts.",
     "REED_CARD_INFERNO_STORM.title": "Inferno Storm",
     "REED_CARD_INFERNO_STORM.description": "Deal {Damage:diff()} damage to ALL enemies and apply {Cards:diff()} [red]Scorch[/red].",
     "REED_CARD_BREATH_OF_CALAMITY.title": "Breath of Calamity",

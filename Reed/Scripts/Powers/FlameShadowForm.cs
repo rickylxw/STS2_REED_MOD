@@ -9,8 +9,9 @@ using STS2RitsuLib.Scaffolding.Content;
 namespace Reed.Scripts.Powers;
 
 /// <summary>
-/// 焰影形态（FlameShadowForm）—— 焰影苇草的终极形态。
+/// 焰影形态（FlameShadowForm）—— 苇草的第二形态（拥有此能力即处于焰影形态）。
 /// 每回合结束时，对所有敌人造成等于其灼燃层数的伤害。
+/// 焰影形态下，灰烬不再提供格挡（Ash 中检查此能力）。
 /// </summary>
 [RegisterPower]
 public sealed class FlameShadowForm : ModPowerTemplate

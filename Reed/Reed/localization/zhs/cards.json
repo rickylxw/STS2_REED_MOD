@@ -18,7 +18,7 @@
     "REED_CARD_SEARING_PIERCE.title": "灼穿",
     "REED_CARD_SEARING_PIERCE.description": "造成 {Damage:diff()} 点伤害，目标每有 1 层[red]灼燃[/red]额外造成 {Cards:diff()} 点伤害。目标获得[red]灼燃免疫[/red]（不再受到灼燃伤害）。",
     "REED_CARD_FLAME_SHADOW_REED.title": "焰影苇草",
-    "REED_CARD_FLAME_SHADOW_REED.description": "获得 {Cards} 层[blue]焰影形态[/blue]。每回合结束时，对所有敌人造成等于其[red]灼燃[/red]层数的伤害。",
+    "REED_CARD_FLAME_SHADOW_REED.description": "获得 {Cards} 层[blue]焰影形态[/blue]：每回合结束时，对所有敌人造成等于其[red]灼燃[/red]层数的伤害。形态持续期间[blue]灰烬[/blue]不再提供格挡。",
     "REED_CARD_INFERNO_STORM.title": "烈焰风暴",
     "REED_CARD_INFERNO_STORM.description": "对所有敌人造成 {Damage:diff()} 点伤害并施加 {Cards:diff()} 层[red]灼燃[/red]。",
     "REED_CARD_BREATH_OF_CALAMITY.title": "灾厄之息",

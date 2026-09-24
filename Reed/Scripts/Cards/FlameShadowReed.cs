@@ -11,8 +11,8 @@ namespace Reed.Scripts.Cards;
 
 /// <summary>
 /// 焰影苇草（FlameShadowReed）——稀有能力牌。
-/// 3费，获得焰影形态（升级后层数+1）。
-/// 每回合结束时，对所有敌人造成等于其灼燃层数的伤害。
+/// 3费，进入焰影形态：每回合结束时，对所有敌人造成等于其灼燃层数的伤害；
+/// 形态持续期间，灰烬不再提供格挡。升级后费用-1。
 /// </summary>
 [RegisterCard(typeof(ReedCardPool))]
 public sealed class FlameShadowReed : ModCardTemplate
